@@ -1,0 +1,33 @@
+<html>
+<head>
+</head>
+<body style="background: url(#RootPath#/images/BulletinThumbs/dotted.png) repeat; font-family: Arial, Helvetica, sans-serif; 
+	color: #313131; font-size: 14px; text-align: left;">
+    <div style="width: 700px; padding: 0px; margin: 0px auto; >
+		<div  min-height: 74px;
+            padding-top: 20px 0px;">
+            <div style="margin: 0 auto; width: 700px; overflow: hidden;">
+				<div style="margin 0px auto; width:0px; float:left;">
+                    #HeaderLogo#</div>
+                     <div style="margin 0px auto; width:0px; float:right; margin-right: 65px;">
+                    #AdditionalLogo#</div>
+                <div style="  margin: 0px 0px 0px 0px;">
+                    <h1 style="font-size: 28px; line-height: 25px; font-weight: bold; color: #fcb040;
+                        text-align: center; margin: 0px; padding: 0px;">
+                        #BusinessProfileName#</h1><br/>
+					<div  style="text-align:center;"><span style="text-align:center;">#AgencyAddress# </span>                  
+                    <h4 style="font-size: 16px; line-height: 28px; font-weight: bold; color: #383838;
+                        text-align: center; margin: 0px; padding: 0px;">
+                        #EmergencyNumber#</h4></div>
+                </div>
+               
+            </div>
+        </div>
+        <div style="clear: both;">
+        </div>
+		<div align="center" style="margin : auto 0px;">
+			#BuildHtmlForForm#
+		</div>
+		</div>
+</body>
+</html>

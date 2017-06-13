@@ -1,0 +1,11 @@
+﻿<Window x:Class="POC.ProgressBarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:local="clr-namespace:POC.Control"
+        Title="ProgressBarWindow" Height="130" Width="110" WindowStartupLocation="CenterOwner"
+        WindowStyle="None" ResizeMode="NoResize" >
+
+    <local:LoadingAnimation  x:Name="loading" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    <!--<ProgressBar Height="30" HorizontalAlignment="Left" Name="progressBar1" VerticalAlignment="Top" Width="244" IsIndeterminate="True" />-->
+
+</Window>

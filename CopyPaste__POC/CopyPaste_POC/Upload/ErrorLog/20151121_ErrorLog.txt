@@ -1,0 +1,42 @@
+================================11/21/2015 4:47:20 AM================================
+ 
+Type : ERROR
+ 
+Page Name : Editor.aspx.cs
+ 
+Method Name : CreateImage
+ 
+MESSAGE : A generic error occurred in GDI+.
+ 
+STACKTRACE :    at System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   at System.Drawing.Image.Save(String filename, ImageFormat format)
+   at System.Drawing.Image.Save(String filename)
+   at Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlStringToFile(String htmlString, ImageFormat format, String outFile)
+   at Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlStreamToFile(Stream htmlStream, Encoding streamEncoding, ImageFormat format, String outFile)
+   at CopyPaste_POC.Editor.CreateImage(String path, Int32 profileID, Int32 userID, Int32 bulletinID, String html) in D:\CopyPaste_POC\CopyPaste__POC\CopyPaste_POC\Editor.aspx.cs:line 827
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================11/21/2015 4:48:50 AM================================
+ 
+Type : ERROR
+ 
+Page Name : Editor.aspx.cs
+ 
+Method Name : CreateImage
+ 
+MESSAGE : A generic error occurred in GDI+.
+ 
+STACKTRACE :    at System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   at System.Drawing.Image.Save(String filename, ImageFormat format)
+   at System.Drawing.Image.Save(String filename)
+   at Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlStringToFile(String htmlString, ImageFormat format, String outFile)
+   at Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlStreamToFile(Stream htmlStream, Encoding streamEncoding, ImageFormat format, String outFile)
+   at CopyPaste_POC.Editor.CreateImage(String path, Int32 profileID, Int32 userID, Int32 bulletinID, String html) in D:\CopyPaste_POC\CopyPaste__POC\CopyPaste_POC\Editor.aspx.cs:line 827
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 

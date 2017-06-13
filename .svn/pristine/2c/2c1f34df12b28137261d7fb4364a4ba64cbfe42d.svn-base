@@ -1,0 +1,80 @@
+﻿<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        .printappicon img
+        {
+            width: 140px;
+            margin-top:5px;
+            float: left;
+        }
+        .headercontent
+        {
+            margin-top: -25px; margin-left:140px;
+        }
+    </style>
+</head>
+<body style="font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 20px;
+    line-height: 1.5em; color: black; background: #FFFFFF; overflow-x: hidden !important;">
+    <div style="margin: 20px auto; margin-top: 0px; width: 780px; border: 0px solid #48505c;
+        padding: 0px 35px 10px 35px; position: relative;">
+        <div>
+            <div class="printappicon">
+                ##Logo##</div>
+            <div class="headercontent">
+                <h4 style="font-family: 'Open Sans', sans-serif; font-size: 40px; font-weight: 300;
+                    line-height: 60px; margin-bottom:0px; margin-right: 100px; text-align: center;">
+                    Stay informed with
+                    <br />
+                    current updates from
+                    <br />
+                    <label>
+                        ##Profile_Name##</label>
+                    <br />
+                    on your smartphone</h4>
+            </div>
+        </div>
+        <div style="clear: both;">
+        </div>
+        <div>
+            <div style="margin: 40px 0px 30px 0px; text-align: center;">
+                <span>
+                    <h3>
+                        <b>Download for FREE!</b></h3>
+                </span>
+                <div style="text-align: center; margin: 15px 0px;">
+                    <img style="vertical-align: middle; border: 0;" src="##QRCode##" /></div>
+                <h4 style="line-height: 54px; font-family: 'Open Sans', sans-serif; color: black;
+                    font-size: 32px; font-weight: normal;">
+                    <span style="text-align: center;">Scan the QR code and install.</span><br />
+                    <span style="text-align: center;">If you are unable to scan the code,
+                        <br />
+                        type '##Profile_Name##'
+                        <br />
+                        in the search box of your App Store.</span><!-- and select
+                        the
+                        <label>
+                            <b>
+                        ##Profile_Name## App by LogicTree IT Solutions Inc. </b></label></span><br/>
+                    Click 'Install' to download the App.-->
+                </h4>
+                <a style="display: inline-block; border-radius: 100%; width: 135px; height: 64px;
+                    color: white; font-weight: 400" href="##Android_Url##">
+                    <img src="##Android##" style="border-color: White;"> <span style="font-size: 25px;
+                        color: #687888;">Android</span> </img>
+                </a><a style="display: inline-block; border-radius: 100%; width: 135px; height: 64px;
+                    color: white; font-weight: 400" href="##IOS_Url##">
+                    <img src="##Apple##" style="border-color: White;"> <span style="font-size: 25px;
+                        color: #687888;">Apple</span> </img>
+                </a><a style="display: inline-block; border-radius: 100%; width: 135px; height: 64px;
+                    color: white; font-weight: 400" href="##Windows_Url##">
+                    <img src="##Windows##" style="border-color: White;"> <span style="font-size: 25px;
+                        color: #687888;">Windows</span> </img>
+                </a>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+</body>
+</html>

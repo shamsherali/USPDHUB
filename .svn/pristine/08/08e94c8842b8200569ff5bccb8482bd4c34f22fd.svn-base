@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { font-family:Arial, Helvetica, sans-serif; font-size: 17px;
+    background-color:white;
+}
+
+input {}
+.lft { float:left}
+
+.txt-input { 
+ 
+    border: 1px solid #848484; 
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    border-radius: 30px; 
+    outline:0; 
+    height:25px; 
+    width: 100px; 
+    padding-left:10px; 
+    padding-right:10px; 
+	margin-left: 10px;
+  } 
+
+
+#popup-cont { width:588px; display:block; margin: 0 auto; padding:0 auto; }
+
+#popup-cont h1 {font-size: 24px;font-weight: normal;color: #FFF;clear: both;display: block;margin: 0 auto; padding-left:56px; padding-bottom:20px; font-family:Arial, Helvetica, sans-serif}
+
+#popup-cont h2 {font-size: 17px;font-weight: normal;color: #FFF;clear: both;display: block;margin: 0 auto; padding-left:56px;padding-bottom:20px;font-family:Arial, Helvetica, sans-serif}
+
+
+
+#popup-cont .top	 { background:url('../../images/dashboard/top-part.png') no-repeat 0 0; width:588px; height:29px;}
+#popup-cont .top a	 { position:relative; top: -8px; right: -565px; display:block; background:url('../../images/dashboard/close_btn.png') no-repeat 0 0; width:30px; height:30px;}
+
+#popup-cont .middle { background:url('../../images/dashboard/middle-part.png')  repeat-y; }
+
+#popup-cont .bottom { background:url('../../images/dashboard/bottom-part.png') no-repeat 0 0; width:588px; height:112px; }
+
+#popup-cont .scrollablebox  { width:432px; display:block; height:104px; margin:0 auto;}
+#popup-cont a.btn { background: url('../../images/dashboard/btn-on.png') no-repeat scroll 0px 0px transparent;
+width: 144px;
+height: 54px;
+display: block;
+font-size: 20px;
+color: #323031;
+text-decoration: none;
+line-height: 52px;
+text-align: center;
+margin-left:360px;
+border:none;
+padding:0;
+margin-top:20px}
+#popup-cont a.btn:hover { background:url('../../images/dashboard/btn-over.png') no-repeat 0 0; width:144px ; height:54px}
+
+
+#popup-cont ul { list-style:none; list-style-position:inside; background:#FFFFFF; padding:0; }
+#popup-cont ul li { list-style:none;list-style-position:inside;  height:34px; float:left }
+
+.auto{
+	display:block;
+	border: 1px solid white;
+	padding:5px;
+	height:100px;
+	overflow:auto; background-color:#FFFFFF;
+	}
+.pad { padding:0px}
+	

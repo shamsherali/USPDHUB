@@ -1,0 +1,17 @@
+
+Please do not send a reply to this email. If you have questions or comments, please direct your questions to helpdesk@uspdhub.com or call customer care at 1-866-676-7335(8AM - 5PM PST) Toll Free.
+
+<b>Contact Details</b>
+--------------------
+
+<b>Time Sent</b>: #TimeSent#
+
+<b>User Name</b>: #UserName#
+
+<b>Phone Number</b>: #PhoneNumber#
+
+<b>Email ID</b>: #EmailID# 
+
+<b>Location</b>: #Location# 
+
+#Body#

@@ -1,0 +1,17 @@
+
+
+<b>Call from #TabName# - #ItemTitle# Has Been Placed  Using 
+The #ButtonTitle#  Button To #DailNumber# </b>
+
+Calling User:
+	Name: #Name#
+	Phone: #Phone#
+	Email ID: #EmailID#
+
+	Time: #Time#
+	Location: #Location#
+	Description: #Description#
+	
+
+
+

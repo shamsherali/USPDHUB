@@ -1,0 +1,101 @@
+﻿<Window x:Class="ISANotifications.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISANotifications"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        Name="MainWindow1" Closing="MainWindow1_Closing"
+        Title="inSchoolALERT - Emergency Notifications System" Height="350" Width="525" FontSize="18" Icon="Images/INSA.ico" SizeChanged="MainWindow1_SizeChanged">
+
+    <Window.Resources>
+        <local:UserBO x:Key="user"/>
+    </Window.Resources>
+    <Grid >
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                <GradientStop Color="#3cbc9f" Offset="0.667"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="5" Opacity="0.4"/>
+        </Grid.Effect>
+        <DockPanel LastChildFill="False">
+            <StackPanel x:Name="spMenu" DockPanel.Dock="Top" Background="#FF5FC6AC" Height="30">
+                <Menu Background="#FF5FC6AC"  Margin="0,5,0,0">
+                    <MenuItem  FontSize="14" >
+                        <MenuItem.Header>
+                            <TextBlock  Text="Options" Foreground="White"></TextBlock>
+                        </MenuItem.Header>
+                        <MenuItem Header="Notifications"  x:Name="menuNotification" Click="menuNotification_Click"></MenuItem>
+                        <!--<MenuItem Header="Settings"  x:Name="menuSettings" Click="menuSettings_Click"></MenuItem>-->
+                        <MenuItem Header="Favorites" x:Name="menuFav"   Click="menuFav_Click"></MenuItem>
+                        <MenuItem Header="Alert Sound" x:Name="menuAlertSound" Click="menuAlertSound_Click"></MenuItem>
+                        <MenuItem Header="Exit" x:Name="menuExit" Click="menuExit_Click"></MenuItem>
+                    </MenuItem>
+                </Menu>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top">
+                <Frame   x:Name="frame" Source="/Registration.xaml" NavigationUIVisibility="Hidden" FontSize="18" MaxHeight="750"
+                        HorizontalAlignment="Center" Margin="20,10,0,0" Navigated="frame_Navigated" Navigating="frame_Navigating" ></Frame>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Bottom"  Orientation="Horizontal"  Background="#329881" MinWidth="500" Height="45" VerticalAlignment="Top" >
+                <DockPanel  >
+                    <StackPanel HorizontalAlignment="Left" Margin="100,10,50,0" DockPanel.Dock="Left"  >
+                        <TextBlock Text="" Name="tbCurrentVersion" Foreground="White" FontSize="14"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" x:Name="spUpdates" Visibility="Collapsed"
+                            VerticalAlignment="Top"  Margin="800,0,0,0">
+                        <TextBlock Text="New update available" Name="tbLatestVersion" Foreground="White" FontSize="14" Margin="0,10,0,0"></TextBlock>
+                        
+                        <Image  MouseLeftButtonDown="btnUpdateVersion_Click" Source="Images/upgrade.png" 
+                                Width="167" Height="40" Margin="10,3,0,0">
+                            <Image.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <EventTrigger RoutedEvent="Image.Loaded">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation Storyboard.TargetProperty="(Image.Opacity)"
+							   BeginTime="0:0:0" Duration="0:0:0.5"
+							   From="1.0" To="0.0" RepeatBehavior="Forever" AutoReverse="True"/>
+
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                        <EventTrigger RoutedEvent="Image.MouseMove">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation Storyboard.TargetProperty="(Image.Opacity)"
+							   BeginTime="0:0:0" Duration="0:0:0.0"
+							   From="1.0" To="1.0" RepeatBehavior="Forever" AutoReverse="True"/>
+
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                        <EventTrigger RoutedEvent="Image.MouseLeave">
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation Storyboard.TargetProperty="(Image.Opacity)"
+							   BeginTime="0:0:0" Duration="0:0:0.5"
+							   From="1.0" To="0.0" RepeatBehavior="Forever" AutoReverse="True"/>
+
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                    </Style.Triggers>
+                                    
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                        
+                    </StackPanel>
+
+                </DockPanel>
+            </StackPanel>
+
+        </DockPanel>
+
+    </Grid>
+</Window>

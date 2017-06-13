@@ -1,0 +1,28 @@
+<table cellpadding="2" cellspacing="0" style="margin: 0 auto; width: 700px; overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif; color: #313131; font-size: 14px; text-align: left;">
+    <tr>
+        <td style="margin 0px auto; width: 0px; float: left;">
+            #HeaderLogo#
+        </td>
+        <td style="padding-right:80px;">
+            <h1 style="font-size: 28px; line-height: 25px; font-weight: bold; color: #fcb040;
+                text-align: center; margin: 0px; padding: 0px;">
+                #BusinessProfileName#</h1>
+        </td>
+        <td>
+        #AdditionalLogo#
+        </td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;
+        </td>
+        <td style="text-align: center; padding-right:80px;">
+            <span style="text-align: center;">#AgencyAddress# </span>
+            <h4 style="font-size: 16px; line-height: 28px; font-weight: bold; color: #383838;
+                text-align: center; margin: 0px; padding: 0px;">
+                #EmergencyNumber#</h4>
+        </td>
+        <td></td>
+    </tr> 
+</table>

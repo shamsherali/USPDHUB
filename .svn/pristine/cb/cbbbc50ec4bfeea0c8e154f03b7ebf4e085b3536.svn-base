@@ -1,0 +1,212 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="Admin1" Codebehind="Common.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Mobile App for Law Enforcement, Community Outreach, Police App & Agency App from USPDhub.com</title>
+    <meta name="author" content="USPDhub.com Team" />
+    <meta name="description" content="USPDhub is a software platform that provides a proven System and the Tools to Simplify Communication and Online Marketing." />
+    <meta name="keywords" content="online marketing system, online marketing, email marketing, internet marketing, local online marketing, online marketing companies, online marketing blog, online marketing tools" />    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="CSS/wowzzy_newcss.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/Calendar.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/searchtabs.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <link rel="icon" href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath") %>/images/wow.ico"
+        type="image/x-icon" />
+    <link rel="shortcut icon" href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath") %>/images/wow.ico"
+        type="image/x-icon" />
+    <form id="form1" runat="server">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="wrapper" align="center">
+        <tr>
+            <td class="page-top">
+                <!--Start Header -->
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="header">
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="NH-header">
+                                <tr>
+                                    <td>
+                                        <img src="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath")%>/images/NH-header-leftbg.gif"
+                                            width="23" height="79" />
+                                    </td>
+                                    <td>
+                                        <img src="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath")%>/images/NH-logo.gif"
+                                            width="311" height="79" />
+                                    </td>
+                                    <td class="NH-tl">
+                                        <img src="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath")%>/images/NH-tagline.gif"
+                                            width="445" height="79" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="login">
+                                <tr>
+                                    <td>
+                                        <% if (Request.Url.ToString().Contains("/ShowBusinessReviews.aspx") == false)
+                                           {
+                                        %>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td>
+                                                    <table border="0" align="right" cellpadding="0" cellspacing="0" class="tabs1">
+                                                        <tr>
+                                                            <td>
+                                                                <img src="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath")%>/images/ImagesNewHome/divider.gif"
+                                                                    width="2" height="22" />
+                                                            </td>
+                                                            <td class="tabtxt">
+                                                                <% 
+                                               if (Session["userid"] != null && Session["RoleID"] != null) // Check for session
+                                               {%>
+                                                                <%
+                                                   if (Session["RoleID"].ToString() == "2")  // check for business 
+                                                   {
+                                                       //Check if page is ordercancelled do not display all the tab links
+                                                       if (Request.Url.ToString().Contains("/OrderCancelled.aspx") == false)
+                                                       {
+                                                                %>
+                                                                <a href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("SRootPath")%>/Business/MyAccount/Default.aspx">
+                                                                    Dashboard</a>
+                                                                <%
+                                                       }
+                                                   }
+                                                   else if (Session["RoleID"].ToString() == "1")  // check for Consumer 
+                                                   { 
+                                                                %>
+                                                                <a href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("SRootPath")%>/Consumer/MyAccount/Default.aspx">
+                                                                    Dashboard</a>
+                                                                <% }
+                                                   else if (Session["RoleID"].ToString() == "5")  // check for Advertiser 
+                                                   { 
+                                                                %>
+                                                                <a href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("SRootPath")%>/WowzzyAds/MyAccount/Default.aspx">
+                                                                    Dashboard</a>
+                                                                <% }
+                                                   else if ((Session["RoleID"].ToString() == "3") || (Session["RoleID"].ToString() == "4")) // check for Admin 
+                                                   { 
+                                                                %>
+                                                                <a href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("SRootPath")%>/Admin/MyAccount/Default.aspx">
+                                                                    Dashboard</a>
+                                                                <% }
+                                                   else
+                                                   { 
+                                                                %>
+                                                                <%}
+                                               }
+                                               else
+                                               { %>
+                                                                <%} %>
+                                                            </td>
+                                                            <!--<td><img src="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath")%>/images/ImagesNewHome/divider.gif" width="2" height="22" /></td>
+                             <td class="tabtxt"><a href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath")%>/forum/">Forums</a></td>-->
+                                                            <%
+                                               if (Session["userid"] != null) // Check for session
+                                               {
+                                                   //Check if page is ordercancelled do not display all the tab links
+                                                   if (Request.Url.ToString().Contains("/OrderCancelled.aspx") == false)
+                                                   {
+                                                            %><td>
+                                                                <img src="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath")%>/images/ImagesNewHome/divider.gif"
+                                                                    width="2" height="22" />
+                                                            </td>
+                                                            <td class="tabtxt">
+                                                                <a href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("SRootPath")%>/Logout.aspx">
+                                                                    Logout</a>
+                                                            </td>
+                                                            <td>
+                                                                <img src="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath")%>/images/ImagesNewHome/divider.gif"
+                                                                    width="2" height="22" />
+                                                            </td>
+                                                            <% }
+                                               }  %>
+                                                            <!-- Issue #818
+					          <td class="tabtxt">
+                                   <a href="javascript:;" onclick="MM_openBrWindow('<%=System.Configuration.ConfigurationManager.AppSettings.Get("SRootPath")%>/Help/helpguide.html','HelpGuide','scrollbars=yes,resizable=yes,width=1172,height=768')">
+                                          Help</a></td>-->
+                                                            <%--<td class="tabtxt"><a href="javascript:;" onClick="MM_openBrWindow('<%=System.Configuration.ConfigurationManager.AppSettings.Get("SRootPath")%>/Help/helpguide.html','HelpGuide','scrollbars=yes,resizable=yes,width=1172,height=768')">Help</a></td>--%>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <%}
+                                           else
+                                           { %>
+                                        &nbsp;
+                                        <%} %>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End Header -->
+                    <!-- Start Body-->
+                    <tr>
+                        <td class="body_bg">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="page-width">
+                                <tr>
+                                    <td style="width: 82%; vertical-align: top;">
+                                        <div>
+                                            <asp:ContentPlaceHolder ID="cphUser" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                    </td>
+                                    <td class="valign-top" width="18%">
+                                        <asp:ContentPlaceHolder ID="wowzzyAds" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End Body -->
+                    <!--Start Footer-->
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>
+                                        <img src="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath")%>/images/ImagesNewHome/footer_bg1.gif"
+                                            width="915" height="42" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="footer">
+                                <tr>
+                                    <td align="center">
+                                        <a href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("OuterRootURL")%>/aboutus.html"
+                                            target="_blank">About Logictree IT Solutions</a> | <a href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("OuterRootURL")%>/sf/contactus.aspx"
+                                                target="_blank">Contact Logictree IT Solutions</a> | <a href="javascript:openWin('<%=System.Configuration.ConfigurationManager.AppSettings.Get("SRootPath")%>/Feedback.aspx')">
+                                                    Feedback</a> | <a href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("OuterRootURL")%>/terms.html"
+                                                        target="_blank">Terms of Service</a>| <%--<a href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("OuterRootURL")%>/Privacy.html"
+                                                            target="_blank">Privacy Policy</a> |--%> <a href="<%=System.Configuration.ConfigurationManager.AppSettings.Get("OuterRootURL")%>/Terms.html" target="_blank">Terms of Service</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="footer1">
+                                <tr>
+                                    <td style="line-height: 20px;" align="center">
+                                        <%--USPDhub<sup style="font-size: 14px;">&reg;</sup> is a trademark of Logictree
+                                        IT Solutions, Inc, registered in the U.S, (R) 2008-2010 Logictree IT Solutions,
+                                        Inc - Patent Pending<br />--%>
+                                        <%--  Disclaimer: This site is optimized for 1024x768 resolution and works best with Internet
+                                        Explorer 6.0 and up. Please upgrade to IE 8: --%>
+                                        <%=System.Configuration.ConfigurationManager.AppSettings.Get("Disclaimer")%>
+                                        <a href="http://www.microsoft.com/windows/internet-explorer/?ocid=ie8_b_771df619-de21-451f-80ca-2e96a82cef76"
+                                            target="_blank">Download Now</a> !
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!--End Footer-->
+                </table>
+                </td>
+                </tr>
+                </table>
+
+    </form>
+</body>
+</html>

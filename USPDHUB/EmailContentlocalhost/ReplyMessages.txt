@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<link href="http://www.uspdhub.com/css/wowzzy_general.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<table width="100%" border="0" align="center" style="padding:10px;">
+			<tr>
+				<td>
+					#ProfileLogo#
+				</td>
+			</tr>			
+			<tr>
+				<td>
+					<br/>
+					<br/>
+					<table width="470px" border="0">
+						<tr>
+							<td nowrap>
+								<HR size="1" style="color: #fff; background-color: #fff; border: 1px dotted #025586; border-style: none none dotted;">
+								<br/>
+								<strong style="color:#B3B3B3;">This is an Automated Email from #AppName#. Please do not reply to it.</strong>
+								<br>
+								<HR size="1" style="color: #fff; background-color: #fff; border: 1px dotted #025586; border-style: none none dotted;">								
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					 
+					<b>Subject</b>: #Subject#<br/><br/> 
+					<b>Message</b>: #Message#<br/><br/>  
+					<b>Replied By</b>: #RepliedBy#<br/><br/> 
+					<b>Replied Date</b>: #RepliedDate#<br/><br/>
+					#CatName#				
+					<b>Reference ID</b>: #MessageID#<br/><br/>
+					<b>Tab Name</b>: #TabName#<br/><br/>
+					#ButtonName#				
+					<b>Notes</b>: #Notes#<br/><br/>
+					#PreviousNotes#<br/><br/> 
+					
+					<br/>
+					<br/>
+					Please do not send a reply to this email. This address is not monitored for response.
+					
+					<br/>
+					<br/>
+				</td>
+			</tr>
+			<tr style="color:#B3B3B3;">
+				<td>
+					<strong style="color: #0071B3"></strong>
+					<br/><br/> 
+				</td>
+			</tr>
+			<br/><br/>
+		</table>
+	</body>
+</html>
+
+
+

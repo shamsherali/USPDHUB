@@ -1,0 +1,118 @@
+﻿.headermenu li ul
+{
+    position: absolute;
+    display: none;
+    padding:0px;
+    width: 200px;
+    z-index: 5;
+    top:92%;
+    margin-left:-30px;
+}
+.headermenu li:hover ul
+{
+    
+    display: block;
+    background-color: #DCDCDC;
+    border-bottom: solid 1px #D0D0D0;
+    border-right: solid 1px #D0D0D0;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 195px;
+}
+
+/* we apply different background color to 2nd level menu items*/
+.headermenu li ul li
+{
+    position: relative;
+    list-style: none;
+    list-style-type: none;
+    text-align:left;
+    padding:10px 10px !important;
+    border-bottom: 1px solid #f0f0f0;
+}
+.headermenu li ul li:hover
+{
+    background-color:#f1f1f1;
+}
+.headermenu li ul li a::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: #3cbc9f;
+    display: block;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 7px;
+}
+.headermenu li ul li:last-child
+{
+    padding:10px !important;
+}
+
+.headermenu li ul li a:before
+{
+    list-style: none;
+}
+.AspNet-Menu-Leaf
+{
+    padding-top: 6px;
+    height: 23px;
+    border-bottom: solid 1px #D0D0D0;
+    background-color: #DCDCDC;
+    white-space: nowrap;
+}
+/* We change the background color for the level 2 submenu when hovering the menu */
+.headermenu li:hover ul li:hover
+{
+    color: #8eb5d0;
+    text-decoration: none;
+}
+
+/* We style the color of level 2 links */
+.headermenu li ul li a
+{
+    color: #454444;
+    display: inline-block;
+    padding: 0px 0px 0px 0px;
+}
+
+/**** THIRD LEVEL MENU ****/
+/* We need to hide the 3rd menu, when hovering the first level menu */
+.headermenu li:hover ul li ul
+{
+    position: absolute;
+    display: none;
+}
+
+/* We show the third level menu only when they hover the second level menu parent */
+.headermenu li:hover ul li:hover ul
+{
+    display: block;
+    left: 150px;
+    top: 0;
+}
+
+/* We change the background color for the level 3 submenu*/
+.headermenu li:hover ul li:hover ul li
+{
+    background: #86d3fa;
+}
+
+/* We change the background color for the level 3 submenu when hovering the menu */
+.headermenu li:hover ul li:hover ul li:hover
+{
+    background: #358ebc;
+}
+
+/* We change the level 3 link color */
+.headermenu li:hover ul li:hover ul li a
+{
+    color: #ffffff;
+}
+
+/* Clear float */
+.clear
+{
+    clear: both;
+}

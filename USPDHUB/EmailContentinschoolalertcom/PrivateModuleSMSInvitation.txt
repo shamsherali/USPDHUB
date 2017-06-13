@@ -1,0 +1,3 @@
+﻿#ProfileName# is inviting you to view a private Call Directory on their app.
+Step 1: Install the inSchool Alert app #InstallationLink#
+Step 2: Register the Call Directory #SetupLink#

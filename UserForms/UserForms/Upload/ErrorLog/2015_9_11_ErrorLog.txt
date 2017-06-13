@@ -1,0 +1,520 @@
+================================09/11/2015 10:44:13 AM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Could not find a part of the path 'E:\USPDHub\USPDHUB\UserForms\UserForms\BulletinPreview\LogoHeaderText.txt'.
+ 
+STACKTRACE :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at System.IO.File.OpenText(String path)
+   at UserFormsBLL.CommonBLL.GetLogoHeaderText(Int32 pUserID, Int32 pProfileID, String pRootPath) in E:\USPDHub\USPDHUB\UserForms\UserFormsBLL\CommonBLL.cs:line 535
+   at UserForms.MostWanted.LoadFormDefaultData() in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 112
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 84
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 10:51:31 AM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 574
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 12:09:09 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 62
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 12:12:38 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 62
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 12:19:15 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Could not find a part of the path 'E:\USPDHub\USPDHUB\UserForms\UserForms\BulletinPreview\LogoHeaderText.txt'.
+ 
+STACKTRACE :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at System.IO.File.OpenText(String path)
+   at UserFormsBLL.CommonBLL.GetLogoHeaderText(Int32 pUserID, Int32 pProfileID, String pRootPath) in E:\USPDHub\USPDHUB\UserForms\UserFormsBLL\CommonBLL.cs:line 535
+   at UserForms.MostWanted.LoadFormDefaultData() in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 112
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 84
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 12:54:52 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 12:55:24 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 63
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 02:28:15 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 63
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 02:29:11 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 63
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 03:08:23 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 03:22:07 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 576
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 03:22:35 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 576
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 03:23:16 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnSave_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnSave_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 298
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 03:26:40 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnSave_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnSave_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 298
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 03:40:42 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnSave_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnSave_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 298
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 04:23:11 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnSave_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnSave_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 298
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 04:32:40 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnSave_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnSave_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 298
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 04:40:00 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnSave_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnSave_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 298
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 04:48:24 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnSave_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnSave_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 299
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 04:50:20 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnSave_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnSave_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 299
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 05:41:00 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 577
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 06:08:18 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnSave_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnSave_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 299
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 06:09:53 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnSave_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnSave_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 299
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/11/2015 06:13:06 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnSave_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnSave_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 299
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 

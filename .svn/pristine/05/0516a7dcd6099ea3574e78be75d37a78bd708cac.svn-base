@@ -1,0 +1,146 @@
+﻿<div style="background: #fffdfb; overflow: hidden; width: 300px; margin: 0px; padding: 15px 0px 40px 0px;">
+    <div style="font-size: 26px; line-height: 28px; font-weight: normal; color: #f15b29;
+        text-align: center; padding: 0px 0px 10px 0px; border-bottom: 1px dashed #d1d1d1;">
+        Stolen Vehicle</div>
+    <div align="center" style="margin: 0px auto; overflow: hidden;">
+        <div align="center" style="margin: 20px auto; border: 1px solid #dddddd; padding: 0px;">
+            #VehicleImage#</div>
+    </div>
+	<div style="overflow: hidden; float: left;">
+        <div style="float: left; text-align: left; width: 155px; padding: 3px 0px 0px 0px;
+            margin: 2px 5px 0px 10px;">
+            <label>
+                Bulletin Date :</label>
+        </div>
+        <div style="color: #353535; float: left; padding: 3px 0px 0px 0px; margin: 2px 0px;
+            width: auto;">
+            <label>
+                #BulletinDate#</label>
+        </div>
+    </div>
+    <div style="overflow: hidden; float: left;">
+        <div style="float: left; text-align: left; width: 155px; padding: 3px 0px 0px 0px;
+            margin: 2px 5px 0px 10px;">
+            <label>
+                Make :</label>
+        </div>
+        <div style="color: #353535; float: left; padding: 3px 0px 0px 0px; margin: 2px 0px;
+            width: auto;">
+            <label>
+                #Make#</label>
+        </div>
+    </div>
+    <div style="overflow: hidden; float: left;">
+        <div style="float: left; text-align: left; width: 155px; padding: 3px 0px 0px 0px;
+            margin: 2px 5px 0px 10px;">
+            <label>
+                Model :</label>
+        </div>
+        <div style="color: #353535; float: left; padding: 3px 0px 0px 0px; margin: 2px 0px;
+            width: auto;">
+            <label>
+                #Model#</label>
+        </div>
+    </div>
+    <div style="overflow: hidden; float: left;">
+        <div style="float: left; text-align: left; width: 155px; padding: 3px 0px 0px 0px;
+            margin: 2px 5px 0px 10px;">
+            <label>
+               Body Style :</label>
+        </div>
+        <div style="color: #353535; float: left; padding: 3px 0px 0px 0px; margin: 2px 0px;
+            width: auto;">
+            <label>
+                #Style#</label>
+        </div>
+    </div>
+    <div style="overflow: hidden; float: left;">
+        <div style="float: left; text-align: left; width: 155px; padding: 3px 0px 0px 0px;
+            margin: 2px 5px 0px 10px;">
+            <label>
+                Year :</label>
+        </div>
+        <div style="color: #353535; float: left; padding: 3px 0px 0px 0px; margin: 2px 0px;
+            width: auto;">
+            <label>
+                #Year#</label>
+        </div>
+    </div>
+    <div style="overflow: hidden; float: left;">
+        <div style="float: left; text-align: left; width: 155px; padding: 3px 0px 0px 0px;
+            margin: 2px 5px 0px 10px;">
+            <label>
+                Color :</label>
+        </div>
+        <div style="color: #353535; float: left; padding: 3px 0px 0px 0px; margin: 2px 0px;
+            width: auto;">
+            <label>
+                #Color#</label>
+        </div>
+    </div>
+    <div style="overflow: hidden; float: left;">
+        <div style="float: left; text-align: left; width: 155px; padding: 3px 0px 0px 0px;
+            margin: 2px 5px 0px 10px;">
+            <label>
+                State :</label>
+        </div>
+        <div style="color: #353535; float: left; padding: 3px 0px 0px 0px; margin: 2px 0px;
+            width: auto;">
+            <label>
+                #State#</label>
+        </div>
+    </div>
+    <div style="overflow: hidden; float: left;">
+        <div style="float: left; text-align: left; width: 155px; padding: 3px 0px 0px 0px;
+            margin: 2px 5px 0px 10px;">
+            <label>
+                License Number :</label>
+        </div>
+        <div style="color: #353535; float: left; padding: 3px 0px 0px 0px; margin: 2px 0px;
+            width: auto;">
+            <label>
+                #LcsPlate#</label>
+        </div>
+    </div>
+    <div style="overflow: hidden; float: left;">
+        <div style="float: left; text-align: left; width: 155px; padding: 3px 0px 0px 0px;
+            margin: 2px 5px 0px 10px;">
+            <label>
+                Distinguishing Marks :</label>
+        </div>
+        <div style="color: #353535; float: left; padding: 3px 0px 0px 0px; margin: 2px 0px;
+            width: auto;">
+            <label style="float: left; text-align: left; margin-left:25px;">
+                #Marks#
+            </label>
+        </div>
+    </div>
+    <div style="overflow: hidden; float: left;">
+        <div style="float: left; text-align: left; width: 155px; padding: 3px 0px 0px 0px;
+            margin: 2px 5px 0px 10px;">
+            <label>
+                Date Last Seen :</label>
+        </div>
+        <div style="color: #353535; float: left; padding: 3px 0px 0px 0px; margin: 2px 0px;
+            width: auto;">
+            <label>
+                #LSDate#</label>
+        </div>
+    </div>
+    <div style="overflow: hidden; float: left;">
+        <div style="float: left; text-align: left; width: 155px; padding: 3px 0px 0px 0px;
+            margin: 2px 5px 0px 10px;">
+            <label>
+                Remarks :</label>
+        </div>
+        <div style="color: #353535; float: left; padding: 3px 0px 0px 0px; margin: 2px 0px;
+            width: auto;">
+            <div style="color: #353535; float: left; padding: 3px 0px 0px 0px; margin: 2px 0px;
+            width: auto;">
+                <label style="float: left; text-align: left; margin-left:25px;">
+                    #Remarks#
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+﻿#ProfileName# is inviting you to view a Private QR Connect on their app. 
+Click the link to complete the registration process.
+ 
+#SetupLink#

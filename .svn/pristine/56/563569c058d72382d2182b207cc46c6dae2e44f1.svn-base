@@ -1,0 +1,43 @@
+﻿<table width='793px' cellpadding='0' cellspacing='2' style='font-family: Arial;'>
+    <tr style='page-break-inside: avoid;'>
+        <td>
+            <span style='font-size: 19px; font-weight: bold; margin: 0; padding: 0;'><span style='color: Gray;
+                margin: 0; padding: 0;'>#QUESTION_NO#.</span> #QUESTION_NAME#</span>
+        </td>
+    </tr>
+    <tr style='height: 4px;'>
+        <td style="padding: 0; margin: 0;">
+        </td>
+    </tr>
+    <tr style='page-break-inside: avoid;'>
+        <td>
+            <span style='color: Gray; font-weight: bold; font-size: 12px; padding: 0; margin: 0;'>
+                #ANSWER_COUNT#</span>
+        </td>
+    </tr>
+    <tr style='page-break-inside: avoid;'>
+        <td>
+            #REPORT_IMAGE#
+        </td>
+    </tr>
+    <tr style='page-break-inside: avoid;'>
+        <td>
+            &nbsp;
+        </td>
+    </tr>
+    <tr style='page-break-inside: avoid;'>
+        <td>
+            #ANSWERS#
+        </td>
+    </tr>
+    <tr style='page-break-inside: avoid;'>
+        <td style="height: 30px;">
+            &nbsp;
+        </td>
+    </tr>
+    <tr style='page-break-inside: avoid;'>
+        <td style="border-top: 0px solid black; height: 30px;">
+            &nbsp;
+        </td>
+    </tr>
+</table>

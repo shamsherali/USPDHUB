@@ -1,0 +1,20 @@
+
+<b>Call from #TabName# - #ItemTitle# Has Been Placed  Using 
+The #ButtonTitle#  Button To #DailNumber# </b>
+
+Calling User:
+	Name: #Name#
+	Phone: #Phone#
+	Email ID: #EmailID#
+
+	Time: #Time#
+	Location: #Location#
+	Description: #Description#
+
+
+	
+Please do not send a reply to this email. If you have questions or comments, please direct your questions to helpdesk@uspdhub.com or call customer care at 1-866-676-7335(8AM - 5PM PST) Toll Free.
+	
+
+
+

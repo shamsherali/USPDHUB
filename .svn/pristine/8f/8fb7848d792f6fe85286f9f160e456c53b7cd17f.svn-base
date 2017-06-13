@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>App</title>
+<link href="../../css/BGImageStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="phone-bg">
+<div class="container">
+  <div class="toolbar"><img src="../../images/MobileDevice/toolbar.jpg" alt=""></div>
+  <header>
+	<div class="profilesetting##DomainName##">
+		<div class="navgird"><img src="../../images/MobileDevice/nav-grid.png"></div>
+		<div class="appname"><span>##ProfileName##</span></div>
+		<div class="settings"><img src="../../images/MobileDevice/settings.png"></div>
+	<div>
+    <div class="address-section" id="divMobileHeader">
+      ##LogoAddress##
+    </div>
+  </header>
+  <footer>
+	<div class="mainFooter clr_appGeneral_footer_bg bg-image-section" style="background-color: #3b85b9; #BackgroundBGImage#;" id="divMobileFooter">
+		<div class="bottom-tab" id="divMobileNav">
+			<table  cellpadding="0" cellspacing="0" border="0" style="bottom:0px;">
+				<tr>
+					<td>
+						<a href="javascript:void(0);" onclick="toggle_visibility('tabNavigation');"><img src="../../images/MobileDevice/footer##DomainName##.png"></a>
+					</td>
+				</tr>
+			</table>
+			<div id="tabNavigation">
+				##BindAppIcons##
+				<table  cellpadding="0" cellspacing="0" border="0"  style="bottom:0px;" width="100%">
+					<tr>
+						<td align="center">
+							<img src="../../images/MobileDevice/Elips_Dots##DomainName##.png">
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="bannerNavigation"> 
+				##BindBanners##
+			</div>
+		</div>
+	</div>
+  </footer>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+
+<CrimeHighlights>
+	<ColumnNames FromDate='Report From Date' TotalIncidents='Total Incidents' OfficerInitiatedActivity='Officer Initiated Activity'
+	CallsforService='Calls for Service' ArrestsMisdemeanor='Arrests - Misdemeanor' ArrestsFelony='Arrests - Felony'
+	CasesWritten='Cases Written' TrafficStops='Traffic Stops'  Citations='Citations'  DUIArrests='DUI Arrests'  Accidents='Accidents'  AccidentCriminal='Accident - Criminal' ToDate='Report To Date'	
+		/>
+</CrimeHighlights>

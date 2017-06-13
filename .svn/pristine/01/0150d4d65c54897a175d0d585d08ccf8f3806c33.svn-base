@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+      <section name="ISANotifications.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <userSettings>
+    <ISANotifications.Properties.Settings>
+      <setting name="IsRegisteredUser" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="RegistrationID" serializeAs="String">
+        <value>0</value>
+      </setting>
+      <setting name="PushNotificationCount" serializeAs="String">
+        <value>5</value>
+      </setting>
+      <setting name="CallNotificationCount" serializeAs="String">
+        <value>5</value>
+      </setting>
+      <setting name="DurationTime" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="LastSynDate" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="PoolDate" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="IsTrayIcon" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="IsFirstLaunch" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="ManagePoolDate" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="IsAppExit" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="LastSyncDate" serializeAs="String">
+        <value />
+      </setting>
+    </ISANotifications.Properties.Settings>
+  </userSettings>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding> 
+        <binding name="ClientServiceSoap" maxReceivedMessageSize="2147483647"
+           maxBufferSize="2147483647"
+           maxBufferPoolSize="2147483647">
+          <readerQuotas maxDepth="32"
+           maxArrayLength="2147483647"
+           maxStringContentLength="2147483647"/>
+        </binding> 
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://www.myyouthhub.com/inschoolalertdesktopservice/m_service/ClientService.asmx"
+        binding="basicHttpBinding" bindingConfiguration="ClientServiceSoap"
+        contract="ISAService.ClientServiceSoap" name="ClientServiceSoap" />
+    </client>
+  </system.serviceModel>
+  <appSettings>
+    <add key="Version" value="1.0"/>
+    <add key="VersionUrl" value="http://staging.uspdhub.com/Upload/VersionCheck/CheckNewVersion.xml"/>
+    <add key="CurrentVersion" value="1.0.0"/>
+  </appSettings>
+</configuration>

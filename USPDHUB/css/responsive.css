@@ -1,0 +1,129 @@
+
+@media(max-width:990px) {
+}
+
+@media(max-width:768px) {
+}
+
+@media(max-width:767px) {
+.container {
+	width: 100%;
+}
+.logo {
+	float: left;
+	margin-left: 0;
+	text-align: left;
+}
+.reginal-events {
+	float: right;
+	margin: 28px 0px 0 0;
+}
+.strip4 {
+	width: 20%;
+}
+.heading-section {
+	width: 100%;
+}
+.left-cont-section {
+	width: 100%;
+}
+.venue {
+	width: 100%;
+}
+.venue-image {
+	width: 100%;
+	float: left;
+}
+.devide-section {
+	display: none;
+}
+.form-section {
+	float: none;
+	margin-left: 0px;
+	width: 100%;
+}
+.container {
+	margin: 0px auto 0;
+}
+#contact-area input, #contact-area textarea {
+	width: 100%;
+}
+label {
+	padding-bottom: 5px;
+	width: auto;
+}
+label span {
+	float: right;
+	margin-top: 0px;
+	margin-left: 5px;
+}
+}
+
+@media (max-width: 766px) {
+.strip4 {
+	width: 22.8%;
+}
+}
+
+@media(max-width:640px) {
+.container {
+	width: 100%;
+}
+.logo {
+	float: left;
+	margin-left: 0;
+	text-align: left;
+}
+.reginal-events {
+	float: right;
+	margin: 28px 0px 0 0;
+}
+.strip4 {
+	width: 20%;
+}
+.heading-section {
+	width: 100%;
+}
+.left-cont-section {
+	width: 100%;
+}
+.venue {
+	width: 100%;
+}
+.venue-image {
+	width: 100%;
+	float: left;
+}
+.devide-section {
+	display: none;
+}
+.form-section {
+	float: none;
+	margin-left: 0px;
+	width: 100%;
+}
+.container {
+	margin: 0px auto 0;
+}
+#contact-area input, #contact-area textarea {
+	width: 100%;
+}
+label {
+	padding-bottom: 5px;
+	width: auto;
+}
+label span {
+	float: right;
+	margin-top: 0px;
+	margin-left: 5px;
+}
+}
+
+@media(max-width:640px)and (orientation: landscape) {
+.strip4 {
+	width: 22.6%;
+}
+.strip1 {
+	width: 39%
+}
+}

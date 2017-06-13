@@ -1,0 +1,77 @@
+﻿<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <connectionStrings>
+    <add name="WOWZYDevServer" connectionString="Data Source=MALLI\SQLEXPRESS;Initial Catalog=USPDHub;User Id=sa;Password=123456"/>
+  </connectionStrings>
+  <appSettings>
+    <add key="SendgridSMTPServer_Port" value="587"/>
+    <add key="SendgridSMTPServer_Username" value="azure_2c7c5ead564a444cd4a2bddc03607c1e@azure.com"/>
+  </appSettings>
+  <system.web>
+    <sessionState timeout="5400"/>
+    <httpRuntime executionTimeout="3600" maxRequestLength="2097151" requestValidationMode="2.0"/>
+    <authentication mode="None"/>
+    <compilation debug="true" targetFramework="4.0">
+      <assemblies>
+        <add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+      </assemblies>
+    </compilation>
+    <pages controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID">
+      <controls>
+        <add tagPrefix="asp" namespace="System.Web.UI.DataVisualization.Charting" assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      </controls>
+    </pages>
+    <customErrors mode="Off" defaultRedirect="wowzzyGenericErrorPage.htm">
+      <error statusCode="403" redirect="wowzzyNoAccess.htm"/>
+      <error statusCode="404" redirect="wowzzyFileNotFound.htm"/>
+    </customErrors>
+  </system.web>
+  <system.serviceModel/>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true">
+      <remove name="ApplicationInsightsWebTracking"/>
+      <!--<add name="ApplicationInsightsWebTracking" type="Microsoft.ApplicationInsights.Extensibility.Web.ApplicationInsightsHttpModule, Microsoft.ApplicationInsights.Extensibility.Web" preCondition="managedHandler" />-->
+    </modules>
+    <defaultDocument>
+      <files>
+        <add value="Default.aspx"/>
+      </files>
+    </defaultDocument>
+    <staticContent>
+      <mimeMap fileExtension=".aspx" mimeType="application/aspx"/>
+    </staticContent>
+    <validation validateIntegratedModeConfiguration="false"/>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Runtime" publicKeyToken="b03f5f7f11d50a3a" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-2.6.8.0" newVersion="2.6.8.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Threading.Tasks" publicKeyToken="b03f5f7f11d50a3a" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-2.6.8.0" newVersion="2.6.8.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Net.Http.Primitives" publicKeyToken="b03f5f7f11d50a3a" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-2.2.29.0" newVersion="2.2.29.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Net.Http" publicKeyToken="b03f5f7f11d50a3a" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-2.2.29.0" newVersion="2.2.29.0"/>
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+
+<configuration>
+  <connectionStrings>
+    <add name="WOWZYDevServer" connectionString="Data Source=MALLI\SQLEXPRESS;Initial Catalog=USPDHub;User Id=sa;Password=123456" />
+    <!--<add name="WOWZYDevServer" connectionString="Data Source=SERVER\SQLEXPRESS;Initial Catalog=USPDHUB;User Id=uspdhub;Password=uspdhub" />-->
+  </connectionStrings>
+  <system.web>
+    <compilation debug="true" targetFramework="4.0" />
+    <httpRuntime executionTimeout="3600" maxRequestLength="2097151" requestValidationMode="2.0" />
+  </system.web>
+  <appSettings>
+
+    <add key="RootPath" value="http://localhost:54916"/>
+    <add key="PID" value="10001"/>
+    <add key="UID" value="125"/>
+    <add key="TemplateID" value="32"/>
+    <add key="CustomModuleTemplateID" value="32"/>
+    <add key="USPDhubFolderPath" value="E:\USPDhub\USPDhub\USPDHUB\Upload"/>
+    <add key="imgkeyval" value="A0doRPHevX3fWJeDUKPrRv82JhAZEo7yT6GudUHTDkiqVHRO8jTPvEE11UIKFyer" />
+    <add key="ImageDraw40LicenseOwner" value="Darek Figueroa-Developer License" />
+    <add key="ImageDraw40LicenseKey" value="UKRK9CEMPEZMHHLNKMRQBKQ7Y3KMHM4RP47NQ78WQPXNCCNX22CQ" />
+    <add key="CorruptedMSG" value="Conversion failed. Please choose another file and try again."/>
+    <add key="NoContentMSG" value="There is no content available in uploaded file."/>
+    <add key="spire_doc_Licensekey" value="6F047FCE9A00E2948C09D400E526487F" />
+  </appSettings>
+
+</configuration>

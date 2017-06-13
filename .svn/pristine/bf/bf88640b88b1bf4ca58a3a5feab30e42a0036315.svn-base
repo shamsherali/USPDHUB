@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+   <title>inSchool ALERT</title>
+    <link href="../../css/ishglobal.css" rel="stylesheet" type="text/css" media="all" />
+      <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="icon" href="/images/ishfav.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/images/ishfav.ico" type="image/x-icon" />
+  
+</head>
+<bod>
+    <div id="mainwrapper">
+        <div id="container">
+            <div id="bannersecondary">
+                <div id="bannerleft">
+                    <div class="logo">
+                        <img src="images/inschoolalert.png" alt="InSchoolAlert"></div>
+                </div>
+                <!--bannerleft-->
+                <div id="rightcol">
+                    <div id="navigation">
+                        <div align="right">
+                            <p>
+                                <a href="Default.aspx">Home</a> | <a href="HowToWorks.aspx">How It Works</a> | <a href="features.htm">
+                                    Pricing</a> | <a href="javascript:void(0);" class="active">About Us</a> | 
+                                   <button type="button" class="btn btn-green">Login</button>
+                               
+                                 
+                            </p>
+                        </div>
+                    </div>
+                    <!--navigation-->
+                </div>
+                <!--bannerright-->
+            </div>
+            <!--bannersecondary-->
+            <div id="content">
+                <img src="../../images/about.jpg">
+                <div id="aboutcontent">
+                    <h1>
+                        Mission</h1>
+                    <p>
+                        Our Mission is to reach out and give back to the community and our youth while enhancing
+                        children&rsquo;s safety.</p>
+                    <br />
+                    <h1>
+                        About Us</h1>
+                    <p>
+                        LogicTree IT Solutions, Inc. is a U.S. based information technology company providing
+                        solutions for enterprise, cloud and mobile applications. LogicTree IT is structured
+                        to design and develop software in a planned and systematized process for both Web
+                        and Mobile Platforms. With 17 years of experience in the IT industry and over 7
+                        years of mobility expertise, LogicTree IT's proficiency spans the entire range of
+                        IT development from conception to final implementation.<br />
+                        <br />
+                        LogicTree IT is making this program available at a reduced price for any youth oriented
+                        organizations. The company has designed a sponsorship program so that businesses
+                        and community associations can easily make the inSchoolHub available for local schools
+                        and youth groups.</p>
+                </div>
+                <!--column-->
+                <div id="abtright">
+                    <p>
+                        <img src="../../images/logictree-logo.png" width="271" height="78"></p>
+                </div>
+                <!--columnright-->
+            </div>
+            <!--container-->
+        </div>
+        <footer>
+  <div class="container">
+    <div class="footer-text">LogicTree IT Solutions Inc.  |   6060 Sunrise Vista Drive, Suite 3500  |  Citrus Heights, CA 95610</div>
+    <div class="footer-text margintop10"><a href="mailto:info@logictreeit.com">Info@LogicTreeIT.com</a> |  916.676.7335  |  800.281.0263</div>
+  </div>
+</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+        <!--footer-->
+    </div>
+    <!--mainwrapper-->
+</body>
+</html>

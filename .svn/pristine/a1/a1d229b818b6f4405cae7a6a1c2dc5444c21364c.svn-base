@@ -1,0 +1,155 @@
+﻿<Page x:Class="ISANotifications.Favorites"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISANotifications"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="600"
+      Title="Favorites" FontSize="14">
+    <Page.Resources>
+        <Style x:Key="CellStyle" TargetType="{x:Type DataGridCell}">
+            <Setter Property="Foreground" Value="Black" />
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{x:Null}" />
+                    <Setter Property="BorderBrush" Value="{x:Null}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <StackPanel>
+        <StackPanel Orientation="Horizontal" >
+            <TextBlock Text="Favorites - Desktop Notifications" Style="{StaticResource pageTitleStyle}"></TextBlock>
+            
+        </StackPanel>
+            <StackPanel>
+        <Border Style="{StaticResource pageBorderStyle}" >
+            <StackPanel>
+                <GroupBox Padding="5" Header="Favorites - Desktop Notifications">
+                    <StackPanel>
+                    <DataGrid AutoGenerateColumns="False"  x:Name="grdFavorites" CellStyle="{StaticResource CellStyle}"
+                              ItemsSource="{Binding}" Height="270"  CanUserAddRows="False" >
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}"  Width="400" Header="School Name" CanUserResize="False">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Margin="10"  Orientation="Horizontal">
+                                            <StackPanel x:Name="sp" Loaded="sp_Loaded">
+                                                <Image Tag="{Binding Profile_logo_path}" Width="50" Height="50"
+                                                       x:Name="imgLogo" Loaded="imgLogo_Loaded"></Image>
+                                                <TextBlock Visibility="Collapsed" x:Name="tbPID" Text="{Binding Profile_ID}" TextWrapping="Wrap"/>
+                                            </StackPanel>
+                                            <StackPanel Margin="10,0,0,0" >
+                                                <TextBlock FontWeight="Bold" Text="{Binding Profile_name}" TextWrapping="Wrap"/>
+                                                <TextBlock Text="{Binding Profile_City}" TextWrapping="Wrap"/>
+                                                <TextBlock Text="{Binding Profile_Zipcode}" TextWrapping="Wrap"/>
+                                            </StackPanel>
+
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}"  Width="100"  Header="Notifications" CanUserResize="False">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    
+                                    <DataTemplate>
+
+                                        <Button Click="ImageButton_Click" Height="30"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                                            <Image Width="50">
+                                                <Image.Style>
+                                                    <Style TargetType="{x:Type Image}">
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding IsNotificationsOn}" Value="False">
+                                                                <Setter Property="Source" Value="Images/imgContactOffBtn.png"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding IsNotificationsOn}" Value="True">
+                                                                <Setter Property="Source" Value="Images/imgContactOnBtn.png"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Image.Style>
+                                            </Image>
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}"  Width="100"  Header="Delete" CanUserResize="False">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="btnDelete" Click="btnDelete_Click" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Width="30" >
+                                            <Image Width="30" Source="Images/delete.png"/>
+                                            
+                                        </Button>
+                                       
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Name="lblemptyRows" Foreground="Green" FontSize="16" Content="No Favorite(s) available."
+                                              Visibility="Collapsed" ></Label>
+                    </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Search" Margin="0,10,0,0" Padding="10">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock    Name="textBlockSchool" Text="Enter School Name / Zip Code: "  />
+                            <TextBox x:Name="txtSchool" VerticalAlignment="Bottom"  Width="300" TextWrapping="NoWrap" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <!--<Button Content="Search" HorizontalAlignment="Left"  x:Name="btnSearch" Style="{StaticResource btnStyle}" Margin="10,0,0,0" Visibility="Hidden" />-->
+                            <ListBox  x:Name="lbSchoolList" Background="LightYellow"  Visibility="Collapsed" SelectionChanged="lbSchoolList_SelectionChanged" Margin="193,0,0,0"
+                      VerticalAlignment="Bottom" Width="300" Grid.Row="1" HorizontalAlignment="Center">
+                                 
+                            </ListBox>
+                        </StackPanel>
+                       
+                        <StackPanel Margin="0,5,0,0">
+
+                            <DataGrid AutoGenerateColumns="False" 
+                                      x:Name="grdAddSchools" ItemsSource="{Binding}" Height="240" Width="600" CanUserAddRows="False">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}"  Width="*" Header="School Name" CanUserResize="False">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="10"  Orientation="Horizontal">
+                                                    <StackPanel x:Name="sp" Loaded="sp_Loaded">
+                                                        <Image Tag="{Binding Profile_logo_path}" Width="50" Height="50" x:Name="imgLogo" Loaded="imgLogo_Loaded"></Image>
+                                                        <TextBlock Visibility="Collapsed" x:Name="tbPID" Text="{Binding Profile_ID}" TextWrapping="Wrap"/>
+                                                    </StackPanel>
+                                                    <StackPanel Margin="10,0,0,0" >
+                                                        <TextBlock FontWeight="Bold" Text="{Binding Profile_name}" TextWrapping="Wrap"/>
+                                                        <TextBlock Text="{Binding Profile_City}" TextWrapping="Wrap"/>
+                                                        <TextBlock Text="{Binding Profile_Zipcode}" TextWrapping="Wrap"/>
+                                                    </StackPanel>
+
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}"  Width="100"  Header="Add" CanUserResize="False">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button x:Name="btnAdd" Click="btnAdd_Click" Height="25" Width="80"
+                                                        HorizontalAlignment="Center" VerticalAlignment="Center">Add</Button>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </Border>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

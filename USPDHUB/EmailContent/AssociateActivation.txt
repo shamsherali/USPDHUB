@@ -1,0 +1,19 @@
+﻿This email has been sent because the administrator of your agency has invited you to become an associate for their App.
+
+Please click the link below or go to www.USPDhub.com and click 'Login'.
+
+#Link#
+
+
+<b>Login Details</b>
+--------------------
+Note: The following user name is your permanent login name:
+
+<b>Username</b>: #Email#
+
+<b>Your Assigned Password</b>: #Password#
+
+
+Thank you,
+
+The USPDhub<sup style="font-size: 14px;">&reg;</sup> Team

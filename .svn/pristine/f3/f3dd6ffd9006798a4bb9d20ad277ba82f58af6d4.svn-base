@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Mobile App for Law Enforcement, Community Outreach, Police App & Agency App from USPDhub.com</title>
+    <meta name="author" content="USPDhub.com Team" />
+    <meta name="description" content="Advertise with Email Marketing, Get your Message Out with Social Media Marketing, Create Your Own Website &amp; Attract Customers with Online Coupons by using some amazing tools from USPDhub.com" />
+    <meta name="keywords" content="online marketing system, online marketing, email marketing, internet marketing, local online marketing, online marketing companies, online marketing blog, online marketing tools" />
+  
+    <link href="../css/index.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        document.createElement('header');
+        document.createElement('footer');
+        document.createElement('section');
+        document.createElement('aside');
+        document.createElement('nav');
+    </script>    
+</head>
+<body>
+    <!--Header starts-->
+    <div id="nav-wrapper">
+        <div id="navwidth">
+            <div id="logo">
+                <img src="../images/Homepage/logo.png" /></div>
+            <nav>
+      <ul>
+        <li><a href="../Default.aspx">Home</a></li>
+        <li class="active"><a href="javascript:void(0);">Features</a></li>
+        <li><a href="http://www.uspdhub.com/Business/AddTools.aspx">Pricing</a></li>
+        <li><a href="Aboutus.html">About Us</a></li>
+        <li><a href="contactus.aspx">Contact Us</a></li>
+      </ul>
+    </nav>
+            <div id="login">
+                <ul>
+                    <li><a href='https://www.uspdhub.com/login.aspx'>Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Header ends-->
+    <div class="clear">
+    </div>
+    <div id="container">
+        <div class="pagehead">
+            Features</div>
+        <div id="containercontent">        
+            <!--Mobile APP-->
+            <div id="feature">
+                <h1>
+                    <a name="ec">Mobile APP</a><span> - Take your World Mobile</span></h1>
+                <br />
+                <br />
+                <div class="description">
+                    <ul>
+                        <li>Provides one touch call button</li>
+                        <li>Directions</li>
+                        <li>Push Notifications</li>
+                        <li>Web Links</li>
+                        <li>Display
+                            <ul style="margin-left: -35px;">
+                                <li>Home page</li>
+                                <li>Updates</li>
+                                <li>Bulletins</li>                                
+                                <li>Events</li>
+                                <li>About us page</li>
+                                <li>Photos</li>
+                            </ul>
+                        </li>                        
+                    </ul>
+                </div>
+                <div class="img" align="right">
+                    <img src="../images/OuterImages/mobileapp.png" alt="Mobile APP" width="433" height="430" /></div>
+                <div class="clear">
+                </div>
+            </div>
+            <!--end of Mobile APP-->
+            <div class="clear">
+            </div>
+            <!--flyer-->
+            <div id="feature">
+                <h2>
+                    <a name="sm">Social Media</a><span> - Get your Message Out</span></h2>
+                <br />
+                <br />
+                <div class="img">
+                    <img src="../images/OuterImages/f-socialmedia.png" alt="Website" width="288" height="238" /></div>
+                <div class="description">
+                    <ul>
+                        <li>Share on Facebook & Twitter</li>
+                        <li>Easily post Event Calendar & Updates</li>
+                        <li>Post with a simple click of a button</li>
+                    </ul>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <!--end of flyer-->
+            <div class="clear">
+            </div>
+            <!--updates-->
+            <div id="feature">
+                <h1>
+                    <a name="updates">Updates</a><span> - Easily Keep Customers Up to Date</span></h1>
+                <br />
+                <br />
+                <div class="description">
+                    <ul>
+                        <li>Share current news, tips &amp; more</li>
+                        <li>Easy to use editor</li>
+                        <li>Include images and links</li>
+                        <li>Send to contact groups</li>
+                        <li>Post to social networks &amp; website</li>
+                    </ul>
+                </div>
+                <div class="img" align="right">
+                    <img src="../images/OuterImages/f-updates.png" alt="Website" width="237" height="289" /></div>
+                <div class="clear">
+                </div>
+            </div>
+            <!--end of updates-->
+            <div class="clear">
+            </div>
+            <!--eventcalendar-->
+            <div id="feature">
+                <h2>
+                    <a name="ec">Event Calendar</a> <span>- Keep Everyone Informed</span></h2>
+                <br />
+                <br />
+                <div class="img">
+                    <img src="../images/OuterImages/f-calendar.png" alt="Website" width="257" height="251" /></div>
+                <div class="description">
+                    <ul>
+                        <li>Create events with easy editor</li>
+                        <li>Include images and links</li>
+                        <li>Send to your contacts</li>
+                        <li>View in list or calendar format</li>
+                        <li>Share events on social networks</li>
+                    </ul>
+                </div>
+                <div class="clear">
+                </div>
+            </div>            
+            <div class="clear">
+            </div>
+            <!--end of Contact Manager-->
+            <div id="feature">
+                <h2>
+                    <a name="cm">Contact Manager</a> <span>- Easily Manage &amp; Store</span></h2>
+                <br />
+                <br />
+                <div class="description">
+                    <ul>
+                        <li>Group contacts into targeted lists</li>
+                        <li>Easily import all of your contacts</li>
+                        <li>Auto opt-out feature</li>
+                        <li>Manage duplicate addresses</li>
+                    </ul>
+                </div>
+                <div class="img" align="right">
+                    <img src="../images/OuterImages/f-contact.png" alt="Website" width="250" height="272" /></div>
+                
+                <div class="clear">
+                </div>
+            </div>
+            <!--end of conatc manager-->            
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div id="footer-wrapper">
+        <div id="footer">
+            <div class="footerlinks">
+                <a href="../Default.aspx">Home</a> | <a href="javascript:void(0);">Features</a>
+                |<a href="http://www.uspdhub.com/OP/uspdhubcom/AddTools.aspx">Pricing</a>
+                | <a href="http://www.uspdhub.com/login.aspx">Login</a> | <a href="aboutus.html">
+                    About Us</a> | <a href="contactus.aspx">Contact Us</a> | <!--<a href="../privacy.html"
+                        target="_blank">Privacy Policy</a> | --><a href="Terms.html" target="_blank">Terms of Service</a></div>           
+            <div class="clear">
+            </div>
+            <div class="copyright">
+                <!--USPDhub<sup style="font-size: 14px;">&reg;</sup> is a trademark of LogicTree
+                IT Solutions, Inc, registered in the U.S, (R) 2012-2013 LogicTree IT Solutions,
+                Inc<br />-->
+                Disclaimer: This site is optimized for 1024x768 resolution and works best with Internet
+                Explorer 8.0. Please upgrade to IE 8: <a href="http://windows.microsoft.com/en-US/internet-explorer/downloads/ie-8"
+                    target="_blank">Download Now</a> !</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,277 @@
+﻿body
+{
+}
+.UnreadInquiry
+{
+    background-color: #d2e5fa;
+    font-weight: bold;
+}
+.readInquiry
+{
+    background-color: #FFFFFF;
+}
+.radius
+{
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#manage
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#manage .clear
+{
+    clear: both;
+}
+#manage a img
+{
+    border: none;
+}
+#manage h1, #manage h2, #tabber ul
+{
+    margin: 0;
+    padding: 0;
+}
+#manage h1
+{
+    font-size: 18px;
+    color: #EC2027;
+    height: 35px;
+    line-height: 35px;
+}
+#manage h2
+{
+    background: #f3f3f3;
+    display: block;
+    padding: 5px;
+    font-size: 12px;
+    border: solid 1px #dcdcdc;
+}
+#manage h2 .filtertd
+{
+    padding-top: 10px;
+}
+
+#tabber
+{
+    margin-top: 27px;
+}
+#tabber .content
+{
+    background: #f3f3f3;
+    border: solid 1px #d5d5d5;
+}
+#tabber .content .leftmenu
+{
+    vertical-align: top;
+    width: 754px; /*padding-right: 5px;*/
+}
+#tabber .content .rightmenu
+{
+    vertical-align: top;
+    padding-left: 0px;
+    width: 169px;
+    float: left;
+}
+#tabber .content .rightmenu .rightLinks
+{
+    width: 167px;
+    padding-bottom: 1px;
+}
+#tabber .content .rightmenu .rightLinks a
+{
+    display: block;
+    font-size: 13px;
+    color: #003c7f;
+    width: 167px;
+    background: url(../../images/Dashboard/side_link.gif) repeat-x;
+    height: 35px;
+    text-align: left;
+    border: solid 1px #9abfe7;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 35px;
+}
+#tabber .content .rightmenu .rightLinks a:hover
+{
+    background: url(../../images/Dashboard/side_link_h.gif) repeat-x;
+}
+#tabber .content .rightmenu .rightLinks a span
+{
+    display: block;
+    float: left;
+    height: 35px;
+    width: 35px;
+    margin-right: 13px;
+}
+#tabber .content .rightmenu .share
+{
+    background: #f8fcff;
+    text-align: center;
+    border: solid 1px #d2e8ff;
+}
+#tabber .content .rightmenu .share img
+{
+    margin: 10px;
+}
+#fullheight
+{
+    height: 100%;
+    text-align: center;
+}
+.cursor
+{
+    cursor: hand;
+}
+.sendcontactsbutton
+{
+    background: url(../../images/CreateModule.png) no-repeat;
+    width: 134px;
+    height: 35px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    border: 0px;
+    font-weight: bold;
+    cursor: hand;
+}
+.navy20
+{
+    width: 100px;
+    color: #2F348F;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial;
+    padding: 10px 0px 5px 0px;
+}
+#boxes .window
+{
+    border: solid 2px #FFCC00;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 490px;
+    height: 200px;
+    display: none;
+    z-index: 9999;
+}
+
+#boxes #dialog
+{
+    width: 500px;
+    height: 405px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    margin-top: 12%;
+    margin-left: 36%;
+}
+/**** Tool Tip Decoration ****/
+.couponcode:hover .coupontooltip
+{
+    display: block;
+}
+.coupontooltip
+{
+    font-weight: normal;
+    font-size: 14px;
+    display: none;
+    background: #D9E8FF;
+    border: 1px dashed #297CCF;
+    position: absolute;
+    padding: 6px;
+    z-index: 1000;
+    width: 300px;
+    height: auto;
+    color: Black;
+    text-align: left;
+}
+.hdrText
+{
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+}
+.border
+{
+    border: solid 2px black;
+}
+.ExportButton
+{
+    -webkit-border-radius: 2;
+    -moz-border-radius: 2;
+    border-radius: 2px;
+    font-family: Arial;
+    border: solid #0066cc 2px;
+    color: #ffffff;
+    font-size: 14px;
+    background: #0066cc;
+    padding: 4px 8px 4px 8px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.SearchButton
+{
+    -webkit-border-radius: 2;
+    -moz-border-radius: 2;
+    border-radius: 2px;
+    font-family: Arial;
+    border: solid #008000 2px;
+    color: #ffffff;
+    font-size: 14px;
+    background: #008000;
+    padding: 4px 8px 4px 8px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.CancelButton
+{
+    -webkit-border-radius: 2;
+    -moz-border-radius: 2;
+    border-radius: 2px;
+    font-family: Arial;
+    border: solid #f15a29 2px;
+    color: #ffffff;
+    font-size: 14px;
+    background: #f15a29;
+    padding: 4px 8px 4px 8px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.GridDock
+{
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 755px;
+    padding: 0 0 10px 0;
+}
+.sol-current-selection
+{
+    width: 890px !important;
+}
+.sol-selected-display-item, .sol-results-count
+{
+    border-radius: 0px !important;
+    padding: 0px !important;
+    min-width: 150px !important;
+}
+.sol-input-container input
+{
+}
+.chart-one-pie
+{
+    width: 550px;
+    height: 450px;
+}
+.paginationClass span
+{
+    font-weight: bold;
+    font-size: 14px;
+    color: White;
+    border: 1px solid #f15a29;
+    padding: 0px 5px;
+    background-color: #FFCC00;
+}

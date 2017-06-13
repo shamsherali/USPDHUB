@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        #container
+        {
+            padding: 15px;
+            width: 700px;
+        }
+        #container table
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 20px;
+			font-size: 13px;
+        }
+		body {
+		-webkit-print-color-adjust: exact;
+	}
+    </style>
+</head>
+<body>
+    <div id="container" style="border: 0px solid black;">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td valign="top">
+                    <div style="border: 0px solid black;">
+                        <img src='#Logo#' border="0" width="160px" />
+                    </div>
+                </td>
+                <td align="right" style="margin-right: 20px;">
+                    INVOICE
+                </td>
+            </tr>
+        </table>
+        <hr />
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td valign="top" style="">
+                    <div style="margin-top: 5px;">
+                        6060 Sunrise Vista Drive, Suite 3500
+                        <br />
+                        Citrus Heights, CA 95610
+						<br/>
+						Phone (916) 676-7335 &nbsp; Fax (916) 676-7337
+						<br/>
+						accounts@logictreeit.com						
+						<br />
+						
+                    </div>
+					<br />
+					 <div style="margin-top: 5px; margin-left: 5px; font-weight: bold;">
+                        Billed To: <br />
+						<div style="font-weight: bold;">#BillingAddress#</div>
+                    </div>
+                </td>
+                <td align="right" style="margin-right: 20px;">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <colgroup>
+                            <col width="200px" />
+                            <col width="10px" />
+                            <col width="*" />
+                        </colgroup>
+                        <tr>
+                            <td align="right">
+                                Invoice Date:
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td align="left">
+                                #InvoiceDate#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                Invoice #:
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td align="left">
+                                #InvoiceNumber#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                Profile ID:
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td align="left">
+                                #ProfileID#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" align="right">
+                                #Agency# Info:
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td align="left">
+                                #ProfileInfo#
+                            </td>
+                        </tr>
+						<tr>
+							<td valign="top" align="right">Purchase Order #:</td>  
+							<td>
+                                &nbsp;
+                            </td>
+							<td align="left">
+                                #PONumber#
+                            </td>
+						</tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table cellpadding="5" cellspacing="0" border="0" style="border: 1px solid #D9D9D9;
+            margin-top: 20px; width: 100%;">
+            <colgroup>
+                <col width="300px" />
+                <col width="160px" />
+            </colgroup>
+             <tr style="border: 1px solid black;">
+                <td align="center" colspan="2" style="border-top: 1px solid #D9D9D9; background-color: #7F7F7F; bgcolor: #7F7F7F;  color: White; font-size: 16px; ">
+                    <strong> INVOICE SUMMARY </strong>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="border-top: 1px solid #D9D9D9; background-color: #D9D9D9;  bgcolor: #7F7F7F;">
+                    <strong>Description</strong>
+                </td>
+                <td align="center" style=" border-top: 1px solid #D9D9D9; background-color: #D9D9D9;  bgcolor: #7F7F7F; border-left: 1px solid #D9D9D9;">
+                    <strong>Total</strong>
+                </td>
+            </tr>
+            #OrderDetailsRows# 
+        </table>
+        <table cellpadding="0" cellspacing="0" border="0" style="border: 1px solid #D9D9D9;
+            margin-top: 20px; width: 100%;">
+            <colgroup>
+                <col width="300px" />
+                <col width="160px" />
+            </colgroup>
+           <tr>
+                <td align="center" colspan="2" style="background-color: #7F7F7F; padding: 5px;  color: White; font-size: 16px;">
+                   <strong>  INVOICE TOTALS  </strong>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" style="padding: 0px; border-top: 1px solid #D9D9D9;">
+                     <div style="margin-top: 5px; margin-left: 5px;">
+                        Terms: Due on receipt.
+                    </div>
+                </td>
+                <td style="padding: 0px; border-top: 1px solid #D9D9D9;">
+                     <table cellpadding="5" cellspacing="0" border="0" style="border: 0px solid #D9D9D9;
+                        margin-top: 0px; width: 100%;">
+                        <tr>
+                            <td style="border: 1px solid #D9D9D9;">
+                                Total
+                            </td>
+                            <td style="border: 1px solid #D9D9D9; padding-right: 10px;" align="right">
+                                $#TotalBill#
+                            </td>
+                        </tr>
+						#DiscountRow#
+						 <tr>
+                            <td style="border: 1px solid #D9D9D9;">
+                                Amount Due
+                            </td>
+                            <td style="border: 1px solid #D9D9D9; padding-right: 10px;" align="right">
+                                $#AmountDue#
+                            </td>
+                        </tr> 
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td style="text-align: center; padding-top: 50px;">
+                    Thank you for your order.
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                     
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

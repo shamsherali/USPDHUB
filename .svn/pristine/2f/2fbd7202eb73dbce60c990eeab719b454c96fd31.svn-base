@@ -1,0 +1,57 @@
+﻿.btn { padding:13px 36px; color:#FFFFFF; font-weight:400;  display:inline-block;  position:relative; background: #e7b606; }
+.btn {
+	-webkit-border-radius: 3px;
+	-moz-border-radius:	   3px;
+	border-radius:		   3px;
+	text-shadow:1px 1px 1px #AD8D04; 
+	 
+}
+.btn { 
+ -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+ 
+}
+ 
+.btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffc909;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-border-radius: 3px;
+	-moz-border-radius:	   3px;
+	border-radius:		   3px;
+ /* -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;*/
+ 
+ -webkit-transition: transform .2s ease-out;
+   transition: transform .2s ease-out;
+   
+}
+.btn:hover:before, .btn:focus:before, .btn:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+ 
+
+.btn-explore { margin:50px 0 30px;}
+.btn:hover,.btn:focus,.btn:active { color:#FFFFFF; }
+
+.btn-default { background-color:#454545; text-shadow:1px 1px 1px #000000; cursor:pointer; text-decoration:none; margin:10px; font-weight:bold; font-size:14px; }
+.btn-default::before {background-color:#333;}
+
+.btn-add { font-size:14px; text-transform:uppercase; padding:7px 10px; color:#000000; text-shadow:1px 1px 1px #FFFFFF; cursor:pointer; }
+.btn-add:hover,.btn-add:focus,.btn-add:active { color:#000000; outline:none; outline-offset:0; }
+
+.btn-remove { background-color:#E42326; text-shadow: inherit;color:#fff; font-size:12px; text-transform:inherit; }
+.btn-remove::before {background-color:#CC0F11;}
+.btn-remove:hover,.btn-remove:focus,.btn-remove:active { color:#fff; }

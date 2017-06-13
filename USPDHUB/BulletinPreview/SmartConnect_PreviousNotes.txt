@@ -1,0 +1,20 @@
+<div style="margin-top: 5px;">
+                    <table style="border-collapse: collapse; background-color: rgb(220, 220, 220);" border="0"
+                        cellpadding="10" width="50%">
+                        <tbody>
+                            <tr>
+                                <td align="justify" colspan="2" style="background-color: rgb(220, 220, 220);">
+                                    <span style="color: Black;"> #Note# </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="background-color: rgb(220, 220, 220);">
+                                    Notes By: <span style="color: Black;"> #User# </span>
+                                </td>
+                                <td align="right" style="background-color: rgb(220, 220, 220);">
+                                    <span style="color: Black;"> #date# </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>

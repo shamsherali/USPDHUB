@@ -1,0 +1,18 @@
+================================9/15/2016 2:58:23 PM================================
+ 
+Type : ERROR
+ 
+Page Name : CMCMTraffic.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Procedure or function 'USP_SaveResellerInquiry' expects parameter '@State', which was not supplied.
+ 
+STACKTRACE :    at ResellersDAL.InquiryDAL.SaveResellerInquiry(Inquiry objInquiry) in C:\Applications\USPDhub\Resellers\ResellersDAL\InquiryDAL.cs:line 33
+   at ResellersBLL.InquiryBLL.SaveResellerInquiry(Inquiry objInquiry) in C:\Applications\USPDhub\Resellers\ResellersBLL\InquiryBLL.cs:line 16
+   at Resellers.SMBResellers.btnSubmit_Click(Object sender, EventArgs e) in C:\Applications\USPDhub\Resellers\Resellers\SMBResellers.aspx.cs:line 59
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 

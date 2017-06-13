@@ -1,0 +1,7 @@
+﻿School Name: #SchoolName# <br/><br/>
+
+Click the link below to download the Desktop PC Notification Manager.<br/><br/>
+
+#RootPath#/DownloadWizard.aspx
+<br/><br/>
+If the above link does not work, simply copy and paste the address into your browser. 

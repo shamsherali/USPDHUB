@@ -1,0 +1,362 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminLite.master.cs"
+    Inherits="AdminLite" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="icon" href="/images/ishfav.ico" type="image/x-icon" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="css/helpscreen.css" />
+    <link rel="stylesheet" type="text/css" href="css/Litemenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsivelite.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        var __lc = {};
+        __lc.license = 1642221;
+
+        (function () {
+            var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+            lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+        })();
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" AsyncPostBackTimeout="1000" ScriptMode="Release">
+        </asp:ScriptManager>
+        <div id="header">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <img src="<%=LogoName%>" />
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 headercontent text-right">
+                            <p>
+                                <% if (Session["UserID"] != null)
+                                   {%>
+                                <%=hdnLoginType.Value%>:
+                                <%= Session["profilename"].ToString().Replace("&", "&amp;")%><br />
+                                <%if (Session["C_USER_ID"] == null)
+                                  { %>
+                                Logged in:
+                                <%= Session["Username"]%>
+                                (User ID:
+                                <%=Session["UserID"]%>)
+                                <%}
+                                  else
+                                  { %>
+                                Logged in:
+                                <%= Session["C_USER_NAME"]%>
+                                (User ID:
+                                <%=Session["C_USER_ID"]%>)</p>
+                            <%} %>
+                            <%} %>
+                            <div style="height:27px;">&nbsp;</div>
+                            <h4 style="display:none;">
+                                <a href="<%=FreeToUpgrade %>">Upgrade Subscription</a></h4>
+                            <ul class="list-inline headermenu">
+                                <li><a href="javascript:void(0);">Dashboard</a></li>
+                                <li><a href="#">Options</a>
+                                    <ul>
+                                        <asp:Literal ID="ltrOptionsMenu" runat="server"></asp:Literal>
+                                    </ul>
+                                </li>
+                                <li><a href="#">My Account</a>
+                                    <ul>
+                                        <asp:Literal ID="ltrAccountMenu" runat="server"></asp:Literal>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:ShowHelpWindow();">Help</a></li>
+                                <li><a href="<%=Page.ResolveClientUrl("~/Logout.aspx")%>">Sign Out</a></li>
+                            </ul>
+                            <asp:HiddenField ID="hdnLoginType" runat="server" />
+                            <asp:HiddenField ID="hdnIsLiteVersion" runat="server" Value="false" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <asp:ContentPlaceHolder ID="cphUser" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:UpdatePanel ID="uppnlpopuphelp" runat="server" UpdateMode="Conditional">
+            <Triggers>
+                <asp:PostBackTrigger ControlID="lnkHelpDownload" />
+            </Triggers>
+            <ContentTemplate>
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td align="center">
+                            <asp:Label ID="lblashelp" runat="server"></asp:Label>
+                            <cc1:ModalPopupExtender ID="ModalPopupExtenderhelp" runat="server" PopupControlID="pnlpopuphelp"
+                                TargetControlID="lblashelp" BackgroundCssClass="popupmodal" RepositionMode="RepositionOnWindowResize"
+                                CancelControlID="imclosehelp">
+                            </cc1:ModalPopupExtender>
+                            <asp:Panel ID="pnlpopuphelp" runat="server" Width="600px" Style="display: none;"
+                                class="mp-border" Height="628px">
+                                <asp:Panel ID="pnlHelpList" runat="server" Width="100%" CssClass="noprint">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mp-title">
+                                        <tr>
+                                            <td align="center">
+                                                Choose a help topic
+                                            </td>
+                                            <td class="close">
+                                                <asp:ImageButton ID="imgBtnHidePopup" runat="server" ImageUrl="~/Images/Dashboard/mp-close.gif"
+                                                    OnClick="imgBtnHidePopup_Click" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table style="background-color: #F0F3F4;" width="100%" border="0" cellpadding="0"
+                                        cellspacing="0">
+                                        <tr>
+                                            <td align="center">
+                                                <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="3">
+                                                    <ProgressTemplate>
+                                                        <img src="<%=Page.ResolveClientUrl("~/images/popup_ajax-loader.gif")%>" border="0" /><b><font
+                                                            color="green">Processing....</font></b>
+                                                    </ProgressTemplate>
+                                                </asp:UpdateProgress>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div align="left" style="background-color: #F0F3F4; padding: 10px 0px 10px 20px;">
+                                        <table>
+                                            <colgroup>
+                                                <col width="70%" />
+                                                <col width="*" />
+                                            </colgroup>
+                                            <tr>
+                                                <td>
+                                                    <asp:TextBox ID="txtHelpSearch" runat="server" CssClass="HelpBox"></asp:TextBox>
+                                                </td>
+                                                <td valign="middle">
+                                                    <asp:Button ID="btnHelpSearch" runat="server" Text="Search" OnClick="btnHelpSearch_Click"
+                                                        CssClass="HelpButton" />
+                                                    <asp:Button ID="btnHelpClear" runat="server" Text="Clear" OnClick="btnHelpClear_Click"
+                                                        CssClass="HelpButton" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <asp:Label ID="lblNoHelpMsg" Font-Size="12px" runat="server" ForeColor="Red"></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <br />
+                                    </div>
+                                    <div style="overflow: scroll; overflow-x: hidden; height: 495px; word-wrap: break-word;
+                                        background-color: #F0F3F4;">
+                                        <table width="95%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td align="left" class="treeview">
+                                                    <asp:TreeView ID="TreeView1" runat="server">
+                                                    </asp:TreeView>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <asp:Label ID="lblNoHelp" runat="server" Style="color: Green; font-size: 16px;"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <table cellpadding="0" cellspacing="0" border="0" style="padding-top: 10px;">
+                                                        <tr>
+                                                            <td>
+                                                                <a href="javascript:Hidepopup()">
+                                                                    <img src="<%=Page.ResolveClientUrl("~/images/Dashboard/mpcontinue.gif")%>" /></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </asp:Panel>
+                                <asp:Panel ID="pnlHelpDetails" runat="server" Width="100%" style="display:none;">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mp-title">
+                                        <tr>
+                                            <td align="center">
+                                                <asp:Label ID="lbltitle" runat="server"></asp:Label>
+                                            </td>
+                                            <td class="close">
+                                                <asp:ImageButton ID="imclosehelp" runat="server" ImageUrl="~/images/Dashboard/mp-close.gif"
+                                                    Width="22" Height="22" OnClick="btnclose_Click" CausesValidation="false" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div width="100%" style="overflow: scroll; overflow-x: hidden; height: 580px; word-wrap: break-word;
+                                        background-color: #F0F3F4;">
+                                        <table width="95%" border="0" cellpadding="0" cellspacing="0" class="linkcolor">
+                                            <tr>
+                                                <td align="right" style="padding-left: 8px;">
+                                                    <table id="tblhelpmenu" cellpadding="0" cellspacing="0" border="0" style="padding-top: 10px;">
+                                                        <tr>
+                                                            <td>
+                                                                <a href="javascript:popup();">
+                                                                    <img src="<%=Page.ResolveClientUrl("~/images/Dashboard/mpgotomenu.gif")%>" alt="" /></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left" style="padding-left: 8px; padding-top: 10px; padding-bottom: 10px;"
+                                                    class="linkcolor">
+                                                    <div style="width: 100%;" id="divtoprint">
+                                                        <asp:Label ID="lblcontent" runat="server"></asp:Label><br />
+                                                        <asp:Label ID="lblvideoheading" runat="server"></asp:Label><br />
+                                                        <asp:Label ID="lblvideo" runat="server" CssClass=""></asp:Label></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <table cellpadding="0" cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <a href="javascript:Hidepopup()">
+                                                                    <img src="<%=Page.ResolveClientUrl("~/images/Dashboard/close.jpg")%>" /></a>
+                                                                <a href="javascript:PrintContent();">
+                                                                    <img src="<%=Page.ResolveClientUrl("~/images/Dashboard/mpprint.gif")%>" /></a>
+                                                                <asp:LinkButton ID="lnkHelpDownload" runat="server" OnClick="lnkHelpDownload_OnClick"
+                                                                    CausesValidation="false"><img src="<%=Page.ResolveClientUrl("~/images/Dashboard/DownloadHelp.jpg")%>" /></asp:LinkButton>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </asp:Panel>
+                            </asp:Panel>
+                        </td>
+                    </tr>
+                </table>
+                <asp:HiddenField ID="hdnhelpKeyword" runat="server" Value="" />
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <asp:HiddenField ID="hdnhelpText" runat="server" />
+        <asp:HiddenField ID="hdnhelpvideo" runat="server" />
+        <asp:HiddenField ID="hdnhelpname" runat="server" />
+        <asp:HiddenField ID="hdnhelpID" runat="server" />
+        </form>
+        <div id="footer">
+            <div class="container-fluid footer text-center">
+                <div class="container">
+                    <ul class="list-inline">
+                        <li><a href="<%=RootPath %>/Business/MyAccount/LiteDashboard.aspx">Dashboard</a></li><li>
+                            <a href="<%=RootPath %>/OP/<%=DomainName %>/aboutus.html" target="_blank">About Us</a></li><li>
+                                <a href="<%=RootPath %>/OP/<%=DomainName %>/Terms.html" target="_blank">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- lib files -->
+<script src="../../Scripts/jquery.min.js" type="text/javascript"></script>
+<!-- bootstrap lib files -->
+<script src="../../css/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function HighlightKeyword(text) {
+        var txtSearch = document.getElementById('<%= txtHelpSearch.ClientID %>');
+        txtSearch.value = text;
+        document.getElementById('<%= btnHelpSearch.ClientID %>').click();
+        
+    }
+    function ShowHelpWindow() {
+        var modalPopupBehaviorCtrl = $find('<%=ModalPopupExtenderhelp.ClientID %>');
+        modalPopupBehaviorCtrl.show();
+        var txtSearch = document.getElementById('<%= txtHelpSearch.ClientID %>');
+        txtSearch.value = "";
+        document.getElementById('<%=lblNoHelpMsg.ClientID %>').innerHTML = "";
+        document.getElementById('<%=pnlHelpDetails.ClientID %>').style.display = "none";
+        document.getElementById('<%=pnlHelpList.ClientID %>').style.display = "inline";
+    }
+    var Title11 = "";
+    var DivID11 = "";
+    var DivVideo11 = "";
+    function ModalHelpPopup(Title1, DivID, divvideo) {
+        Title11 = Title1;
+        DivID11 = DivID;
+        DivVideo11 = divvideo;
+        document.getElementById('<%=hdnhelpID.ClientID %>').value = DivID11;
+        PageMethods.GetHelpcontentbyHelpID(DivID, GetHelpcontentbyHelpID_Success, GetHelpcontentbyHelpID_Failure);
+    }
+    function GetHelpcontentbyHelpID_Success(result) {
+        var searchKeyword = "";
+        var Divtxt1 = result;
+        Divtxt1 = Divtxt1.replace(/__/g, "");
+        var content = Divtxt1.replace(/</g, "&lt;");
+        content = content.replace(/>/g, "&gt;");
+        document.getElementById('<%=hdnhelpText.ClientID %>').value = content;
+        document.getElementById('<%=hdnhelpname.ClientID %>').value = Title11;
+        document.getElementById('<%=hdnhelpvideo.ClientID %>').value = DivVideo11;
+        var Divtxt2 = Divtxt1.replace(/;/g, "~");
+        Divtxt2 = Divtxt2.replace(/‘/g, "'");
+        Divtxt2 = Divtxt2.replace(/’/g, "'");
+
+        var modalPopupBehaviorCtrl = $find('<%=ModalPopupExtenderhelp.ClientID %>');
+        modalPopupBehaviorCtrl.show();
+
+        if (document.getElementById('<%=hdnhelpKeyword.ClientID %>').value != "")
+            searchKeyword = document.getElementById('<%=hdnhelpKeyword.ClientID %>').value;
+        document.getElementById('<%=lbltitle.ClientID %>').innerHTML = document.getElementById('<%=hdnhelpname.ClientID %>').value;
+        var showcontent = document.getElementById('<%=hdnhelpText.ClientID %>').value;
+        showcontent = showcontent.replace(/&lt;/g, "<");
+        showcontent = showcontent.replace(/&gt;/g, ">");
+        document.getElementById('<%=lblcontent.ClientID %>').innerHTML = showcontent;
+        if (document.getElementById('<%=hdnhelpvideo.ClientID %>').value != "") {
+            document.getElementById('<%=lblvideoheading.ClientID %>').innerHTML = "Looking for demonstration? Watch the video:";
+            document.getElementById('<%=lblvideo.ClientID %>').innerHTML = divvideo11;
+        }
+        else {
+            document.getElementById('<%=lblvideoheading.ClientID %>').innerHTML = "";
+            document.getElementById('<%=lblvideo.ClientID %>').innerHTML = "";
+        }
+        setTimeout("hide()", 0.5);
+        setTimeout("display()", 0.5);
+    }
+    function GetHelpcontentbyHelpID_Failure()
+    { }
+    function Hidepopup() {
+        var modalPopupBehaviorCtrl = $find('<%=ModalPopupExtenderhelp.ClientID %>');
+        modalPopupBehaviorCtrl.hide();
+    }
+    function hide() {
+        document.getElementById('<%=pnlHelpList.ClientID %>').style.display = "none";
+    }
+    function display() {
+        document.getElementById('<%=pnlHelpDetails.ClientID %>').style.display = "inline";
+    }
+    function popup() {
+        document.getElementById('<%=pnlHelpDetails.ClientID %>').style.display = "none";
+        document.getElementById('<%=pnlHelpList.ClientID %>').style.display = "inline";
+    }
+    function PrintContent() {
+        var DocumentContainer1 = document.getElementById('<%=lbltitle.ClientID %>');
+        var DocumentContainer = document.getElementById('divtoprint');
+        var WindowObject = window.open('', "PrintWindow", "width=420,height=380,top=50,left=50,toolbars=no,scrollbars=yes,status=no,resizable=yes");
+        WindowObject.document.writeln("<b>" + DocumentContainer1.innerHTML + "</b>" + "<br/><br/><br/><div style='width:540px;'>" + DocumentContainer.innerHTML + "</div>");
+        WindowObject.document.close();
+        WindowObject.focus();
+        WindowObject.print();
+        WindowObject.close();
+    }
+</script>
+</html>

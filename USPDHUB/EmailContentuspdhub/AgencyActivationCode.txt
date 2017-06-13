@@ -1,0 +1,29 @@
+﻿Thank you for joining USPDhub.com.
+
+This email has been sent as part of the registration process.
+
+Please do not send a reply to this email. If you have questions or comments, please direct your questions to helpdesk@uspdhub.com or call customer care at 1-866-676-7335 (8AM - 5PM PST) Toll Free.
+
+
+To complete your registration process and activate your account, please visit the home page at www.USPDhub.com and click login or click the link below.
+
+#Link#
+
+
+<b>Login Details</b>
+--------------------
+Note: The following user name is your login:
+
+<b>Username</b>: #Email#
+
+<b>Temporary Password</b>: #Password#
+
+
+
+Note: Use the temporary password to log into USPDhub.com for the first time. You will be asked to change this password during the first login process.
+
+
+
+Thank you,
+
+The USPDhub<sup style="font-size: 14px;">&reg;</sup> Team

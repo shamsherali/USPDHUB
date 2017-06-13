@@ -1,0 +1,1601 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="Admin_Master" CodeBehind="Admin.master.cs" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="CSS/wowzzy_newcss.css" rel="stylesheet" type="text/css" />
+    <link href="css/dashboard.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/Calendar.css" rel="stylesheet" type="text/css" />
+    <link href="css/popupcss.css" rel="stylesheet" type="text/css" />
+    <link href="css/Menu.css" rel="stylesheet" type="text/css" />
+    <link href="css/DashboardMenu.css" rel="stylesheet" type="text/css" />
+    <link href="css/AjaxControlsStyles.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/helpscreen.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/ModalPopups.js" language="javascript"></script>
+    <asp:ContentPlaceHolder ID="myPlaceholder" runat="server">
+        <script type="text/javascript">
+            document.createElement('header');
+            document.createElement('footer');
+            document.createElement('section');
+            document.createElement('aside');
+            document.createElement('nav');
+
+            function ModalPopupsAlert1(Title, Divtxt) {
+                ModalPopups.Alert("jsAlert1",
+              Title, Divtxt,
+              {
+                  okButtonText: "Close"
+              });
+            }
+            function showPanel(value) {
+
+                var modalPopupBehaviorCtrl = $find('<%=ModalPopupExtenderhelp.ClientID %>');
+                modalPopupBehaviorCtrl.show();
+                if (value != 0) {
+                    //                    if (document.getElementById('<%=hdnhelpname.ClientID %>').value != "" & document.getElementById('<%=hdnhelpText.ClientID %>').value != "") {
+                    //                        var content = document.getElementById('<%=hdnhelpText.ClientID %>').value;
+                    //                        content = content.replace(/&lt;/g, "<");
+                    //                        content = content.replace(/&gt;/g, ">");
+                    //                        document.getElementById('<%=hdnhelpText.ClientID %>').value = content;
+
+                    //                        document.getElementById('<%=lbltitle.ClientID %>').innerHTML = document.getElementById('<%=hdnhelpname.ClientID %>').value;
+                    //                        document.getElementById('<%=lblcontent.ClientID %>').innerHTML = document.getElementById('<%=hdnhelpText.ClientID %>').value;
+                    //                        if (document.getElementById('<%=hdnhelpvideo.ClientID %>').value != "") {
+                    //                            document.getElementById('<%=lblvideoheading.ClientID %>').innerHTML = "Looking for demonstration? watch video:";
+                    //                            document.getElementById('<%=lblvideo.ClientID %>').innerHTML = document.getElementById('<%=hdnhelpvideo.ClientID %>').value;
+                    //                        }
+                    //                        document.getElementById('<%=pnl2.ClientID %>').style.display = "none";
+                    //                        document.getElementById('<%=pnl1.ClientID %>').style.display = "inline";
+                    //                        document.getElementById('<%=pnlemail.ClientID %>').style.display = "none";
+                    //                    }
+                    //                    else {
+                    document.getElementById('<%=lblNoHelpMsg.ClientID %>').innerHTML = "";
+                    document.getElementById('<%=pnl1.ClientID %>').style.display = "none";
+                    document.getElementById('<%=pnl2.ClientID %>').style.display = "inline";
+                    document.getElementById('<%=pnlemail.ClientID %>').style.display = "none";
+                    //                    }
+                }
+            }
+            function popup() {
+                document.getElementById('<%=pnl1.ClientID %>').style.display = "none";
+                document.getElementById('<%=pnl2.ClientID %>').style.display = "inline";
+                document.getElementById('<%=pnlemail.ClientID %>').style.display = "none";
+            }
+
+            function popupclose() {
+                var modalPopupBehaviorCtrl = $find('<%=ModalPopupExtenderhelp.ClientID %>');
+                modalPopupBehaviorCtrl.hide();
+            }
+
+            var Title11 = "";
+            var DivID11 = "";
+            var DivVideo11 = "";
+            function ModalHelpPopup(Title1, DivID, divvideo) {
+                Title11 = Title1;
+                DivID11 = DivID;
+                DivVideo11 = divvideo;
+                document.getElementById('<%=hdnhelpID.ClientID %>').value = DivID11;
+                PageMethods.GetHelpcontentbyHelpID(DivID, GetHelpcontentbyHelpID_Success, GetHelpcontentbyHelpID_Failure);
+            }
+
+            function GetHelpcontentbyHelpID_Success(result) {
+                var searchKeyword = "";
+                var Divtxt1 = result;
+                Divtxt1 = Divtxt1.replace(/__/g, "");
+                var content = Divtxt1.replace(/</g, "&lt;");
+                content = content.replace(/>/g, "&gt;");
+                document.getElementById('<%=hdnhelpText.ClientID %>').value = content;
+                document.getElementById('<%=hdnhelpname.ClientID %>').value = Title11;
+                document.getElementById('<%=hdnhelpvideo.ClientID %>').value = DivVideo11;
+                var Divtxt2 = Divtxt1.replace(/;/g, "~");
+                Divtxt2 = Divtxt2.replace(/‘/g, "'");
+                Divtxt2 = Divtxt2.replace(/’/g, "'");
+
+                var modalPopupBehaviorCtrl = $find('<%=ModalPopupExtenderhelp.ClientID %>');
+                modalPopupBehaviorCtrl.show();
+
+                if (document.getElementById('<%=hdnhelpKeyword.ClientID %>').value != "")
+                    searchKeyword = document.getElementById('<%=hdnhelpKeyword.ClientID %>').value;
+
+                document.getElementById('<%=lbltitle.ClientID %>').innerHTML = document.getElementById('<%=hdnhelpname.ClientID %>').value;
+
+                var showcontent = document.getElementById('<%=hdnhelpText.ClientID %>').value;
+                showcontent = showcontent.replace(/&lt;/g, "<");
+                showcontent = showcontent.replace(/&gt;/g, ">");
+                document.getElementById('<%=lblcontent.ClientID %>').innerHTML = showcontent.replace(searchKeyword, '<span style="background-color:#CCE9FF;">' + searchKeyword + '</span>');
+                if (document.getElementById('<%=hdnhelpvideo.ClientID %>').value != "") {
+                    document.getElementById('<%=lblvideoheading.ClientID %>').innerHTML = "Looking for demonstration? Watch the video:";
+                    document.getElementById('<%=lblvideo.ClientID %>').innerHTML = divvideo11;
+                }
+                else {
+                    document.getElementById('<%=lblvideoheading.ClientID %>').innerHTML = "";
+                    document.getElementById('<%=lblvideo.ClientID %>').innerHTML = "";
+                }
+                setTimeout("hide()", 0.5);
+                setTimeout("display()", 0.5);
+            }
+            function GetHelpcontentbyHelpID_Failure()
+            { }
+            function Hidepopup() {
+                var modalPopupBehaviorCtrl = $find('<%=ModalPopupExtenderhelp.ClientID %>');
+                modalPopupBehaviorCtrl.hide();
+            }
+            function hide() {
+                document.getElementById('<%=pnl2.ClientID %>').style.display = "none";
+                document.getElementById('<%=pnlemail.ClientID %>').style.display = "none";
+            }
+            function display() {
+                document.getElementById('<%=pnl1.ClientID %>').style.display = "inline";
+                document.getElementById('<%=pnlemail.ClientID %>').style.display = "none";
+            }
+
+            function displayemailpanel(value) {
+                if (document.getElementById('<%=hdnhelpname.ClientID %>') != null && document.getElementById('<%=hdnhelpText.ClientID %>') != null) {
+                    document.getElementById('<%=lbltitle.ClientID %>').innerHTML = document.getElementById('<%=hdnhelpname.ClientID %>').value;
+                    var content = document.getElementById('<%=hdnhelpText.ClientID %>').value;
+                    content = content.replace(/&lt;/g, "<");
+                    content = content.replace(/&gt;/g, ">");
+                    document.getElementById('<%=lblcontent.ClientID %>').innerHTML = content;
+                    if (document.getElementById('<%=hdnhelpvideo.ClientID %>').value != "") {
+                        document.getElementById('<%=lblvideoheading.ClientID %>').innerHTML = "Looking for demonstration? watch video:";
+                        document.getElementById('<%=lblvideo.ClientID %>').innerHTML = document.getElementById('<%=hdnhelpvideo.ClientID %>').value;
+                    }
+                    else {
+                        document.getElementById('<%=lblvideoheading.ClientID %>').innerHTML = "";
+                        document.getElementById('<%=lblvideo.ClientID %>').innerHTML = "";
+                    }
+
+                    if (value != 1) {
+                        document.getElementById('<%=lblhelpmsg.ClientID %>').innerHTML = "";
+                        document.getElementById('<%=txtemail.ClientID %>').value = "";
+                        document.getElementById('<%=pnlemail.ClientID %>').style.display = "none";
+                        document.getElementById('<%=pnl1.ClientID %>').style.display = "inline";
+                        document.getElementById('<%=pnl2.ClientID %>').style.display = "none";
+                    }
+                    else {
+                        document.getElementById('<%=pnlemail.ClientID %>').style.display = "inline";
+                        document.getElementById('<%=pnl1.ClientID %>').style.display = "none";
+                        document.getElementById('<%=pnl2.ClientID %>').style.display = "none";
+                    }
+                }
+            }
+            function PrintContent() {
+                var DocumentContainer1 = document.getElementById('<%=lbltitle.ClientID %>');
+                var DocumentContainer = document.getElementById('divtoprint');
+                var WindowObject = window.open('', "PrintWindow", "width=420,height=380,top=50,left=50,toolbars=no,scrollbars=yes,status=no,resizable=yes");
+                WindowObject.document.writeln("<b>" + DocumentContainer1.innerHTML + "</b>" + "<br/><br/><br/><div style='width:540px;'>" + DocumentContainer.innerHTML + "</div>");
+                WindowObject.document.close();
+                WindowObject.focus();
+                WindowObject.print();
+                WindowObject.close();
+            }
+            function CloseVersionsModal() {
+                $find("<%=ModalPopupExtenderVersions.ClientID %>").hide();
+            }
+            function ShowVersionsPopup() {
+                $find("<%=ModalPopupExtenderVersions.ClientID %>").show();
+            }  
+        </script>
+        <style type="text/css">
+            .allversions ul
+            {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            @media print
+            {
+                #tblh
+                {
+                    display: none;
+                }
+                #tblti
+                {
+                    display: none;
+                }
+                #tbltab
+                {
+                    display: none;
+                }
+                #tblcolumns
+                {
+                    display: none;
+                }
+                #preview
+                {
+                    display: block;
+                }
+                #Table1
+                {
+                    display: none;
+                }
+                #footerimg
+                {
+                    display: none;
+                }
+                #site
+                {
+                    display: none;
+                }
+                #tblf
+                {
+                    display: none;
+                }
+                #pagetitle
+                {
+                    display: none;
+                }
+                #css
+                {
+                    display: none;
+                }
+            
+                #tbls
+                {
+                    display: none;
+                }
+                #cphUser
+                {
+                    display: none;
+                }
+                #ctl00_cphUser_btnSearch
+                {
+                    display: none;
+                }
+                #ctl00_cphUser_grdCoupons
+                {
+                    display: none;
+                }
+                #ctl00_cphUser_grid
+                {
+                    display: none;
+                }
+                #imgprint
+                {
+                    display: none;
+                }
+                #ctl00_cphUser_ASPxPopupControl1_imgPreview
+                {
+                    display: block;
+                }
+            
+                #ctl00_cphUser_ASPxPopupControl1_PWH-1
+                {
+                    display: none;
+                }
+                #ctl00_cphUser_ASPxPopupControl1_HCB-1Img
+                {
+                    display: none;
+                }
+            }
+            .modal
+            {
+                background-color: Gray;
+                filter: alpha(opacity=90);
+                opacity: 0.7;
+            }
+            
+            .mp-border
+            {
+                border: 12px solid #959fa7;
+                margin: 0px;
+            }
+            .mp-title
+            {
+                background-color: #b9cce4;
+                padding: 5px;
+                border-bottom: 1px solid #8594a3;
+                border-left: 1px solid #FFFFFF;
+                border-right: 1px solid #FFFFFF;
+                border-top: 1px solid #FFFFFF;
+                font-weight: bold;
+                color: #0c2947;
+                padding-left: 5px;
+                font-size: 12px;
+            }
+            .mp-title td.close
+            {
+                text-align: right;
+                width: 35px;
+            }
+            .mp-bg
+            {
+                padding: 10px;
+            }
+            #container *
+            {
+                z-index: 2;
+            }
+            /*  #content * { z-index: 1;}*/
+            
+            .AutoExtender
+            {
+                list-style-type: none;
+                padding: -5px 0px 0px -40px;
+                margin: -5px 0px 0px -40px;
+                width: 440px;
+                font-size: 16px;
+                z-index: 200001 !important;
+            }
+            
+            .HelpBox
+            {
+                width: 370px;
+                height: 20px;
+                border: solid 1px #F0F0F0;
+                padding: 5px;
+                background-color: #FFFFFF;
+                outline: none;
+                color: #474747;
+            }
+            .HelpButton
+            {
+                -webkit-border-radius: 2;
+                -moz-border-radius: 2;
+                border-radius: 2px;
+                font-family: Arial;
+                border: solid #5d6061 2px;
+                color: #ffffff;
+                font-size: 14px;
+                background: #5c5f61;
+                padding: 4px 8px 4px 8px;
+                text-decoration: none;
+            }
+            /*  #content * { z-index: 1;}*/
+            /*
+            .AutoExtender
+            {
+                list-style-type:none;
+                padding: -5px 0px 0px -40px;
+                margin: -5px 0px 0px -40px;
+                width: 440px;
+                font-size: 16px;
+                z-index:200001 !important;     
+            }
+            
+            .HelpBox
+            {
+                width: 370;
+                height: 20px;
+                border: solid 1px #F0F0F0;
+                padding: 5px;
+                background-color: #FFFFFF;
+                outline: none;
+                color: #474747;
+            }
+            .HelpButton
+            {
+                -webkit-border-radius: 2;
+                -moz-border-radius: 2;
+                border-radius: 2px;
+                font-family: Arial;
+                border: solid #5d6061 2px;
+                color: #ffffff;
+                font-size: 14px;
+                background: #5c5f61;
+                padding: 4px 8px 4px 8px;
+                text-decoration: none;
+            }
+            */
+            /*AutoComplete flyout */
+            
+            .autocomplete_completionListElement
+            {
+                margin: 0px !important;
+                background-color: inherit;
+                color: windowtext;
+                border: buttonshadow;
+                border-width: 1px;
+                border-style: solid;
+                cursor: 'default';
+                overflow: auto;
+                height: auto;
+                text-align: left;
+                list-style-type: none;
+            }
+            
+            /* AutoComplete highlighted item */
+            
+            .autocomplete_highlightedListItem
+            {
+                background-color: #ffff99;
+                color: black;
+                padding: 1px;
+            }
+            
+            /* AutoComplete item */
+            
+            .autocomplete_listItem
+            {
+                background-color: window;
+                color: windowtext;
+                padding: 1px;
+            }
+            /* .AutoExtender
+        {
+            font-family: Verdana, Helvetica, sans-serif;
+            font-size: 1.0em;
+            font-weight: normal;
+            border: solid 1px #006699;
+            line-height: 20px;
+            padding: 10px;
+            background-color: White;
+            margin-left:10px;
+        }*/
+            .AutoExtenderList
+            {
+                border-bottom: dotted 1px #006699;
+                cursor: pointer;
+                color: Maroon;
+                font-style: normal;
+            }
+            #ctl00_pnlpopuphelp td img, #ctl00_pnlpopuphelp table td
+            {
+                vertical-align: baseline !important;
+            }
+            #ctl00_TreeView1 table tr:first-child td img
+            {
+                vertical-align: middle !important;
+            }
+        </style>
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        var __lc = {};
+        __lc.license = 1642221;
+
+        (function () {
+            var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+            lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+        })();
+    </script>
+    <%--  <script type="text/javascript">
+        (function () {
+            //            setInterval(ServerSidefill, 300000);
+            setInterval(ServerSidefill, 5000);
+        })();
+        function ServerSidefill() {
+            var id = '<%=Session["UserID"]%>';
+            var typeval = PageMethods.ServerSidefill(id, OnSuccess);
+        }
+        function OnSuccess(result) {
+            if (result != "" && result != null && result != undefined) {
+                var res = [];
+                res = result.split(".");
+                if (res[0] == "M")
+                    document.getElementById('<%=lblmobilenewsletter.ClientID %>').innerHTML = res[1];
+                else if (res[0] == "T")
+                    document.getElementById('<%=lblmobiletips.ClientID %>').innerHTML = res[1];
+                else {
+                    if (res[0] == "MT") {
+                        document.getElementById('<%=lblmessages.ClientID %>').innerHTML = res[1];
+                        document.getElementById('<%=lbltips.ClientID %>').innerHTML = res[2];
+                    }
+                }
+                $("#Notins").show();
+                $("#Notins").fadeIn('slow');          
+                $("#Notins").fadeOut(30000);
+            }
+        }
+        function hide() {
+            $("#Notins").hide();
+            return false;
+        }
+    </script>
+    <style type="text/css">
+        .popupNotins
+        {
+            margin: 0px;
+            padding: 10px 10px 10px 10px;
+            width: 300px;
+            height: 50px;
+            background: #eef7ff;
+            text-align: left;
+            border: 1px solid #daedff;
+            color: #494949;
+            font-size: 12px;
+            float: right;
+            bottom: 40px;
+            position: absolute;
+            right: 10px;
+            z-index: 99999;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px; /* future proofing */
+            -khtml-border-radius: 6px; /* for old Konqueror browsers */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .popupNotins span
+        {
+            color: #e59724;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 5px:0px;
+        }
+        .popupNotins span a
+        {
+            color: #39618d;
+        }
+        .popupNotins span a:hover
+        {
+            color: #e59724;
+        }
+    </style>--%>
+</head>
+<body style="background-color: #E5E5E5;">
+    <link rel="icon" href="images/<%=DomainName %>fav.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/<%=DomainName %>fav.ico" type="image/x-icon" />
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" AsyncPostBackTimeout="1000">
+    </asp:ScriptManager>
+    <div>
+        <!-- *** Start of Header Menu -->
+        <div id="navwrapper">
+            <div id="logo">
+                <img src="<%=LogoName%>" /></div>
+            <%if (IsTraining)
+              { %>
+            <div class="trainingac">
+                Training Account</div>
+            <%} %>
+            <div id="top">
+                <% if (Session["UserID"] != null && Session["UserID"] != "") // Check for session
+                   {
+                       if (Session["RoleID"].ToString() == "2")
+                       {%>
+                <%=hdnLoginType.Value%>:
+                <%= Session["profilename"].ToString().Replace("&", "&amp;")%><br />
+                <%if (Session["C_USER_ID"] == null)
+                  { %>
+                logged in:
+                <%= Session["Username"]%><br />
+                User ID:
+                <%=Session["UserID"]%>
+                <%}
+                       }
+                   }%>
+                <% if (Session["C_USER_ID"] != "" && Session["C_USER_ID"] != null)
+                   {
+                       if (Session["RoleID"].ToString() == "2")
+                       {%>
+                logged in:
+                <%= Session["C_USER_NAME"]%><br />
+                User ID:
+                <%=Session["C_USER_ID"]%>
+                <%}
+                   }%>
+            </div>
+            <%if (Convert.ToBoolean(hdnIsLiteVersion.Value))
+              { %>
+            <div id="navwrapnewalert">
+                <%}
+              else
+              {%>
+                <div id="navwrapnew">
+                    <%} %>
+                    <%if (Session["userid"] != null && Session["RoleID"] != null) // Check for session
+                      {%>
+                    <div id="navlinks" style="padding-right: 0px;">
+                        <a href="<%=Page.ResolveClientUrl("~/Logout.aspx")%>" class="last">Logout</a>
+                        <div class="divider">
+                            <img src="<%=Page.ResolveClientUrl("~/images/OuterImages/nav-bullet.png")%>" /></div>
+                    </div>
+                    <%if (Session["RoleID"].ToString() == "2")
+                      {%>
+                    <div id="navlinks">
+                        <a href="javascript:showPanel(1);">Help</a><div class="divider">
+                            <img src="<%=Page.ResolveClientUrl("~/images/OuterImages/nav-bullet.png")%>" /></div>
+                    </div>
+                    <%if (Session["IsSponsor"] == null)
+                      { %>
+                    <div id="navlinks">
+                        <div id="container">
+                            <asp:Menu ID="Menu2" runat="server" Orientation="Vertical" CssSelectorClass="SimpleEntertainmentMenu">
+                            </asp:Menu>
+                        </div>
+                        <div class="dividermenu">
+                            <img src="<%=Page.ResolveClientUrl("~/images/OuterImages/nav-bullet.png")%>" /></div>
+                    </div>
+                    <%if (IsCompleted) // *** Checking if user completed registration completion steps 13-05-2013 *** //
+                      {%>
+                    <div id="navlinks">
+                        <div id="container">
+                            <asp:Menu ID="Menu1" runat="server" Orientation="Vertical" CssSelectorClass="SimpleEntertainmentMenu">
+                            </asp:Menu>
+                        </div>
+                        <div class="dividermenu">
+                            <img src="<%=Page.ResolveClientUrl("~/images/OuterImages/nav-bullet.png")%>" /></div>
+                    </div>
+                    <div id="navlinks">
+                        <div id="container">
+                            <asp:Menu ID="menuMessages" runat="server" Orientation="Vertical" CssSelectorClass="SimpleEntertainmentMenu">
+                            </asp:Menu>
+                        </div>
+                        <div class="dividermenu">
+                            <img src="<%=Page.ResolveClientUrl("~/images/OuterImages/nav-bullet.png")%>" /></div>
+                    </div>
+                    <%}%>
+                    <div id="navlinks">
+                        <%if (Dburl == Checkdburl)
+                          {%>
+                        <a class="active" href="javascript:void(0);">Dashboard</a>
+                        <%}
+                          else
+                          { %>
+                        <a href="<%=Page.ResolveClientUrl("~/Business/MyAccount/Default.aspx")%>">Dashboard</a>
+                        <%} %>
+                        <div class="divider">
+                            <img src="<%=Page.ResolveClientUrl("~/images/OuterImages/nav-bullet.png")%>" /></div>
+                    </div>
+                    <%} %>
+                    <% }
+                      }%>
+                    <asp:HiddenField ID="hdnLoginType" runat="server" />
+                    <asp:HiddenField ID="hdnIsLiteVersion" runat="server" Value="false" />
+                </div>
+            </div>
+            <!-- *** End of Header Menu -->
+            <div class="clear">
+            </div>
+            <div id="contentwrapper">
+                <!--box starts-->
+                <div id="innertop" style="margin-top: 35px;">
+                </div>
+                <div id="innermidbg">
+                    <asp:ContentPlaceHolder ID="cphUser" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="innerbottom">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div>
+                <asp:Literal ID="ltrFooter" runat="server"></asp:Literal>
+            </div>
+            <asp:UpdatePanel ID="uppnlpopuphelp" runat="server" UpdateMode="Conditional">
+                <Triggers>
+                    <asp:PostBackTrigger ControlID="lnkHelpDownload" />
+                    <asp:PostBackTrigger ControlID="imgBtnHidePopup" />
+                </Triggers>
+                <ContentTemplate>
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tr>
+                            <td align="center">
+                                <asp:Label ID="lblashelp" runat="server"></asp:Label>
+                                <cc1:ModalPopupExtender ID="ModalPopupExtenderhelp" runat="server" PopupControlID="pnlpopuphelp"
+                                    TargetControlID="lblashelp" BackgroundCssClass="modal" RepositionMode="RepositionOnWindowResize"
+                                    CancelControlID="imclosehelp">
+                                </cc1:ModalPopupExtender>
+                                <asp:Panel ID="pnlpopuphelp" runat="server" Width="600px" Style="display: none;"
+                                    class="mp-border" Height="615px">
+                                    <%--<table style="background-color: #F0F3F4;" width="100%" border="0" cellpadding="0"
+                                    cellspacing="0">
+                                    <tr>
+                                        <td align="center">
+                                            <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="3">
+                                                <ProgressTemplate>
+                                                    <img src="images/popup_ajax-loader.gif" border="0" /><b><font color="green">Processing....</font></b>
+                                                </ProgressTemplate>
+                                            </asp:UpdateProgress>
+                                        </td>
+                                    </tr>
+                                </table>--%>
+                                    <asp:Panel ID="pnl1" runat="server" Width="100%" Style="display: none;">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mp-title">
+                                            <tr>
+                                                <td align="center">
+                                                    <asp:Label ID="lbltitle" runat="server"></asp:Label>
+                                                </td>
+                                                <td class="close">
+                                                    <asp:ImageButton ID="imclosehelp" runat="server" ImageUrl="~/images/Dashboard/mp-close.gif"
+                                                        Width="22" Height="22" OnClick="btnclose_Click" CausesValidation="false" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div width="100%" style="overflow: scroll; overflow-x: hidden; height: 580px; word-wrap: break-word;
+                                            background-color: #F0F3F4;">
+                                            <table width="95%" border="0" cellpadding="0" cellspacing="0" class="linkcolor">
+                                                <tr>
+                                                    <td align="right" style="padding-left: 8px;">
+                                                        <table id="tblhelpmenu" cellpadding="0" cellspacing="0" border="0" style="padding-top: 10px;">
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="javascript:popup();">
+                                                                        <img src="<%=Page.ResolveClientUrl("~/images/Dashboard/mpgotomenu.gif")%>" alt="" /></a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" style="padding-left: 8px; padding-top: 10px; padding-bottom: 10px;"
+                                                        class="linkcolor">
+                                                        <div width="100%" id="divtoprint">
+                                                            <asp:Label ID="lblcontent" runat="server"></asp:Label><br />
+                                                            <asp:Label ID="lblvideoheading" runat="server"></asp:Label><br />
+                                                            <asp:Label ID="lblvideo" runat="server" CssClass=""></asp:Label></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        <table cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="javascript:Hidepopup()">
+                                                                        <img src="<%=Page.ResolveClientUrl("~/images/Dashboard/close.jpg")%>" /></a>
+                                                                    <a href="javascript:PrintContent();">
+                                                                        <img src="<%=Page.ResolveClientUrl("~/images/Dashboard/mpprint.gif")%>" /></a>
+                                                                    <asp:LinkButton ID="lnkHelpDownload" runat="server" OnClick="lnkHelpDownload_OnClick"
+                                                                        CausesValidation="false"><img src="<%=Page.ResolveClientUrl("~/images/Dashboard/DownloadHelp.jpg")%>" /></asp:LinkButton>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </asp:Panel>
+                                    <asp:Panel ID="pnl2" runat="server" Width="100%" CssClass="noprint">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mp-title">
+                                            <tr>
+                                                <td align="center">
+                                                    Choose a help topic
+                                                </td>
+                                                <td class="close">
+                                                    <asp:ImageButton ID="imgBtnHidePopup" runat="server" ImageUrl="~/Images/Dashboard/mp-close.gif"
+                                                        OnClick="imgBtnHidePopup_Click" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table style="background-color: #F0F3F4;" width="100%" border="0" cellpadding="0"
+                                            cellspacing="0">
+                                            <tr>
+                                                <td align="center">
+                                                    <asp:UpdateProgress ID="UpdateProgress2" runat="server" DisplayAfter="3">
+                                                        <ProgressTemplate>
+                                                            <img src="<%=Page.ResolveClientUrl("~/images/popup_ajax-loader.gif")%>" border="0" /><b><font
+                                                                color="green">Processing....</font></b>
+                                                        </ProgressTemplate>
+                                                    </asp:UpdateProgress>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div align="left" style="background-color: #F0F3F4; padding: 10px 0px 10px 20px;">
+                                            <table>
+                                                <colgroup>
+                                                    <col width="70%" />
+                                                    <col width="*" />
+                                                </colgroup>
+                                                <tr>
+                                                    <td>
+                                                        <asp:TextBox ID="txtHelpSearch" runat="server" CssClass="HelpBox"></asp:TextBox><%--<cc1:AutoCompleteExtender
+                                                        ID="AutoCompleteExtender1" runat="server" TargetControlID="txtHelpSearch" MinimumPrefixLength="1"
+                                                        EnableCaching="true" CompletionSetCount="1" CompletionInterval="500" ServiceMethod="GetHelpItems"
+                                                        CompletionListCssClass="AutoExtender" CompletionListItemCssClass="AutoExtenderList" CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem">
+                                                    </cc1:AutoCompleteExtender>--%>
+                                                    </td>
+                                                    <td valign="middle">
+                                                        <asp:Button ID="btnHelpSearch" runat="server" Text="Search" OnClick="btnHelpSearch_Click"
+                                                            CssClass="HelpButton" />
+                                                        <asp:Button ID="btnHelpClear" runat="server" Text="Clear" OnClick="btnHelpClear_Click"
+                                                            CssClass="HelpButton" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <asp:Label ID="lblNoHelpMsg" runat="server" Font-Size="12px" ForeColor="Red"></asp:Label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <br />
+                                        </div>
+                                        <div style="overflow: scroll; overflow-x: hidden; height: 580px; word-wrap: break-word;
+                                            background-color: #F0F3F4;">
+                                            <table width="95%" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td align="left" class="treeview">
+                                                        <asp:TreeView ID="TreeView1" runat="server">
+                                                        </asp:TreeView>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <asp:Label ID="lblNoHelp" runat="server" Style="color: Green; font-size: 16px;"></asp:Label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        <table cellpadding="0" cellspacing="0" border="0" style="padding-top: 10px;">
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="javascript:Hidepopup()">
+                                                                        <img src="<%=Page.ResolveClientUrl("~/images/Dashboard/mpcontinue.gif")%>" /></a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </asp:Panel>
+                                    <asp:Panel ID="pnlemail" runat="server" CssClass="noprint">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mp-title">
+                                            <tr>
+                                                <td>
+                                                </td>
+                                                <td class="close">
+                                                    <a href="javascript:Hidepopup()">
+                                                        <img src="<%=Page.ResolveClientUrl("~/images/Dashboard/mp-close.gif")%>" /></a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div style="overflow: scroll; overflow-x: hidden; height: 580px; word-wrap: break-word;
+                                            background-color: #F0F3F4;">
+                                            <table width="95%" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td colspan="2" style="padding-top: 5px;">
+                                                        <asp:Label ID="lblhelpmsg" runat="server" ForeColor="green"></asp:Label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 5px;">
+                                                        Enter Email ID:
+                                                    </td>
+                                                    <td style="padding-top: 5px;">
+                                                        <asp:TextBox ID="txtemail" runat="server"></asp:TextBox>
+                                                        <asp:RequiredFieldValidator ID="reqMovinggroup" runat="server" ControlToValidate="txtemail"
+                                                            ValidationGroup="M">*</asp:RequiredFieldValidator>
+                                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtemail"
+                                                            ErrorMessage="Invalid Email format" Font-Size="XX-Small" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                                                            ValidationGroup="M"></asp:RegularExpressionValidator>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 10px; padding-left: 100px; padding-right: 100px;" colspan="2">
+                                                        <asp:ImageButton ID="btnsend" OnClick="btnsend_Click" runat="server" ValidationGroup="M"
+                                                            ImageUrl="~/images/Dashboard/mpsend.gif" />
+                                                        <a href="javascript:displayemailpanel(0)">
+                                                            <img src="<%= Page.ResolveClientUrl("~/images/Dashboard/mpback.gif")%>" /></a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </asp:Panel>
+                                </asp:Panel>
+                            </td>
+                        </tr>
+                    </table>
+                    <asp:HiddenField ID="hdnhelpKeyword" runat="server" Value="" />
+                    <asp:Label ID="lblVersions" runat="server" visiable="false"></asp:Label>
+                    <cc1:ModalPopupExtender ID="ModalPopupExtenderVersions" runat="server" TargetControlID="lblVersions"
+                        PopupControlID="pnlVersions" BackgroundCssClass="modal">
+                    </cc1:ModalPopupExtender>
+                    <asp:Panel Style="display: none" ID="pnlVersions" runat="server" Width="100%">
+                        <table style="background-color: White; padding: 20px; border-radius" cellspacing="0"
+                            cellpadding="0" width="450" align="center" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 0px; padding-top: 0px" align="right">
+                                        <a href="javascript:void(0);" onclick="CloseVersionsModal();">
+                                            <img src="../../images/popup_close.gif" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold; font-size: 14px; padding-bottom: 10px; color: Orange;
+                                        padding-top: 10px" align="left">
+                                        Release History
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="overflow-y: auto; height: 350px; position: relative; width: auto; padding: 5px;
+                                            border: 1px solid #FFCC00;" class="allversions">
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="color: #218C8D; font-size: 16px; font-weight: bold; padding-bottom: 10px;">
+                                                        What's new - 2.8.1 Release
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #40B8AF; padding-left: 5px; font-size: 14px; font-weight: bold;
+                                                        padding-bottom: 10px;">
+                                                        Hub Management System
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Enhancements:</div>
+                                                        <ul>
+                                                            <li>SmartConnect: Message Management – Included the ability to create and assign a Category
+                                                                to SmartConnect Buttons for reporting purposes. Added message reports and filtering
+                                                                feature (date to date search, category search, reference id search or text search).
+                                                                Included the down export to Excel.</li>
+                                                            <li>SmartConnect: Improvement to SmartConnect message reply</li>
+                                                            <li>SmartConnect: Added ability to create notes and maintain a log. Included sending
+                                                                notes via email.</li>
+                                                            <li>SmartConnect messages, App messages and email messages are now on separate pages.</li>
+                                                            <li>SmartConnect/Private Call Directory: Added default image library for SmartConnect
+                                                                button icons.</li>
+                                                            <li>App Messages: Improvement to message reply</li>
+                                                            <li>App Messages: Added archive button</li>
+                                                            <li>App Image Gallery: Added ascending and descending options for image sorting</li>
+                                                            <li>How to Videos: Now display in separate window when playing.</li>
+                                                            <li>Permissions page: Now displays SmartConnect in parenthesis when button name is renamed
+                                                                for easy identification.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px; padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Fixes:</div>
+                                                        <ul>
+                                                            <li>Youtube share link no longer cutting off URL when pasting.</li>
+                                                            <li>Facebook Auto Share: Shortened link will no longer display error. (link was duplicating
+                                                                shortened url displaying error)</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="color: #218C8D; font-size: 16px; font-weight: bold; padding-bottom: 10px;">
+                                                        What's new - 2.8 Release
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #40B8AF; padding-left: 5px; font-size: 14px; font-weight: bold;
+                                                        padding-bottom: 10px;">
+                                                        Hub Management System
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Enhancements:</div>
+                                                        <ul>
+                                                            <li>Blank Template: Added Phone field to blank template which allows dialing of a 10
+                                                                digit or 3 digit phone number.</li>
+                                                            <li>Affiliate Apps: Improved linking procedure for adding to favorites.</li>
+                                                            <li>Word Converter: MS word converter added to Home / About Us / Our Mission modules.</li>
+                                                            <li>SmartConnect: Add and select contacts directly from the button edit screen.</li>
+                                                            <li>Private Call: Add and select contacts directly from the button edit screen.</li>
+                                                            <li>Marketplace: Improved payment processing.</li>
+                                                            <li>Help menu: Help content updated.</li>
+                                                            <li>Forms: Added expiration time drop down.</li>
+                                                            <li>System emails: Eliminated showing all of the recipients of the email.</li>
+                                                            <li>Manage Associates: Search box has been added to easily find an Associate to edit.</li>
+                                                            <li>SmartConnect: Included more icons for Button description.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px; padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Fixes:</div>
+                                                        <ul>
+                                                            <li>Private call Module: Messages now alerting for new messages on Dashboard.</li>
+                                                            <li>Private Content Contacts: Fixed mobile number field to mandatory.</li>
+                                                            <li>Messages: Fixed text wrap.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #257E78; font-size: 14px; font-weight: bold; padding-top: 20px;
+                                                        padding-bottom: 10px; padding-left: 5px;">
+                                                        Mobile app
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <h3>
+                                                            Enhancements:</h3>
+                                                        <ul>
+                                                            <li>Full Screen View Option for Content Modules on App - Ability to choose default view
+                                                                in settings (Requires app update to 2.8).</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px; padding-left: 10px;">
+                                                        <h3>
+                                                            Fixes:</h3>
+                                                        <ul>
+                                                            <li>Contact Us / Tips: Paragraphs now display for longer messages.</li>
+                                                            <li>App owner's time zone displays on app.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="color: #218C8D; font-size: 16px; font-weight: bold; padding-bottom: 10px;">
+                                                        What's new - 2.7 Release
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #40B8AF; padding-left: 5px; font-size: 14px; font-weight: bold;
+                                                        padding-bottom: 10px;">
+                                                        Hub Management System
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            New Feature:</div>
+                                                        <ul>
+                                                            <li>MS Word Converter – Allows for content created in MS Word documents to be uploaded
+                                                                directly to templates in the content modules. Transfers all of the MS Word document’s
+                                                                content including images and links to the blank template.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Enhancements:</div>
+                                                        <ul>
+                                                            <li>Added a "Favorites" category to forms in content modules. - Add forms that are used
+                                                                on a regular basis to Favorites to find them quickly.</li>
+                                                            <li>Included a branded app flyer in the Downloads Section – Flyer identifies the app
+                                                                and includes the QR Code. Downloaded in pdf format.</li>
+                                                            <li>Added custom message field in app display settings so that an additional message
+                                                                can be displayed on the contact / tips screens.</li>
+                                                            <li>Added Arizona time zone to drop down time zone on the Dashboard.</li>
+                                                            <li>Added new items on permission page to control information available to associates.</li>
+                                                            <li>Added 4 standard default buttons and descriptions for Private Call Directory. Buttons
+                                                                may be deleted or changed to suit the organization’s requirements. By default they
+                                                                are set not to display so that users may edit them before publishing.</li>
+                                                            <li>Added on / off option for Private Call Directory buttons; controls display of individual
+                                                                buttons in the Call Directory Module.</li>
+                                                            <li>Added image gallery to manage icons for Private Call Directory Buttons.</li>
+                                                            <li>Added check box for push notifications. – Provides the option to send a push notification
+                                                                or SMS (text) message individually or both simultaneously. Note: The SMS option
+                                                                is visible only if the SMS Module has been actuated.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px; padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Fixes:</div>
+                                                        <ul>
+                                                            <li>Drag and drop button order not saving every time.</li>
+                                                            <li>Show play button on help videos</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="color: #218C8D; font-size: 16px; font-weight: bold; padding-bottom: 10px;">
+                                                        What's new - 2.6.8 Release
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #40B8AF; padding-left: 5px; font-size: 14px; font-weight: bold;
+                                                        padding-bottom: 10px;">
+                                                        Hub Management System
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            New Feature:</div>
+                                                        <span style="color: green;">Private Call Module (Phone Directory)</span>
+                                                        <ul>
+                                                            <li>Private Call Module – Is a "One Touch" call manager that has the ability to automatically
+                                                                send emails, text and push notifications to selected smart phones. When used as
+                                                                an emergency call module it is unique in that it minimizes potential abuse of emergency
+                                                                call buttons by giving administrators control over who has access to the directory
+                                                                on the app.</li>
+                                                            <li>Only mobile app users that have been invited and accepted the invitation on their
+                                                                smart device are able to display the Directory Buttons on their phone.</li>
+                                                            <li>The call module can include as many custom call buttons as needed. The buttons are
+                                                                defined and set up by the administrator based on their requirements.</li>
+                                                            <li>When a button is pushed the app establishes a phone connection, and can simultaneously
+                                                                send text messages, emails and push notifications to personnel listed to receive
+                                                                them. The message identifies the app name, the type of incident (button), the caller’s
+                                                                information, and the GPS location of the caller.</li>
+                                                        </ul>
+                                                        <span style="color: green;">SMS Messaging (Text)</span>
+                                                        <ul>
+                                                            <li>SMS (Text) Messaging - Add SMS Messaging to send notifications via SMS to app users
+                                                                that have opted in to receive SMS (text) messages. The “OPT IN” feature is included
+                                                                in the settings of the app.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Enhancements:</div>
+                                                        <ul>
+                                                            <li>Optimized tips form to recognize when location services are turned off.</li>
+                                                            <li>Added select all option to permissions page.</li>
+                                                            <li>Dashboard enhancement - Moved all App statistics to a button on right side of Dashboard.</li>
+                                                            <li>Red titles indicate which buttons are currently turned off on the App.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="color: #218C8D; font-size: 16px; font-weight: bold; padding-bottom: 10px;">
+                                                        What's new - 2.6 Release
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #40B8AF; padding-left: 5px; font-size: 14px; font-weight: bold;
+                                                        padding-bottom: 10px;">
+                                                        Hub Management System
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            New Feature:</div>
+                                                        <ul>
+                                                            <li>Banner Ad Reports - Track the number of times a banner ad has been clicked.</li>
+                                                            <li>App Open Statistics – View app usage; reports the number of times the app has been
+                                                                opened.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Enhancements:</div>
+                                                        <ul>
+                                                            <li>Improved sharing to Facebook. Created the ability to enter up to 140 characters
+                                                                of text when manually sharing an item.</li>
+                                                            <li>Added new items and check boxes to permissions page.</li>
+                                                            <li>Separated the permission option for receive feedback / tips messages on the permissions
+                                                                page.</li>
+                                                            <li>Removed security code from email share function from Dashboard.</li>
+                                                            <li>Added search function to content image gallery.</li>
+                                                            <li>Auto-populate current date in mandatory date fields.</li>
+                                                            <li>New videos added to How To section.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px; padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Fixes:</div>
+                                                        <ul>
+                                                            <li>New Content Alert updated for iPhones.</li>
+                                                            <li>Reposition images that appear sideways or upside down when submitted from iPhone.</li>
+                                                            <li>Adjustment to the "Located" watermark on forms images.</li>
+                                                            <li>Sent items as push notifications that are not displayed without using manual sync.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="color: #218C8D; font-size: 16px; font-weight: bold; padding-bottom: 10px;">
+                                                        What's new - 2.5 Release
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #40B8AF; padding-left: 5px; font-size: 14px; font-weight: bold;
+                                                        padding-bottom: 10px;">
+                                                        Hub Management System
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            New Feature:</div>
+                                                        <ul>
+                                                            <li>Banner Ads – Create and manage up to 6 banner ads that rotate across the bottom
+                                                                of each app screen</li>
+                                                            <li>Create and send canned messages for replying to incoming tips/messages</li>
+                                                            <li>Add Video link blocks to content modules</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Enhancements:</div>
+                                                        <ul>
+                                                            <li>Added 'Review & Publish' admin control to identify associates that receive content
+                                                                for approval to display on app.</li>
+                                                            <li>Form improvements to templates</li>
+                                                            <li>Added the ability to create links to text in content text editors</li>
+                                                            <li>New help videos added to How To section</li>
+                                                            <li>Push notification button always visible on content module manage screens</li>
+                                                            <li>Questions marks and exclamation points now allowed in content titles</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px; padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Fixes:</div>
+                                                        <ul>
+                                                            <li>Survey total downloads vs. app downloads corrected</li>
+                                                            <li>Push notifications to iphone</li>
+                                                            <li>"Located" watermark on Missing form removed image thumbnail on app</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="color: #218C8D; font-size: 16px; font-weight: bold; padding-bottom: 10px;">
+                                                        What's new - 2.4.5 Release
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #40B8AF; padding-left: 5px; font-size: 14px; font-weight: bold;
+                                                        padding-bottom: 10px;">
+                                                        Hub Management System
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            New Feature:</div>
+                                                        <ul>
+                                                            <li>Add Background Image on app - You may now add or change the background image displayed
+                                                                on your app.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Enhancements:</div>
+                                                        <ul>
+                                                            <li>Content Block Editor removes styling from copied and pasted content; links of copied
+                                                                content remain as links.</li>
+                                                            <li>Private module title displays as red on the Manage Buttons Page of the dashboard</li>
+                                                            <li>Permissions page - Manage Message Receipt changed to Access Messages / Tips</li>
+                                                            <li>Permissions page - Added Access Market Place as option</li>
+                                                            <li>Permissions page - Added Manage Associate Logins as option</li>
+                                                            <li>Permissions page - Added Access App Background Image as option</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px; padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Fixes:</div>
+                                                        <ul>
+                                                            <li>App usage report total downloads to date</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="color: #218C8D; font-size: 16px; font-weight: bold; padding-bottom: 10px;">
+                                                        What's new - 2.4 Release
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #40B8AF; padding-left: 5px; font-size: 14px; font-weight: bold;
+                                                        padding-bottom: 10px;">
+                                                        Hub Management System
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            New Feature:</div>
+                                                        <ul>
+                                                            <li>Private app button / module – Viewed by invitation only Add an additional content
+                                                                module to the Dashboard and an app button that will <u>only display</u> on those
+                                                                smart devices that have accepted "setup" from an email invitation sent from you.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Enhancements:</div>
+                                                        <ul>
+                                                            <li>Updated permissions page – Approve / Reject content to publish</li>
+                                                            <li>Added justify text option to editor in content blocks</li>
+                                                            <li>Added QR code to downloads page for branded app customers</li>
+                                                            <li>Added change viewing order to surveys</li>
+                                                            <li>Added change viewing order to web links</li>
+                                                            <li>Added Search to help guide</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px; padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Fixes:</div>
+                                                        <ul>
+                                                            <li>Content title remaining in push notification field</li>
+                                                            <li>Release date on footer</li>
+                                                            <li>Improvement to form’s PDFs and blank templates</li>
+                                                            <li>Improvement to user interface in Firefox</li>
+                                                            <li>Approve / Reject functionality by adding associate selection for approval permissions
+                                                                (Enhancements – Updated permissions page)</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="color: #218C8D; font-size: 16px; font-weight: bold; padding-bottom: 10px;">
+                                                        What's new - 2.3 Release
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #40B8AF; padding-left: 5px; font-size: 14px; font-weight: bold;
+                                                        padding-bottom: 10px;">
+                                                        Hub Management System
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Enhancements:</div>
+                                                        <ul>
+                                                            <li>Ability to include app store links to your App on emails</li>
+                                                            <li>Default font size changed to 16 on content editors</li>
+                                                            <li>Google calendar sync improvements</li>
+                                                            <li>Options for displaying content order</li>
+                                                            <li>Version release number added to footer of website</li>
+                                                            <li>Updated help content</li>
+                                                            <li>Additional how to videos</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px; padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Fixes:</div>
+                                                        <ul>
+                                                            <li>Apostrophe issue in surveys</li>
+                                                            <li>Quotation marks not displaying in image captions</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #257E78; font-size: 14px; font-weight: bold; padding-top: 20px;
+                                                        padding-bottom: 10px; padding-left: 5px;">
+                                                        Mobile app
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <h3>
+                                                            Enhancements:</h3>
+                                                        <ul>
+                                                            <li>Removed location info on intro screen</li>
+                                                            <li>Added app navigation video to intro screen</li>
+                                                            <li>Text color intensified for date published</li>
+                                                            <li>Calendar view options added to app settings</li>
+                                                            <li>Version release number added to app</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px; padding-left: 10px;">
+                                                        <h3>
+                                                            Fixes:</h3>
+                                                        <ul>
+                                                            <li>Swipe motion to refresh screen</li>
+                                                            <li>Linked images go directly to link</li>
+                                                            <li>Push notifications display on iPhones</li>
+                                                            <li>Survey text block outline intensified</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="color: #218C8D; font-size: 16px; font-weight: bold; padding-bottom: 10px;">
+                                                        What's new - 2.1 Release
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #40B8AF; padding-left: 5px; font-size: 14px; font-weight: bold;
+                                                        padding-bottom: 10px;">
+                                                        Hub Management System
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Enhancements:</div>
+                                                        <ul>
+                                                            <li>Schedule push notifications</li>
+                                                            <li>Auto share to Facebook / Twitter</li>
+                                                            <li>Updated help</li>
+                                                            <li>New how to videos</li><li>Expanded app download stats</li>
+                                                            <li>Drag and Drop added to Home and About Us</li>
+                                                            <li>Forms improvement</li>
+                                                            <li>Ability to edit content name</li>
+                                                            <li>Hyperlinks replaced with shortened URL's</li>
+                                                            <li>Approve / Reject content added to body of email</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px; padding-left: 10px;">
+                                                        <div style="font-size: 14px;">
+                                                            Fixes:</div>
+                                                        <ul>
+                                                            <li>Forms print issue</li>
+                                                            <li>Google Calendar Sync</li>
+                                                            <li>Private content app alert</li>
+                                                            <li>Contact selection</li>
+                                                            <li>Facebook sharing</li>
+                                                            <li>Published content display time</li>
+                                                            <li>Survey reports</li>
+                                                            <li>Apostrophes in emailed content</li>
+                                                            <li>Auto update module names on widget content</li>
+                                                            <li>Email page - Contact us defaulted to un-checked</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding: 10px;">
+                                        <a class="versionbutton" href="javascript:void(0);" onclick="CloseVersionsModal();">
+                                            Close</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </asp:Panel>
+                    <table width="100%" class="modalmargin">
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblpre" runat="server" visiable="false"></asp:Label>
+                                <cc1:ModalPopupExtender ID="HelpVideosModal" runat="server" TargetControlID="lblpre"
+                                    PopupControlID="pnlVideos" BackgroundCssClass="popupmodal">
+                                </cc1:ModalPopupExtender>
+                                <asp:Panel ID="pnlVideos" runat="server" Width="100%" Style="display: none;">
+                                    <table style="background-color: White" cellspacing="0" cellpadding="0" width="770"
+                                        align="center" border="0">
+                                        <tr>
+                                            <td align="center">
+                                                <asp:UpdateProgress ID="UpdateProgress7" runat="server" DisplayAfter="3">
+                                                    <ProgressTemplate>
+                                                        <img src="../../images/popup_ajax-loader.gif" border="0" /><b><font color="green">Processing....</font></b>
+                                                    </ProgressTemplate>
+                                                </asp:UpdateProgress>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 5px;" align="right">
+                                                <a href="javascript:void(0);" onclick="CloseModal();">
+                                                    <img src="../../images/popup_close.gif" /></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Panel Style="display: none" ID="pnlVideolist" runat="server" Width="100%">
+                                                    <table style="background-color: White" cellspacing="0" cellpadding="0" width="100%"
+                                                        border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <div style="overflow: scroll; overflow-x: hidden; height: 380px;">
+                                                                    <div id="dlGridVideos">
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </asp:Panel>
+                                                <asp:Panel Style="display: none" ID="pnlVideosFrame" runat="server" Width="100%">
+                                                    <table style="background-color: White" cellspacing="0" cellpadding="0" width="100%"
+                                                        border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="padding: 5px;">
+                                                                    <label id="lblVideoTitle" style="color: Green; font-weight: bold;" />
+                                                                </td>
+                                                                <td align="right" style="padding-right: 20px;">
+                                                                    <a href="javascript:ShowVideosList();" style="color: #E45641; font-weight: bold;">Show
+                                                                        Videos</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding-bottom: 15px;" colspan="2">
+                                                                    <iframe id="IframeVideoPopup" width="640" height="375" frameborder="0" webkitallowfullscreen
+                                                                        mozallowfullscreen allowfullscreen></iframe>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </asp:Panel>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </asp:Panel>
+                            </td>
+                        </tr>
+                    </table>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            <asp:HiddenField ID="hdnhelpText" runat="server" />
+            <asp:HiddenField ID="hdnhelpvideo" runat="server" />
+            <asp:HiddenField ID="hdnGlossarytext" runat="server" />
+            <asp:HiddenField ID="hdnGlossarydesc" runat="server" />
+            <asp:HiddenField ID="hdnhelpname" runat="server" />
+            <asp:HiddenField ID="hdnhelpID" runat="server" />
+        </div>
+    </form>
+    <script type="text/javascript">
+        $(function () {
+            var height_diff = $(window).height() - $('body').height();
+            if (height_diff > 0) {
+                height_diff = height_diff + 20;
+                $('#footer').css('margin-top', height_diff);
+            }
+        });
+        function ShowHelpVideos(blockType) {
+
+            var strSdata = "{VideoType:'" + blockType + "'}";
+            $find("<%=HelpVideosModal.ClientID %>").show();
+            $("#dlGridVideos").empty();
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "LiteDashboard.aspx/BindVideosData",
+                data: strSdata,
+                dataType: "json",
+                success: function (data) {
+                    var strdata = "";
+                    if (data.d.length > 0) {
+                        for (var i = 0; i < data.d.length; i++) {
+                            if (i == 0) {
+                                ShowVideoPopup(data.d[i].Url, data.d[i].Title)
+                            }
+                            document.getElementById('<%=pnlVideolist.ClientID %>').style.display = "block";
+                            document.getElementById('<%=pnlVideosFrame.ClientID %>').style.display = "none";
+                            strdata = strdata + "<div style='float:left; margin:10px;'><div id='Videowrap'><div id='Video' style='height:153px;'><a id='videoURL' href='javascript:void(0)' onclick='ShowVideoPopup(" + data.d[i].Url + ",\"" + data.d[i].Title + "\")'><img id='lblThumbnailUrl' src='" + data.d[i].Thumb_Url + "' CssClass='img'/></a></div>";
+                            strdata = strdata + "<div class='videotitle'><label id='lblTitle'>" + data.d[i].Title + "</label></div>";
+                            strdata = strdata + "<div class='clear'></div></div><div class='clear'></div></div>";
+                        }
+                        $("#dlGridVideos").append(strdata);
+                    }
+                },
+                error: function (result) {
+                    //alert("Error Occured.");
+                    $find("<%=HelpVideosModal.ClientID %>").hide();
+                }
+            });
+        }
+        function ShowVideosList() {
+            document.getElementById('<%=pnlVideolist.ClientID %>').style.display = "block";
+            document.getElementById('<%=pnlVideosFrame.ClientID %>').style.display = "none";
+        }
+        function ShowVideoPopup(url, videotitle) {
+            document.getElementById('<%=pnlVideolist.ClientID %>').style.display = "none";
+            document.getElementById('<%=pnlVideosFrame.ClientID %>').style.display = "block";
+            document.getElementById('lblVideoTitle').innerHTML = videotitle;
+            var Iframe = document.getElementById("IframeVideoPopup");
+            Iframe.src = "http://player.vimeo.com/video/" + url;
+            $find("<%=HelpVideosModal.ClientID %>").show();
+        }
+        function CloseModal() {
+            var Iframe = document.getElementById("IframeVideoPopup");
+            Iframe.src = '';
+            $find("<%=HelpVideosModal.ClientID %>").hide();
+        }
+    </script>
+</body>
+</html>

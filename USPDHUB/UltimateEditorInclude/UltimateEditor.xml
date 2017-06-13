@@ -1,0 +1,77 @@
+<ToolbarList>
+	<Toolbar ID="File">
+		<ToolbarItem Type="Button" ID="New" Command="New" ButtonFile="New.gif" />
+		<ToolbarItem Type="Button" ID="Save" Command="Save" ButtonFile="Save.gif" PostBackValue="Save" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="Print" Command="Print" ButtonFile="Print.gif" />
+		<ToolbarItem Type="Button" ID="PrintPreview" Command="PrintPreview" ButtonFile="PrintPreview.gif" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="UltimateSpell" Command="UltimateSpell" ButtonFile="UltimateSpell.gif" />
+		<ToolbarItem Type="Button" ID="SpellAsYouType" Command="SpellAsYouType" ButtonFile="SpellAsYouType.gif" Selected="False" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="FindReplace" Command="FindReplace" ButtonFile="FindReplace.gif" />
+	</Toolbar>
+	<Toolbar ID="Edit">
+		<ToolbarItem Type="Button" ID="Cut" Command="Cut" ButtonFile="Cut.gif" />
+		<ToolbarItem Type="Button" ID="Copy" Command="Copy" ButtonFile="Copy.gif" />
+		<ToolbarItem Type="Button" ID="Paste" Command="Paste" ButtonFile="Paste.gif" />
+		<ToolbarItem Type="Button" ID="PasteAsText" Command="PasteAsText" ButtonFile="PasteAsText.gif" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="Undo" Command="Undo" ButtonFile="Undo.gif" />
+		<ToolbarItem Type="Button" ID="Redo" Command="Redo" ButtonFile="Redo.gif" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="SelectAll" Command="SelectAll" ButtonFile="SelectAll.gif" />
+		<ToolbarItem Type="Button" ID="RemoveFormat" Command="RemoveFormat" ButtonFile="RemoveFormat.gif" />
+		<ToolbarItem Type="Button" ID="CleanWordFormat" Command="CleanWordFormat" ButtonFile="CleanWordFormat.gif" />
+	</Toolbar>
+	<Toolbar ID="Insert">
+		<ToolbarItem Type="Button" ID="CreateLink" Command="CreateLink" ButtonFile="CreateLink.gif" />
+		<ToolbarItem Type="Button" ID="Unlink" Command="Unlink" ButtonFile="Unlink.gif" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="InsertImage" Command="InsertImage" ButtonFile="InsertImage.gif" />
+		<ToolbarItem Type="Button" ID="InsertTemplate" Command="InsertTemplate" ButtonFile="InsertTemplate.gif" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="InsertTable" Command="InsertTable" ButtonFile="InsertTable.gif" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="InsertEmoticon" Command="InsertEmoticon" ButtonFile="InsertEmoticon.gif" />
+		<ToolbarItem Type="Button" ID="InsertSymbol" Command="InsertSymbol" ButtonFile="InsertSymbol.gif" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="InsertPageBreak" Command="InsertPageBreak" ButtonFile="InsertPageBreak.gif" />
+		<ToolbarItem Type="Button" ID="InsertHorizontalRule" Command="InsertHorizontalRule" ButtonFile="InsertHorizontalRule.gif" />
+	</Toolbar>
+	<Toolbar ID="View">
+		<ToolbarItem Type="Button" ID="FitToWindow" Command="FitToWindow" ButtonFile="FitToWindow.gif" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="Help" Command="Help" ButtonFile="Help.gif" />
+	</Toolbar>
+	<Toolbar ID="Format" NewLine="True">
+		<ToolbarItem Type="DropDown" ID="FormatBlock" Command="FormatBlock" AutoPopulateItems="True" SelectedValue="" />
+		<ToolbarItem Type="DropDown" ID="FontName" Command="FontName" AutoPopulateItems="True" SelectedValue="" />
+		<ToolbarItem Type="DropDown" ID="FontSize" Command="FontSize" SelectedValue="" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="Bold" Command="Bold" ButtonFile="Bold.gif" Selected="False" />
+		<ToolbarItem Type="Button" ID="Italic" Command="Italic" ButtonFile="Italic.gif" Selected="False" />
+		<ToolbarItem Type="Button" ID="Underline" Command="Underline" ButtonFile="Underline.gif" Selected="False" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="JustifyLeft" Command="JustifyLeft" ButtonFile="JustifyLeft.gif" Selected="False" />
+		<ToolbarItem Type="Button" ID="JustifyCenter" Command="JustifyCenter" ButtonFile="JustifyCenter.gif" Selected="False" />
+		<ToolbarItem Type="Button" ID="JustifyRight" Command="JustifyRight" ButtonFile="JustifyRight.gif" Selected="False" />
+		<ToolbarItem Type="Button" ID="JustifyFull" Command="JustifyFull" ButtonFile="JustifyFull.gif" Selected="False" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="InsertOrderedList" Command="InsertOrderedList" ButtonFile="InsertOrderedList.gif" />
+		<ToolbarItem Type="Button" ID="InsertUnorderedList" Command="InsertUnorderedList" ButtonFile="InsertUnorderedList.gif" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="Outdent" Command="Outdent" ButtonFile="Outdent.gif" />
+		<ToolbarItem Type="Button" ID="Indent" Command="Indent" ButtonFile="Indent.gif" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="ForeColor" Command="ForeColor" ButtonFile="ForeColor.gif" SelectedValue="" />
+		<ToolbarItem Type="Button" ID="ForeColorPicker" Command="ForeColorPicker" ButtonFile="TriangleDown.gif" />
+		<ToolbarItem Type="Button" ID="BackColor" Command="BackColor" ButtonFile="BackColor.gif" SelectedValue="" />
+		<ToolbarItem Type="Button" ID="BackColorPicker" Command="BackColorPicker" ButtonFile="TriangleDown.gif" />
+	</Toolbar>
+	<Toolbar ID="Setting">
+		<ToolbarItem Type="Button" ID="LineBreakAsParagraph" Command="LineBreakAsParagraph" ButtonFile="LineBreakAsParagraph.gif" Selected="False" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="Properties" Command="Properties" ButtonFile="Properties.gif" />
+	</Toolbar>
+</ToolbarList>

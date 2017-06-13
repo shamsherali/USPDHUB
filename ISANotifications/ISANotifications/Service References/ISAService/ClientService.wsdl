@@ -1,0 +1,2502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSuperAdminiDetails1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSuperAdminiDetails1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSuperAdminiDetails1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="superAdminUserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBusinessProfileByUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBusinessProfileByUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBusinessProfileByUserIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getorderidbyuserid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetorderidbyuseridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetorderidbyuseridResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDetailsByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDetailsByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserDetailsByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUserActivationCodeForRegistration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUserActivationCodeForRegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckUserActivationCodeForRegistrationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProfileIDByUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProfileIDByUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetProfileIDByUserIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDetailsByUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDetailsByUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserDetailsByUserIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMobileAppAlerts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="flag" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMobileAppAlertsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMobileAppAlertsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMobileTips">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="flag" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMobileTipsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMobileTipsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDesktopMobileAlerts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pUserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFlag" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pPoolDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDesktopMobileAlertsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDesktopMobileAlertsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDesktopMobileAlertsByPoolDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pUserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFlag" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pPoolDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDesktopMobileAlertsByPoolDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDesktopMobileAlertsByPoolDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStatusForMobileAlerts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="contactID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="flag" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStatusForMobileAlertsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateStatusForMobileAlertsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMobileAppAlertsForDesktop">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pSource" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pUserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pRowCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMobileAppAlertsForDesktopResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMobileAppAlertsForDesktopResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfigSettingByPID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pProfileID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pConfigName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfigSettingByPIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConfigSettingByPIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfigSettingsByVertical">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pDomain" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pConfigName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfigSettingsByVerticalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConfigSettingsByVerticalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTipsManagerAudioFilePath">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pProfileID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pVerticalDomain" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTipsManagerAudioFilePathResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTipsManagerAudioFilePathResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAudioFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="audioBytes" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="audioFileName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="profileID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="chkDefault" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="domain" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAudioFilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadAudioFilesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAudioTipsManager">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="profileId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="domainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAudioTipsManagerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAudioTipsManagerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAudioTipsManager">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="audioID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAudioTipsManagerResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertUpdateAudioTipsManager">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="audioID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProfileID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="audioName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="audioFile" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isDefault" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="DefaultAudioID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AudioType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateAudioTipsManagerResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PlayAudioTipsManager">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="audioType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProfileID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="audioFile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PlayAudioTipsManagerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PlayAudioTipsManagerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentDateTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCurrentDateTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentDateTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllCannedMessages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pPID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllCannedMessagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllCannedMessagesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ErrorHandling">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="errorType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPageName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="methodName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strackTrace" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="innerException" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppNanme" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ErrorHandlingResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetModuleTypes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetModuleTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetModuleTypesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Insert_DesktopPOC_ModulContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pProfileID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pModuleType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDomainVertical" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTitle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPreviewHTML" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEditHTML" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pCreatedUser" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pModifyUser" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIsCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIsContactUs" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pisPublic" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pExpiryDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pPublishDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsPublish" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIsDesktopPOC" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pPublishID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pUserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_DesktopPOC_ModulContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_DesktopPOC_ModulContentResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOC_ModuleContentHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pProfileID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOC_ModuleContentHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPOC_ModuleContentHistoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertBulletinDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pBulletinID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTemplateBID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pBulletinTitle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pBulletinHTML" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pBulletinXML" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pCreatedUser" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pModifyUser" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIsArchive" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pUserID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pProfileID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIsCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIsPhotoCapture" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIsContactUs" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIsPrivate" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pExpiryDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pPublishDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Category" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsPublic" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="PublishedBy" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="printerHtml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCustomXML" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pListDescription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertBulletinDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertBulletinDetailsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertBusinessUpdateDetailsNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="profileID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessDesc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updateName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="progressLevel" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="isPublic" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pPublishDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEditHtml" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="publishedBy" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pListDescription" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pExDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIsCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIsContactUs" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pUserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertBusinessUpdateDetailsNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertBusinessUpdateDetailsNewResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadPOCImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="imgBytes" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProfileID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadPOCImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadPOCImageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPermissionsById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="associateID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPermissionsByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPermissionsByIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssociateUserDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssociateUserDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssociateUserDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAuthorNotifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="C_Username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ModuleName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="C_UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RootPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAuthorNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendAuthorNotificationsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertToUserTimeZone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="profileID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertToUserTimeZoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConvertToUserTimeZoneResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertUserTimeZoneToPST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtuserDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertUserTimeZoneToPSTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConvertUserTimeZoneToPSTResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_GetBusinessSchoolsList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pRegistrationID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_GetBusinessSchoolsListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISA_GetBusinessSchoolsListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_Add_Update_User">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pLastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pMobieNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSystemOSName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSystemOSVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pProfileID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_Add_Update_UserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ISA_Add_Update_UserResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_Generate_OTP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pPhoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pProfileID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_Generate_OTPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISA_Generate_OTPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_GetPushNotifications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pProfielID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPushNoteCount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCallNoteCount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pRegistrationID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_GetPushNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISA_GetPushNotificationsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_GetProfileDetailsOnRegID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pRegistrationID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pIsAddAll" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_GetProfileDetailsOnRegIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISA_GetProfileDetailsOnRegIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_AddProfiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pRegistrationID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pProfileID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_AddProfilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISA_AddProfilesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_UploadAudioFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pAudioBytes" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="pFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAudioFileName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pRegistrationID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pChkDefault" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAudioID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_UploadAudioFilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISA_UploadAudioFilesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_UpdateAudioFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pRegistrationID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAudioID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_UpdateAudioFilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ISA_UpdateAudioFilesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_GetAudioDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pRegistrationID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_GetAudioDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISA_GetAudioDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_DeleteProfilesOnRegID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pRegistrationID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pProfieID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_DeleteProfilesOnRegIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ISA_DeleteProfilesOnRegIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_UpdateNotifications_OnOff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pRegistrationID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pProfileID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isNotificationsOn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_UpdateNotifications_OnOffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ISA_UpdateNotifications_OnOffResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_SyncNoticicationsData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pRegistrationID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pLastSynTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_SyncNoticicationsDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISA_SyncNoticicationsDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strRecentDateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_DeleteAudioFileonRegID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pRegistrationID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAudioID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_DeleteAudioFileonRegIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ISA_DeleteAudioFileonRegIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_GetDefaultAudio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pRegistrationID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_GetDefaultAudioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISA_GetDefaultAudioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ISA_GetSyncTimeIntervals">
+        <s:complexType />
+      </s:element>
+      <s:element name="ISA_GetSyncTimeIntervalsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISA_GetSyncTimeIntervalsResult" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDefautSynTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSuperAdminiDetails1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetSuperAdminiDetails1" />
+  </wsdl:message>
+  <wsdl:message name="GetSuperAdminiDetails1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetSuperAdminiDetails1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetBusinessProfileByUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBusinessProfileByUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetBusinessProfileByUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBusinessProfileByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetorderidbyuseridSoapIn">
+    <wsdl:part name="parameters" element="tns:Getorderidbyuserid" />
+  </wsdl:message>
+  <wsdl:message name="GetorderidbyuseridSoapOut">
+    <wsdl:part name="parameters" element="tns:GetorderidbyuseridResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailsByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsByID" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailsByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserActivationCodeForRegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckUserActivationCodeForRegistration" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserActivationCodeForRegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckUserActivationCodeForRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProfileIDByUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProfileIDByUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetProfileIDByUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProfileIDByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailsByUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsByUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDetailsByUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMobileAppAlertsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMobileAppAlerts" />
+  </wsdl:message>
+  <wsdl:message name="GetMobileAppAlertsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMobileAppAlertsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMobileTipsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMobileTips" />
+  </wsdl:message>
+  <wsdl:message name="GetMobileTipsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMobileTipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDesktopMobileAlertsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDesktopMobileAlerts" />
+  </wsdl:message>
+  <wsdl:message name="GetDesktopMobileAlertsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDesktopMobileAlertsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDesktopMobileAlertsByPoolDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDesktopMobileAlertsByPoolDate" />
+  </wsdl:message>
+  <wsdl:message name="GetDesktopMobileAlertsByPoolDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDesktopMobileAlertsByPoolDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStatusForMobileAlertsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateStatusForMobileAlerts" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStatusForMobileAlertsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateStatusForMobileAlertsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMobileAppAlertsForDesktopSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMobileAppAlertsForDesktop" />
+  </wsdl:message>
+  <wsdl:message name="GetMobileAppAlertsForDesktopSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMobileAppAlertsForDesktopResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConfigSettingByPIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConfigSettingByPID" />
+  </wsdl:message>
+  <wsdl:message name="GetConfigSettingByPIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConfigSettingByPIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConfigSettingsByVerticalSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConfigSettingsByVertical" />
+  </wsdl:message>
+  <wsdl:message name="GetConfigSettingsByVerticalSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConfigSettingsByVerticalResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTipsManagerAudioFilePathSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTipsManagerAudioFilePath" />
+  </wsdl:message>
+  <wsdl:message name="GetTipsManagerAudioFilePathSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTipsManagerAudioFilePathResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadAudioFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadAudioFiles" />
+  </wsdl:message>
+  <wsdl:message name="UploadAudioFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadAudioFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAudioTipsManagerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAudioTipsManager" />
+  </wsdl:message>
+  <wsdl:message name="GetAudioTipsManagerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAudioTipsManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAudioTipsManagerSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAudioTipsManager" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAudioTipsManagerSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAudioTipsManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateAudioTipsManagerSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUpdateAudioTipsManager" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateAudioTipsManagerSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUpdateAudioTipsManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="PlayAudioTipsManagerSoapIn">
+    <wsdl:part name="parameters" element="tns:PlayAudioTipsManager" />
+  </wsdl:message>
+  <wsdl:message name="PlayAudioTipsManagerSoapOut">
+    <wsdl:part name="parameters" element="tns:PlayAudioTipsManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentDateTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentDateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentDateTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentDateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCannedMessagesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllCannedMessages" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCannedMessagesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllCannedMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ErrorHandlingSoapIn">
+    <wsdl:part name="parameters" element="tns:ErrorHandling" />
+  </wsdl:message>
+  <wsdl:message name="ErrorHandlingSoapOut">
+    <wsdl:part name="parameters" element="tns:ErrorHandlingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetModuleTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetModuleTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetModuleTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetModuleTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_DesktopPOC_ModulContentSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_DesktopPOC_ModulContent" />
+  </wsdl:message>
+  <wsdl:message name="Insert_DesktopPOC_ModulContentSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_DesktopPOC_ModulContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPOC_ModuleContentHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetPOC_ModuleContentHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetPOC_ModuleContentHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetPOC_ModuleContentHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertBulletinDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertBulletinDetails" />
+  </wsdl:message>
+  <wsdl:message name="InsertBulletinDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertBulletinDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertBusinessUpdateDetailsNewSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertBusinessUpdateDetailsNew" />
+  </wsdl:message>
+  <wsdl:message name="InsertBusinessUpdateDetailsNewSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertBusinessUpdateDetailsNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadPOCImageSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadPOCImage" />
+  </wsdl:message>
+  <wsdl:message name="UploadPOCImageSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadPOCImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissionsByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPermissionsById" />
+  </wsdl:message>
+  <wsdl:message name="GetPermissionsByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPermissionsByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssociateUserDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssociateUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetAssociateUserDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssociateUserDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendAuthorNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:SendAuthorNotifications" />
+  </wsdl:message>
+  <wsdl:message name="SendAuthorNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:SendAuthorNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertToUserTimeZoneSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertToUserTimeZone" />
+  </wsdl:message>
+  <wsdl:message name="ConvertToUserTimeZoneSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertToUserTimeZoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertUserTimeZoneToPSTSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertUserTimeZoneToPST" />
+  </wsdl:message>
+  <wsdl:message name="ConvertUserTimeZoneToPSTSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertUserTimeZoneToPSTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_GetBusinessSchoolsListSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_GetBusinessSchoolsList" />
+  </wsdl:message>
+  <wsdl:message name="ISA_GetBusinessSchoolsListSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_GetBusinessSchoolsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_Add_Update_UserSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_Add_Update_User" />
+  </wsdl:message>
+  <wsdl:message name="ISA_Add_Update_UserSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_Add_Update_UserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_Generate_OTPSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_Generate_OTP" />
+  </wsdl:message>
+  <wsdl:message name="ISA_Generate_OTPSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_Generate_OTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_GetPushNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_GetPushNotifications" />
+  </wsdl:message>
+  <wsdl:message name="ISA_GetPushNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_GetPushNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_GetProfileDetailsOnRegIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_GetProfileDetailsOnRegID" />
+  </wsdl:message>
+  <wsdl:message name="ISA_GetProfileDetailsOnRegIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_GetProfileDetailsOnRegIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_AddProfilesSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_AddProfiles" />
+  </wsdl:message>
+  <wsdl:message name="ISA_AddProfilesSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_AddProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_UploadAudioFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_UploadAudioFiles" />
+  </wsdl:message>
+  <wsdl:message name="ISA_UploadAudioFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_UploadAudioFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_UpdateAudioFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_UpdateAudioFiles" />
+  </wsdl:message>
+  <wsdl:message name="ISA_UpdateAudioFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_UpdateAudioFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_GetAudioDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_GetAudioDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISA_GetAudioDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_GetAudioDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_DeleteProfilesOnRegIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_DeleteProfilesOnRegID" />
+  </wsdl:message>
+  <wsdl:message name="ISA_DeleteProfilesOnRegIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_DeleteProfilesOnRegIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_UpdateNotifications_OnOffSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_UpdateNotifications_OnOff" />
+  </wsdl:message>
+  <wsdl:message name="ISA_UpdateNotifications_OnOffSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_UpdateNotifications_OnOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_SyncNoticicationsDataSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_SyncNoticicationsData" />
+  </wsdl:message>
+  <wsdl:message name="ISA_SyncNoticicationsDataSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_SyncNoticicationsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_DeleteAudioFileonRegIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_DeleteAudioFileonRegID" />
+  </wsdl:message>
+  <wsdl:message name="ISA_DeleteAudioFileonRegIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_DeleteAudioFileonRegIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_GetDefaultAudioSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_GetDefaultAudio" />
+  </wsdl:message>
+  <wsdl:message name="ISA_GetDefaultAudioSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_GetDefaultAudioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISA_GetSyncTimeIntervalsSoapIn">
+    <wsdl:part name="parameters" element="tns:ISA_GetSyncTimeIntervals" />
+  </wsdl:message>
+  <wsdl:message name="ISA_GetSyncTimeIntervalsSoapOut">
+    <wsdl:part name="parameters" element="tns:ISA_GetSyncTimeIntervalsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ClientServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <wsdl:input message="tns:GetUserDetailsSoapIn" />
+      <wsdl:output message="tns:GetUserDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSuperAdminiDetails1">
+      <wsdl:input message="tns:GetSuperAdminiDetails1SoapIn" />
+      <wsdl:output message="tns:GetSuperAdminiDetails1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessProfileByUserID">
+      <wsdl:input message="tns:GetBusinessProfileByUserIDSoapIn" />
+      <wsdl:output message="tns:GetBusinessProfileByUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getorderidbyuserid">
+      <wsdl:input message="tns:GetorderidbyuseridSoapIn" />
+      <wsdl:output message="tns:GetorderidbyuseridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetailsByID">
+      <wsdl:input message="tns:GetUserDetailsByIDSoapIn" />
+      <wsdl:output message="tns:GetUserDetailsByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserActivationCodeForRegistration">
+      <wsdl:input message="tns:CheckUserActivationCodeForRegistrationSoapIn" />
+      <wsdl:output message="tns:CheckUserActivationCodeForRegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileIDByUserID">
+      <wsdl:input message="tns:GetProfileIDByUserIDSoapIn" />
+      <wsdl:output message="tns:GetProfileIDByUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetailsByUserID">
+      <wsdl:input message="tns:GetUserDetailsByUserIDSoapIn" />
+      <wsdl:output message="tns:GetUserDetailsByUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileAppAlerts">
+      <wsdl:input message="tns:GetMobileAppAlertsSoapIn" />
+      <wsdl:output message="tns:GetMobileAppAlertsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileTips">
+      <wsdl:input message="tns:GetMobileTipsSoapIn" />
+      <wsdl:output message="tns:GetMobileTipsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDesktopMobileAlerts">
+      <wsdl:input message="tns:GetDesktopMobileAlertsSoapIn" />
+      <wsdl:output message="tns:GetDesktopMobileAlertsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDesktopMobileAlertsByPoolDate">
+      <wsdl:input message="tns:GetDesktopMobileAlertsByPoolDateSoapIn" />
+      <wsdl:output message="tns:GetDesktopMobileAlertsByPoolDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatusForMobileAlerts">
+      <wsdl:input message="tns:UpdateStatusForMobileAlertsSoapIn" />
+      <wsdl:output message="tns:UpdateStatusForMobileAlertsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileAppAlertsForDesktop">
+      <wsdl:input message="tns:GetMobileAppAlertsForDesktopSoapIn" />
+      <wsdl:output message="tns:GetMobileAppAlertsForDesktopSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigSettingByPID">
+      <wsdl:input message="tns:GetConfigSettingByPIDSoapIn" />
+      <wsdl:output message="tns:GetConfigSettingByPIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigSettingsByVertical">
+      <wsdl:input message="tns:GetConfigSettingsByVerticalSoapIn" />
+      <wsdl:output message="tns:GetConfigSettingsByVerticalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipsManagerAudioFilePath">
+      <wsdl:input message="tns:GetTipsManagerAudioFilePathSoapIn" />
+      <wsdl:output message="tns:GetTipsManagerAudioFilePathSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAudioFiles">
+      <wsdl:input message="tns:UploadAudioFilesSoapIn" />
+      <wsdl:output message="tns:UploadAudioFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAudioTipsManager">
+      <wsdl:input message="tns:GetAudioTipsManagerSoapIn" />
+      <wsdl:output message="tns:GetAudioTipsManagerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAudioTipsManager">
+      <wsdl:input message="tns:DeleteAudioTipsManagerSoapIn" />
+      <wsdl:output message="tns:DeleteAudioTipsManagerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateAudioTipsManager">
+      <wsdl:input message="tns:InsertUpdateAudioTipsManagerSoapIn" />
+      <wsdl:output message="tns:InsertUpdateAudioTipsManagerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PlayAudioTipsManager">
+      <wsdl:input message="tns:PlayAudioTipsManagerSoapIn" />
+      <wsdl:output message="tns:PlayAudioTipsManagerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentDateTime">
+      <wsdl:input message="tns:GetCurrentDateTimeSoapIn" />
+      <wsdl:output message="tns:GetCurrentDateTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCannedMessages">
+      <wsdl:input message="tns:GetAllCannedMessagesSoapIn" />
+      <wsdl:output message="tns:GetAllCannedMessagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ErrorHandling">
+      <wsdl:input message="tns:ErrorHandlingSoapIn" />
+      <wsdl:output message="tns:ErrorHandlingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleTypes">
+      <wsdl:input message="tns:GetModuleTypesSoapIn" />
+      <wsdl:output message="tns:GetModuleTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_DesktopPOC_ModulContent">
+      <wsdl:input message="tns:Insert_DesktopPOC_ModulContentSoapIn" />
+      <wsdl:output message="tns:Insert_DesktopPOC_ModulContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPOC_ModuleContentHistory">
+      <wsdl:input message="tns:GetPOC_ModuleContentHistorySoapIn" />
+      <wsdl:output message="tns:GetPOC_ModuleContentHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBulletinDetails">
+      <wsdl:input message="tns:InsertBulletinDetailsSoapIn" />
+      <wsdl:output message="tns:InsertBulletinDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBusinessUpdateDetailsNew">
+      <wsdl:input message="tns:InsertBusinessUpdateDetailsNewSoapIn" />
+      <wsdl:output message="tns:InsertBusinessUpdateDetailsNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadPOCImage">
+      <wsdl:input message="tns:UploadPOCImageSoapIn" />
+      <wsdl:output message="tns:UploadPOCImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissionsById">
+      <wsdl:input message="tns:GetPermissionsByIdSoapIn" />
+      <wsdl:output message="tns:GetPermissionsByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateUserDetails">
+      <wsdl:input message="tns:GetAssociateUserDetailsSoapIn" />
+      <wsdl:output message="tns:GetAssociateUserDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAuthorNotifications">
+      <wsdl:input message="tns:SendAuthorNotificationsSoapIn" />
+      <wsdl:output message="tns:SendAuthorNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToUserTimeZone">
+      <wsdl:input message="tns:ConvertToUserTimeZoneSoapIn" />
+      <wsdl:output message="tns:ConvertToUserTimeZoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertUserTimeZoneToPST">
+      <wsdl:input message="tns:ConvertUserTimeZoneToPSTSoapIn" />
+      <wsdl:output message="tns:ConvertUserTimeZoneToPSTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetBusinessSchoolsList">
+      <wsdl:input message="tns:ISA_GetBusinessSchoolsListSoapIn" />
+      <wsdl:output message="tns:ISA_GetBusinessSchoolsListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_Add_Update_User">
+      <wsdl:input message="tns:ISA_Add_Update_UserSoapIn" />
+      <wsdl:output message="tns:ISA_Add_Update_UserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_Generate_OTP">
+      <wsdl:input message="tns:ISA_Generate_OTPSoapIn" />
+      <wsdl:output message="tns:ISA_Generate_OTPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetPushNotifications">
+      <wsdl:input message="tns:ISA_GetPushNotificationsSoapIn" />
+      <wsdl:output message="tns:ISA_GetPushNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetProfileDetailsOnRegID">
+      <wsdl:input message="tns:ISA_GetProfileDetailsOnRegIDSoapIn" />
+      <wsdl:output message="tns:ISA_GetProfileDetailsOnRegIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_AddProfiles">
+      <wsdl:input message="tns:ISA_AddProfilesSoapIn" />
+      <wsdl:output message="tns:ISA_AddProfilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_UploadAudioFiles">
+      <wsdl:input message="tns:ISA_UploadAudioFilesSoapIn" />
+      <wsdl:output message="tns:ISA_UploadAudioFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_UpdateAudioFiles">
+      <wsdl:input message="tns:ISA_UpdateAudioFilesSoapIn" />
+      <wsdl:output message="tns:ISA_UpdateAudioFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetAudioDetails">
+      <wsdl:input message="tns:ISA_GetAudioDetailsSoapIn" />
+      <wsdl:output message="tns:ISA_GetAudioDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_DeleteProfilesOnRegID">
+      <wsdl:input message="tns:ISA_DeleteProfilesOnRegIDSoapIn" />
+      <wsdl:output message="tns:ISA_DeleteProfilesOnRegIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_UpdateNotifications_OnOff">
+      <wsdl:input message="tns:ISA_UpdateNotifications_OnOffSoapIn" />
+      <wsdl:output message="tns:ISA_UpdateNotifications_OnOffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_SyncNoticicationsData">
+      <wsdl:input message="tns:ISA_SyncNoticicationsDataSoapIn" />
+      <wsdl:output message="tns:ISA_SyncNoticicationsDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_DeleteAudioFileonRegID">
+      <wsdl:input message="tns:ISA_DeleteAudioFileonRegIDSoapIn" />
+      <wsdl:output message="tns:ISA_DeleteAudioFileonRegIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetDefaultAudio">
+      <wsdl:input message="tns:ISA_GetDefaultAudioSoapIn" />
+      <wsdl:output message="tns:ISA_GetDefaultAudioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetSyncTimeIntervals">
+      <wsdl:input message="tns:ISA_GetSyncTimeIntervalsSoapIn" />
+      <wsdl:output message="tns:ISA_GetSyncTimeIntervalsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ClientServiceSoap" type="tns:ClientServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <soap:operation soapAction="http://tempuri.org/GetUserDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuperAdminiDetails1">
+      <soap:operation soapAction="http://tempuri.org/GetSuperAdminiDetails1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessProfileByUserID">
+      <soap:operation soapAction="http://tempuri.org/GetBusinessProfileByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getorderidbyuserid">
+      <soap:operation soapAction="http://tempuri.org/Getorderidbyuserid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetailsByID">
+      <soap:operation soapAction="http://tempuri.org/GetUserDetailsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserActivationCodeForRegistration">
+      <soap:operation soapAction="http://tempuri.org/CheckUserActivationCodeForRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileIDByUserID">
+      <soap:operation soapAction="http://tempuri.org/GetProfileIDByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetailsByUserID">
+      <soap:operation soapAction="http://tempuri.org/GetUserDetailsByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileAppAlerts">
+      <soap:operation soapAction="http://tempuri.org/GetMobileAppAlerts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileTips">
+      <soap:operation soapAction="http://tempuri.org/GetMobileTips" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesktopMobileAlerts">
+      <soap:operation soapAction="http://tempuri.org/GetDesktopMobileAlerts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesktopMobileAlertsByPoolDate">
+      <soap:operation soapAction="http://tempuri.org/GetDesktopMobileAlertsByPoolDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatusForMobileAlerts">
+      <soap:operation soapAction="http://tempuri.org/UpdateStatusForMobileAlerts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileAppAlertsForDesktop">
+      <soap:operation soapAction="http://tempuri.org/GetMobileAppAlertsForDesktop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigSettingByPID">
+      <soap:operation soapAction="http://tempuri.org/GetConfigSettingByPID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigSettingsByVertical">
+      <soap:operation soapAction="http://tempuri.org/GetConfigSettingsByVertical" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipsManagerAudioFilePath">
+      <soap:operation soapAction="http://tempuri.org/GetTipsManagerAudioFilePath" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAudioFiles">
+      <soap:operation soapAction="http://tempuri.org/UploadAudioFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAudioTipsManager">
+      <soap:operation soapAction="http://tempuri.org/GetAudioTipsManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAudioTipsManager">
+      <soap:operation soapAction="http://tempuri.org/DeleteAudioTipsManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateAudioTipsManager">
+      <soap:operation soapAction="http://tempuri.org/InsertUpdateAudioTipsManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlayAudioTipsManager">
+      <soap:operation soapAction="http://tempuri.org/PlayAudioTipsManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentDateTime">
+      <soap:operation soapAction="http://tempuri.org/GetCurrentDateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCannedMessages">
+      <soap:operation soapAction="http://tempuri.org/GetAllCannedMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ErrorHandling">
+      <soap:operation soapAction="http://tempuri.org/ErrorHandling" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleTypes">
+      <soap:operation soapAction="http://tempuri.org/GetModuleTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_DesktopPOC_ModulContent">
+      <soap:operation soapAction="http://tempuri.org/Insert_DesktopPOC_ModulContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOC_ModuleContentHistory">
+      <soap:operation soapAction="http://tempuri.org/GetPOC_ModuleContentHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBulletinDetails">
+      <soap:operation soapAction="http://tempuri.org/InsertBulletinDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBusinessUpdateDetailsNew">
+      <soap:operation soapAction="http://tempuri.org/InsertBusinessUpdateDetailsNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadPOCImage">
+      <soap:operation soapAction="http://tempuri.org/UploadPOCImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissionsById">
+      <soap:operation soapAction="http://tempuri.org/GetPermissionsById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateUserDetails">
+      <soap:operation soapAction="http://tempuri.org/GetAssociateUserDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAuthorNotifications">
+      <soap:operation soapAction="http://tempuri.org/SendAuthorNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToUserTimeZone">
+      <soap:operation soapAction="http://tempuri.org/ConvertToUserTimeZone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertUserTimeZoneToPST">
+      <soap:operation soapAction="http://tempuri.org/ConvertUserTimeZoneToPST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetBusinessSchoolsList">
+      <soap:operation soapAction="http://tempuri.org/ISA_GetBusinessSchoolsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_Add_Update_User">
+      <soap:operation soapAction="http://tempuri.org/ISA_Add_Update_User" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_Generate_OTP">
+      <soap:operation soapAction="http://tempuri.org/ISA_Generate_OTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetPushNotifications">
+      <soap:operation soapAction="http://tempuri.org/ISA_GetPushNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetProfileDetailsOnRegID">
+      <soap:operation soapAction="http://tempuri.org/ISA_GetProfileDetailsOnRegID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_AddProfiles">
+      <soap:operation soapAction="http://tempuri.org/ISA_AddProfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_UploadAudioFiles">
+      <soap:operation soapAction="http://tempuri.org/ISA_UploadAudioFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_UpdateAudioFiles">
+      <soap:operation soapAction="http://tempuri.org/ISA_UpdateAudioFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetAudioDetails">
+      <soap:operation soapAction="http://tempuri.org/ISA_GetAudioDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_DeleteProfilesOnRegID">
+      <soap:operation soapAction="http://tempuri.org/ISA_DeleteProfilesOnRegID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_UpdateNotifications_OnOff">
+      <soap:operation soapAction="http://tempuri.org/ISA_UpdateNotifications_OnOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_SyncNoticicationsData">
+      <soap:operation soapAction="http://tempuri.org/ISA_SyncNoticicationsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_DeleteAudioFileonRegID">
+      <soap:operation soapAction="http://tempuri.org/ISA_DeleteAudioFileonRegID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetDefaultAudio">
+      <soap:operation soapAction="http://tempuri.org/ISA_GetDefaultAudio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetSyncTimeIntervals">
+      <soap:operation soapAction="http://tempuri.org/ISA_GetSyncTimeIntervals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ClientServiceSoap12" type="tns:ClientServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetUserDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuperAdminiDetails1">
+      <soap12:operation soapAction="http://tempuri.org/GetSuperAdminiDetails1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessProfileByUserID">
+      <soap12:operation soapAction="http://tempuri.org/GetBusinessProfileByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getorderidbyuserid">
+      <soap12:operation soapAction="http://tempuri.org/Getorderidbyuserid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetailsByID">
+      <soap12:operation soapAction="http://tempuri.org/GetUserDetailsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserActivationCodeForRegistration">
+      <soap12:operation soapAction="http://tempuri.org/CheckUserActivationCodeForRegistration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileIDByUserID">
+      <soap12:operation soapAction="http://tempuri.org/GetProfileIDByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetailsByUserID">
+      <soap12:operation soapAction="http://tempuri.org/GetUserDetailsByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileAppAlerts">
+      <soap12:operation soapAction="http://tempuri.org/GetMobileAppAlerts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileTips">
+      <soap12:operation soapAction="http://tempuri.org/GetMobileTips" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesktopMobileAlerts">
+      <soap12:operation soapAction="http://tempuri.org/GetDesktopMobileAlerts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDesktopMobileAlertsByPoolDate">
+      <soap12:operation soapAction="http://tempuri.org/GetDesktopMobileAlertsByPoolDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatusForMobileAlerts">
+      <soap12:operation soapAction="http://tempuri.org/UpdateStatusForMobileAlerts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobileAppAlertsForDesktop">
+      <soap12:operation soapAction="http://tempuri.org/GetMobileAppAlertsForDesktop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigSettingByPID">
+      <soap12:operation soapAction="http://tempuri.org/GetConfigSettingByPID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigSettingsByVertical">
+      <soap12:operation soapAction="http://tempuri.org/GetConfigSettingsByVertical" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipsManagerAudioFilePath">
+      <soap12:operation soapAction="http://tempuri.org/GetTipsManagerAudioFilePath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAudioFiles">
+      <soap12:operation soapAction="http://tempuri.org/UploadAudioFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAudioTipsManager">
+      <soap12:operation soapAction="http://tempuri.org/GetAudioTipsManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAudioTipsManager">
+      <soap12:operation soapAction="http://tempuri.org/DeleteAudioTipsManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateAudioTipsManager">
+      <soap12:operation soapAction="http://tempuri.org/InsertUpdateAudioTipsManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlayAudioTipsManager">
+      <soap12:operation soapAction="http://tempuri.org/PlayAudioTipsManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentDateTime">
+      <soap12:operation soapAction="http://tempuri.org/GetCurrentDateTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCannedMessages">
+      <soap12:operation soapAction="http://tempuri.org/GetAllCannedMessages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ErrorHandling">
+      <soap12:operation soapAction="http://tempuri.org/ErrorHandling" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleTypes">
+      <soap12:operation soapAction="http://tempuri.org/GetModuleTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_DesktopPOC_ModulContent">
+      <soap12:operation soapAction="http://tempuri.org/Insert_DesktopPOC_ModulContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOC_ModuleContentHistory">
+      <soap12:operation soapAction="http://tempuri.org/GetPOC_ModuleContentHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBulletinDetails">
+      <soap12:operation soapAction="http://tempuri.org/InsertBulletinDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBusinessUpdateDetailsNew">
+      <soap12:operation soapAction="http://tempuri.org/InsertBusinessUpdateDetailsNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadPOCImage">
+      <soap12:operation soapAction="http://tempuri.org/UploadPOCImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissionsById">
+      <soap12:operation soapAction="http://tempuri.org/GetPermissionsById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateUserDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetAssociateUserDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAuthorNotifications">
+      <soap12:operation soapAction="http://tempuri.org/SendAuthorNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToUserTimeZone">
+      <soap12:operation soapAction="http://tempuri.org/ConvertToUserTimeZone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertUserTimeZoneToPST">
+      <soap12:operation soapAction="http://tempuri.org/ConvertUserTimeZoneToPST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetBusinessSchoolsList">
+      <soap12:operation soapAction="http://tempuri.org/ISA_GetBusinessSchoolsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_Add_Update_User">
+      <soap12:operation soapAction="http://tempuri.org/ISA_Add_Update_User" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_Generate_OTP">
+      <soap12:operation soapAction="http://tempuri.org/ISA_Generate_OTP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetPushNotifications">
+      <soap12:operation soapAction="http://tempuri.org/ISA_GetPushNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetProfileDetailsOnRegID">
+      <soap12:operation soapAction="http://tempuri.org/ISA_GetProfileDetailsOnRegID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_AddProfiles">
+      <soap12:operation soapAction="http://tempuri.org/ISA_AddProfiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_UploadAudioFiles">
+      <soap12:operation soapAction="http://tempuri.org/ISA_UploadAudioFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_UpdateAudioFiles">
+      <soap12:operation soapAction="http://tempuri.org/ISA_UpdateAudioFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetAudioDetails">
+      <soap12:operation soapAction="http://tempuri.org/ISA_GetAudioDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_DeleteProfilesOnRegID">
+      <soap12:operation soapAction="http://tempuri.org/ISA_DeleteProfilesOnRegID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_UpdateNotifications_OnOff">
+      <soap12:operation soapAction="http://tempuri.org/ISA_UpdateNotifications_OnOff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_SyncNoticicationsData">
+      <soap12:operation soapAction="http://tempuri.org/ISA_SyncNoticicationsData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_DeleteAudioFileonRegID">
+      <soap12:operation soapAction="http://tempuri.org/ISA_DeleteAudioFileonRegID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetDefaultAudio">
+      <soap12:operation soapAction="http://tempuri.org/ISA_GetDefaultAudio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISA_GetSyncTimeIntervals">
+      <soap12:operation soapAction="http://tempuri.org/ISA_GetSyncTimeIntervals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClientService">
+    <wsdl:port name="ClientServiceSoap" binding="tns:ClientServiceSoap">
+      <soap:address location="http://www.myyouthhub.com/inschoolalertdesktopservice/m_service/ClientService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ClientServiceSoap12" binding="tns:ClientServiceSoap12">
+      <soap12:address location="http://www.myyouthhub.com/inschoolalertdesktopservice/m_service/ClientService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

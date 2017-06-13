@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISANotifications", "ISANotifications\ISANotifications.csproj", "{8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB}"
+EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "ISANotificationSetup", "ISANotificationSetup\ISANotificationSetup.isproj", "{E14EDF2A-BB98-45AA-9FF2-2121763F0914}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB} = {8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeleteISANotificationFiles", "DeleteISANotificationFiles\DeleteISANotificationFiles.csproj", "{A10916F8-6C1C-4B5B-9967-FD3EE56B0C3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
+		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{8813F419-1FAB-4F9E-9D7F-1D2C8037B2AB}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{E14EDF2A-BB98-45AA-9FF2-2121763F0914}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
+		{E14EDF2A-BB98-45AA-9FF2-2121763F0914}.CD_ROM|Any CPU.Build.0 = CD_ROM
+		{E14EDF2A-BB98-45AA-9FF2-2121763F0914}.Debug|Any CPU.ActiveCfg = SingleImage
+		{E14EDF2A-BB98-45AA-9FF2-2121763F0914}.Debug|Any CPU.Build.0 = SingleImage
+		{E14EDF2A-BB98-45AA-9FF2-2121763F0914}.DVD-5|Any CPU.ActiveCfg = DVD-5
+		{E14EDF2A-BB98-45AA-9FF2-2121763F0914}.DVD-5|Any CPU.Build.0 = DVD-5
+		{E14EDF2A-BB98-45AA-9FF2-2121763F0914}.Release|Any CPU.ActiveCfg = SingleImage
+		{E14EDF2A-BB98-45AA-9FF2-2121763F0914}.Release|Any CPU.Build.0 = SingleImage
+		{E14EDF2A-BB98-45AA-9FF2-2121763F0914}.SingleImage|Any CPU.ActiveCfg = SingleImage
+		{E14EDF2A-BB98-45AA-9FF2-2121763F0914}.SingleImage|Any CPU.Build.0 = SingleImage
+		{A10916F8-6C1C-4B5B-9967-FD3EE56B0C3C}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{A10916F8-6C1C-4B5B-9967-FD3EE56B0C3C}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{A10916F8-6C1C-4B5B-9967-FD3EE56B0C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10916F8-6C1C-4B5B-9967-FD3EE56B0C3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10916F8-6C1C-4B5B-9967-FD3EE56B0C3C}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10916F8-6C1C-4B5B-9967-FD3EE56B0C3C}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{A10916F8-6C1C-4B5B-9967-FD3EE56B0C3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10916F8-6C1C-4B5B-9967-FD3EE56B0C3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10916F8-6C1C-4B5B-9967-FD3EE56B0C3C}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{A10916F8-6C1C-4B5B-9967-FD3EE56B0C3C}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

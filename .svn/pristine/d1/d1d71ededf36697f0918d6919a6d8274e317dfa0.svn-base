@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<German>
+	<ToolbarItem ID="AttachFile" ButtonTitle="Bringen Akte An" />
+	<ToolbarItem ID="BackColor" ButtonTitle="Hintergrund Farbe" />
+	<ToolbarItem ID="BackColorPicker" ButtonTitle="Hintergrund Farbe" />
+	<ToolbarItem ID="Bold" ButtonTitle="Fett" />
+	<ToolbarItem ID="CleanWordFormat" ButtonTitle="Wort-Format Säubern" />
+	<ToolbarItem ID="Copy" ButtonTitle="Kopieren" />
+	<ToolbarItem ID="CreateLink" ButtonTitle="Stelle Verbindung" />
+	<ToolbarItem ID="Cut" ButtonTitle="Ausschneiden" />
+	<ToolbarItem ID="DeleteColumn" ButtonTitle="LöschungcSpalte" />
+	<ToolbarItem ID="DeleteRow" ButtonTitle="LöschungcReihe" />
+	<ToolbarItem ID="FindReplace" ButtonTitle="Finden und Ersetzen" />
+	<ToolbarItem ID="FitToWindow" ButtonTitle="Füllen Das Fenster" />
+	<ToolbarItem ID="ForeColor" ButtonTitle="Farbe" />
+	<ToolbarItem ID="ForeColorPicker" ButtonTitle="Farbe" />
+	<ToolbarItem ID="Help" ButtonTitle="Helfen" />
+	<ToolbarItem ID="Indent" ButtonTitle="Einzug Vergrößern" />
+	<ToolbarItem ID="InsertAnchor" ButtonTitle="Fügen Anker" />
+	<ToolbarItem ID="InsertColumnLeft" ButtonTitle="Fügen Spalte Nach Links Ein" />
+	<ToolbarItem ID="InsertColumnRight" ButtonTitle="Fügen SpaltencRecht Ein" />
+	<ToolbarItem ID="InsertDate" ButtonTitle="Fügen Datum Ein" />
+	<ToolbarItem ID="InsertEmoticon" ButtonTitle="Fügen Emoticon Ein" />
+	<ToolbarItem ID="InsertFlash" ButtonTitle="Fügen Flash Ein" />
+	<ToolbarItem ID="InsertForm" ButtonTitle="Fügen Form Ein" />
+	<ToolbarItem ID="InsertHorizontalRule" ButtonTitle="Fügen Horizontale Linie Ein" />
+	<ToolbarItem ID="InsertImage" ButtonTitle="Fügen Bild Ein" />
+	<ToolbarItem ID="InsertInputButton" ButtonTitle="Fügen Knopf Ein" />
+	<ToolbarItem ID="InsertInputCheckbox" ButtonTitle="Fügen Checkbox Ein" />
+	<ToolbarItem ID="InsertInputHidden" ButtonTitle="Fügen versteckt Ein" />
+	<ToolbarItem ID="InsertInputPassword" ButtonTitle="Fügen Passwort Ein" />
+	<ToolbarItem ID="InsertInputRadio" ButtonTitle="Fügen Radio-Knopf Ein" />
+	<ToolbarItem ID="InsertInputReset" ButtonTitle="Fügen Löschungknopf Ein" />
+	<ToolbarItem ID="InsertInputSubmit" ButtonTitle="Fügen Submit-Knopf Ein" />
+	<ToolbarItem ID="InsertInputText" ButtonTitle="Fügen Textbox Ein" />
+	<ToolbarItem ID="InsertOrderedList" ButtonTitle="Fügen Numerierte Liste Ein" />
+	<ToolbarItem ID="InsertPageBreak" ButtonTitle="Fügen Seitenende Ein" />
+	<ToolbarItem ID="InsertRowAbove" ButtonTitle="Fügen Reihe Oben Ein" />
+	<ToolbarItem ID="InsertRowBelow" ButtonTitle="Fügen Reihe Unten Ein" />
+	<ToolbarItem ID="InsertSelectDropdown" ButtonTitle="Fügen Dropdown-Kasten Ein" />
+	<ToolbarItem ID="InsertSelectListbox" ButtonTitle="Fügen Liste Ein" />
+	<ToolbarItem ID="InsertSymbol" ButtonTitle="Fügen Symbol Ein" />
+	<ToolbarItem ID="InsertTable" ButtonTitle="Fügen Tabelle Ein" />
+	<ToolbarItem ID="InsertTemplate" ButtonTitle="Fügen Template" />
+	<ToolbarItem ID="InsertTextArea" ButtonTitle="Fügen Textbereich Ein" />
+	<ToolbarItem ID="InsertTime" ButtonTitle="Fügen Zeit Ein" />
+	<ToolbarItem ID="InsertUnorderedList" ButtonTitle="Fügen Bulleted Liste Ein" />
+	<ToolbarItem ID="InsertWindowsMedia" ButtonTitle="Fügen Windows Media Ein" />
+	<ToolbarItem ID="Italic" ButtonTitle="Kursiv" />
+	<ToolbarItem ID="JustifyCenter" ButtonTitle="Rechtfertigen Zentrier" />
+	<ToolbarItem ID="JustifyFull" ButtonTitle="Rechtfertigen Voll" />
+	<ToolbarItem ID="JustifyLeft" ButtonTitle="Rechtfertigen Links" />
+	<ToolbarItem ID="JustifyRight" ButtonTitle="Rechtfertigen Rechts" />
+	<ToolbarItem ID="LineBreakAsParagraph" ButtonTitle="Zeilenumbruch Als Absatz" />
+	<ToolbarItem ID="MergeCells" ButtonTitle="Mischen Zellen" />
+	<ToolbarItem ID="New" ButtonTitle="Neu" />
+	<ToolbarItem ID="Open" ButtonTitle="Öffnen" />
+	<ToolbarItem ID="Outdent" ButtonTitle="Einzug verkleinern" />
+	<ToolbarItem ID="Paste" ButtonTitle="Einfügen" />
+	<ToolbarItem ID="PasteAsText" ButtonTitle="Einfügen Als Text" />
+	<ToolbarItem ID="Print" ButtonTitle="Drucken" />
+	<ToolbarItem ID="PrintPreview" ButtonTitle="Druckvorbetrachtung" />
+	<ToolbarItem ID="Properties" ButtonTitle="Eigenschaften" />
+	<ToolbarItem ID="Redo" ButtonTitle="Wiederherstellen" />
+	<ToolbarItem ID="RemoveAttachments" ButtonTitle="Entfernen Angebrachte Akten" />
+	<ToolbarItem ID="RemoveFormat" ButtonTitle="Entfernen Format" />
+	<ToolbarItem ID="Save" ButtonTitle="Speichern" />
+	<ToolbarItem ID="SelectAll" ButtonTitle="Wählen Alle" />
+	<ToolbarItem ID="SpellAsYouType" ButtonTitle="Rechtschreibprüfung Während Der Eingabe" />
+	<ToolbarItem ID="SplitCells" ButtonTitle="Teilen Zellen" />
+	<ToolbarItem ID="StrikeThrough" ButtonTitle="Strichen Durch" />
+	<ToolbarItem ID="Subscript" ButtonTitle="Tiefzeichen" />
+	<ToolbarItem ID="Superscript" ButtonTitle="Hochzeichen" />
+	<ToolbarItem ID="UltimateSpell" ButtonTitle="Rechtschreibprüfung" />
+	<ToolbarItem ID="Underline" ButtonTitle="Unterstreichen" />
+	<ToolbarItem ID="Undo" ButtonTitle="Machen Rückgängig" />
+	<ToolbarItem ID="Unlink" ButtonTitle="Entfernen Linke" />
+	<ToolbarItem ID="XHTML" ButtonTitle="XHTML" />
+	<ToolbarItem ID="FormatBlock">
+		<DropDown>
+			<DropDownItem ItemText="Format" ItemValue="" />
+			<DropDownItem ItemText="Normal" ItemValue="Normal" />
+			<DropDownItem ItemText="Formatiert" ItemValue="Formatted" />
+			<DropDownItem ItemText="Adresse" ItemValue="Address" />
+			<DropDownItem ItemText="Überschrift 1" ItemValue="Heading 1" />
+			<DropDownItem ItemText="Überschrift 2" ItemValue="Heading 2" />
+			<DropDownItem ItemText="Überschrift 3" ItemValue="Heading 3" />
+			<DropDownItem ItemText="Überschrift 4" ItemValue="Heading 4" />
+			<DropDownItem ItemText="Überschrift 5" ItemValue="Heading 5" />
+			<DropDownItem ItemText="Überschrift 6" ItemValue="Heading 6" />
+			<DropDownItem ItemText="Numerierte Liste" ItemValue="Numbered List" />
+			<DropDownItem ItemText="Bulleted Liste" ItemValue="Bulleted Liste" />
+			<DropDownItem ItemText="Verzeichnisliste" ItemValue="Directory List" />
+			<DropDownItem ItemText="Menü List" ItemValue="Menuliste" />
+			<DropDownItem ItemText="Definition Bezeichnung" ItemValue="Definition Term" />
+			<DropDownItem ItemText="Definition" ItemValue="Definition" />
+		</DropDown>
+	</ToolbarItem>
+	<ToolbarItem ID="FontName">
+		<DropDown>
+			<DropDownItem ItemText="Schriftart" ItemValue="" />
+			<DropDownItem ItemText="Arial" ItemValue="Arial" />
+			<DropDownItem ItemText="Arial Black" ItemValue="Arial Black" />
+			<DropDownItem ItemText="Comic Sans MS" ItemValue="Comic Sans MS" />
+			<DropDownItem ItemText="Courier" ItemValue="Courier" />
+			<DropDownItem ItemText="Courier New" ItemValue="Courier New" />
+			<DropDownItem ItemText="Fixedsys" ItemValue="Fixedsys" />
+			<DropDownItem ItemText="Georgia" ItemValue="Georgia" />
+			<DropDownItem ItemText="Impact" ItemValue="Impact" />
+			<DropDownItem ItemText="Lucida Console" ItemValue="Lucida Console" />
+			<DropDownItem ItemText="Lucida Sans Unicode" ItemValue="Lucida Sans Unicode" />
+			<DropDownItem ItemText="MS Sans Serif" ItemValue="MS Sans Serif" />
+			<DropDownItem ItemText="MS Serif" ItemValue="MS Serif" />
+			<DropDownItem ItemText="Marlett" ItemValue="Marlett" />
+			<DropDownItem ItemText="Modern" ItemValue="Modern" />
+			<DropDownItem ItemText="Palatino Linotype" ItemValue="Palatino Linotype" />
+			<DropDownItem ItemText="Roman" ItemValue="Roman" />
+			<DropDownItem ItemText="Script" ItemValue="Script" />
+			<DropDownItem ItemText="Small Fonts" ItemValue="Small Fonts" />
+			<DropDownItem ItemText="Symbol" ItemValue="Symbol" />
+			<DropDownItem ItemText="System" ItemValue="System" />
+			<DropDownItem ItemText="Tahoma" ItemValue="Tahoma" />
+			<DropDownItem ItemText="Terminal" ItemValue="Terminal" />
+			<DropDownItem ItemText="Times New Roman" ItemValue="Times New Roman" />
+			<DropDownItem ItemText="Trebuchet MS" ItemValue="Trebuchet MS" />
+			<DropDownItem ItemText="Verdana" ItemValue="Verdana" />
+			<DropDownItem ItemText="Webdings" ItemValue="Webdings" />
+			<DropDownItem ItemText="Wingdings" ItemValue="Wingdings" />
+		</DropDown>
+	</ToolbarItem>
+	<ToolbarItem ID="FontSize">
+		<DropDown>
+			<DropDownItem ItemText="Größe" ItemValue="" />
+			<DropDownItem ItemText="1 (8 pt)" ItemValue="1" />
+			<DropDownItem ItemText="2 (10 pt)" ItemValue="2" />
+			<DropDownItem ItemText="3 (12 pt)" ItemValue="3" />
+			<DropDownItem ItemText="4 (14 pt)" ItemValue="4" />
+			<DropDownItem ItemText="5 (18 pt)" ItemValue="5" />
+			<DropDownItem ItemText="6 (24 pt)" ItemValue="6" />
+			<DropDownItem ItemText="7 (36 pt)" ItemValue="7" />
+		</DropDown>
+	</ToolbarItem>
+	<ToolbarItem ID="Style">
+		<DropDown>
+			<DropDownItem ItemText="Art" ItemValue="" />
+			<DropDownItem ItemText="Fett Kursiv" ItemValue="FONT-WEIGHT: bold; FONT-STYLE: italic" />
+			<DropDownItem ItemText="Fett Rot" ItemValue="FONT-WEIGHT: bold; COLOR: #FF0000" />
+			<DropDownItem ItemText="Kapitalisieren" ItemValue="TEXT-TRANSFORM: capitalize" />
+			<DropDownItem ItemText="Zitat" ItemValue="FONT-STYLE: italic" />
+			<DropDownItem ItemText="Beispielcode" ItemValue="FONT-FAMILY: Courier New" />
+			<DropDownItem ItemText="Glühen" ItemValue="FILTER: glow; HEIGHT: 0px" />
+			<DropDownItem ItemText="Markieren" ItemValue="BACKGROUND-COLOR: #FFFF00" />
+			<DropDownItem ItemText="kleinbuchstaben" ItemValue="TEXT-TRANSFORM: lowercase" />
+			<DropDownItem ItemText="Pull-Quote" ItemValue="BORDER-RIGHT: #606060 2px dotted; BORDER-TOP: #606060 2px dotted; DISPLAY: block; FONT-WEIGHT: bold; BORDER-LEFT: #606060 2px dotted; BORDER-BOTTOM: #606060 2px dotted; BACKGROUND-COLOR: #EBF3F6" />
+			<DropDownItem ItemText="Titel" ItemValue="FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #0080FF; FONT-FAMILY: Verdana" />
+			<DropDownItem ItemText="VERSALIEN" ItemValue="TEXT-TRANSFORM: uppercase" />
+		</DropDown>
+	</ToolbarItem>
+	<ToolbarItem ID="Zoom">
+		<DropDown>
+			<DropDownItem ItemText="Zoomen" ItemValue="" />
+			<DropDownItem ItemText="10%" ItemValue="10%" />
+			<DropDownItem ItemText="25%" ItemValue="25%" />
+			<DropDownItem ItemText="50%" ItemValue="50%" />
+			<DropDownItem ItemText="75%" ItemValue="75%" />
+			<DropDownItem ItemText="100%" ItemValue="100%" />
+			<DropDownItem ItemText="150%" ItemValue="150%" />
+			<DropDownItem ItemText="200%" ItemValue="200%" />
+			<DropDownItem ItemText="500%" ItemValue="500%" />
+		</DropDown>
+	</ToolbarItem>
+</German>

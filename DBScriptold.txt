@@ -1,0 +1,2475 @@
+Malli
+--------------------------------------------------------------------------------
+Added new colimns to M_PushNotifications table -- Type/varchar(20), Type_ID/INT    -- Completed 1.1
+Column Name changed to T_ManageBulletins IsCompleted to IsPublished                -- Completed 1.1
+APRJProcess_Initials added new column to manage table of bulletin, update, events  -- Completed 1.1
+changed Gallery, Images and Image Gallery to Page3 in M_Profile_Buttons            -- Completed 1.1
+Changed Media menu name to Gallery In L_PackageMenu                                -- Completed 1.1
+
+
+usp_Mob_AddPushNotifications                                                       -- Completed 1.1
+Usp_GetManageBulletins                                                             -- Completed 1.1
+usp_GetAllEventsByProfileId                                                        -- Completed 1.1
+Usp_CopyBulletin                                                                   -- Completed 1.1
+Usp_CopyUpdateDetails                                                              -- Completed 1.1
+usp_CheckUpdateNameAvailable                                                       -- Completed 1.1
+usp_InsertEventDetails                                                             -- Completed 1.1
+Usp_UpdatePublishedEvents                                                          -- Completed 1.1
+Usp_UpdateBulletinPublish                                                          -- Completed 1.1
+Usp_UpdatePublishedUpdates                                                         -- Completed 1.1
+usp_Insert_Update_BulletinDetails                                                  -- Completed 1.1
+usp_InsertBusinessUpdateDetailsNew                                                 -- Completed 1.1
+usp_GetAllBusinessUpdates                                                          -- Completed 1.1
+
+
+Venkat -- new procedures,new tables and new columns added in existing Tables for Roles & Permissions.
+--------------------------------------------------------------------------------------------------------
+
+Procedures
+--------------------------------------------
+usp_GetPermissionsById                                                             -- Completed 1.1
+Usp_InsertUserPermissions                                                          -- Completed 1.1
+usp_DeletePermisions                                                               -- Completed 1.1
+usp_GetBulletinDetailsByID                                                         -- Completed 1.1
+
+
+New Tables
+--------------------------------------------
+T_Associate_Permissions                                                            -- Completed 1.1
+L_Permission_Bits                                                                  -- Completed 1.1
+
+
+New Columns added in below mentioned tables
+--------------------------------------------
+T_EventsCalendar,T_BusinessUpdates,T_Manage_Bulletins                              -- Completed 1.1
+
+Published_By  (int,null)   
+Rejected_By   (int,null)
+Remarks      varchar(max)
+
+
+**************************** ********************************
+		Balaji 	Start
+***********************************************************
+-------------- New Columns (Edit_HTML)                                             -- Completed 1.1
+T_BusinessUpdates                                                                  -- Completed 1.1                        
+T_EventsCalendar                                                                   -- Completed 1.1
+T_Business_Profiles (About_Edit_HTML,Description_Edit_HTML)                        -- Completed 1.1
+
+
+T_EventsCalendar(IsPublished)                                                      -- Completed 1.1
+T_BusinessUpdates(IsPublished)                                                     -- Completed 1.1
+
+------------------- Modify Proc 
+usp_UpdateProfileAboutUsDetails                                                    -- Completed 1.1
+usp_UpdateBusinessProfileForezSmartSitename                                        -- Completed 1.1
+
+usp_GetActiveBusinessUpdates                                                       -- Completed 1.1
+usp_GetAllEventsByProfileIdandSelectedmonth                                        -- Completed 1.1
+usp_GetActiveBulletinsByProfileID                                                  -- Completed 1.1
+
+
+
+usp_InsertCustomerDeskNotesDetails                                                 -- Completed 1.1
+usp_GetAdminDetails                                                                -- Completed 1.1
+
+-----------------------28-05-2013
+usp_m_AgencySummary (new Webservice Related )                                      -- Completed 1.1                                     
+--------------------- 30-05-2013
+usp_GetAllSalesPerson                                                              -- Completed 1.1
+Usp_GetNotesCountById                                                              -- Completed 1.1
+-----------------------31-05-2013
+usp_M_GetProfilesDetailsByBCode (webservice related)                               -- Completed 1.1
+
+
+
+
+***********************************************
+			Balaji 	End
+***********************************************
+
+
+Venkat -- New procedure(28/05/2013)
+---------------------------------------------------
+
+usp_GetUserDtlsByUserID                                                           -- Completed 1.1
+
+usp_Mob_GetFavoriteDevices                                                        -- Completed 1.1
+Added table L_Master_AppNames                                                     -- Completed 1.1
+Added column to M_Business_Devices App_ID(int, NOT NULL)                          -- Completed 1.1
+
+
+=========================================== End of version 1.1 ====================================================
+
+=========================================== Start of version 1.2 ==================================================
+Malli
+-----------------
+Usp_GetManageBulletins                                                             -- Completed 1.2
+usp_GetAllBusinessUpdates                                                          -- Completed 1.2
+usp_GetAllEventsByProfileId                                                        -- Completed 1.2
+
+created new table T_Schedule_Bulletins                                             -- Completed 1.2
+
+Usp_GetSchBulletinCount                                                            -- Completed 1.2
+Usp_GetBulletinMaxSchedulingDate                                                   -- Completed 1.2
+usp_GetBulletinDetailsByID                                                         -- Completed 1.2
+
+Added column to T_UnlimitedMails_Users -- Bulletin_Unlimited(bit, 0)               -- Completed 1.2
+
+Usp_CheckEmailsCountOnSendingDateForBulletin                                       -- Completed 1.2
+Usp_InsertBulletinScheduleDetails                                                  -- Completed 1.2
+Usp_GetSchedulesEmailsByUpateID                                                    -- Completed 1.2
+Usp_GetScheduledBulletinDetailsbyScheduledID                                       -- Completed 1.2
+Usp_CancelBulletinCampaign                                                         -- Completed 1.2
+Usp_GetBulletinMasterDetailsByBulletinID                                           -- Completed 1.2
+Usp_GetBulletinCountforDayandUserID                                                -- Completed 1.2
+usp_Add_ContactsEmailDetails                                                       -- Completed 1.2
+Usp_GetBulletinDetailsBySchID                                                      -- Completed 1.2
+Usp_UnSubscribeBulletinEmail                                                       -- Completed 1.2
+Usp_UnSubscribeBusinessEmail                                                       -- Completed 1.2
+Usp_UnSubscribeEventEmail                                                          -- Completed 1.2
+Ser_GetBulletinCampaignMail                                                        -- Completed 1.2
+Ser_GetBulletinMasterDetails                                                       -- Completed 1.2
+Ser_UpdateBulletinSentFlag                                                         -- Completed 1.2
+
+Added column to M_Business_Devices --  IsSendPushNotification(bit,1)               -- Completed 1.2
+usp_Mob_GetFavoriteDevices                                                         -- Completed 1.2
+
+usp_DeleteSalesPerson                                                              -- Completed 1.2
+usp_CreateSalesPerson                                                              -- Completed 1.2
+Usp_GetSalesPersonByID                                                             -- Completed 1.2
+Usp_GetActiveCommissions                                                           -- Completed 1.2
+
+added new table L_Verticals
+added new column to T_Business_Profiles(Vertical_Name, varchar(100))               -- Completed 1.2
+added new column to T_Agency_Inquiry(Vertical_Name, varchar(100))                  -- Completed 1.2
+
+USP_GetAllActiveVerticals                                                          -- Completed 1.2
+Usp_UpdateAgencyDtlsById                                                           -- Completed 1.2
+usp_ActivateAccount --Check with production procedure                              -- Completed 1.2
+usp_Training_useraccount  --Check with production procedure                        -- Completed 1.2
+
+Mob_Insert_Update_ManageButtons                                                    -- Completed 1.2
+usp_CreateSalesPerson                                                              -- Completed 1.2
+
+added new tables T_SalesCommissions, T_SalesCommissionsExport                      -- Completed 1.2
+usp_GetCommissionReports                                                           -- Completed 1.2
+usp_InsertSalesCommissionExportDetails                                             -- Completed 1.2
+Usp_GetPurchageOrderDetails                                                        -- Completed 1.2
+Usp_AddSalesReport                                                                 -- Completed 1.2
+
+
+added new table L_AppPins                                                          -- Completed 1.2 
+Ser_UpdateBouncedBackEmailFlag                                                     -- Completed 1.2
+Usp_GetBulletinByID                                                                -- Completed 1.2
+usp_GetUsernameandpasswordforUserID                                                -- Completed 1.2
+=======
+Balaji
+------------------
+ 
+usp_GetMobileAlertsForDesktop                                                      -- Completed 1.2
+usp_m_OnOff_PushNotification                                                       -- Completed 1.2
+
+--Web service related         
+usp_GetVerticalNameByPID                                                           -- Completed 1.2
+usp_m_ValidateAppPin                                                               -- Completed 1.2
+
+
+========================================
+Suneel
+========================================
+Added the stored procedures below on (01/07/2013)
+-----------------------------------------------
+Usp_GetSentBusinessBulletins                                                       -- Completed 1.2
+USP_UpdateBusinessBulletinStatus                                                   -- Completed 1.2
+usp_GetBusinessBulletinWithBulletinId                                              -- Completed 1.2
+Usp_GetOpenedMailsForUpdateID                                                      -- Completed 1.2
+Usp_GetBulletinsCount                                                              -- Completed 1.2
+Usp_GetOptOutCountForBulletins                                                     -- Completed 1.2
+Usp_GetBusinessBulletinMasterDetailsByBusinessBulletinID                           -- Completed 1.2
+
+Added the procedures from test server, which were skipped in local (02/07/2013)
+------------------------------------------------------------------
+usp_GetUpdateBusinessUpdatesText                                                   -- Completed 1.2
+usp_StatusChg_BusinessUpdateDetails                                                -- Completed 1.2
+Usp_GetUpdatesCount                                                                -- Completed 1.2
+
+Changed Procedures (05/07/2013)
+------------------------------------------
+usp_InsertEventDetails                                                             -- Completed 1.2
+usp_InsertBusinessUpdateDetailsNew                                                 -- Completed 1.2
+usp_Insert_Update_BulletinDetails                                                  -- Completed 1.2
+=================================================== End of version 1.2 ===================================
+
+
+
+
+=================================================== Start of version 1.3 ===================================
+Malli
+----------
+Added new columns to T_Agency_Inquiry -- Title varchar(200), HowIKnow varchar(50) -- Completed 1.3
+usp_ManageAgency                                                                  -- Completed 1.3
+Usp_UpdateAgencyDtlsById                                                          -- Completed 1.3                
+Usp_DeleteSelectedListing                                                         -- Completed 1.3
+USP_VERIFYLISTINGDTLS                                                             -- Completed 1.3
+Added tables for default data for cricis form                                     -- Completed 1.3
+Added column to T_Agency_Listing -- NextAction_Date(Datetime)                     -- Completed 1.3
+Usp_InsertInquiryNotesWithActionDate                                              -- Completed 1.3
+Changed the data in L_Commissions                                                 -- Completed 1.3             
+Adde column to L_Sales_People Verticals varchar(100)                              -- Completed 1.3
+Added column to L_Verticals Name varchar(20)                                      -- Completed 1.3
+Added column to Custom_XML ntext                                                  -- Completed 1.3
+usp_CreateSalesPerson                                                             -- Completed 1.3
+Added Column to L_Sales_People IsManager bit                                      -- Completed 1.3
+Changed vw_Sales_Commissions                                                      -- Completed 1.3
+usp_GetAllSalesPerson                                                             -- Completed 1.3
+usp_GetAllSalesPersonManagers                                                     -- Completed 1.3
+Added Managers to  L_Sales_PeoplE                                                 -- Completed 1.3                                                 
+Created table L_AdminUsers                                                        -- Completed 1.3
+Usp_CheckAdminUser                                                                -- Completed 1.3
+Added table L_Bulletin_Categories and data for PoliceDept                         -- Completed 1.3
+Usp_GetManageBulletins                                                            -- Completed 1.3
+Added table L_Vertical_Configs                                                    -- Completed 1.3
+Added coumn to schedule tables VerticalID INT Default 1                           -- Completed 1.3
+Usp_GerVerticalDetails                                                            -- Completed 1.3
+Usp_GerVerticalConfigsByType                                                      -- Completed 1.3
+usp_ManageAgency                                                                  -- Completed 1.3
+usp_GetUsernameandpasswordforUserID                                               -- Completed 1.3
+Usp_GetAllBulletins                                                               -- Completed 1.3
+Usp_GetBulletinCategories                                                         -- Completed 1.3
+Added column to L_Bulletin_Templates                                              -- Completed 1.3
+Changed the view V_GetProfileIDUserIDbyEmailAddress                               -- Completed 1.3
+Changed the view View_DataAnalysisReport                                          -- Completed 1.3
+usp_CustomerDetails                                                               -- Completed 1.3
+Usp_GetBulletinCategoriesByVertical
+
+Usp_InsertBulletinScheduleDetails                                                 -- Completed 1.3
+Usp_InsertEventScheduleDetails                                                    -- Completed 1.3
+Usp_InsertBusinessUpdateSchduleDetails                                            -- Completed 1.3
+Functions
+---------
+dbo.GetVerticalNameByUserID                                                       -- Completed 1.3
+
+Added new column T_Manage_Bulletins Printer_Html ntext                            -- Completed 1.3
+usp_Insert_Update_BulletinDetails                                                 -- Completed 1.3
+created new table L_CustomForm_Headers                                            -- Completed 1.3
+usp_GetCustomFormHeader                                                           -- Completed 1.3
+usp_GetBulletinDetailsByID                                                        -- Completed 1.3
+-----------------
+Update T_Manage_Bulletins
+ SET Printer_Html = s.Bulletin_html
+ FROM T_Manage_Bulletins , T_Manage_Bulletins as s                                -- Completed 1.3
+------------------------
+
+Created new table T_CrisisLog_Downloads
+
+Suneel
+---------- 
+Added new Procedure [usp_Delete_Messages] to delete multiple messages             -- Completed 1.3
+Added new procedure [Usp_GetHelpMenuDetailsbyHelpID] to get Help Menu.            -- Completed 1.3
+changed the procedure [Usp_GetHelpMenuDetailsbyHelpID] to get Help Menu.          -- Completed 1.3
+
+
+
+Balaji---------------------------------------- 1.3
+
+usp_GetBulletinDetailsByID                                                        -- Completed 1.3
+usp_Insert_Update_BulletinDetails                                                 -- Completed 1.3
+usp_GetCallerTypeAgencyByProfileID                                                -- Completed 1.3
+usp_GetAllRegions                                                                 -- Completed 1.3
+usp_OfficersByRegionName                                                          -- Completed 1.3
+usp_GetAllEventsByMonth_PID                                                       -- Completed 1.3
+usp_m_GetBulletinCategoriesByVerticalName                                         -- Completed 1.3
+usp_InsertEventDetails                                                            -- Completed 1.3
+usp_M_GetProfilesDetailsByBCode                                                   -- Completed 1.3
+
+Balaji-----------------------------------------------------------1.3
+usp_GetBulletinDetailsByDates 
+usp_InsertCrisisLogDownloads
+usp_GetCrisisLogDownloads
+======================================= End of 1.3 ===================================================
+
+======================================= Start of 1.4 ===================================================
+
+Malli
+=======
+Added column for T_Users IsAssociate_SuperAdmin(bit)                             -- Completed 1.4                 
+Added table L_Countries                                                          -- Completed 1.4
+Added column for T_Agency_Inquiry(Country, varchar(100))                         -- Completed 1.4
+changed view V_AdminSearch                                                       -- Completed 1.4
+USP_VERIFYLISTINGDTLS                                                            -- Completed 1.4
+Usp_UpdateAgencyDtlsById                                                         -- Completed 1.4
+usp_AdminSearch                                                                  -- Completed 1.4
+Usp_AdminSearchbyBusinessName                                                    -- Completed 1.4
+Created Tables L_Domains and L_Domain_Configs and add data in both tables        -- Completed 1.4
+Usp_GerVerticalConfigsByType Delete                                              -- Completed 1.4 
+Usp_GetDomainConfigsByType                                                       -- Completed 1.4
+Usp_GetDoaminDetails                                                             -- Completed 1.4
+Usp_GerVerticalDetails Delete                                                    -- Completed 1.4
+Added new table L_Country_Verticals                                              -- Completed 1.4
+usp_GetDomainNameByCountry                                                       -- Completed 1.4
+usp_ActivateAccount                                                              -- Completed 1.4
+usp_GetDomainNameByCountryVertical                                               -- Completed 1.4
+Usp_AddTransactions                                                              -- Completed 1.4
+added table T_Business_profiles to view vw_UserDetails                           -- Completed 1.4
+usp_GetUsersData                                                                 -- Completed 1.4
+Added column T_Inquiry_Subscriptions OneTimeSetup_Fee decimal(18,2)              -- Completed 1.4
+Added column T_CheckInvoice OneTimeSetup_Fee decimal(18,2)                       -- Completed 1.4
+Usp_AddCheckInvoice                                                              -- Completed 1.4
+Added column T_ProfileSubscription_Types OneTimeSetup_Fee decimal(18,2)          -- Completed 1.4
+Added column PromoCode varchar(20) to T_Inquiry_Listing                          -- Completed 1.4                        
+usp_ManageAgency                                                                 -- Completed 1.4
+Delete Usage_Count column add gain with not null and default 0 L_PromoCodes      -- Completed 1.4
+Added column IsBranded_App bit default 0                                         -- Completed 1.4
+changed view v_UserDetails,v_AdminSearch                                         -- Completed 1.4
+Added column L_Promocodes Vertical_Name varchar(20) default uspdhub              -- Completed 1.4
+Usp_CheckPromoCode                                                               -- Completed 1.4
+
+=============
+Balaji------------------------------------1.4
+===========
+vw_UserDetails (Add new Column AssociateSuperAdmin)                              -- Completed 1.4
+usp_ValidateAgencyEmailID                                                        -- Completed 1.4
+
+usp_InsertPromocodes                                                             -- Completed 1.4
+usp_GetAllPromoCodes                                                             -- Completed 1.4
+usp_GetPromocodeDetails                                                          -- Completed 1.4
+usp_GenerateNewPromocode                                                         -- Completed 1.4
+
+USE [USPDHub]
+GO
+/****** Object:  StoredProcedure [dbo].[Usp_GerVerticalConfigsByType]    Script Date: 09/30/2013 23:25:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+ALTER PROCEDURE [dbo].[Usp_GerVerticalConfigsByType]
+(
+	@Vertical varchar(100),
+	@Type varchar(20)
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	DECLARE @DomainID INT
+	SET @DomainID=(SELECT ID FROM L_Domain_Verticals WHERE Vertical=@Vertical)
+    IF @DomainID IS NOT NULL
+		BEGIN
+			SELECT Name,Value FROM L_Domain_Configs WHERE Domain_ID=@DomainID AND Type=@Type
+		END	
+END
+
+
+
+
+Balaji ------------------------------------------- 1.4 Changes
+usp_GetDomainVerticals                                                           -- Completed 1.4
+
+
+=============================================End of 1.4===================================================
+
+
+=============================================Start of 1.5===================================================
+Added DisplayLabel row for all domains in L_Domain_Configs                                      --Completed 1.5
+Added column DomainID int default 1 to M_Profile_Buttons and ad data from JIRA 307              --Completed 1.5
+Mob_GetMasterManageButtons                                                                      --Completed 1.5
+usp_GetPieChartData                                                                             --Completed 1.5
+usp_GetAllPromoCodes                                                                            --Completed 1.5
+usp_GetBulletinDetailsByID                                                                      --Completed 1.5
+created tables L_SurveyTypes, L_QuestionTypes add default data                                  --Completed 1.5
+Created table T_Manage_Surveys, T_Survey_Questions, T_SurveyQuestion_Options, T_SURVEY_ANSWERS  --Completed 1.5
+Ser_GetBulletinCampaignMail                                                                     --Completed 1.5
+Ser_GetBusinessUpdateCampanMail                                                                 --Completed 1.5
+added column Parent_ProfileID int to T_Agency_Inquiry, T_Business_Profiles                      --Completed 1.5
+usp_GetParentProfiles                                                                           --Completed 1.5
+usp_CheckParentProfile                                                                          --Completed 1.5
+usp_ManageAgency                                                                                --Completed 1.5
+usp_ActivateAccount                                                                             --Completed 1.5
+Usp_UpdateAgencyDtlsById                                                                        --Completed 1.5
+Usp_GetAllMenuChildLinksForMasterID                                                             --Completed 1.5
+rEMOVE TRADEMARK CONTENT IN the footer L_domains                                                --Completed 1.5
+usp_ValidatePromoCode                                                                           --Completed 1.5
+ADDED COLUMN Invoice_Discount TO T_CHECKINVOICE                                                 --Completed 1.5
+Usp_AddCheckInvoice                                                                             --Completed 1.5                                                              
+Added a Row L_Permission_Bits for SURVEYS                                                       --Completed 1.5
+ADDED COLUMNS Location,EventType TO t_EVENTCALENDAR                                             --Completed 1.5
+usp_GetAllEventsByProfileId                                                                     --Completed 1.5
+Usp_InsertBulletinScheduleDetails                                                               --Completed 1.5
+Usp_InsertEventScheduleDetails                                                                  --Completed 1.5
+Usp_InsertBusinessUpdateSchduleDetails                                                          --Completed 1.5
+emailcontent                                                                                    --Completed 1.5
+T_GoogleUsers added table                                                                       --Completed 1.5
+usp_GetSurveyAnswersCount                                                                       --Completed 1.5
+usp_InsertBusinessUpdateDetailsNew                                                              --Completed 1.5
+Shorten_Url added column for manage tables                                                      --Completed 1.5
+T_Survey_Completed new table                                                                    --Completed 1.5
+T_SubAccount_Invitations, T_Invitation_Codes new tables                                         --Completed 1.5
+usp_GetValidInvitationCode deleted
+usp_AddInvitation                                                                               --Completed 1.5
+usp_GetInvitationDetailsByID                                                                    --Completed 1.5
+usp_CheckSendInvitationEmail                                                                    --Completed 1.5
+added new column Invitation_ID to T_Agency_Inquiry                                              --Completed 1.5
+GetDomainIDByProfileID function                                                                 --Completed 1.5
+usp_GetActiveInvitations                                                                        --Completed 1.5
+usp_CancelInvitationCode                                                                        --Completed 1.5
+usp_GenerateSubAppCodes                                                                         --Completed 1.5
+USP_VERIFYLISTINGDTLS                                                                           --Completed 1.5
+added new table L_Private_Favorites                                                             --Completed 1.5
+usp_GetInvitatioCodeDetailsByID  
+Mob_Insert_Update_ManageButtons                                                               --Completed 1.5
+
+
+==================================================================================
+Balaji 1.5 changes START
+==================================================================================
+usp_GetSurveyTypes                                                                              --Completed 1.5
+usp_GetQuestionTypes                                                                            --Completed 1.5
+usp_Insert_Update_Suvery                                                                        --Completed 1.5
+usp_GetSurveyDetails                                                                            --Completed 1.5
+usp_GetMangeSurveys                                                                             --Completed 1.5
+usp_DeleteSurvey                                                                                --Completed 1.5
+usp_GetSurveyTypeMaxQuestions                                                                   --Completed 1.5
+usp_Insert_Update_Question                                                                      --Completed 1.5
+usp_Insert_QuestionOptions                                                                      --Completed 1.5
+usp_Delete_QuestionOptions                                                                      --Completed 1.5
+usp_GetQuestionsBySurveyID                                                                      --Completed 1.5
+usp_GetQuestionOptionsByQuestionID                                                              --Completed 1.5
+New Columns (T_BusinessProfiles) MaxSurveyQuestions int                                         --Completed 1.5
+
+
+28-11-2013 ****************
+usp_Insert_Update_BulletinDetails
+usp_InsertBusinessUpdateDetailsNew
+
+
+Service Related=====================
+ 
+usp_M_GetMangeSurveys                                                                           --Completed 1.5
+usp_M_GetQuestionsBySurveyID                                                                    --Completed 1.5
+usp_m_InsertSurveyAnswers                                                                       --Completed 1.5
+usp_m_DeleteSurveyAnswers                                                                       --Completed 1.5
+usp_m_GetSurveyAnswers                                                                          --Completed 1.5
+usp_GetSurveyAnswersByQID                                                                       --Completed 1.5
+usp_GetAnswersByOptionID                                                                        --Completed 1.5
+usp_m_SurveyStatus                                                                              --Completed 1.5
+usp_GetAnswersSkipCount                                                                         --Completed 1.5
+usp_DeleteQuestion                                                                              --Completed 1.5
+Usp_Survey_Publish_Unpublish                                                                    --Completed 1.5
+usp_DeviceCountByPID                                                                            --Completed 1.5
+usp_GetActiveBulletinsByProfileID                                                               --Completed 1.5
+usp_GetActiveBusinessUpdates                                                                    --Completed 1.5
+usp_m_AgencySummary                                                                             --Completed 1.5
+usp_M_GetProfilesDetailsByBCode                                                                 --Completed 1.5
+usp_m_InsertSurveyStatus                                                               		    --Completed 1.5
+
+--------------------------- END -------------------------------------------------
+
+
+=================================================================================
+suneel    Verson: 1.5
+=================================================================================
+usp_InsertGMailEventDetailsinManageList		- Newly Created                                --Completed 1.5
+usp_InsertGMailEventDetails					- Newly Created                                --Completed 1.5
+Usp_GetGoogleEventsCount					- Newly created                                --Completed 1.5
+usp_CopySurvey								- Newly created                                --Completed 1.5
+Usp_UpdateShortenURL 						- Newly created                                --Completed 1.5
+usp_GetCompletedAnswersCountBySurveyID		- Newly created                                --Completed 1.5
+Usp_GetAllBulletins							- Modified.                                         --Completed 1.5
+---------------------------------------------------------------------------------------------------------------------------------------------
+Modified on 2013-11-28 12:24:14.453
+---------------------------------------------------------------------------------------------------------------------------------------------
+Usp_CopyUpdateDetails						- Modified.
+usp_InsertEventDetails						- Modified.
+Usp_CopyBulletin								- Modified.
+---------------------------------------------------------------------------------------------------------------------------------------------
+USE [USPDHUB ]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_CopySurvey]    Script Date: 10/29/2013 11:31:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<MALLI>
+-- Create date: <28-10-2013>
+-- Description:	<Copy Survey>
+-- =============================================
+ALTER PROCEDURE [dbo].[usp_CopySurvey]
+( 
+	@UserID INT,
+	@CreatedUserID INT,
+	@OldSurveyID INT,
+	@NewSurveyName VARCHAR(200)
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+SET NOCOUNT ON;
+DECLARE @NewSurveyID INT=0
+Declare @QID int=0
+Declare @OptId int=0
+-- *** Checking if new survey name is alrady exists or not *** --
+IF NOT EXISTS(SELECT Name FROM T_Manage_Surveys WHERE Name=@NewSurveyName AND UserID=@UserID) -- *** if not exists *** --
+	BEGIN
+		INSERT INTO T_Manage_Surveys ([ProfileID]
+		  ,[UserID]
+		  ,[Name]
+		  ,[Description]
+		  ,[STypeID]
+		  ,[Thanks_Message]      
+		  ,[IsDeleted]
+		  ,[Created_Date]
+		  ,[Created_User]
+		  ,[Modified_Date]
+		  ,[Modified_User])
+		SELECT [ProfileID]
+		  ,[UserID]
+		  ,@NewSurveyName
+		  ,[Description]
+		  ,[STypeID]
+		  ,[Thanks_Message]      
+		  ,[IsDeleted]
+		  ,GETDATE()
+		  ,@CreatedUserID
+		  ,GETDATE()
+		  ,@CreatedUserID
+		FROM T_Manage_Surveys WHERE Survey_ID= @OldSurveyID
+		SET @NewSurveyID=SCOPE_IDENTITY()
+		-- *** inserting questions based on old survey ID *** --
+		INSERT INTO dbo.T_Survey_Questions  (Text,
+			QTypeID, 
+			SurveyID,
+			Status,
+			Created_Date,    
+			Creadted_User,
+			Modified_Date, 
+			Modified_User)
+		SELECT
+			Text,  
+			QTypeID,
+			@NewSurveyID,
+			Status,
+			GETDATE(),
+			@CreatedUserID,
+			GETDATE(),
+			@CreatedUserID
+		FROM dbo.T_Survey_Questions TSQ  WHERE TSQ.SurveyID = @OldSurveyID
+	CREATE TABLE #QuestionTable
+	(
+		Id int
+	)
+	INSERT INTO #QuestionTable SELECT Question_ID From T_Survey_Questions Where SurveyID=@OldSurveyID 
+	CREATE TABLE #OptionsTable
+	(
+		Id int
+	)
+	INSERT INTO #OptionsTable SELECT Question_ID From T_Survey_Questions Where SurveyID=@NewSurveyID 
+	/*******************************************************/
+	While((Select Count(*) From #QuestionTable)>0)
+	BEGIN
+	Set @QID=(Select Top 1 Id From #QuestionTable)
+	set @OptId=(Select Top 1 Id From #OptionsTable)
+	INSERT INTO dbo.T_SurveyQuestion_Options  
+	(  
+		QuestionID,
+		SurveyID, 
+		Answer_Option,
+		Order_No,
+		IsDeleted,    
+		Created_Date,
+		Created_User, 
+		Modified_Date,
+		Modified_User)
+	SELECT
+		@OptId,  
+		@NewSurveyID,
+		Answer_Option,
+		Order_No,
+		IsDeleted,
+		GETDATE(),
+		@UserID,
+		GETDATE(),
+		@UserID
+
+	FROM dbo.T_SurveyQuestion_Options TSQO  
+	WHERE TSQO.SurveyID = @OldSurveyID AND QuestionID = @QID
+	/*******************************************************/
+	Delete From #QuestionTable Where Id=@QID
+	Delete From #OptionsTable where Id=@OptId
+	END
+	Delete #QuestionTable
+	Delete #OptionsTable
+	END	
+	SELECT @NewSurveyID
+END
+
+============================================== Start of 1.6 ==============================================================
+Usp_GetsalesReport                                                                                         --Completed
+usp_GetLoginDetailsbyUserID                                                                                --Completed
+Added VW_CheckUser view                                                                                    --Completed
+CheckUserNameandPassword                                                                                   --Completed
+usp_ValidateAgencyEmailID                                                                                  --Completed
+usp_GetUserDetails                                                                                         --Completed
+added view Vw_CheckAssociate                                                                               --Completed
+usp_GetAssociateUserDetails                                                                                --Completed
+Added a value for messages in L_Permission_Bits                                                            --Completed
+Added column Device_ID, IsBlocked,Device_Type,App_ID T_Messages                                            --Completed
+Added columns IsRequired,Error_Message,Answers_CheckType,Answers_CheckCount T_Survey_Questions             --Completed
+usp_BlockUnBlockMessageSenders                                                                             --Completed
+usp_GetMobileTips                                                                                          --Completed
+usp_GetMobileNewsletterAlerts                                                                              --Completed
+ALTER TABLE dbo.T_Messages ALTER COLUMN CREATED_USER INT                                                   --Completed
+ALTER TABLE dbo.T_Messages ALTER COLUMN MODIFIED_USER INT                                                  --Completed
+usp_GetBlockedSenders                                                                                      --Completed
+usp_BlockUnBlockMessageSendersnew                                                                          --Completed
+Added table L_TimeZones                                                                                    --Completed
+added column TimeZoneId INT Default 1 to T_Business_Profiles                                               --Completed
+usp_GetBusinessProfileByID                                                                                 --Completed
+usp_Insert_Update_BulletinDetails                                                                          --Completed
+ConvertUserTimeZoneToPST FUNCTION                                                                          --Completed
+ConvertPSTToUserTimeZone function                                                                          --Completed
+GetProfileIDByUserID function                                                                              --Completed
+Usp_GetManageBulletins                                                                                     --Completed
+usp_GetBulletinDetailsByID                                                                                 --Completed
+usp_Insert_Update_Suvery                                                                                   --Completed
+usp_GetMangeSurveys                                                                                        --Completed
+usp_GetMobileNewsletterAlerts                                                                              --Completed
+Mob_GetSendNotifications                                                                                   --Completed
+usp_GetAllBusinessUpdates                                                                                  --Completed
+usp_InsertBusinessUpdateDetailsNew                                                                         --Completed
+usp_GetBusinessUpdateWithUpdateId                                                                          --Completed
+usp_GetAllEventsByProfileId                                                                                --Completed
+usp_GetCalendarEventDetails                                                                                --Completed
+usp_InsertEventDetails                                                                                     --Completed
+usp_GetScheduleDateInPST                                                                                   --Completed
+Usp_GetScheduledBulletinDetailsbyScheduledID                                                               --Completed
+Usp_GetBulletinMasterDetailsByBulletinID                                                                   --Completed
+Usp_GetBusinessBulletinMasterDetailsByBusinessBulletinID                                                   --Completed
+Usp_GetOptOutCountForBulletins                                                                             --Completed
+Usp_GetOpenedMailsForUpdateID                                                                              --Completed
+Usp_GetBouncedEmailsForUpdateID                                                                            --Completed
+Usp_GetBusinessEventMasterDetailsByBusinessEventID                                                         --Completed
+Usp_GetScheduledEventDetailsbyScheduledEventID                                                             --Completed
+Usp_GetOptOutCountForEvents                                                                                --Completed
+usp_GetBulletinDetailsByID                                                                                 --Completed
+new column added Payment_Type varchar(50) T_Profile_Subscription_Types                                     --Completed
+Ser_AddBusinessProfileOrder                                                                                --Completed
+added table M_App_CustomMessages                                                                           --Completed
+Usp_UpdateUserTracking                                                                                     --Completed
+run new vertical service engine                                                                            --Completed
+sERVICE
+========
+usp_m_GetPushNotifications                                                                                 --Completed 
+usp_m_AgencySummary                                                                                        --Completed
+usp_GetActiveBusinessUpdates                                                                               --Completed
+usp_m_SurveyStatus                                                                                         --Completed
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+Suneel
+---------------------------------------------------------------------------------------------------------------------------------
+usp_GetAccessCodeInfo                                                                                      --Completed
+VW_PinCodes                                                                                                --Completed  
+View_DataAnalysisReport	                                                                                   --Completed
+usp_GetAllEventsByProfileId                                                                                --Completed
+usp_GetAllBusinessUpdates                                                                                  --Completed
+usp_GetAccessCodeInfo                                                                                      --Completed
+usp_DeleteAccessCode                                                                                       --Completed
+usp_GetBlockedSenders                                                                                      --Completed
+usp_GetTimeZonesByCountryName                                                                              --Completed
+usp_UpdateBusinessProfileForezSmartSitename                                                                --Completed
+Usp_GetBusinessUpdateMasterDetailsByBusinessUpdateID                                                       --Completed
+Usp_GetOptOutCountForBusinessUpdates                                                                       --Completed
+Usp_GetScheduledBusinessUpdateDetailsbyScheduledID                                                         --Completed
+usp_UpdateTimeZoneID	                                                                                   --Completed
+
+------------------------------------------------------Queries-------------------------------------------------------------
+ALTER TABLE T_EventsCalendar ALTER COLUMN Published_By int                                                 --Completed
+ALTER TABLE T_EventsCalendar ALTER COLUMN Rejected_By int                                                  --Completed
+
+ALTER TABLE T_BusinessUpdates ALTER COLUMN Published_By int                                                --Completed
+ALTER TABLE T_BusinessUpdates ALTER COLUMN Rejected_By int                                                 --Completed
+
+
+
+*************************************************************************************************************************************
+Balaji
+****************************
+
+ALTER TABLE [T_Manage_Bulletins]                                                                          --Completed
+ALTER COLUMN [Published_By] INT                                                                           --Completed
+
+ALTER TABLE [T_Manage_Bulletins]                                                                          --Completed
+ALTER COLUMN [Rejected_By] INT                                                                            --Completed
+
+=================
+Usp_GetManageBulletins                                                                                    --Completed
+usp_Insert_Update_AssociateLogin                                                                          --Completed
+usp_GetManageAssociates                                                                                   --Completed
+usp_GetActiveAssociates                                                                                   --Completed
+usp_Insert_Update_Question                                                                                --Completed
+usp_GetQuestionsBySurveyID                                                                                --Completed
+usp_M_GetQuestionsBySurveyID                                                                              --Completed
+usp_M_ManageMessages                                                                                      --Completed
+usp_GetActiveBulletinsByProfileID                                                                         --Completed
+usp_m_GetCustomMessagesByPID                                                                              --Completed
+
+================================================= End of 1.6 08-01-2014 ===============================================================================
+
+================================================= Start of 1.7 ========================================================================================
+Added Duration column to L_Promocodes                                                            --Completed
+new data table L_Default_TabNames and data                                                       --Completed
+new data table T_PaymentCard_Details                                                             --Completed
+T_RFP_Requests new table                                                                         --Completed
+T_order_detils new table                                                                         --Completed
+T_OrderPayments  new table                                                                       --Completed
+L_Subscriptions new table                                                                        --Completed
+L_Request_Types                                                                                  --Completed
+L_Sub_Account_Subscriptions                                                                      --Completed
+added columns to T_profile_Subscription_Types                                                    --Completed
+ADDED COLUMNS T_Profile_Subcriptions                                                             --Completed
+ADDED COLUMNS T_Invitation_Codes                                                                 --Completed
+T_Agency_Inquiry                                                                                 --Completed
+added column Created_By to t_associate_permissionss                                              --Completed
+
+usp_ActivateAccount                                                                              --Completed
+update L_User_Contact_Groups set Active_Flag=0 where Contact_Group_name='Mailing List'           --Completed
+delete from L_User_Contact_Groups where Contact_Group_name='Affiliates'                          --Completed
+delete from L_User_Contact_Groups where Contact_Group_name='Generaltab'                          --Completed
+Usp_GetUserContactGroupNames                                                                     --Completed
+check JIRA 412 for free text boxes L_QuestionTypes                                               --Completed
+Usp_CheckPromoCode                                                                               --Completed
+[usp_GetAlternateCards]                                                                          --Completed
+usp_GetExistedPreferredDetails                                                                   --Completed
+usp_GenerateSubAppCodes                                                                          --Completed
+Usp_InsertStoreTransactionDetails                                                                --Completed
+Usp_GetSubscriptionByID                                                                          --Completed
+Usp_UpdateBrandedApp                                                                             --Completed
+Usp_UpdateRecurringDetails                                                                       --Completed
+usp_GetInvitatioCodeDetailsByID                                                                  --Completed
+Usp_InsertUserSubscription                                                                       --Completed
+rejectednotification.txt new email content                                                       --Completed
+Usp_UpdateInquiryTransaction                                                                     --Completed
+Usp_InsertOrderPayment                                                                           --Completed
+Usp_UpdateAgencySubscription                                                                     --Completed 
+Usp_UpdateOrderDetails                                                                           --Completed
+usp_GetInvoiceDetailsByID                                                                        --Completed
+Usp_GetManageBulletins                                                                           --Completed
+usp_GetAllBusinessUpdates                                                                        --Completed
+usp_GetAllEventsByProfileId                                                                      --Completed
+usp_GetActiveInvitations                                                                         --Completed
+usp_m_SurveyStatus                                                                               --Completed
+Usp_InsertUserPermissions                                                                        --Completed
+usp_Insert_Update_AssociateLogin                                                                 --Completed
+usp_GetUserDtlsByUserID                                                                          --Completed
+usp_m_InsertSurveyStatus                                                                         --Completed
+usp_GetStoreItems                                                                                --Completed
+usp_ManageAgency                                                                                 --Completed
+Ser_GetRecurringProfiles                                                                         --Completed
+Ser_GetUserDetailsForUserID                                                                      --Completed
+View_Profile_Recurring --new view                                                                --Completed
+usp_CustomerDetails                                                                              --Completed
+----------------------------
+Balaji
+----------------------------------------------
+
+ //New Columns
+ alter table T_BusinessUpdates add  Expiration_Date datetime null                                --Completed
+ alter table T_EventsCalendar  add  Expiration_Date datetime null                                --Completed
+usp_M_Insert_Update_Settings                                                                     --Completed
+usp_InsertBusinessUpdateDetailsNew                                                               --Completed
+usp_GetBusinessUpdateWithUpdateId                                                                --Completed
+usp_InsertEventDetails                                                                           --Completed
+usp_GetCalendarEventDetails                                                                      --Completed
+Usp_CopyUpdateDetails                                                                            --Completed
+usp_Insert_PaymentCard_Details                                                                 	 --Completed
+usp_GetPaymentCardDetails                                                                        --Completed
+usp_InsertRequestCustomForms                                                                     --Completed
+usp_GetStoreItems                                                                                --Completed
+usp_InsertOrderDetails                                                                           --Completed
+usp_GetOrderDetailsByPID                                                                         --Completed
+GetSurveyStatus (Function)                                                                       --Completed
+usp_InsertPromocodes                                                                             --Completed
+usp_ActivateNewAccount                                                                           --Completed
+usp_GetAffilatesInvitationDetailsByPID                                                           --Completed
+usp_Insert_Update_RFP_CustomRequests                                                             --Completed
+usp_GetRFP_CustomDetailsByID                                                                     --Completed
+usp_GetAll_RFPRequests                                                                           --Completed
+// Mobile Service
+usp_GetActiveBusinessUpdates                                                                     --Completed
+usp_GetAllEventsByMonth_PID                                                                      --Completed
+usp_M_GetQuestionsBySurveyID                                                                     --Completed
+usp_m_AgencySummary                                                                              --Completed
+
+add new Row for L_deafulttabsName 9-1-1 EmergencyNumber (all domains)                                 --Completed
+in TabParent Tip changes Tips                                                                         --Completed
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+suneel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Mob_GetMasterManageButtons                                                                            --Completed
+usp_UpdateUserPassword                                                                                --Completed
+usp_GetDefaultProfileTabs                                                                             --Completed
+usp_GetActivationCodes                                                                                --Completed
+usp_GetSubAppsCost                                                                                    --Completed
+usp_GetSubAppAmount                                                                                   --Completed
+usp_GetOrderDetailsByOrderID                                                                          --Completed
+View_UserProfiles                                                                                     --Completed
+-- Message Blocking                                                                                   --Completed
+
+INSERT INTO [USPDHUB ].[dbo].[L_Help_Content]
+           ([Help_Name]
+           ,[IsMaster]
+           ,[Master_ID]
+           ,[Help_content]
+           ,[IsActive]
+           ,[Video_File]
+           ,[Pdf_Name])
+     VALUES
+           ('Message Blocking'
+           ,'False'
+           ,86
+           ,'<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+        font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+        Message Blocking</span>
+    <br />
+    <br />
+    <span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px; word-wrap: break-word;">
+        If you receive prank or abusive messages you have the ability to block messages 
+		from that particular device. Blocked users will still be able to use your 
+		app but are unable to send messages.
+	</span>
+    <br />
+    <br />
+    <span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+        or Menu:</span>
+    <br />
+    <br />
+    <table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+        padding-left: 25px;" width="100%">
+        <tr>
+            <td valign="bottom">
+                1.
+            </td>
+            <td>
+                Select ''Messages''.
+                <img src="/Images/HelpImages/Messages.jpg">
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                2.
+            </td>
+            <td>
+                Check the box next to the sender’s message that you wish to block.
+            </td>
+        </tr>
+		<tr>
+            <td colspan="2" align="center">
+                <img src="/Images/HelpImages/SelectAllMsgs.jpg">
+            </td>
+        </tr>
+        <tr>
+            <td valign="bottom">
+                3.
+            </td>
+            <td>
+                Select ''Block Sender'' at the bottom of the screen.
+                <img src="/Images/HelpImages/BlocksenderBtn.jpg">
+            </td>
+        </tr>
+		<tr>
+            <td valign="bottom">
+                4.
+            </td>
+            <td>
+                Click ''OK''.
+                <img src="/Images/HelpImages/OK.jpg">
+            </td>
+        </tr>
+		<tr>
+            <td valign="top">
+                5.
+            </td>
+            <td>
+                The sender will now be blocked from sending messages unless you unblock them.
+            </td>
+        </tr>
+    </table>'
+           ,'True'
+           ,NULL
+           ,'MessageBlocking.pdf')
+GO
+
+
+-- Message Unblocking                                                                                         --Completed
+
+INSERT INTO [USPDHUB ].[dbo].[L_Help_Content]
+           ([Help_Name]
+           ,[IsMaster]
+           ,[Master_ID]
+           ,[Help_content]
+           ,[IsActive]
+           ,[Video_File]
+           ,[Pdf_Name])
+     VALUES
+           ('Message Unblocking'
+           ,'False'
+           ,86
+           ,'<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+        font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+        Message Unblocking</span>
+    <br />
+    <br />
+    <span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+        or Menu:</span>
+    <br />
+    <br />
+    <table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+        padding-left: 25px;" width="100%">
+        <tr>
+            <td valign="bottom">
+                1.
+            </td>
+            <td>
+                Select ''Mobile App''.
+                <img src="/Images/HelpImages/MobileApp.jpg">
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                2.
+            </td>
+            <td>
+                Select ''Manage Blocked Senders''.   
+            </td>
+        </tr>
+		<tr>
+            <td colspan="2" align="center">
+                <img src="/Images/HelpImages/ManageBlockedSenders.jpg">
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                3.
+            </td>
+            <td>
+                If you have more than one blocked sender you may identify him by clicking 
+				on the box next to the device id number.
+            </td>
+        </tr>
+		<tr>
+            <td colspan="2" align="center">
+                <img src="/Images/HelpImages/BlockedDeviceID.jpg">
+            </td>
+        </tr>
+		<tr>
+            <td valign="top">
+                4.
+            </td>
+            <td>
+                This will display the subject and message for that device.<br/>
+                <img src="/Images/HelpImages/DeviceSubjectMessage.jpg">
+            </td>
+        </tr>
+		<tr>
+            <td valign="bottom">
+                5.
+            </td>
+            <td>
+                Select the checkbox next to the sender you wish to unblock.
+            </td>
+        </tr>
+		<tr>
+            <td colspan="2" align="center">
+                <img src="/Images/HelpImages/UnblockDevice.jpg">
+            </td>
+        </tr>
+		<tr>
+            <td valign="bottom">
+                6.
+            </td>
+            <td>
+                Select ''Unblock Sender''. <img src="/Images/HelpImages/UnblockSender.jpg">
+            </td>
+        </tr>
+    </table>'
+           ,'True'
+           ,NULL
+           ,'MessageUnblocking.pdf')
+GO
+============================================================= End of 1.7 03-12-2014============================================================
+
+============================================================= *** start of 1.8 *** ============================================================
+EmailContent                                                                                   --Completed
+L_Domain_Configs                                                                               --Completed
+App_themes                                                                                     --Completed
+T_CustomerService_Users new table                                                              --Completed
+usp_GetCSUsers                                                                                 --Completed
+T_Logs                                                                                         --Completed
+L_BrandedApp_ProcessStatus                                                                     --Completed
+T_BrandedApp_Orders                                                                            --Completed
+
+GO
+/****** Object:  Table [dbo].[L_Bulletin_Templates]    Script Date: 03/28/2014 14:42:20 ******/
+SET IDENTITY_INSERT [dbo].[L_Bulletin_Templates] ON
+INSERT [dbo].[L_Bulletin_Templates] ([Template_BID], [Template_Name], [Category_ID], [Category], [Image_ThumbName], [Template], [IsCustom], [IsUrl], [IsActive], [Created_Date], [Created_User], [Modifier_Date], [Modified_User], [User_ID], [Vertical_Name]) VALUES (46, N'Email Form', 4, N'Email Only Forms', N'bulletinFlyer_thumb.jpg', N'/Business/MyAccount/BulletinFlyer.aspx', 0, 1, 1, CAST(0x0000A2F800000000 AS DateTime), N'Malli', CAST(0x0000A2F800000000 AS DateTime), N'Malli', NULL, N'localhost')
+INSERT [dbo].[L_Bulletin_Templates] ([Template_BID], [Template_Name], [Category_ID], [Category], [Image_ThumbName], [Template], [IsCustom], [IsUrl], [IsActive], [Created_Date], [Created_User], [Modifier_Date], [Modified_User], [User_ID], [Vertical_Name]) VALUES (47, N'Email Form', 4, N'Email Only Forms', N'bulletinFlyer_thumb.jpg', N'/Business/MyAccount/BulletinFlyer.aspx', 0, 1, 1, CAST(0x0000A2F800000000 AS DateTime), N'Malli', CAST(0x0000A2F800000000 AS DateTime), N'Malli', NULL, N'uspdhubcom')
+INSERT [dbo].[L_Bulletin_Templates] ([Template_BID], [Template_Name], [Category_ID], [Category], [Image_ThumbName], [Template], [IsCustom], [IsUrl], [IsActive], [Created_Date], [Created_User], [Modifier_Date], [Modified_User], [User_ID], [Vertical_Name]) VALUES (48, N'Email Form', 4, N'Email Only Forms', N'bulletinFlyer_thumb.jpg', N'/Business/MyAccount/BulletinFlyer.aspx', 0, 1, 1, CAST(0x0000A2F800000000 AS DateTime), N'Malli', CAST(0x0000A2F800000000 AS DateTime), N'Malli', NULL, N'twoviecom')
+INSERT [dbo].[L_Bulletin_Templates] ([Template_BID], [Template_Name], [Category_ID], [Category], [Image_ThumbName], [Template], [IsCustom], [IsUrl], [IsActive], [Created_Date], [Created_User], [Modifier_Date], [Modified_User], [User_ID], [Vertical_Name]) VALUES (49, N'Email Form', 4, N'Email Only Forms', N'bulletinFlyer_thumb.jpg', N'/Business/MyAccount/BulletinFlyer.aspx', 0, 1, 1, CAST(0x0000A2F800000000 AS DateTime), N'Malli', CAST(0x0000A2F800000000 AS DateTime), N'Malli', NULL, N'inschoolhubcom')
+INSERT [dbo].[L_Bulletin_Templates] ([Template_BID], [Template_Name], [Category_ID], [Category], [Image_ThumbName], [Template], [IsCustom], [IsUrl], [IsActive], [Created_Date], [Created_User], [Modifier_Date], [Modified_User], [User_ID], [Vertical_Name]) VALUES (50, N'Email Form', 4, N'Email Only Forms', N'bulletinFlyer_thumb.jpg', N'/Business/MyAccount/BulletinFlyer.aspx', 0, 1, 1, CAST(0x0000A2F800000000 AS DateTime), N'Malli', CAST(0x0000A2F800000000 AS DateTime), N'Malli', NULL, N'inschoolhubin')
+SET IDENTITY_INSERT [dbo].[L_Bulletin_Templates] OFF
+
+alter table T_PaymentCard_Details alter column CC_CVV varchar(40)                              --Completed
+usp_Insert_PaymentCard_Details                                                                 --Completed
+usp_InsertLog                                                                                  --Completed 
+IsSms-column T_Business_Profiles                                                               --Completed
+T_Manage_UserSms new table                                                                     --Completed
+usp_GetBusinessProfileByID                                                                     --Completed
+Balaji 1.8 =====================================
+
+ALTER TABLE L_QuestionTypes ALTER COLUMN Type_Name varchar(max)                                --Completed
+
+usp_GetQuestionTypes                                                                           --Completed
+usp_M_GetQuestionsBySurveyID                                                                   --Completed
+usp_GetQuestionsBySurveyID                                                                     --Completed
+Usp_GetBulletinByID                                                                            --Completed
+
+
+usp_GetBrandedAppProcessAllStatus                                                              --Completed
+usp_Insert_Update_BrandedAppOrderStatus                                                        --Completed
+usp_GetManageBrandedAppProcessStatus                                                           --Completed
+usp_GetBrandedAppOrderStatusDetails                                                            --Completed
+usp_ChangeAppOrderStatus                                                                       --Completed
+
+usp_GetAppOrderStatusByStatusID                                                                --Completed
+
+ 
+usp_GetManageSMS                                                                               --Completed
+usp_DeleteSMS                                                                                  --Completed
+usp_InsertSMSDetails                                                                           --Completed
+usp_GetSMSDetailsBySMSID                                                                       --Completed
+
+usp_Insert_Update_BrandedAppOrderStatus
+usp_GetManageBrandedAppProcessStatus
+
+L_QuestionTypes TABLE DATA                                                                     --Completed
+
+
+
+--------------------------------------------------------------------------------------------
+Suneel
+--------------------------------------------------------------------------------------------
+usp_CreateUpdateAccessCodes                                                                   --Completed
+Usp_NewAdminUserInsertion                                                                     --Completed
+CheckAdminUserNameandPassword                                                                 --Completed
+usp_ExtendSubscriptionPeriod                                                                  --Completed
+usp_AdminUserDetailsCheck                                                                     --Completed
+usp_GetAdminDetailsCheck                                                                      --Completed
+
+
+======================================================== *** End of 1.8 *** ============================================
+
+
+
+
+
+================================================= Start of 1.9 =================================================
+Added columns T_ProfileSubscriptions_Types                                                                     --Completed
+Usp_InsertStoreTransactionDetails                                                                              --Completed
+usp_UpdateSubcriptionRecurring                                                                                 --Completed
+usp_GetDataFeeds                                                                                               --Completed
+T_Weblink_Categories new table                                                                                 --Completed
+Category_ID new column t_weblinks                                                                              --Completed
+T_BrandedAppDeskNotes new table                                                                                --Completed
+usp_GetManageBrandedAppProcessStatus                                                                           --Completed
+Usp_GetManageBulletins                                                                                         --Completed
+usp_GetAllBusinessUpdates                                                                                      --Completed
+usp_GetAllEventsByProfileId                                                                                    --Completed
+Usp_ArchiveNewsletterByNewsDetailedID                                                                          --Completed
+Usp_GetManageBulletins                                                                                         --Completed
+Usp_UpdateAgencyDtlsById                                                                                       --Completed
+usp_ActivateNewAccount                                                                                         --Completed
+
+Data default data for myyouthhub -L_bulletin_Categories,L_bulletin_Tempaltes, L_Country_Verticals, L_Domain_Verticals, L_Domains, L_master_appnames, L_Sub_Account_Subscriptions
+
+
+update L_Domains set Footer='<div id="footer">
+            <div id="footerwrapper">
+                <div id="footer-col1">
+                    <a href="#RootPath#/Business/MyAccount/Default.aspx">
+                        Dashboard</a><br />
+                    <a href="#RootPath#/OP/#DomainName#/aboutus.html" target="_blank">About Us</a><br />
+                    <a href="#RootPath#/OP/#DomainName#/contactus.aspx" target="_blank">Contact Us</a><br />
+                    <a href="#RootPath#/OP/#DomainName#/Terms.html" target="_blank">Terms of Service</a>
+                </div>
+                <div id="footer-col2">
+                    &nbsp;
+                </div>
+            </div>
+        </div>' where Domain_ID=5
+
+
+INSERT INTO L_Domain_Configs (Domain_ID, Type, Name, Value, IsActive)
+SELECT 5, Type, Name, Value, IsActive 
+FROM L_Domain_Configs where Domain_ID=2
+update L_Domain_Configs set Value=REPLACE(Value, 'inschoolhub.com', 'myyouthhub.com') where Domain_ID=5
+
+INSERT INTO L_Default_TabNames (Tab_Name, Tab_Parent, Domain_name)
+SELECT Tab_Name, Tab_Parent, 'myyouthhubcom' 
+FROM L_Default_TabNames where Domain_name='inschoolhubcom'
+
+INSERT INTO L_Subscriptions (Category, Product_Type, Title, Description,RFP_Flag, Navigation_Path,Request_Type, Template_ID, Store_Image_Icon, Sub_Accounts_Flag, Active_Flag,Subscription_Cost, Subscription_period, Type, Email_Description, Order_ID)
+SELECT Category, 'myyouthhubcom' , Title, Description,RFP_Flag, Navigation_Path,Request_Type, Template_ID, Store_Image_Icon, Sub_Accounts_Flag, Active_Flag,Subscription_Cost, Subscription_period, Type, Email_Description, Order_ID
+FROM L_Subscriptions where Product_Type='inschoolhubcom'
+
+replace the values for myyouthhub in L_Subscriptions
+
+-- Change subscriptionID in L_Sub_Accounts_Subscriptions based on above insert
+
+
+
+
+
+Balaji
+------------
+
+USP_CreateWebLinks                                                                                            --Completed
+usp_GetWebLinksCategories                                                                                     --Completed
+USP_GetWebLinksById                                                                                           --Completed
+Insert_Update_Weblink_Categories                                                                              --Completed
+usp_DeleteWeblinkCategory                                                                                     --Completed
+usp_GetManageWeblinksCategories                                                                               --Completed
+usp_GetWeblinksCategoryDetailsByID                                                                            --Completed
+USP_GetWebLinks                                                                                               --Completed
+usp_Insert_Update_Suvery                                                                                      --Completed
+usp_InsertBrandedAppDeskNotes                                                                                 --Completed
+usp_GetBrandedAppDeskNotesByAppID                                                                             --Completed
+usp_GetAppOrderStatusByStatusID                                                                               --Completed
+usp_m_GetWebLinksCategories                                                                                   --Completed
+usp_m_GetWebLinksByCatID                                                                                      --Completed
+usp_GetManageBrandedAppProcessStatus                                                                          --Completed
+usp_Insert_Update_BrandedAppOrderStatus                                                                       --Completed
+alter table T_BrandedApp_Orders add  App_Store_Icon varchar(250)                                              --Completed
+alter table T_BrandedApp_Orders add  Printable_App_Store_Icon varchar(250)                                    --Completed
+usp_GetBrandedAppOrderStatusDetails                                                                           --Completed
+usp_GetActiveBulletinsByProfileID                                                                             --Completed
+
+
+usp_m_GetPushNotifyDetails_BUE
+
+usp_ManageAgency
+
+--------------------------------------------------------------------------------------------
+Suneel
+--------------------------------------------------------------------------------------------
+
+UPDATE [USPDHUB ].[dbo].[L_Help_Content]                                                                               --Completed
+   SET [Help_content] = '<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+        font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+        Create Survey</span>
+    <br />
+    <br />
+    <span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+        or Menu:</span>
+    <br />
+    <table style="font-family: Arial,Helvetica,sans-serif; line-height:22px; font-size: 15px; padding-left: 25px;"
+        width="100%">
+        <tr>
+            <td valign="bottom">
+                1.
+            </td>
+            <td>
+                Select ''Surveys''.
+                <img src="/Images/HelpImages/SelectSurvey.jpg" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2.
+            </td>
+            <td>
+                Select ''Create''.
+				<img src="/Images/HelpImages/create.jpg" />
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" style="padding-top:10px;">
+                3.
+            </td>
+            <td>
+                Enter a name for your Survey. <img src="/Images/HelpImages/SurevyName.jpg" /> <br/>Note: The survey name will be displayed on the App. 
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                4.
+            </td>
+            <td>
+                For Survey type, select the ''Survey'' radio button. <img src="/Images/HelpImages/SurveyTypeSurvey.jpg" />
+            </td>
+        </tr>
+		<tr>
+            <td valign="top">
+                5.
+            </td>
+            <td>
+				Enter a Thank you message that survey participants will read upon completing the survey. <img src="/Images/HelpImages/ThankYouMessage.jpg" />
+            </td>
+        </tr>
+		<tr>
+            <td valign="top" style="padding-top:10px;">
+                6.
+            </td>
+            <td>
+				You may enter an expiration date  <img src="/Images/HelpImages/ExpirationDate.jpg" />  and the system will automatically remove the survey from the App on that date.
+            </td>
+        </tr>
+		<tr>
+            <td valign="top">
+                7.
+            </td>
+            <td>
+                Choose whether you would like to display it on your App or keep it private by clicking the appropriate radio buttons.
+                <img src="/Images/HelpImages/PublicPrivate.jpg" />
+            </td>
+        </tr>
+		<tr>
+            <td valign="bottom">
+                8.
+            </td>
+            <td>
+                Click ''Save & Continue''. <img src="/Images/HelpImages/SaveContinue.jpg" />
+        </tr>
+		 <tr>
+            <td>
+                9.
+            </td>
+            <td>
+                Enter your first survey question in the question text box.
+            </td>
+        </tr>
+		<tr>
+            <td colspan="2" align="center">
+                <img src="/Images/HelpImages/PollQuestion.jpg" />
+            </td>
+        </tr>
+		<tr>
+            <td valign="top">
+                10.
+            </td>
+            <td>
+				Select the type of answer your question requires by selecting the appropriate radio buttons. <img src="/Images/HelpImages/QuestionType.jpg" />    Check boxes allow users to check multiple answers; radio buttons allow only one answer and free text boxes provide for comments or detailed answers.
+            </td>
+        </tr>
+		<tr>
+            <td valign="top">
+                11.
+            </td>
+            <td>
+				Enter your answer options.  If you need additional answer fields select ''Add''. <img src="/Images/HelpImages/AnswerOptions.jpg" />
+            </td>
+        </tr>
+		<tr>
+            <td valign="bottom">
+                12.
+            </td>
+            <td>
+				Check the ‘require answer’ box if you need a specific question answered.
+            </td>
+        </tr>
+		<tr>
+            <td colspan="2" align="center">
+                <img src="/Images/HelpImages/RequireAnswer.jpg" />
+            </td>
+        </tr>
+		<tr>
+			<td valign="top">
+				13.
+			</td>
+			<td>
+				Select an answer option from the drop down and enter the number of answer choices in the box provided, e.g. ‘Respondent must answer <u>at least 3</u> choices’.
+			</td>
+		</tr>
+		<tr>
+            <td colspan="2" align="center">
+                <img src="/Images/HelpImages/AnswersOptionDropdown.jpg" />
+            </td>
+        </tr>
+		<tr>
+			<td valign="top">
+				14.
+			</td>
+			<td>
+				If a required question is not answered, a pre-populated error message will display that you may edit.
+			</td>
+		</tr>
+		<tr>
+            <td colspan="2" align="center">
+                <img src="/Images/HelpImages/RequiredQuestionErrorMessage.jpg" />
+            </td>
+        </tr>
+		<tr>
+            <td valign="bottom">
+                15.
+            </td>
+            <td>
+				Select ''Save & Continue'' <img src="/Images/HelpImages/SaveContinue.jpg" />  to add additional questions.
+            </td>
+        </tr>
+		<tr>
+            <td valign="bottom">
+                16.
+            </td>
+            <td>
+				Follow steps 9 thru 16 for each additional survey question.
+            </td>
+        </tr>
+		<tr>
+            <td valign="bottom">
+                17.
+            </td>
+            <td>
+				When you complete your survey, select ''Finish''. <img src="/Images/HelpImages/Finish.jpg" />
+            </td>
+        </tr>
+    </table>'
+ WHERE Help_ID = 177
+
+usp_GetAllEventsByProfileId1				 --Completed
+
+
+
+
+================================================= Start of 1.9.1 =================================================
+
+/**********************************************************************************************************/
+suneel
+/**********************************************************************************************************/
+usp_DesktopMobileAlerts                                                                       --Completed
+
+
+====================================== END of 1.9.1 ==============================================================
+
+
+========================================= Start of 1.9.5 =========================================================
+IsArchived BIT Default 0 in T_Business_Profiles                                             --Completed
+IsDollarAmount BIT Default 0 in L_Promocodes                                                --Completed
+VW_UserDetails                                                                              --Completed
+V_AdminSearch                                                                               --Completed 
+View_DataAnalysisReport                                                                     --Completed
+Ser_GetBulletinMasterDetails                                                                --Completed
+Usp_CheckPromoCode                                                                          --Completed
+usp_InsertPromocodes                                                                        --Completed
+usp_GetUsersData                                                                            --Completed
+Usp_ArchiveUser                                                                             --Completed
+Usp_AdminSearchbyBusinessName                                                               --Completed
+usp_AdminSearch                                                                             --Completed
+usp_CustomerDetails                                                                         --Completed
+
+
+Balaji 
+========================================================================
+
+L_OfficerType new table and data                                                             --Completed
+usp_GetOfficerType                                                                           --Completed
+BulletinCategoryName varchar(100) (L_Bulletin_Templates) new column                          --Completed
+usp_GetActiveAssociates                                                                      --Completed
+Usp_GetBulletinByID                                                                          --Completed
+Usp_GetBulletinDetailsBySchID                                                                --Completed
+Usp_CopyBulletin                                                                             --Completed
+usp_ValidateAdminLogin                                                                       --Completed
+T_UserActivityLogs new tale                                                                  --Completed
+usp_InsertUserActivityLog                                                                    --Completed
+usp_DesktopMobileAlertsByPoolDate                                                            --Completed
+**********************************************************************************************************************************
+==================================================================================================================================
+
+
+
+
+
+
+
+/**********************************************************************************************************/
+suneel
+/**********************************************************************************************************/
+usp_DesktopMobileAlerts                                                                      --Completed
+usp_CopySurvey                                                                               --Completed
+usp_GetLatestLoginDateTime                                                                   --Completed
+usp_ManageUser                                                                               --Completed
+usp_GetAllPromoCodes                                                                         --Completed
+usp_GetUserActivityLogs                                                                      --Completed
+
+
+============================================ End of 1.9.5 ===========================================================
+
+
+============================================ Start of 2.0 ===========================================================
+
+Added column App_ShortDescription varchar(100), App_DisplayName varchaR(20) to T_BrandedApp_Orders		== Completed
+usp_Insert_Update_BrandedAppOrderStatus										== Completed
+usp_GetBrandedAppOrderStatusDetails										== Completed
+usp_ValidateAgencyEmailID											== Completed
+T_RepeatEvents new table    											== completed                          
+usp_Select_EmailContacts											== Completed											
+Usp_DeleteEmailContact												== Completed
+usp_GetEmailContacts												== Completed
+L_CustomModule_Templates   											== Completed
+T_UserCustom_Modules       											== Completed
+Usp_InsertBulletinScheduleDetails										== Completed
+Usp_InsertEventScheduleDetails											== Completed
+Usp_InsertBusinessUpdateSchduleDetails										== Completed
+Added Columns IsRepeat bit default 0, ParentEventID int in T_EventCalendar                             		== Completed
+T_Audio_TipsManager												== Completed
+L_Audio_DefaultFiles												== Completed
+usp_InsertEventDetails												== Completed
+USP_InsertDailyEvents												== Completed
+usp_GetCalendarEventDetails											== Completed
+USP_GetRepeatEventByEventID											== Completed
+USP_DeleteRepeat												== Completed
+USP_ChangeParentEvent												== Completed
+USP_InsertYearlyEvents												== Completed
+USP_InsertRepeatEventDetails											== Completed
+USP_UpdateContentForFollowing											== Completed
+USP_InsertWeeklyEvents												== Completed
+USP_UpdateFollowingEvents											== Completed
+usp_InsertPurchaseAddons											== Completed
+USP_GetAddOnById												== Completed
+USP_GetAllManageAddOns												== Completed
+USP_GetCustomModuleByID												== Completed
+USP_DeleteCustomModule												== Completed
+Usp_ArchiveNewsletterByNewsDetailedID										== Completed
+Usp_UpdateBulletinPublish											== Completed
+USP_UpdateCustomModulePublish											== Completed
+Usp_UpdateOrder													== Completed
+Usp_GetPublishedItemsByID											== Completed
+Usp_UpdateShortenURL												== Completed
+Usp_CopyItem													== Completed
+new table T_Schedule_CustomModules										== Completed 
+Usp_GetSchItemCount												== Completed
+Usp_GetItemMaxSchedulingDate											== Completed
+Usp_CheckEmailsCountOnSendingDateForItem									== Completed
+Usp_InsertItemScheduleDetails											== Completed
+usp_Add_ContactsEmailDetails											== Completed
+Usp_UnSubscribeItemEmail											== Completed
+Usp_UnSubscribeBulletinEmail											== Completed
+Usp_UnSubscribeEventEmail											== Completed
+Usp_UnSubscribeBusinessEmail											== Completed
+Usp_CancelItemCampaign												== Completed
+Usp_GetScheduledDetailsByCustomID										== Completed
+Usp_GetScheduledItemDetailsbyScheduledID									== Completed
+Usp_GetItemCountforDayandUserID											== Completed
+Usp_GetSentItems												== Completed
+Usp_GetOpenedMailsForUpdateID											== Completed
+Usp_GetOptOutCountForItems											== Completed
+Usp_GetItemsCount												== Completed
+usp_GetScheduledCount												== Completed
+Usp_GetBouncedEmailsForUpdateID											== Completed
+USP_UpdateShowRepeat												== Completed
+Ser_GetBulletinCampaignMail											== Completed
+Usp_GetItemDetailsBySchID											== Completed
+IsTurnOnEmail new column t_users										== Completed
+add column IsShortLogo bit to t_business_profile set default 1							== Completed
+order no column for t_business_updates										== Completed
+new L_CustomModuleAppIcons table										== Completed
+USP_AddUpdateItem												== Completed
+usp_GetAllEventsByProfileId											== Completed
+usp_GetDashboardIcons												== Completed
+L_RequestCustomForms												== Completed
+L_Roles														== Completed
+changed view view_danaanalysys											== Completed
+usp_CustomerDetails												== Completed
+usp_Insert_Update_Suvery											== Completed
+USP_GetUserCustomModules											== Completed
+USP_GetUserCustomModuleById											== Completed
+USP_UpdateCustomModuleIcon											== Completed
+new table T_ManagePurchaseAddOns										== Completed
+usp_CustomModuleTemplates											== Completed
+USP_InsertPurchasedForms											== Completed
+usp_InsertUserCustomModules											== Completed
+USP_GetActiveForms												== Completed
+added column PermissionName varchar(100) to l_packagemenu, l_menulinks and add data				== Completed
+new view VW_ManageCustomModuleForms										== Completed
+USP_GetRemainingForms												== Completed
+change subscription renewl to renewal in l_subscriptions							== Completed
+Usp_UpdateAppButtnOrder												== Completed
+new table L_Domain_DefaultButtons										== Completed
+USP_InsertDefaultAppButtons											== Completed
+USP_GetManageAddOns												== Completed
+usp_GetPermissionsById												== Completed
+Usp_GetManageBulletins												== Completed
+usp_GetAllBusinessUpdates											== Completed
+Usp_CheckPromoCode												== Completed
+USP_GetPushNotificationByID											== Completed
+usp_GetAllEventsByProfileIdandSelectedmonth									== Completed
+usp_GetAllEventsByMonth_PID											== Completed
+USP_AddAdditionalTab												== Completed
+usp_UsersDeleteRecord												== Completed
+usp_Mob_GetFavoriteDevices											== Completed
+usp_GetAllSalesPerson												== Completed
+Usp_GetSchedulesEmailsByUpateID											== Completed
+usp_GetBrandedAppOrderStatusDetails										== Completed
+usp_GetPushTypeTabName
+=====================================================================================================
+new table M_AppDefaultData											== Completed
+new table T_StoreErrorLog											== Completed
+new table M_IntroUserDetails											== Completed
+alter table M_Business_Devices add  UniqueDeviceID varchar(max)							== Completed
+alter table T_EventsCalendar add IsCall bit									== Completed
+alter table T_EventsCalendar add IsContactUs bit								== Completed
+usp_InsertErrorLog												== Completed
+usp_m_GetAppDefaultImages											== Completed
+usp_m_InsertIntroUserDetails											== Completed
+usp_M_InsertAppDeviceDetails											== Completed
+usp_InsertBusinessUpdateDetailsNew										== Completed
+Usp_CopyUpdateDetails												== Completed
+usp_GetBusinessUpdateWithUpdateId										== Completed
+usp_GetActiveBusinessUpdates											== Completed
+usp_GetActiveBulletinsByProfileID										== Completed
+usp_m_GetPushNotifications											== Completed
+Usp_ArchiveNewsletterByNewsDetailedID										== Completed
+usp_GetCalendarEventDetails											== Completed
+usp_InsertEventDetails												== Completed
+usp_Insert_Update_BulletinDetails										== Completed
+usp_GetManageBrandedAppProcessStatus										== Completed
+usp_ChangeLoginID												== Completed
+usp_m_AgencySummary												== Completed
+usp_GetCrimeDetailsReportsByDates										== Completed
+GetExpiryDateByModulename											== Completed
+usp_M_DeleteAppDeviceDetails											== Completed 
+alter table T_EventsCalendar add IsDeleted bit  DEFAULT 0							== Completed
+alter table T_EventsCalendar add Order_No int									== Completed
+alter table T_Manage_Surveys add Order_No int									== Completed 
+usp_Delete_BusinessUpdateDetails										== Completed
+Usp_DeleteEventTemplate												== Completed
+usp_GetMangeSurveys												== Completed
+usp_DeleteSurvey												== Completed
+usp_M_GetMangeSurveys												== Completed
+usp_DeleteTipsAudio												== Completed
+usp_GetAudio_TipsManager											== Completed
+usp_UpdateAudio_TipsManager											== Completed
+alter table T_Manage_Bulletins add IsDesktopPOC bit  DEFAULT 0							== Completed
+usp_GetBulletinBlankTemplateDetails										== Completed
+usp_GetPOC_ModuleContentHistory											== Completed 
+ ==== Add Config File below settings										== Completed
+<add key="BulletinModifyDate" value="09/10/2014"/>								== Completed
+<add key="MaxPhotAlbumPhotoWidth" value="1500"/>								== Completed
+<add key="ShortLogoWidth" value="110"/>										== Completed
+<add key="ShortLogoHeight" value="110"/>									== Completed
+<add key="LongLogoWidth" value="640"/>										== Completed
+<add key="LongLogoHeight" value="165"/>										== Completed
+<add key="USPDVirtualFolderPath" value="C:\inetpub\wwwroot\test.uspdhub.com"/>					== Completed
+usp_m_GetActiveBusinessUpdates											== Completed
+usp_m_GetAllEventsByMonth_PID											== Completed
+usp_M_GetActiveBulletinsByProfileID										== Completed
+usp_GetPurchaseAddOnsByProfileID										== Completed
+usp_CustomModuleTemplates											== Completed 
+usp_m_GetVerticalDetailsByVID											== Completed
+alter table T_Profile_Photos add IsDeleted bit  DEFAULT 0							== Completed
+alter table T_WebLinks add IsDeleted bit  DEFAULT 0								== Completed
+alter table T_Profile_Descriptions add IsDeleted bit  DEFAULT 0							== Completed
+Usp_getprofiledescription											== Completed
+Usp_m_getprofiledescription											== Completed
+USP_GetWebLinks													== Completed
+USP_M_GetWebLinks												== Completed
+usp_m_GetProfilePhotosByID											== Completed
+usp_GetProfilePhotosByID											== Completed
+usp_m_GetSyncProfileDetails											== Completed
+usp_GetTipsManagerAudioDefaultByPID										== Completed
+usp_m_GetBulletinCustomModuleByPID										== Completed
+usp_m_BulletinCustomModuleDataByID										== Completed
+usp_m_AppCustomMessages												== Completed
+Usp_m_GetProfileTabsByPID											== Completed
+usp_m_GetWebLinksCategories1											== Completed
+new table M_App_CustomMessages											== Completed    
+usp_GetBusinessProfileByID											== Completed
+new table  M_AppSyncTimeLog											== Completed
+usp_GetManageWeblinksCategories											== Completed
+usp_DeleteWeblinkCategory											== Completed
+alter table T_Messages add  UniqueDeviceID varchar(max) DEFAULT null						== Completed
+usp_M_ManageMessages1												== Completed
+usp_m_GetCustomMessagesByPID											== Completed
+alter table T_Survey_Answers add  UniqueDeviceID varchar(max) DEFAULT null					== Completed
+alter table T_Survey_Completed add  UniqueDeviceID varchar(max) DEFAULT null					== Completed
+new table M_App_Help_Content											== Completed
+usp_m_GetHelpContent												== Completed
+usp_m_OnOff_PushNotification1											== Completed
+usp_m_GetOn_OffPushNotification1										== Completed
+usp_m_SurveyStatus1												== Completed
+usp_m_InsertSurveyAnswers1											== Completed
+usp_m_DeleteSurveyAnswers1											== Completed
+usp_m_InsertSurveyStatus1											== Completed
+usp_m_GetSurveyAnswers1												== Completed
+usp_m_GetPushNotifications1											== Completed
+usp_m_GetCustomModuleBulletins											== Completed
+usp_m_GetDataSync												== Completed
+usp_m_AgencySummary_NEW												== Completed
+vw_M_SearchResultView												== Completed
+alter table M_Business_Devices add  AppVersion varchar(50) DEFAULT null						== Completed
+usp_m_GetBulletinCategoriesByVerticalName									== Completed
+Insert_Update_Weblink_Categories										== Completed
+usp_M_GetProfilesDetailsByBCode											== Completed
+=============================Suneel======================
+usp_GetAccessCodeInfo												== Completed
+Usp_GetProfileIDUserIDByUserEmail										== Completed
+dbo.vw_UserDetails												== Completed
+dbo.AppDownloadReports												== Completed
+usp_GetProfileDetails												== Completed
+dbo.View_AppDownloadReports											== Completed			
+usp_DesktopMobileAlerts												== Completed
+usp_InsertUserCustomModules											== Completed
+V_GetProfileIDUserIDbyEmailAddress(password in T_users)								== Completed
+View_DataAnalysisReport  (isturnonemail in T_users)								== Completed
+USP_UpdateAutoOnOff												== Completed	
+usp_CustomModuleAppIcons											== Completed
+Usp_GetUpdates													== Completed
+Usp_UpdateBusinessUpdatesOrder											== Completed
+usp_GetAllEventsByProfileId1											== Completed
+usp_ChangeLogoType												== Completed
+USP_CreateWebLinks												== Completed
+usp_ManageBusinessPhotos											== Completed
+usp_UpdateBusinessLogo												== Completed
+usp_GetDataFeeds												== Completed
+usp_UpdateLaunchPlay												== Completed
+usp_InsertGMailEventDetailsinManageList										== Completed
+T_Manage_CustomModule												== Completed
+T_PurchaseAddOns												== Completed
+usp_GetProfileDetails
+VW_AppAnalasys (View) - Created
+
+USP_GetCustomModuleByID 
+Usp_GetBulletinByID
+Column "Form_Type" added in Table "L_Bulletin_Templates"
+Column "Form_Type" added in Table "L_CustomModule_Templates"
+usp_GetCrimeDetailsReportsByDates
+
+
+
+=============================================== End of 2.0 =====================================================================
+
+=============================================== Start of 2.1 ===================================================================
+EmailContent/AuthorNotification.txt										--Completed
+usp_GetDataFeeds												--Completed
+USP_GetAllManageAddOns												--Completed
+Usp_GetManageBulletins												--Completed
+usp_GetAllEventsByProfileId											--Completed
+usp_CreateUpdateAccessCodes											--Completed
+added column T_User_CustomModules  IsHasChilds bit default 1							--Completed
+update T_UserCustom_Modules set IsHasChilds=0 where ButtonType<>'AddOn'						--Completed
+add two new rows of content1 and content2 in L_Domain_DefaultButtons						--Completed
+USP_GetInitialAddOns												--Completed
+USP_InsertInitialAddOns												--Completed
+usp_GetDashboardIcons												--Completed
+USP_GetManageAddOns												--Completed
+USP_InsertDefaultAppButtons											--Completed
+USP_AddAdditionalTab												--Completed
+USP_AddUpdateItem												--Completed
+usp_InsertEventDetails												--Completed
+usp_Insert_Update_BulletinDetails										--Completed
+Usp_RenameContent												--Completed
+Usp_m_GetProfileTabsByPID											--Completed
+added 2 columns for M_PushNotifications										--Completed
+update M_PushNotifications SET Sending_Date=Created_Date							--Completed
+usp_Mob_AddPushNotifications											--Completed
+Mob_GetSendNotifications											--Completed
+usp_Mob_CancelNotificationSchedule										--Completed
+Ser_Notification_LogDetails new table										--Completed
+Ser_AddNotificationLogin_Details										--Completed
+Ser_AddNotificationLogOut_Details										--Completed
+Ser_GetScheduledNotifications											--Completed
+Ser_GetMobileDevices												--Completed
+Ser_GetPushTypeTabName												--Completed
+Ser_UpdateNotificationSentFlag											--Completed
+added coulmns for M_Business_Devices										--Completed
+usp_m_GetDataSync
+usp_m_GetPushNotifications											--Completed
+usp_Mob_GetFavoriteDevices											--Completed
+usp_Mob_AddPushNotifications											--Completed
+Ser_AddSuscribeLogin_Details											--Completed
+Usp_GetBulletinByID												--Completed
+usp_UpdatePhotoOrder												--Completed
+usp_m_GetDataSyncNew
+Usp_UpdateBulletinsOrder											--Completed
+Usp_UpdateOrder													--Completed
+usp_m_GetProfilePhotosByID											--Completed
+mODIFIED vIEW_aPPANALYSYS											--Completed
+Ser_GetBulletinMasterDetails											--Completed
+Ser_GetEventCaledarCampanMail											--Completed
+check rocklin data for total contacts issue in DB
+change package menu links for gallery,l_tabsurl
+usp_UsersDeleteRecord												--Completed
+Usp_CheckSubApp													--Completed
+Added column for memorysize in t_business_profiles								--Completed
+usp_GetBusinessProfileByID											--Completed
+usp_GetCostofMemorySpace											--Completed
+usp_UpdateMemorySpace												--Completed
+Ser_AddAutoPostLogin_Details											--Completed
+Ser_AddAutoPostLogOut_Details											--Completed
+Usp_InsertTwitterData												--Completed
+Usp_InsertFacebookData												--Completed
+USP_InsertUpdateAutoShareDetails										--Completed
+increased column lenght for desctiption in L_Subscription							--Completed
+update the L_Subsction desction for sub apps									--Completed
+usp_CustomModuleAppIcons											--Completed
+add icons to L_CustomModuleAppIcons for domains									--Completed
+Usp_ArchiveNewsletterByNewsDetailedID										--Completed
+T_PlayVideos new table												--Completed
+USP_GetPlayerVideoById												--Completed
+added column t_users												--Completed
+usp_UpdateLaunchPlay												--Completed
+Usp_InsertUserPermissions											--Completed
+usp_Insert_Update_AssociateLogin										--Completed
+usp_Mob_AddPushNotifications											--Completed
+GetMaxImageOrderNumber												--Completed
+usp_GetBrandedAppOrderStatusDetails										--Completed
+Background_Icon new column t_brandedapp_orders									--Completed
+usp_Insert_Update_Suvery											--Completed
+----------------------------------------------------------------------
+Balaji
+----------------------------------------------------------------------
+alter table T_BrandedApp_Orders add IsShortLogo bit  DEFAULT 1							--Completed
+usp_Insert_Update_BrandedAppOrderStatus										--Completed
+usp_GetBrandedAppOrderStatusDetails										--Completed
+usp_GetActiveAssociates												--Completed
+alter table T_Manage_Surveys add IsArchive bit  DEFAULT 0							--Completed
+usp_GetMangeSurveys												--Completed
+Insert_Update_Weblink_Categories										--Completed
+usp_DeviceCountByPID												--Completed
+alter table T_Business_Profiles add AppBannerImgName varchar(max) DEFAULT null					--Completed
+usp_GetAnswersSkipCount												--Completed
+usp_GetCompletedAnswersCountBySurveyID										--Completed 
+T_MasterAlbum new table												--Completed
+T_ImageGallery new table											--Completed
+usp_InsertDefaultAlbums												--Completed
+usp_Insert_Update_AlbumDetails											--Completed	
+usp_GetActiveAlbumsByType											--Completed
+usp_DeleteAlbum													--Completed
+usp_GetAlbumDetailsByAlbumID											--Completed
+usp_GalleryImagesByAlbumID											--Completed
+usp_InsertGalleryImages												--Completed
+usp_DeletGalleryImagesByImgID											--Completed
+usp_Update_ImgOrderNo_ImgCaption										--Completed
+usp_CheckingExistedImgOrderNo											--Completed
+usp_GetAlbumIDbyGalleryType											--Completed
+
+Suneel
+===========================================
+usp_ValidateUserByDetails											--Completed
+usp_GetProfileDetails												--Completed
+USP_GetWebLinks													--Completed
+Usp_GetTabDetailsByModule											--Completed
+Usp_InsertFBPagesData												--Completed
+Usp_GetExistingUserData												--Completed
+Usp_GetFbPageAccessTokenByPageId										--Completed
+Usp_GetTwitterDataByUserID											--Completed
+Usp_DeleteSocialUserData											--Completed
+Usp_UpdateFlagData												--Completed
+Usp_TwitterUpdateFlagData											--Completed
+usp_InsertGMailEventDetailsinManageList										--Completed
+T_FacebookProfile												--Completed
+T_FacebookPages													--Completed
+T_TwitterData													--Completed
+T_AutoShareHistory												--Completed
+Usp_GetAutoShareRecordExists											--Completed
+USP_InsertUpdateAutoShareDetails
+
+
+
+======================================================== End of 2.1 =========================================================
+
+
+======================================================== Start of 2.2 & 2.3 =================================================
+changed the permissionname in L_PackageMenu for Sub Affiliates setup 						--Completed
+Update Isbranded_App flag for few accounts in T_Bus_Profiles and change profileid in t_bran_orders for rams	--Completed
+Help														--Completed
+add release version in footer											--Completed
+l_questiontypes													--Completed
+web.config in both sites											--Completed
+ADDED A ROW L_SUBSCRIPTION BUT MAKE IT ACTIVE FALSE AND CHANGE THE Type AddOn to AddOns				--Completed
+usp_CustomerDetails												--Completed
+VW_ManageCustomModuleActiveForms --new view 2 MORE VIEWS and added column to T_usercustom_modiles and view	--Completed
+USP_GetManageAddOns												--Completed
+usp_GetStoreDetailsById												--Completed
+Added column StoreLinksChecked to every email schedule table							--Compelted
+Usp_InsertBulletinScheduleDetails										--Completed
+Usp_InsertItemScheduleDetails											--Completed
+Usp_InsertEventScheduleDetails											--Completed
+Ser_GetBulletinCampaignMail											--Completed
+Ser_GetEventCaledarCampanMail											--Completed
+ADDED COLUMN PurchaseType to T_PurchaseAddOns									--Completed
+added views													--Completed
+usp_InsertPurchaseAddons											--Completed
+usp_GetDashboardIcons												--Completed
+usp_InsertUserCustomModules											--Completed
+T_ManageCalendarAddons new table										--Completed
+Added column to T_RepeatEvents ButtonType varchar(20) default EventCalendar					--Completed
+USP_GetRepeatEventByEventID											--Completed
+USP_InsertRepeatEventDetails											--Completed
+usp_InsertCalendarAddOnDetails NEW										--Completed	
+usp_GetCalendarAddOnDetails  new										--Completed
+USP_UpdateShowRepeatByAddOn NEW											--Completed
+USP_InsertDailyEventsForCalendar NEW										--Completed
+USP_InsertWeeklyEventsForCalendar NEW										--Completed
+USP_InsertMonthlyEventsForCalendar NEW										--Completed
+USP_InsertYearlyEventsForCalendar NEW										--Completed
+USP_UpdateCalendarFollowingEvents new										--Completed
+USP_DeleteRepeatForCalendar new											--Completed
+USP_ChangeParentCalendar NEW											--Completed
+USP_UpdateContentForCalFollowing NEW										--Completed
+USP_ChangeParentEvent												--Completed
+Usp_UpdateShortenURL												--Completed
+Usp_GetTabDetailsByModule											--Completed
+USP_GetAddOnById												--Completed
+usp_GetAllCalendarsByProfileId new										--Completed		
+Usp_GetSchedulesEmailsByUpateID											--Completed
+usp_InsertGMailCalendarList new											--Completed
+Usp_GetCalendarCampaignCount NEW										--Completed
+T_Schedule_CalendarAddOns new table										--Completed
+Usp_GetScheduledItemsByCalendarId new										--Completed
+usp_GetAllCalendarsByPreview NEW										--Completed
+usp_GetAll3MonthsEventsByProfileId										--Completed
+usp_GetAll3MontthsCalendarsByPreview new									--Completed
+usp_GetAllCalendarsBySelectedMonth NEW										--Completed
+Usp_RenameContent												--Completed
+Usp_UpdateCalendarPublish new											--Completed
+Usp_DeleteCalendarById new											--Completed
+Usp_GetCalendarMaxScheduledDate new										--Completed
+Usp_CheckforCalendarSchedule NEW										--Completed
+Usp_ArchiveNewsletterByNewsDetailedID										--Completed
+Usp_GetCalendarCampaignByDates new										--Completed
+Usp_CancelCalendarCampaign NEW											--Completed
+Usp_GetCalendarCountForSendingDate NEW										--Completed
+usp_GetSendCalendarsByProfileID NEW										--Completed
+Usp_GetCalendarReportCounts new											--Completed
+usp_GetScheduledCount												--Completed
+Usp_GetOpenedMailsForUpdateID											--Completed
+Usp_GetOptOutCountForCalendarId new										--Completed
+Usp_GetBouncedEmailsForUpdateID											--Completed
+Usp_CheckEmailsCountOnSendingDateForCalendar new								--Completed
+Usp_GetScheduledCalendarCount new										--Completed
+Usp_InsertCalendarScheduleDetails new										--Completed
+Usp_UpdateAutoEmailToAdminFalg											--Completed
+Usp_GetCalendarDetailsBySchID new										--Completed
+Usp_UnSubscribeCalendarEmail new										--Completed
+Usp_UnSubscribeItemEmail											--Completed
+Usp_UnSubscribeEventEmail											--Completed
+Usp_UnSubscribeBusinessEmail											--Completed
+Usp_UnSubscribeBulletinEmail											--Completed
+Ser_GetEventCaledarCampanMail											--Completed
+Ser_UpdateEventCalendarSendFlag											--Completed
+usp_Add_ContactsEmailDetails											--Completed
+Usp_UpdateUserTracking												--Completed
+usp_GetDataFeeds												--Completed
+usp_GetALLUser_Contacts												--Completed
+T_UsersFonts new table												--Completed
+usp_GetBusinessProfileByID											--Completed
+USP_InsertInitialAddOns												--Completed
+USP_DeleteGoogleEventsFromPresent										--Completed
+Usp_GetEventCalendarDetailsBySchID										--Completed
+Usp_GetItemDetailsBySchID											--Completed
+Usp_GetBulletinDetailsBySchID											--Completed
+
+suneel
+=========================================================
+ALTER TABLE [dbo].[T_EventsCalendar] ADD CalendarID VARCHAR(200) NULL;						--Completed	
+USP_InsertLastSyncDate												--Completed
+usp_GetLastSyncDate												--Completed
+T_GoogleCalendarSync												--Completed
+usp_GetMobileAppDownloadReports	(02/06/2015)									--Completed
+VW_AppAnalasys 			(02/06/2015)									--Completed	
+usp_InsertGMailEventDetailsinManageList										--Completed
+usp_Insert_Update_Suvery											--Completed
+Usp_InsertTwitterData (Remove [dbo].[uspdhub])									--Completed
+
+
+Balaji  =====================================================
+
+usp_GetAllActiveSubApps												--Completed
+ 
+ALTER TABLE [dbo].[T_UserCustom_Modules] ADD DisplayOrderType INT default 1					--Compelted
+usp_UpdateDisplayOrderType											--Completed
+Usp_m_GetProfileTabsByPID											--Compelted
+usp_m_GetCalendarEvents												--Compelted
+usp_m_GetDefaultDataByAppID											--Compelted
+usp_m_GetSurveysCountEachProfile									--Compelted
+M_App_MyProfile --new table											--Completed
+usp_m_Insert_Update_MyProfile_Details								--Compelted
+usp_m_GetApp_MyProfile_Details										--Compelted
+usp_m_GetAppDefaultImages											--Compelted
+==================================================== End of 2.2 & 2.3 =========================================================================
+
+
+==================================================== Start of 2.4 =========================================================================
+Ser_GetScheduledNotifications														--Completed
+ALTER TABLE T_BrandedApp_Orders ADD IsDeleted bit NOT NULL DEFAULT 0									--Completed
+usp_DeleteBrandedAppById														--Completed
+usp_GetAppPinCode															--Completed
+USP_CreateUpdatePinCode															--Completed 
+ALTER TABLE T_BrandedApp_Orders ADD SplashContent varchar(MAX) DEFAULT NULL								--Completed
+usp_GetBrandedAppOrderStatusDetails													--Completed
+NEW VIEW VW_PrivateModuleDevices													--Completed
+usp_GetALLUser_ContactsByType														--Completed
+Usp_GetUserSearchContacts														--Completed
+usp_Mob_AddPushNotifications														--Completed
+usp_GetInvoiceDetailsByID														--Completed
+usp_Mob_GetFavoriteDevices														--Completed
+Ser_GetMobileDevices															--Completed
+USP_GetAddOnById															--Completed
+usp_GetAllPromoCodes															--Completed
+usp_Insert_Update_BrandedAppOrderStatus													--Completed
+Usp_GetDistinctInvoices															--Completed
+Usp_GetTabDetailsByModule														--Completed
+USP_GetCustomModuleByID															--Completed
+usp_DeviceCountByPID															--Completed
+usp_GetPieChartData															--Completed
+Mob_GetSendNotifications														--Completed
+USP_GetPushNotificationByID														--Completed
+added column for L_OfficerType  DepartmentType varchar(20) not null default 'Police' and add rows for Sheriff				--Completed
+add rows for L_CustomModule_Templates and L_Bulletin_Templates										--Completed
+change Standard Forms title in L_Bulletin_Templates to Police Department Forms								--Completed
+usp_GetOfficerType															--Completed
+add rows in L_subscriptions for private module												--Completed
+Added new table L_Products and data													--Completed
+ALTER TABLE L_Subscriptions ADD ProductId int DEFAULT NULL										--Completed
+ALTER TABLE L_PromoCodes ADD IsSingle BIT NOT NULL DEFAULT 0										--Completed
+ALTER TABLE L_PromoCodes ADD IsAutoGenerated BIT NOT NULL  DEFAULT 0									--Completed
+ALTER TABLE L_PromoCodes ADD ProductId  INT NULL											--Completed
+ALTER TABLE L_PromoCodes ADD Product_Price  Decimal(18,2)										--Completed
+ALTER TABLE L_PromoCodes ADD Amount_Charged  Decimal(18,2)										--Completed
+ALTER TABLE L_PromoCodes ADD SetupFee  Decimal(18,2)											--Completed
+ALTER TABLE L_PromoCodes ADD SetupFee_Charged  Decimal(18,2)										--Completed
+ALTER TABLE L_PromoCodes ADD Renewal_LifeTime  BIT NOT NULL DEFAULT 0									--Completed
+ALTER TABLE L_PromoCodes ADD InitialsBy_First  varchar(100)										--Completed
+ALTER TABLE L_PromoCodes ADD InitialsBy_Last  varchar(100)										--Completed
+ALTER TABLE T_Order_Details ADD Renewal_LifeTime  BIT DEFAULT 0										--Completed
+ALTER TABLE T_Order_Details ADD PromoCodeId  int											--Completed
+ALTER TABLE L_Domain_Verticals ADD DomainName  varchar(20) NOT NULL DEFAULT 'uspdhubcom'						--Completed
+usp_GetDomainVerticals															--Completed
+usp_GetProductsByDomain															--Completed
+usp_InsertPromocodes															--Completed
+Usp_CheckPromoCode															--Completed
+usp_InsertOrderDetails															--Completed
+usp_InsertPurchaseAddons														--Completed
+VW_AddOnButtonTypes     new view 													--Completed
+USP_GetDuplicateContactsByUserID													--Completed 
+***************************************** Balaji *************************************************
+new table --- T_PrivateModule_Invitees													--Completed
+new table --  T_PrivateModule_Invitations												--Completed
+usp_Insert_Update_Suvery														--Completed
+usp_GetCSNotesReportData 														--Completed
+usp_GetManageBrandedAppProcessStatus													--Completed
+usp_CustomerDetails															--Completed
+usp_GetDashboardIcons															--Completed
+usp_GetPrivateModuleInviations														--Completed
+usp_PrivateModuleInvitations_Actions													--Completed
+usp_GetInviters																--Completed
+View_DataAnalysisReport (in view you can select SuperAdminID Column)									--Completed
+ALTER TABLE L_User_Contact_Groups ADD UserModuleID int DEFAULT NULL									--Completed
+ALTER TABLE L_User_Contact_Groups ADD GroupType  varchar(100)										--Completed
+ALTER TABLE L_User_Contact_Groups ADD IsMasterGroup  BIT 										--Completed
+ALTER TABLE M_AppSyncTimeLog ADD DeviceID varchar(max) DEFAULT NULL									--Completed
+ALTER TABLE M_AppSyncTimeLog ADD DeviceType varchar(max) DEFAULT NULL									--Completed
+Usp_AddContactGrouptoUserContacts													--Completed
+usp_InsertUserCustomModules														--Completed
+Usp_GetUserContactGroupNames														--Completed
+usp_GetALLUser_Contacts															--Completed
+usp_Insert_Update_Invitees														--Completed
+usp_Insert_Update_Invitations														--Completed
+usp_GetAppDisplayNames															--Completed
+usp_GetStoreDetailsById															--Completed
+USP_M_GetWebLinks															--Completed
+usp_M_GetMangeSurveys															--Completed
+usp_GetAppStoreLinks															--Completed
+usp_M_DeleteAppDeviceDetails														--Completed
+Usp_m_GetProfileTabsByPID														--Completed
+usp_GetInvitationsByInvitorID														--Completed
+ALTER TABLE L_CustomModuleAppIcons ADD IsPrivate  BIT NOT NULL  Default 0								--Completed
+Usp_MoveUserContactFromOneGrouptoAnother												--Completed
+USP_GetWebLinks																--Completed
+usp_GetALLUser_ContactsForPrivateModule													--Completed
+Usp_GetGroupNamesForPrivateModule													--Completed 
+usp_CustomModuleAppIcons														--Completed
+usp_M_GetProfilesDetailsByBCode
+ALTER TABLE M_Business_Devices ADD IsDeleted bit NOT NULL DEFAULT 0									--Completed
+usp_M_InsertAppDeviceDetails														--Completed
+***************************************** Suneel *************************************************
+ALTER TABLE T_Manage_Surveys ADD OrderModified_Date DATETIME DEFAULT NULL								--Completed
+Usp_GetSurveys																--Completed
+Usp_UpdateSurveysOrder															--Completed
+ALTER TABLE T_WebLinks ADD Order_No INT DEFAULT NULL											--Completed
+ALTER TABLE T_WebLinks ADD OrderModified_Date DATETIME DEFAULT NULL									--Completed
+Usp_UpdateWebLinksOrder															--Completed
+USP_GetWebLinksByUserID															--Completed
+Usp_GetHelpMatchedRecords														--Completed
+USP_InsertUpdate_UserPermissions													--Completed
+USP_DeletePermissionsByAssociate													--Completed
+usp_GetAssociatePermission														--Completed
+usp_SaveUserPermissionsById														--Completed
+Usp_GetAllParentUsers															--Completed
+usp_GetPermissionsById															--Completed 
+Usp_GetPermissionValueByUserModuleID													--Completed
+usp_GetManageAssociates 														--Completed
+USP_UpdateCustomModuleIcon														--Completed
+Usp_GetAllApproveRejectCCUsers														--Completed
+Usp_GetAllPublishersofItem														--Completed
+Usp_RenameContent															--Completed
+usp_GetMangeSurveys															--Completed
+
+============================================== End of 2.4 ==========================================================================
+
+
+============================================= Start of 2.4.5 =======================================================================
+Add a records in L_Bulletin_templates for Polly Klaas Foundation and KlaasKids					--Completed
+change PermissionName 'Mobile App' to 'Manage Associates' for Manage Logins in L_PackageMenu			--Completed
+added a row for L_MenuLinks for Release history under My Account						--Completed
+usp_GetDashboardIcons												--Completed
+added a row for L_PackageMenu for ManageBgImages								--Completed
+Usp_GetExipirationMembers											--Completed
+usp_GetPieChartData												--Completed
+usp_GetUsernameandpasswordforUserID										--Completed
+=================== Balaji =============================
+Usp_m_GetProfileTabsByPID and webservice									--Completed
+USP_InsertUpdate_UserPermissions										--Completed
+
+========================================== End of 2.4.5 =============================================================================
+
+========================================== Start of 2.5 ===========================================================================
+ALTER TABLE dbo.T_UserModule_Permissions Add IsReviewer BIT Default 0 			--Completed  
+ALTER TABLE dbo.T_BrandedApp_Orders Add App_Version varchar(10) default 1.0		--Completed
+T_BrandedApp_Orders to view View_DataanalysysReport with left outer join on profileid	--Completed
+added rows for Banners in L_Products and L_subscriptions				--Completed
+Add icon for BannerAds as BannerAd1 in L_CustomeModuleAppIcons				--Completed
+usp_DeviceCountByPID									--Completed
+Ser_SilentPushMessages new table							--Completed
+usp_CheckingIsSponsorForBannerAds							--Completed
+T_Manage_BannerAds New Table								--Completed
+Usp_UpdateBannerAdAppDisplay								--Completed
+Usp_GetUserBannerAds									--Completed
+Usp_GetBannerAdById									--Completed
+Usp_UpdateBannerAdDelete								--Completed
+Usp_GetProfileIDUserIDByUserEmail							--Completed
+usp_CustomerDetails									--Completed
+Usp_UpdateMemberAppVersion								--Completed
+usp_GetBrandedAppOrderStatusDetails							--Completed
+Usp_GetBrandedAppUsers									--Completed
+T_ProfileAccessMessages new table							--Completed
+Usp_AddProfileAccessTypes								--Completed
+Usp_GetProfileAccessTypes								--Completed
+usp_GetAssociatePermission								--Completed
+USP_InsertUpdate_UserPermissions							--Completed
+Usp_GetAllPublishersofItem								--Completed
+Usp_GetAllApproveRejectCCUsers								--Completed
+usp_m_GetBannerAdsByPID									--Completed
+=============================== Balaji ========================================
+T_ManageCannedMessages									--Completed
+usp_GetAllCannedMessages								--Completed
+usp_Insert_BannerAds									--Completed
+Usp_GetManageBulletins									--Completed
+usp_m_GetDataSyncNew									--Completed 
+usp_m_GetAllEventsByMonth_PID								--Completed
+usp_m_GetCalendarEvents									--Completed
+usp_M_GetActiveBulletinsByProfileID							--Completed
+usp_m_BulletinCustomModuleDataByID							--Completed
+usp_m_GetPushNotifications1								--Completed 		
+usp_M_GetventsBySelectedMonth								--Completed
+usp_m_GetAppDefaultSettingByAppID							--Completed
+================================Ramya========================================
+Usp_GetHelpNameByID									--Completed
+usp_GetMessageByCannedID								--Completed
+usp_Insert_Update_CannedMessage								--Completed
+Ser_InsertSilentPushMessages								--Completed
+Usp_GetAllMenuChildLinksForMasterID							--Completed
+Usp_GetAllMenuMasterLinks								--Completed
+======================================================= End of 2.5 ===============================================================
+
+======================================================= Start of 2.6 =============================================================
+Add colum L_Domain_DefaultButtons IsVisibleOn bit dafault value 1										--Completed
+Makke IsVisisble 'False' for otherthan mentioned tabs in L_Domain_DefaultButtons  JIRA 1139							--Completed
+T_UserProfileImages New able															--Completed
+usp_Insert_Update_Suvery															--Completed
+Usp_DeleteBulletin																--Completed
+USP_DeleteCustomModule																--Completed
+usp_DeleteSurvey																--Completed
+Usp_DeleteEventTemplate																--Completed
+Usp_ArchiveNewsletterByNewsDetailedID														--Completed
+Usp_UpdateBulletinPublish															--Completed
+USP_UpdateCustomModulePublish															--Completed
+Usp_Survey_Publish_Unpublish															--Completed
+Usp_UpdatePublishedEvents															--Completed
+Usp_GetUserProfileImages															--Completed
+Usp_CheckUserProfileImage															--Completed
+Usp_InsertUserProfileImages															--Completed
+Usp_DeleteUserProfileImage															--Completed
+USP_InsertInitialAddOns																--Completed
+USP_InsertDefaultAppButtons															--Completed
+USP_AddAdditionalTab																--Completed
+Ser_GetMobileDevicesById															--Completed
+M_PushNotificationAnalysis new table														--Completed
+Ser_UpdateReceiveStatusForPush															--Completed
+usp_GetUserDtlsByUserID																--Completed
+T_AppOpenReport	new table															--Completed
+T_BannerAdClickCountReport new table														--Completed
+usp_GetPieChartDataForOpenReport														--Completed
+usp_GetPieChartDataForBannerAdReport														--Completed
+Added Most Wanted form for rocklin														--Completed
+------------------------------------------------------------- Balaji ----------------------------------------------------------------------------------------
+usp_Insert_Update_BulletinDetails														--Completed
+usp_InsertEventDetails																--Completed
+USP_AddUpdateItem																--Completed
+usp_m_GetActiveBulletinsByProfileID														--Completed
+Ser_InsertSilentPushMessages															--Completed
+usp_m_InsertBannerAdClickCount															--Completed
+usp_m_InsertAppOpenCount															--Completed
+Ser_GetScheduledSilentNotifications														--Completed
+Ser_GetMobileDevicesByIdForSilentPush														--Completed
+Ser_UpdateSilentNotificationSentFlag														--Completed
+Ser_SilentPushSentHistory new table														--Completed
+Ser_UpdateReceiveStatusForSilentPush														--Completed
+usp_GetManageAssociates (USPD-1107 and USPD-1116 Permission related Changes)									--Completed
+usp_m_BulletinCustomModuleDataByID														--Completed
+ALTER TABLE M_Business_Devices ADD  MobileNumber VARCHAR(20)											--Completed
+ALTER TABLE M_Business_Devices ADD  Name VARCHAR(250)												--Completed
+ALTER TABLE M_Business_Devices ADD  EmailID VARCHAR(250)											--Completed
+UpdateAppUserMobileNumber															--Completed
+T_Manage_PrivateCallAddOns															--Completed
+T_PrivateCallAddOns_CallHistory															--Completed
+usp_m_GetManagePrivateCallAddonsItems														--Completed
+InsertPrivateCall_CallHistory															--Completed
+usp_m_GetCallOnsDetailsByCustomID														--Completed
+Usp_m_GetContactDetailsByGroupID														--Completed
+usp_m_GetUserModuleDetailsByUserModuleID													--Completed
+usp_m_PrivateAddOns_SenderDetails														--Completed
+usp_m_PrivateAddOns_MobileNumberForSMS														--Completed
+Usp_UpdateBannerAdAppDisplay															--Completed
+Usp_UpdateBannerAdDelete															--Completed
+Usp_m_GetProfileTabsByPID															--Completed
+
+--------------------------------------------------------------- Ramya--------------------------------------------------------------------------------------
+ALTER TABLE L_Bulletin_Templates ADD IsUserForms bit DEFAULT 0											--Completed
+ALTER TABLE L_CustomModule_Templates ADD IsUserForms bit DEFAULT 0										--Completed
+GetBulletinTemplateDetailsbyTemplateID														--Completed
+GetBulletinDetailsbyCustomModuleID														--Completed 
+USP_GetActiveForms																--Completed
+============================================================= End of 2.6 ==================================================================================
+
+============================================================= Start of 2.6.5 ==============================================================================
+T_Manage_PrivateCallAddOns Order_No INT, OrderModified_Date Datetime datetime added columns				--Completed
+Data in L_Products, L_Subscriptions for Call Module 									--Completed
+usp_InsertUserCustomModules												--Completed
+USP_GetCallContactGroups												--Completed
+Usp_m_GetProfileTabsByPID												--Completed
+Usp_UpdateCallAddonOrder												--Completed
+USP_InsertImportContacts												--Completed
+USP_GetAllCallIndexAddOnsByOrder											--Completed
+-----------------------------------------
+Balaji 
+-----------------------------------------
+T_CallIndex_Groups													--Completed
+T_CallIndex_Contacts													--Completed
+T_CallIndex_AssignGroupToContacts											--Completed
+T_Manage_OTP_Logs													--Completed
+usp_GetDashboardIcons													--Completed
+USP_GetAllManageCallIndexAddOns												--Completed
+ALTER TABLE T_Manage_PrivateCallAddOns ADD Description VARCHAR(500)							--Completed
+ALTER TABLE T_Manage_PrivateCallAddOns ADD Preview_HTML VARCHAR(MAX)							--Completed
+Usp_m_GetContactDetailsByGroupID											--Completed
+usp_m_PrivateAddOns_MobileNumberForSMS											--Completed
+usp_GetInvitationsByInvitorID												--Completed
+usp_Insert_Update_Invitees												--Completed
+-----------------------------------------------
+Ramya
+-----------------------------------------------
+USP_GetGroupsData  													--Completed                              
+USP_InsertCallIndexData													--Completed
+usp_m_GetCallIndexButtons												--Completed
+USP_GetCallIndexDetailByID												--Completed
+USP_DeleteCallIndexItem													--Completed
+Usp_GetGroupNamesForCallIndex												--Completed
+Usp_GetContactsForCallIndex												--Completed
+USP_AddGroup														--Completed
+USP_GetCallIndexGroups													--Completed
+USP_DeleteGroup														--Completed
+Usp_GetActiveContacts													--Completed
+USP_AssignGroupContact													--Completed
+USP_DeleteContacts													--Completed
+USP_CheckAssignGroupToContact												--Completed
+USP_AddContact														--Completed
+USP_SearchContactEmail													--Completed  
+USP_GetAllGroupNames													--Completed
+USP_GetGroupDetailsByID													--Completed
+USP_GetContactDetailsByID												--Completed
+USP_GetCallIndexDetailsByID												--Completed
+Usp_CheckEmailExists													--Completed
+
+============================================================= End of 2.6.5 ==================================================================================
+
+ALTER TABLE T_Profile_Descriptions ADD Youtube_Link varchar(1000)								--Completed
+ALTER TABLE T_Profile_Descriptions ADD Instagram_Link varchar(1000)								--Completed
+ALTER TABLE T_Profile_Descriptions ADD Facebook_Icon varchar(50) Default 'facebook.png'						--Completed
+ALTER TABLE T_Profile_Descriptions ADD Twitter_Icon varchar(50) Default 'twitter.png'						--Completed
+ALTER TABLE T_Profile_Descriptions ADD Youtube_Icon varchar(50) Default 'youtube.png'						--Completed
+ALTER TABLE T_Profile_Descriptions ADD Instagram_Icon varchar(50) Default 'instagram.png'					--Completed
+ALTER TABLE T_CheckInvoice ADD Custom_Notes varchar(MAX)									--Completed
+ALTER TABLE T_ProfileSubscriptions_Types ADD Custom_Notes varchar(MAX)								--Completed
+T_HelpVideoviews new table													--Completed
+Alter table L_PackageMenu  ADD  HasChilds BIT Default 0										--Completed
+L_SMSPurchaseOptions new table and its data											--Completed
+Ser_SMSNotification_LogDetails	new table											--Completed
+usp_EnableSMSSetup														--Completed
+new view  View_ScheduleSMS													--Completed
+Usp_updateSocialNetworks													--Completed
+Usp_GetChildMenuLinks														--Completed
+usp_m_PrivateAddOns_SenderDetails												--Completed
+usp_m_PrivateAddOns_CallingUserDetails												--Completed
+Usp_AddCheckInvoice														--Completed
+ALTER TABLE T_SMS_Purchase_History ADD Invoice_Description varchar(100) default 'SMS Subscription for - #SMSQuantity#'		--Completed
+usp_InsertSMSAddons														--Completed
+usp_GetOrderDetailsByOrderID													--Completed
+Ser_AddSchSMSLogin_Details													--Completed
+Ser_AddSchSMSLogOut_Details													--Completed
+Ser_UpdateSMSSentStatus														--Completed
+Ser_GetSheduledSMSNotifications													--Completed
+Usp_InsertHelpVideoViews													--Completed
+ ******************************************************* BALAJI ***************************************************************************************** 
+ M_SystemPushHistory														--Completed  
+ M_SystemPushMessages														--Completed 
+ T_Scheduled_SMS														--Completed
+ T_Scheduled_SMS_History													--Completed   
+ M_SMS_Optin_History														--Completed
+ T_SMS_Purchase_History														--Completed  
+ Alter table T_User_Contacts  ADD  ContactType VARCHAR(50) Default NULL								--Completed
+ Alter table T_User_Contacts  ADD  SMSOptIn BIT Default 0									--Completed
+ Alter table T_User_Contacts  ADD  BDID INT Default 0										--Completed   
+usp_m_UpdateDeviceDetails													--Completed
+usp_m_GetPemFileNameByAppID													--Completed
+usp_m_GetSystemPushMessages													--Completed
+usp_m_UpdateSystemPushNotifydetails												--Completed
+usp_m_InsertSMSGroup														--Completed
+usp_m_Insert_Update_SMSOptIn_IDs												--Completed
+usp_m_GetAppDisplayNameByInvitationID												--Completed
+usp_M_DeleteAppDeviceDetails													--Completed	 
+usp_m_GetButtonTypeByInvitationID												--Completed	 
+Ser_GetMobileDevicesByIdForSilentPush												--Completed 
+ALTER TABLE T_Business_Profiles ADD Country_Code varchar(5)  DEFAULT '+1'							--Completed 
+ usp_GetBusinessProfileByID													--Completed 
+ -- Add New Row to M_App_CustomMessages												--Completed
+ CustomMessage:: SUCCESS####Your request  has been successfully processed, and you will receive a push notification soon.	--Completed
+ Type:: TestPushSuccessMSG													--Completed
+--------------------------------------------------------Ramya-------------------------------------------------------------------------------------------
+USP_GetGroupsByUserID														--Completed
+USP_GetContactsByContactGroupID													--Completed
+USP_AddSMSNotification														--Completed
+USP_GetAllSMSCount														--Completed
+USP_GetAllSMSQuantity														--Completed
+USP_CheckSMSPurchase														--Completed
+Usp_GetAllVideos														--Completed
+L_HowToVideos	new table													--Completed
+
+========================================================= Start of 2.6.8 =============================================================================
+GO
+/****** Object:  StoredProcedure [dbo].[usp_m_GetCallIndexButtons]    Script Date: 11/25/2015 19:38:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ 
+ALTER PROC [dbo].[usp_m_GetCallIndexButtons]
+(
+	@ProfileID INT,
+	@UserModuleId INT = NULL
+)
+AS 
+	IF(@UserModuleId IS NULL)
+		BEGIN
+			SELECT ROW_NUMBER() OVER(ORDER BY UserModuleID ASC) AS rowid ,* FROM T_UserCustom_Modules
+				WHERE ProfileID=@ProfileID AND IsActive=1 AND ButtonType='PrivateCallAddOns'
+		END
+	ELSE
+		BEGIN
+			SELECT ROW_NUMBER() OVER(ORDER BY UserModuleID ASC) AS rowid ,* FROM T_UserCustom_Modules
+				WHERE ProfileID=@ProfileID AND IsActive=1 AND ButtonType='PrivateCallAddOns' AND UserModuleID = @UserModuleId
+		END
+============================================================================================================================================
+GO
+/****** Object:  StoredProcedure [dbo].[usp_GetDashboardIcons]    Script Date: 11/25/2015 6:24:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[usp_GetDashboardIcons] (	@UserID int)ASBEGIN	SET NOCOUNT ON;	DECLARE @CallDirectory BIT = 0	IF EXISTS(SELECT TOP 1 UserModuleID FROM T_UserCustom_Modules WHERE UserID=@UserID AND ButtonType='PrivateCallAddOns' AND IsActive = 1)		BEGIN			SET @CallDirectory = 1		END	SELECT * FROM (	SELECT TUCM.UserModuleID, TUCM.AppIcon,TUCM.TabName,TUCM.ButtonType,TUCM.IsDefaultButton,TUCM.ExpiredDate,TUCM.OrderNo, TUCM.IsHasChilds, TUCM.IsVisible,	CASE WHEN LDDB.ButtonType='AddOn' THEN '/Business/MyAccount/ManageDirect.aspx?ID=#UMID#'		WHEN LDDB.ButtonType='PrivateAddOn' THEN '/Business/MyAccount/ManageDirect.aspx?ID=#UMID#'		 WHEN LDDB.ButtonType='CalendarAddOn' THEN '/Business/MyAccount/ManageCalDirect.aspx?ID=#UMID#'		 WHEN LDDB.ButtonType='PrivateCallAddOns' THEN '/Business/MyAccount/ManageDirect.aspx?ID=#UMID#'		ELSE LDDB.ManageUrl END AS NavigationUrl FROM T_UserCustom_Modules TUCM 		LEFT OUTER JOIN L_Domain_DefaultButtons LDDB ON TUCM.DefaultButtonID=LDDB.DefaultButtonID	WHERE TUCM.UserID=@UserID AND TUCM.IsActive=1 AND TUCM.IsDefaultButton = 1	UNION	SELECT TUCM.UserModuleID, TUCM.AppIcon,TUCM.TabName,TUCM.ButtonType,TUCM.IsDefaultButton,TUCM.ExpiredDate,TUCM.OrderNo, TUCM.IsHasChilds, TUCM.IsVisible,		CASE WHEN TUCM.ButtonType='AddOn' THEN '/Business/MyAccount/ManageDirect.aspx?ID=#UMID#'		WHEN TUCM.ButtonType='PrivateAddOn' THEN '/Business/MyAccount/ManageDirect.aspx?ID=#UMID#'			 WHEN TUCM.ButtonType='CalendarAddOn' THEN '/Business/MyAccount/ManageCalDirect.aspx?ID=#UMID#'			 WHEN TUCM.ButtonType='PrivateCallAddOns' THEN '/Business/MyAccount/ManageDirect.aspx?ID=#UMID#&Type=Call'		ELSE ManageUrl END AS NavigationUrl  FROM T_UserCustom_Modules  TUCM		WHERE UserID=@UserID AND IsActive=1  AND IsDefaultButton = 0 AND ButtonType<> 'PrivateCallAddOns' AND EXISTS (SELECT 1                    FROM   T_ManagePurchaseAddOns TMA                   WHERE  TUCM.UserModuleID = TMA.UserModuleID)	UNION	SELECT TUCM.UserModuleID, TUCM.AppIcon,TUCM.TabName,TUCM.ButtonType,TUCM.IsDefaultButton,TUCM.ExpiredDate,TUCM.OrderNo, TUCM.IsHasChilds, TUCM.IsVisible,		'/Business/MyAccount/ManageDirect.aspx?ID=#UMID#&Type=CallAddOns' AS NavigationUrl  FROM T_UserCustom_Modules  TUCM		WHERE UserID=@UserID AND IsActive=1  AND IsDefaultButton = 0 AND  ButtonType='PrivateCallAddOns'	--SELECT 0 AS UserModuleID, 'calldirectoryicon' AS AppIcon, 'Call Directory' AS TabName, 'CallDirectory' AS ButtonType, 0 AS IsDefaultButton, '' AS ExpiredDate, NULL AS OrderNo, 0 AS IsHasChilds, 0 AS IsVisible, 	--'/Business/MyAccount/ManageDirect.aspx?ID=#UMID#&Type=Call' AS  NavigationUrl WHERE @CallDirectory = 1		)AS CustomModules ORDER BY OrderNoEND
+
+
+-=======================================================
+
+Gayathri
+
+[USP_GetGroupsByUserID]
+
+======================================================
+Balaji --------------------------------------------
+
+
+
+Usp_m_GetProfileTabsByPID
+usp_GetPrivateCallAddOnsButtons
+
+
+
+================================================ Start of 2.7 ===============================================================================
+ALTER TABLE [dbo].[M_PushNotifications] ADD  [NotificationType] VARCHAR(30) NOT NULL  DEFAULT ('PushNotification')				--Completed
+ALTER TABLE [dbo].[T_Manage_PrivateCallAddOns] ADD  [IsVisible] BIT NOT NULL  DEFAULT ('True')							--Completed
+Give permission names for Billing History and Release History in L_menulinks									--Completed
+ALTER TABLE [dbo].[L_TimeZones] ADD  [Time_ZoneId] VARCHAR(100) NOT NULL  DEFAULT ('Pacific Standard Time')					--Completed
+Add new timezone for arizona in L_Timezones and windows service to change time by daylight time							--Completed
+remove space for 25, 000 for SMS Setup in L_Subscriptions											--Completed
+T_CallModuleProfileImages new table														--Completed
+L_CallModuleDefaultItems new table and its default data												--Completed
+usp_Mob_AddPushNotifications															--Completed
+Ser_GetScheduledNotifications															--Completed
+USP_GetAllManageCallIndexAddOns															--Completed
+Usp_ChangeCallAddOnVisiblity															--Completed
+usp_GetBusinessProfileByID															--Completed
+Usp_UpdateArizonaTime																--Completed
+Usp_GetCallModuleProfileImages															--Completed
+Usp_InsertCallModuleProfileImages														--Completed
+Usp_CheckCallModuleProfileImage															--Completed														
+Usp_DeleteCallModuleProfileImage														--Completed	
+Usp_GetAvailableFavorites															--Completed
+USP_GetFavoriteBulletins															--Completed
+Usp_GetFavoriteCategories															--Completed
+Usp_AddCallModuleDefaultImages															--Completed
+USP_GetCallModuleDefaultItems															--Completed
+usp_m_GetDataSyncNew																--Completed
+======================================= Balaji ======================
+ALTER TABLE L_HowToVideos ADD Thumb_Url VARCHAR(250)												--Completed
+usp_m_GetPushNotifications1															--Completed
+usp_M_InsertAppDeviceDetails															--Completed
+M_Business_Devices_Web	new table														--Completed
+usp_m_InsertSMSGroup																--Completed
+USP_GetAllManageCallIndexAddOns															--Completed
+usp_m_GetManagePrivateCallAddonsItems														--Completed
+ALTER TABLE T_BrandedApp_Orders ALTER COLUMN App_DisplayName VARCHAR(50)
+usp_Insert_Update_BrandedAppOrderStatus
+**********************************Ramya******************************************************
+USP_InsertCallIndexData																--Completed
+Usp_GetBusinessProfileByProfileID														--Completed
+USP_AddFavourite																--Completed
+Usp_GetRemoveFavoritesList															--Completed
+Usp_RemoveFavoriteTemplate															--Completed
+T_FavoriteCategory new table															--Completed
+usp_GetManageBrandedAppProcessStatus														--Completed
+Usp_GetBrandedAppRequestByRequestID														--Completed
+usp_GetBrandedAppAdditionalRequest														--Completed
+T_BrandedApp_AdditionalRequest new table													--Completed
+USP_GetAllCategoryTemplates															--Completed
+USP_GetAppOrderStatusByBrandedAppRequestID 													--Completed
+====================================Gayathri=================================
+Usp_GetAllVideos																--Completed
+usp_GetPieChartData																--Completed
+[dbo].[VW_AppAnalasys]																--Completed
+usp_Insert_Update_CheckedBrandedAppOrderStatus													--Completed
+usp_Insert_Update_BrandedAppAdditionalStatus													--Completed
+
+=================================================== End of 2.7 ================================================================================================
+=================================================== Start of 2.7.5 ============================================================================================
+============================ Malli =======================================
+Include cc_expire_month,cc_expire_year in View_DataAnalysisReport								--Completed
+usp_CustomerDetails														--Completed
+Usp_UnSubscribeItemEmail													--Completed
+usp_GetUniqueProfileID														--Completed
+emailcontent PrivateModuleSendInvitation.txt											--Completed
+USP_GetAllManageAddOns														--Completed
+usp_GetAllEventsByProfileId													--Completed
+Usp_GetManageBulletins														--Completed
+usp_GetMangeSurveys														--Completed
+Usp_GetUserProfileImages													--Completed
+usp_GalleryImagesByAlbumID													--Completed
+usp_GetProfilePhotosByID													--Completed
+Mob_GetSendNotifications													--Completed
+usp_GetBusinessProfileByID													--Completed
+ALTER TABLE T_Agency_Inquiry ADD IsLiteVersion BIT NOT NULL DEFAULT(0)								--Completed
+ALTER TABLE L_PackageMenu ADD IsLiteVersion BIT NOT NULL DEFAULT(0)								--Completed
+ALTER TABLE L_MenuLinks ADD IsLiteVersion BIT NOT NULL DEFAULT(0)								--Completed
+ALTER TABLE L_Domain_DefaultButtons ADD IsLiteVersion BIT  NOT NULL DEFAULT(0)							--Completed
+ALTER TABLE L_Domain_DefaultButtons ADD SubDomainName VARCHAR(20) NOT NULL DEFAULT('uspdhubcom')				--Completed
+ALTER TABLE T_CallIndex_Groups ADD Group_Type VARCHAR(20) NOT NULL DEFAULT 'Generic'						--Completed
+ALTER TABLE L_Domain_Verticals ADD Profile_Aboutus VARCHAR(MAX)									--Completed
+ALTER TABLE L_Domain_Verticals ADD About_Edit_HTML VARCHAR(MAX)									--Completed
+added new items in L_Subscriptions and L_Products										--Completed
+Usp_GetPackageMenuLinks														--Completed
+Usp_GetParentMenuDetails													--Completed
+USP_UpdateLiteVersion														--Completed
+added new items in L_Domains, L_Country_Verticals, L_Default_TabNames, L_Domain_Configs, L_Domain_DefaultButtons, L_Domain_Verticals, L_Verticals and L_Vertical_Configs  --Completed
+new table and data L_Verticals_Sub												--Completed
+added a new row to L_CallModuleDefaultItems for inschoolhubcom									--Completed
+fire icon for defult call item													--Completed
+usp_GetOrderSubscriptionByProfileID												--Completed
+usp_ActivateNewAccount														--Completed
+CheckUserNameandPassword													--Completed
+usp_ValidateAgencyEmailID													--Completed
+USP_InsertDefaultAppButtons													--Completed
+usp_CheckDefaultAddonForLite													--Completed
+usp_InsertUserCustomModules													--Completed
+USP_InsertCallIndexData														--Completed
+ALTER TABLE T_Help_Content ADD IsLiteVersion BIT NOT NULL DEFAULT(0)								--Completed
+update L_Help_Content set IsLiteVersion=1 where Help_Name IN('About Us/Our Mission','Account Information','Logo','Private Call Directory','Push Notifications','SMS (Text)')  --Completed
+ALTER TABLE L_SMSPurchaseOptions ADD Order_No INT NOT NULL DEFAULT(1)								--Completed
+USP_GetAllSMSQuantity														--Completed
+Usp_GetAllMenuMasterLinks													--Completed
+Usp_GetHelpMatchedRecords													--Completed
+ALTER TABLE L_Domain_DefaultButtons ADD LiteVersionTabName varchar(20)								--Completed
+and add tabnames for liteversion for column LiteVersionTabName 									--Completed
+ALTER TABLE L_HowToVideos ADD IsLiteVersion BIT NOT NULL DEFAULT(0)								--Completed
+ALTER TABLE L_HowToVideos ADD VideoType varchar(20)										--Completed
+Usp_GetActiveContacts														--Completed
+usp_GetCallTotalSMSOptIns													--Completed
+Usp_GetAllVideos														--Completed
+Usp_GetLiteVideosByType														--Completed
+Usp_AddCallModuleDefaultImages													--Completed
+
+
+========================= Balaji ===========================
+ALTER TABLE T_CallIndex_Contacts ADD Position varchar(250)									--Completed
+ALTER TABLE T_CallIndex_Contacts ADD Organization varchar(250)									--Completed
+ALTER TABLE T_CallIndex_Contacts ADD IsAllowedToSendIvitation BIT NOT NULL DEFAULT(0)						--Completed
+ALTER TABLE T_CallIndex_Contacts ADD IsEmail_SMS_Unsubscribe BIT NOT NULL DEFAULT(0)						--Completed
+ALTER TABLE T_CallIndex_Groups ADD CustomID Int											--Completed
+ALTER TABLE T_Business_Profiles ADD IsLiteVersion BIT NOT NULL DEFAULT(0)							--Completed
+ALTER TABLE M_AppDefaultData ADD IsLiteVersion BIT  NOT NULL DEFAULT(0)								--Completed
+ALTER TABLE  T_PrivateModule_Invitations ADD  MobileNumber VARCHAR(15)								--Completed
+-- New Table for Lite Version Profile IDS											
+usp_m_GetDataSyncNew_Lite													--Completed
+usp_M_GetProfilesDetailsByBCode													--Completed
+usp_Insert_Update_Invitations													--Completed
+UpdateAppUserMobileNumber													--Completed
+Usp_m_GetProfileTabsByPID													--Completed
+usp_GetPrivateModuleInviations													--Completed
+usp_GetInvitationsByInvitorID													--Completed
+Usp_m_GetProfileTabsByPID_Lite													--Completed
+usp_m_GetInvitationDetailsByInvitationID											--Completed
+USP_GetAllSMSCount														--Completed
+usp_m_PrivateAddOns_MobileNumberForSMS												--Completed
+********************************Ramya-2.7.8************************--------
+USP_AddContact															--Completed
+USP_GetCallIndexGroups														--Completed
+Usp_GetContactsForCallIndex													--Completed
+USP_GetContactDetailsByID													--Completed
+USP_InsertImportContacts													--Completed
+USP_DeleteCallIndexItem														--Completed
+USP_GetCallIndexActiveGroups													--Completed
+Usp_GetAllMenuChildLinksForMasterID
+------gayathri-------
+usp_GetGroupContactsByID													--Completed 
+M_PushNotifications added column MessageType											--Completed
+usp_Mob_AddPushNotifications													--Completed
+Mob_GetSendNotifications													--Completed

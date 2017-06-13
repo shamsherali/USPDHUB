@@ -1,0 +1,408 @@
+.clr
+{
+    clear: both;
+}
+/*.ca-item:first-child{
+	margin-left: 10px;
+}
+.ca-item img
+{
+    border: 2px solid orange;
+}
+.ca-item img:selected
+{
+    border: 1px solid green;
+}
+*/
+.imgpad
+{
+    vertical-align: bottom;
+}
+.tpad
+{
+    vertical-align: middle;
+}
+.CMHeader
+{
+    font-weight:bold;
+    color:Orange;
+    font-size:14px;
+}
+.linkColor
+{
+    color:Blue;
+}
+.AppIcons li.icon
+{
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border: 2px solid #FF9900;
+}
+.AppIcons li.iconselect
+{
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border: 2px solid #2EFE2E;
+}
+.AppIcons li:hover
+{
+    border: 2px solid green;
+}
+.template
+{
+    border: 2px solid #FF9900;
+}
+.templateselect
+{
+    border: 2px solid #2EFE2E;
+}
+.ca-item img:hover
+{
+    border: 2px solid #FFDE00;
+}
+
+/* Circular Content Carousel Style */
+.ca-container
+{
+    position: relative;
+    height: 105px;
+    margin: 5px;
+}
+.ca-wrapper
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.ca-item
+{
+    position: relative;
+    float: left;
+    width: 106px;
+    height: 105px;
+}
+
+.ca-more
+{
+    width: 129px;
+    height: 43px;
+    float: left;
+    background: url(../../images/dashboard/more.png) no-repeat;
+    margin-left: 8px;
+    margin-top: 16px;
+}
+
+.ca-close
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff url(../../images/dashboard/cross.png) no-repeat center center;
+    width: 27px;
+    height: 27px;
+    text-indent: -9000px;
+    outline: none;
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    opacity: 0.7;
+}
+.ca-close:hover
+{
+    opacity: 1.0;
+}
+.ca-item-main
+{
+    position: absolute;
+    overflow: hidden;
+}
+.ca-icon
+{
+    width: 285px;
+    height: 177px;
+    position: relative;
+    margin: 0 auto;
+    background: transparent url(../../images/dashboard/thumb1.png) no-repeat center center;
+}
+.ca-item-1
+{
+    background-image: url(../../images/dashboard/thumb1.png);
+}
+
+.ca-item-2
+{
+    background-image: url(../../images/dashboard/thumb2.png);
+}
+.ca-item-3
+{
+    background-image: url(../../images/dashboard/thumb3.png);
+}
+.ca-item-4
+{
+    background-image: url(../../images/dashboard/thumb1.png);
+}
+.ca-item-5
+{
+    background-image: url(../../images/dashboard/thumb2.png);
+}
+.ca-item-6
+{
+    background-image: url(../../images/dashboard/thumb3.png);
+}
+.ca-item-7
+{
+    background-image: url(../../images/dashboard/thumb1.png);
+}
+.ca-item-8
+{
+    background-image: url(../../images/dashboard/thumb2.png);
+}
+.ca-item h3
+{
+    font-family: 'Coustard' , sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 20px;
+    height: 85px;
+    text-align: center;
+    text-shadow: 0px 1px 1px #e4ebe9;
+}
+.ca-item h4
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    text-align: left;
+    line-height: 20px;
+    margin: 10px;
+    position: relative;
+    color: #766b5f;
+    width: 250px;
+    margin-left: 8px;
+    font-weight: normal;
+}
+.ca-item h4 span
+{
+    display: block;
+}
+.ca-item h4 span.ca-quote
+{
+    color: #f4eee3;
+    font-size: 100px;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    text-indent: 0px;
+}
+.ca-content-wrapper
+{
+    background: #b0ccc6;
+    position: absolute;
+    width: 0px; /* expands to width of the wrapper minus 1 element */
+    height: 440px;
+    top: 5px;
+    text-align: left;
+    z-index: 10000;
+    overflow: hidden;
+}
+.ca-content
+{
+    width: 660px;
+    overflow: hidden;
+}
+.ca-content-text
+{
+    font-size: 14px;
+    font-style: italic;
+    font-family: "Georgia" , "Times New Roman" ,serif;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    line-height: 24px;
+}
+.ca-content-text p
+{
+    padding-bottom: 5px;
+}
+.ca-content h6
+{
+    margin: 25px 20px 0px 35px;
+    font-size: 32px;
+    padding-bottom: 5px;
+    color: #000;
+    font-family: 'Coustard' , sans-serif;
+    color: #60817a;
+    border-bottom: 2px solid #99bcb4;
+    text-shadow: 1px 1px 1px #99BCB4;
+}
+.ca-content ul
+{
+    margin: 20px 35px;
+    height: 30px;
+}
+.ca-content ul li
+{
+    float: left;
+    margin: 0px 2px;
+}
+.ca-content ul li a
+{
+    color: #fff;
+    background: #000;
+    padding: 3px 6px;
+    font-size: 14px;
+    font-family: "Georgia" , "Times New Roman" ,serif;
+    font-style: italic;
+}
+.ca-content ul li a:hover
+{
+    background: #fff;
+    color: #000;
+    text-shadow: none;
+}
+.ca-nav span
+{
+    width: 39px;
+    height: 89px;
+    background: transparent url(../../images/dashboard/arrows.png) no-repeat top left;
+    position: absolute;
+    top: 20%;
+    margin-top: -19px;
+    left: -40px;
+    text-indent: -9000px;
+    opacity: 1.0;
+    cursor: pointer;
+    z-index: 100;
+}
+.ca-nav span.ca-nav-next
+{
+    background-position: top right;
+    left: auto;
+    right: -40px;
+}
+.ca-nav span:hover
+{
+    opacity: 0.7;
+}
+
+
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer
+{
+    overflow: hidden;
+    position: relative;
+}
+
+.jspPane
+{
+    position: absolute;
+}
+
+.jspVerticalBar
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: #fff;
+}
+
+.jspHorizontalBar
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: #fff;
+}
+
+.jspVerticalBar *, .jspHorizontalBar *
+{
+    margin: 0;
+    padding: 0;
+}
+
+.jspCap
+{
+    display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+    float: left;
+}
+
+.jspTrack
+{
+    background: #fff;
+    position: relative;
+}
+
+.jspDrag
+{
+    background: #000;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag
+{
+    float: left;
+    height: 100%;
+}
+
+.jspArrow
+{
+    background: #50506d;
+    text-indent: -20000px;
+    display: block;
+    cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+    cursor: default;
+    background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+    height: 10px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+    width: 10px;
+    float: left;
+    height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+    outline: none;
+}
+
+.jspCorner
+{
+    background: #eeeef4;
+    float: left;
+    height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+    margin: 0 -3px 0 0;
+}

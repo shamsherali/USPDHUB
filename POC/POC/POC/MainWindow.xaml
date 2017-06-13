@@ -1,0 +1,44 @@
+﻿<Window x:Class="POC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:local="clr-namespace:POC.Control"
+        Title="MainWindow" Height="550" Width="835" FontSize="14" WindowState="Normal"  
+        Closing="Window_Closed"  ResizeMode="CanMinimize" Background="#EFEFEF" >
+    <Grid>
+        <!--<Grid.Background>
+            <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                <GradientStop Color="#FFFCF3C7" Offset="0" />
+                <GradientStop Color="#FFFCF3C7" Offset="1" />
+                <GradientStop Color="White" Offset="0.123" />
+                <GradientStop Color="White" Offset="0.869" />
+            </LinearGradientBrush>
+        </Grid.Background>-->
+        <StackPanel>
+            <StackPanel Margin="0,0,0,0" >
+                <StackPanel>
+                    <Menu FontSize="16" >
+                        <MenuItem Header="History" Padding="5">
+                            <MenuItem Header="History" x:Name="menuHisotry" Click="menuHisotry_Click" ></MenuItem>
+                            <MenuItem Header="Logout" x:Name="menuLogOut" Click="menuLogOut_Click"></MenuItem>
+                        </MenuItem>
+                    </Menu>
+                    <Button  Content="Go to My Account" Width="180" FontSize="20" 
+                              HorizontalAlignment="Right" Margin="0,-30,5,0" Click="Button_Click"></Button>
+                </StackPanel>
+                <StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+                <local:LoadingAnimation  x:Name="tbLoading" HorizontalAlignment="Center" VerticalAlignment="Center"  Visibility="Collapsed" />
+            </StackPanel>
+            <StackPanel>
+
+                <Frame Margin="5,10,0,0"  FontSize="14"
+         x:Name="naviateWindow"
+            JournalOwnership="UsesParentJournal" NavigationUIVisibility="Hidden" Padding="10" Navigating="naviateWindow_Navigating"
+                       NavigationProgress="naviateWindow_NavigationProgress" Navigated="naviateWindow_Navigated"></Frame>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

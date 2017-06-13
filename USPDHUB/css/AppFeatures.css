@@ -1,0 +1,44 @@
+﻿
+.appfeatureswrap
+{
+    background-color: #fff;
+    border: 3px solid #b7b7b7;
+}
+.featuretablediv
+{
+    display: table;
+    width: 100%;
+}
+.appfeaturerow
+{
+    display: table-row;
+}
+.appfeaturerow div
+{
+    display: table-cell;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 3px 5px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.appfeaturerow div:nth-child(2), .appfeaturerow div:nth-child(3)
+{
+    text-align: center;
+}
+.appfeaturehead
+{
+    color: #3b7a9d;
+    font-weight: bold;
+}
+.upgradeappprice
+{
+    border-top: 2px solid #3b7a9d;
+    padding-top: 5px;
+    padding-left:3px;
+    padding-bottom: 5px;
+}
+.fnt15
+{
+    font-size:15px !important;
+}
+

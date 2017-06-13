@@ -1,0 +1,18 @@
+<table width='750px' border='0' cellspacing='0' cellpadding='0' align='center' style='border: solid 0px Blue;'>
+<tr><td colspan='2' style='padding: 0px 150px;'>#ContentBody#</td></tr>
+ <tr><td colspan='2' align='center'>
+A new #Type# item has been approved. #Type#  #Title#  has been approved by #Username# and published to your App.
+Initials: #Initiails#
+Remarks: #Remarks#
+ </td></tr> 
+
+  <tr><td colspan='2' style='padding: 30px;'> 
+Thank you,
+
+The USPDhub<sup style="font-size: 14px;">&reg;</sup> Team
+    </td></tr>
+</table>
+
+
+
+

@@ -1,0 +1,335 @@
+html, body, *
+{
+    
+    padding: 0;
+     
+}
+html, body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    min-height: 100%;
+}
+/**
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal; 
+}*/
+ 
+img, a
+{
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p, .p, header, nav, footer, section, artical, aside, video, audio, canvas, main
+{
+    margin: 0;
+    padding: 0;
+}
+header, nav, footer, section, artical, aside, video, audio, canvas, main
+{
+    display: block;
+}
+.grey
+{
+    background-color: #e5e5e5;
+}
+
+
+
+
+
+/*Main container css*/
+
+.container
+{
+    width: 940px;
+    background: #FFF;
+    border: 0px solid #d9d9d9;
+    border-radius: 3px; /* margin: 30px auto; 	padding: 25px;*/
+    display: table;
+}
+.header-wrap
+{
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    height: auto;
+    margin-top: 10px;
+}
+.mangae-lefwrap
+{
+    float: left; /*margin-left: 25px;*/
+}
+.manage-call-title
+{
+    background: url(../imgs/nav-icon.png) no-repeat;
+    font-size: 18px;
+    color: #c7212b; /*padding-left: 40px;*/
+}
+.manage-invitation-head
+{
+    background: url(../imgs/school-icon.png) no-repeat 0 5px; /*padding: 10px 0px;*/
+    margin-top: 25px;
+}
+.manage-invitation-title
+{
+    font-size: 18px;
+    color: #000; /*padding-left: 40px;*/
+}
+.manage-invitation-title b
+{
+    color: #c7212b;
+    font-weight: normal;
+}
+.mangae-rightwrap
+{
+    float: right;
+    text-align: left;
+    margin-right: 25px;
+}
+.displayed
+{
+    font-size: 16px;
+    color: #000;
+    display: block;
+}
+.displayed .on
+{
+    font-size: 16px;
+    color: #27d538;
+    font-weight: bold;
+}
+.display-orderWrap
+{
+    display: block;
+    margin-top: 10px;
+}
+.display-ordertitle
+{
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+}
+.display-checkboxgroup
+{
+    display: block;
+    margin-top: 5px;
+}
+.display-checkboxgroup label
+{
+    font-size: 14px;
+}
+.containermain
+{
+    width: 100%;
+    display: block;
+}
+.nav-wrap
+{
+    float: left;
+    /*margin-right: 11px;*/
+    border: 1px solid #8caac4;
+    width: 225px;
+    padding: 10px;
+    background: #b4e0ff;
+}
+.nav-wraplite
+{
+    float: left;
+    /*margin-right: 11px;*/
+    width: 225px;
+    padding: 10px;
+}
+.content-wrap
+{
+    float: left;
+    border: 1px solid #4b7494;
+    width: 680px;
+    min-height: 414px;
+}
+.content-wraplite
+{
+    margin:0px auto;
+    border: 1px solid #4b7494;
+    width: 680px;
+    min-height: 414px;
+}
+.collapse
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.collapse-header
+{
+    color: #fff;
+    padding: 10px 0px;
+    position: relative;
+    background-color: #d1ecff;
+    margin: 2px 0px;
+    border: 1px solid #98b8de;
+     height: 25px;
+    min-width: 222px;
+}
+.collapse-title
+{
+    
+    float:left;
+    /*cursor:pointer;  
+margin-right:5px;  */
+}
+.collapse-iconedit
+{
+    margin: 0px 10px;
+    font-size: 12px;
+}
+.collapse-iconedit img
+{
+    padding-left:5px;
+}
+.collapse-iconedit > a
+{
+    color: #06425C;
+}
+.collapse-title > a
+{
+    color: #08254d;
+    margin-top: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    vertical-align: top;
+    text-decoration:none;
+}
+.collapse-headtitle
+{
+    color: #08254d;
+    margin-top: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    vertical-align: top;
+    text-decoration:none;
+}
+.collapse-content
+{
+    padding: 5px 10px;
+    background-color: #d2ebff;
+    border: 1px solid #98b8de;
+    margin: 0;
+    min-width:203px;
+}
+.collapse-school-icon
+{
+    background: url(../imgs/school-icon.png) no-repeat left center;
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+    float: right;
+}
+.collasp-inner-wrap ul
+{
+    list-style: none;
+}
+.collasp-inner-wrap ul li
+{
+    list-style: none;
+    display: block;
+    padding: 10px 6px;
+    border: 1px solid #94bae1;
+    background: #b5e0ff;
+    cursor: pointer;
+    background: -moz-linear-gradient(top, #b5e0ff 0%, #a7d7ff 50%, #b5e0ff 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #b5e0ff), color-stop(50%, #a7d7ff), color-stop(100%, #b5e0ff));
+    background: -webkit-linear-gradient(top, #b5e0ff 0%, #a7d7ff 50%, #b5e0ff 100%);
+    background: -o-linear-gradient(top, #b5e0ff 0%, #a7d7ff 50%, #b5e0ff 100%);
+    background: -ms-linear-gradient(top, #b5e0ff 0%, #a7d7ff 50%, #b5e0ff 100%);
+    background: linear-gradient(to bottom, #b5e0ff 0%, #a7d7ff 50%, #b5e0ff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5e0ff', endColorstr='#b5e0ff', GradientType=0 );
+}
+.collasp-inner-wrap ul li a
+{
+    font-size: 12px;
+    color: #0c3879;
+    font-weight: bold;
+    padding: 5px 0px;
+    text-decoration: none;
+}
+.icon-invitation
+{
+    /*     url(../../images/Dashboard/side_icons.png) no-repeat 6px -370px; */
+    background: url(../../images/create-icon.png) no-repeat left center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    float: left;
+}
+.icon-create
+{
+    background: url(../../images/dashboard/createcallbutton.png);
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    float: left;
+}
+.icon-edit
+{
+    background: url(../../images/edit-icon.png) no-repeat left center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    float: left;
+}
+.icon-delete
+{
+    background: url(../../images/dustbin.png) no-repeat left center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    float: left;
+}
+.icon-order
+{
+    background: url(../../images/Dashboard/side_icons.png) no-repeat -2px -232px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    float: left;
+}
+
+.icon-category
+{
+    background: url(../../images/Dashboard/category.png) no-repeat left center;
+    display: inline-block;
+    width: 34px;
+    height: 24px;
+    margin-right: 5px;
+    float: left;
+}
+
+.icon-reports
+{
+    background: url(../../images/Dashboard/messagereports.png) no-repeat left center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    float: left;
+}
+
+.icon-createQRCode
+{
+    background: url(../../images/Dashboard/CreateQRCode.png);
+    display: inline-block;
+    width: 24px;
+    height: 24px; 
+    margin-right: 5px;
+    float: left;
+}

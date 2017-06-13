@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Poll Report </title>
+    <script src="Scripts/jquery-1.7.2.js" type="text/javascript"></script>
+    <script src="Scripts/highcharts.js" type="text/javascript"></script>
+    
+    <script src="https://code.highcharts.com/modules/exporting.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getParameterByName(name, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function () {
+
+            //var profileID = getParameterByName('PID');
+            var profileID = '10319';
+
+
+            var rootUrl = "http://localhost:55350";
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                data: "{ProfileID:'" + profileID + "'}",
+                url: rootUrl + "/SurveyReport.aspx/LoadPollChart",
+                dataType: "json",
+
+                success: function (data) {
+                    points = data.d;
+                    var yourDataPoints = [];
+                    $.each(points, function (index, Info) {
+                        yourDataPoints.push({
+                            x: Info.x,
+                            y: Info.y,
+                            label: Info.label
+                        });
+                    });
+                    // Build the chart
+                    Highcharts.chart('container', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: 'Poll Chart'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    enabled: false
+                                },
+                                showInLegend: true
+                            }
+                        },
+                        series: [{
+                            name: 'Answers',
+                            colorByPoint: true,
+                            data: [{
+                                dataPoints: yourDataPoints
+                            }]
+                        }]
+                    });
+                },
+                error: function (error) {
+                    alert("ERROR:: " + error.statusText);
+                }
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto">
+    </div>
+</body>
+</html>

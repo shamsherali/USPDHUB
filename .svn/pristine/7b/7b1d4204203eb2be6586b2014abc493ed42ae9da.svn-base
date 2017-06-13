@@ -1,0 +1,311 @@
+﻿<Page x:Class="ISANotifications.ManageNotifications"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISANotifications"
+      xmlns:Properties="clr-namespace:ISANotifications.Properties" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="900"
+       
+      Title="ManageNotifications" FontSize="14">
+    
+    <Page.Resources>
+        <local:DateTimeConverter x:Key="BindingCVR"/>
+        <Style x:Key="CellStyle" TargetType="{x:Type DataGridCell}">
+            <Setter Property="Foreground" Value="Black" />
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{x:Null}" />
+                    <Setter Property="BorderBrush" Value="{x:Null}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="BaseButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Background" Value="#d84d31"/>
+            <Setter Property="BorderBrush" Value="#d84d31"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0,3,16,3"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Name="Chrome"
+                                CornerRadius="10"
+                                Padding="0"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                SnapsToDevicePixels="true">
+                            <ContentPresenter Name="Presenter" Margin="{TemplateBinding Padding}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#FFFFFF" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#d84d31" />
+                                <Setter Property="BorderBrush" Value="#d84d31" />
+                                <Setter Property="Foreground" Value="#FFFFFF" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#1ba1e2" />
+                                <Setter Property="BorderBrush" Value="#1ba1e2"/>
+                                <Setter Property="Foreground" Value="#ffffff"/>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="true">
+                                <Setter TargetName="Chrome" Property="BorderBrush" Value="#1ba1e2" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <StreamGeometry x:Key="LeftArrow">M0,25 L25,0 25,13 50,13 50,37 25,37 25,50z</StreamGeometry>
+        <StreamGeometry x:Key="RightArrow">M50,25 L25,0 25,13 0,13 0,37 25,37 25,50z</StreamGeometry>
+        <StreamGeometry x:Key="UpArrow">M25,0 L0,25 13,25 13,50 37,50 37,25 50,25z</StreamGeometry>
+        <StreamGeometry x:Key="DownArrow">M25,50 L0,25 13,25 13,0 37,0 37,25 50,25z</StreamGeometry>
+
+    </Page.Resources>
+    <Grid >
+        <StackPanel>
+            <StackPanel Orientation="Horizontal"  >
+                <TextBlock Text="Manage Notifications" Style="{StaticResource pageTitleStyle}"></TextBlock>
+                <Image Source="Images/refresh.png" Cursor="Hand" Height="30" Margin="15,0,0,0"  ToolTip="Refresh"
+                            MouseLeftButtonUp="Image_MouseLeftButtonDown"  ></Image>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0" Width="315">
+                    <TextBlock Text="Last Sync Date &#38; Time:" Foreground="Green" Width="160" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Margin="5"></TextBlock>
+                    <TextBlock Width="auto" x:Name="tbLastSyncTime" HorizontalAlignment="Right" VerticalAlignment="Center" 
+                               Text="{Binding Path=LastSyncDate, Converter={StaticResource BindingCVR}, Source={x:Static Properties:Settings.Default}}"  ></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom"  >
+                    <TextBlock Text="School Name: " Margin="0,0,0,0" FontWeight="Bold" ></TextBlock>
+                    <ComboBox Name="cmbFavSchools" VerticalAlignment="Top" Margin="10,0,0,0" 
+                                          Width="240" SelectionChanged="cmbFavSchools_SelectionChanged" ItemsSource="{Binding}"   />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel x:Name="sp" Orientation="Horizontal" Margin="0,0,0,0" HorizontalAlignment="Center" >
+                <local:LoadingAnimation  x:Name="loadingControl" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+            </StackPanel>
+            <StackPanel>
+                <Border Style="{StaticResource pageBorderStyle}">
+                    <StackPanel>
+                        <StackPanel >
+                            <GroupBox Header="General Push Notification(s)" Padding="5" FontSize="16">
+                                <StackPanel>
+                                    <DataGrid AutoGenerateColumns="false" CellStyle="{StaticResource CellStyle}"  Name="grdPushNotifications" ItemsSource="{Binding}"
+                                  GridLinesVisibility="Horizontal" HeadersVisibility="All" Width="870" Height="175"
+                                              CanUserResizeColumns="False" CanUserAddRows="False" RowBackground="LightYellow" AlternatingRowBackground="LightBlue">
+                                        <DataGrid.RowStyle>
+                                            <Style TargetType="{x:Type DataGridRow}">
+                                                <Style.Resources>
+                                                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+                                                    <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+                                                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="Black" />
+                                                    <SolidColorBrush x:Key="{x:Static SystemColors.ControlTextBrushKey}" Color="Black" />
+                                                </Style.Resources>
+                                            </Style>
+                                        </DataGrid.RowStyle>
+                                        <DataGrid.Columns>
+                                            <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}" 
+                                                                     Header="School Name"  IsReadOnly="True" Width="250">
+                                                <DataGridTemplateColumn.CellStyle>
+                                                    <Style TargetType="{x:Type DataGridCell}">
+                                                        <Setter Property="BorderBrush" Value="Black"></Setter>
+                                                        <Setter Property="BorderThickness" Value="0,0,1,0"></Setter>
+                                                    </Style>
+                                                </DataGridTemplateColumn.CellStyle>
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock  Text="{Binding Profile_name}" TextWrapping="Wrap"></TextBlock>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <!--<DataGridTextColumn Header="Subject" Width="100" Binding="{Binding Subject}" IsReadOnly="True"/>-->
+                                            <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}" 
+                                                                     Header="Message" IsReadOnly="True" Width="350">
+                                                <DataGridTemplateColumn.CellStyle>
+                                                    <Style TargetType="{x:Type DataGridCell}">
+                                                        <Setter Property="BorderBrush" Value="Black"></Setter>
+                                                        <Setter Property="BorderThickness" Value="0,0,1,0"></Setter>
+                                                    </Style>
+                                                </DataGridTemplateColumn.CellStyle>
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Text="{Binding Message}" TextWrapping="Wrap" Padding="5,0,0,0" ></TextBlock>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTextColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}" 
+                                                                 Header="Date and Time Sent" MinWidth="160" Binding="{Binding Sending_Date, StringFormat={}{0:dd/MM/yyyy hh:mm tt}}" IsReadOnly="True"/>
+
+                                            <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle1}" 
+                                                                     Header="View" Width="80" IsReadOnly="True">
+                                                <DataGridTemplateColumn.CellStyle>
+                                                    <Style TargetType="{x:Type DataGridCell}">
+                                                        <Setter Property="BorderBrush" Value="Black"></Setter>
+                                                        <Setter Property="BorderThickness" Value="1,0,0,0"></Setter>
+                                                    </Style>
+                                                </DataGridTemplateColumn.CellStyle>
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Button Click="Hyperlink_Click" Background="{x:Null}" BorderThickness="0">
+                                                            <Button.Content>
+                                                                <Image Source="images/dataview.png" Width="25" Height="25"
+                                                               ></Image>
+                                                            </Button.Content>
+                                                        </Button>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Label Name="emptyPushRow" Foreground="Green" FontSize="16" Content="No push notification(s) available."
+                                              Visibility="Collapsed" ></Label>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,60,0">
+
+                                        <Button Click="OnPreviousClicked"  Margin="2"  
+                                                Padding="5,0,5,0" Style="{StaticResource BaseButtonStyle}" Name="btnPushPrev">
+                                            <Button.Content>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Path Width="20" Height="20" Data="{DynamicResource LeftArrow}" Fill="White" Stretch="Fill"/>
+                                                    <TextBlock Text="Previous" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                                                </StackPanel>
+                                            </Button.Content>
+                                        </Button>
+                                        <Label Grid.Row="0" Margin="2" Name="currentPage" >
+                                        </Label>
+                                        <Button  Click="OnNextClicked" Margin="2" Padding="5,0,5,0" Style="{StaticResource BaseButtonStyle}" Name="btnPushNext">
+                                            <Button.Content>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="Next" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                                    <Path Width="20" Height="20" Data="{DynamicResource RightArrow}" Fill="White" Stretch="Fill"  Margin="5,0,0,0"/>
+                                                </StackPanel>
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </GroupBox>
+                        </StackPanel>
+                        <StackPanel Margin="0,10,0,0">
+                            <GroupBox Header="Call Directory Alert Notification(s)" Padding="5" FontSize="16">
+                                <StackPanel>
+                                    <DataGrid AutoGenerateColumns="false" ItemsSource="{Binding }" 
+                                  Name="grdCallNotifications" GridLinesVisibility="Horizontal" HeadersVisibility="All"  CellStyle="{StaticResource CellStyle}"
+                                          Width="870" CanUserResizeColumns="False"  CanUserAddRows="False" Height="175" RowBackground="LightYellow"
+                                              AlternatingRowBackground="LightBlue">
+                                        <DataGrid.RowStyle>
+                                            <Style TargetType="{x:Type DataGridRow}">
+                                                <Style.Resources>
+                                                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+                                                    <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+                                                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="Black" />
+                                                    <SolidColorBrush x:Key="{x:Static SystemColors.ControlTextBrushKey}" Color="Black" />
+                                                </Style.Resources>
+                                            </Style>
+                                        </DataGrid.RowStyle>
+                                        <DataGrid.Columns>
+                                            <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}" 
+                                                                     Header="School Name"  IsReadOnly="True" Width="250">
+                                                <DataGridTemplateColumn.CellStyle>
+                                                    <Style TargetType="{x:Type DataGridCell}">
+                                                        <Setter Property="BorderBrush" Value="Black"></Setter>
+                                                        <Setter Property="BorderThickness" Value="0,0,1,0"></Setter>
+                                                    </Style>
+                                                </DataGridTemplateColumn.CellStyle>
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock  Text="{Binding Profile_name}" TextWrapping="Wrap"></TextBlock>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <!--<DataGridTextColumn Header="Subject" Width="100" Binding="{Binding Subject}" IsReadOnly="True"/>-->
+                                            <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}" 
+                                                                     Header="Message" IsReadOnly="True" Width="350">
+                                                <DataGridTemplateColumn.CellStyle>
+                                                    <Style TargetType="{x:Type DataGridCell}">
+                                                        <Setter Property="BorderBrush" Value="Black"></Setter>
+                                                        <Setter Property="BorderThickness" Value="0,0,1,0"></Setter>
+                                                    </Style>
+                                                </DataGridTemplateColumn.CellStyle>
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Text="{Binding Message}" TextWrapping="Wrap" Padding="5,0,0,0" ></TextBlock>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTextColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}" 
+                                                                 Header="Date and Time Sent" MinWidth="160" Binding="{Binding Sending_Date, StringFormat={}{0:dd/MM/yyyy hh:mm tt}}" IsReadOnly="True"/>
+
+                                            <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle1}" 
+                                                                     Header="View" Width="80" IsReadOnly="True">
+                                                <DataGridTemplateColumn.CellStyle>
+                                                    <Style TargetType="{x:Type DataGridCell}">
+                                                        <Setter Property="BorderBrush" Value="Black"></Setter>
+                                                        <Setter Property="BorderThickness" Value="1,0,0,0"></Setter>
+                                                    </Style>
+                                                </DataGridTemplateColumn.CellStyle>
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Button Click="hypCallLink_Click" Background="{x:Null}" BorderThickness="0">
+                                                            <Button.Content>
+                                                                <Image Source="images/dataview.png" Width="25" Height="25"
+                                                               ></Image>
+                                                            </Button.Content>
+                                                        </Button>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+
+                                    </DataGrid>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Label Name="emptyCallRow"  FontSize="16" Content="No call notification(s) available." Foreground="Green" Visibility="Collapsed"></Label>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,60,0">
+
+                                        <Button Click="OnPreviousClicked1" Margin="2" Padding="5,0,5,0" Style="{StaticResource BaseButtonStyle}" Name="btnCallPushPrev">
+                                            <Button.Content>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Path Width="20" Height="20" Data="{DynamicResource LeftArrow}"  Fill="White" Stretch="Fill"/>
+                                                    <TextBlock Text="Previous" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                                                </StackPanel>
+                                            </Button.Content>
+                                        </Button>
+                                        <Label Grid.Row="0" Margin="2" Name="callcurrentPage">
+                                        </Label>
+                                        <Button Click="OnNextClicked1" Margin="2" Padding="5,0,5,0" Style="{StaticResource BaseButtonStyle}" Name="btnCallPushNext">
+                                            <Button.Content>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="Next" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                                    <Path Width="20" Height="20" Data="{DynamicResource RightArrow}" Fill="White" Stretch="Fill"  Margin="5,0,0,0"/>
+                                                </StackPanel>
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </GroupBox>
+
+                        </StackPanel>
+                    </StackPanel>
+
+                </Border>
+            </StackPanel>
+        </StackPanel>
+
+
+
+
+
+    </Grid>
+</Page>

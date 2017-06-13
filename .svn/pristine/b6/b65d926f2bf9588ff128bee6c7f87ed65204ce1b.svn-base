@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body style="background: url(#RootPath#/images/BulletinThumbs/dotted.png) repeat; font-family: Arial, Helvetica, sans-serif; 
+	color: #313131; font-size: 14px; text-align: left;">
+    <div style="width: 670px; margin: 0 auto; padding: 0px; border: 1px solid #CCC;">
+		<div style="background: #eeeeee url(#RootPath#/images/header_bg.gif) repeat-x; min-height: 74px;
+            padding: 20px 0px; width: 740px;">
+            <div style="margin: 0 auto; width: 670px; overflow: hidden;">
+				<div style="margin 0px auto; width:0px; float:left;">
+                    #HeaderLogo#</div>
+                    <div style="margin 0px auto; width:0px; float:right; margin-right: 5px;">
+                    #AdditionalLogo#</div>
+                <div style="  margin: 0px 0px 0px 90px;">
+                    <h1 style="font-size: 28px; line-height: 25px; font-weight: bold; color: #fcb040;
+                        text-align: center; margin: 0px; padding: 0px;">
+                        #BusinessProfileName#</h1><br/>
+					<div  style="text-align:center;"><span style="text-align:center;">#AgencyAddress# </span>                  
+                    <h4 style="font-size: 16px; line-height: 28px; font-weight: bold; color: #383838;
+                        text-align: center; margin: 0px; padding: 0px;">
+                        #EmergencyNumber#</h4></div>
+                </div>
+            </div>
+        </div>
+        <div style="clear: both;">
+        </div>
+		<div align="left" style="margin : auto 0px;">
+			#BuildHtmlForForm#
+		</div>
+		</div>
+</body>
+</html>

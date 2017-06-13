@@ -1,0 +1,734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBC90F02-9CAE-42FA-A577-EB6598DDB041}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UserForms</RootNamespace>
+    <AssemblyName>UserForms</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ajax">
+      <HintPath>..\..\ThirdParty\Ajax.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\ThirdParty\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AJAXExtensionsToolbox">
+      <HintPath>..\..\ThirdParty\AJAXExtensionsToolbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.GraphicsMill">
+      <HintPath>..\..\ThirdParty\Aurigma.GraphicsMill.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.GraphicsMill.AjaxControls">
+      <HintPath>..\..\ThirdParty\Aurigma.GraphicsMill.AjaxControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.GraphicsMill.AjaxControls.VectorObjects">
+      <HintPath>..\..\ThirdParty\Aurigma.GraphicsMill.AjaxControls.VectorObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.GraphicsMill.WinControls">
+      <HintPath>..\..\ThirdParty\Aurigma.GraphicsMill.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.GraphicsMill.WinControls.VectorObjects">
+      <HintPath>..\..\ThirdParty\Aurigma.GraphicsMill.WinControls.VectorObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.Svg">
+      <HintPath>..\..\ThirdParty\Aurigma.Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="autoupdate">
+      <HintPath>..\..\USPDHUB\bin\autoupdate.dll</HintPath>
+    </Reference>
+    <Reference Include="DayPilot">
+      <HintPath>..\..\USPDHUB\bin\DayPilot.dll</HintPath>
+    </Reference>
+    <Reference Include="FlvConverter">
+      <HintPath>..\..\ThirdParty\FlvConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Neodynamic.WebControls.ImageDraw">
+      <HintPath>..\..\ThirdParty\Neodynamic.WebControls.ImageDraw.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Web.Design">
+      <HintPath>..\..\ThirdParty\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\ThirdParty\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="wnvhtmlconvert, Version=3.5.3.23522, Culture=neutral, PublicKeyToken=5b5f377bc08a4d32, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\USPDHUB\bin\wnvhtmlconvert.dll</HintPath>
+    </Reference>
+    <Reference Include="wnvpdfcreator">
+      <HintPath>..\..\ThirdParty\wnvpdfcreator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Ajax.dll" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\AJAXExtensionsToolbox.dll" />
+    <Content Include="bin\Autofac.dll" />
+    <Content Include="bin\autoupdate.dll" />
+    <Content Include="bin\DayPilot.dll" />
+    <Content Include="bin\FlvConverter.dll" />
+    <Content Include="bin\Neodynamic.WebControls.ImageDraw.dll" />
+    <Content Include="bin\UserForms.dll" />
+    <Content Include="bin\UserForms.pdb" />
+    <Content Include="bin\UserFormsBLL.dll" />
+    <Content Include="bin\UserFormsBLL.pdb" />
+    <Content Include="bin\UserFormsDAL.dll" />
+    <Content Include="bin\UserFormsDAL.pdb" />
+    <Content Include="bin\wnvhtmlconvert.dll" />
+    <Content Include="bin\wnvhtmlconvert.xml" />
+    <Content Include="bin\wnvpdfcreator.dll" />
+    <Content Include="BulletinFlyer.aspx" />
+    <Content Include="BulletinsForm_ImageGallery.aspx" />
+    <Content Include="BulletinVideoGallery.aspx" />
+    <Content Include="Bulletin_Imagegallery.aspx" />
+    <Content Include="ChiefsMessageForm.aspx" />
+    <Content Include="CMChiefsMessage.aspx" />
+    <Content Include="CMCrimeHighlights.aspx" />
+    <Content Include="CMFindMissing.aspx" />
+    <Content Include="CMMediaRelease.aspx" />
+    <Content Include="CMMissingPerson.aspx" />
+    <Content Include="CMMissingVehicle.aspx" />
+    <Content Include="CMMostWanted.aspx" />
+    <Content Include="CMNewPrintPressRelease.aspx" />
+    <Content Include="CMPoliceActivity.aspx" />
+    <Content Include="CMPoliceActivityNew.aspx" />
+    <Content Include="CMSchoolNotification.aspx" />
+    <Content Include="CMSheriffActivity.aspx" />
+    <Content Include="CMSheriffCrimeHighlights.aspx" />
+    <Content Include="CMSheriffsMessage.aspx" />
+    <Content Include="CMTrafficAlert.aspx" />
+    <Content Include="CMWanted.aspx" />
+    <Content Include="CrimeHighlights.aspx" />
+    <Content Include="CrimeWeeklyReport.aspx" />
+    <Content Include="CrisisCallLog.aspx" />
+    <Content Include="CSS\AjaxControlsStyles.css" />
+    <Content Include="CSS\Bulletins.css" />
+    <Content Include="CSS\Calendar.css" />
+    <Content Include="CSS\dashboard.css" />
+    <Content Include="CSS\DashboardMenu.css" />
+    <Content Include="CSS\Menu.css" />
+    <Content Include="CSS\popupcss.css" />
+    <Content Include="CSS\repeatcal.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="CSS\ui-lightness\jquery-ui-1.8.19.custom.css" />
+    <Content Include="CSS\wowzzy_newcss.css" />
+    <Content Include="FindMissing.aspx" />
+    <Content Include="fonts\fontello.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\AddArrestedBlock.png" />
+    <Content Include="Images\AddAuthor.png" />
+    <Content Include="Images\addcall.png" />
+    <Content Include="Images\addimg.png" />
+    <Content Include="Images\addnewimg.png" />
+    <Content Include="Images\addnewtext.png" />
+    <Content Include="Images\AddPerson.png" />
+    <Content Include="Images\AddVehicle.png" />
+    <Content Include="Images\AddVideo.png" />
+    <Content Include="Images\add_act.jpg" />
+    <Content Include="Images\add_inc.png" />
+    <Content Include="Images\cleared.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\deletecall.png" />
+    <Content Include="Images\deleteimg.png" />
+    <Content Include="Images\DeletePerson.png" />
+    <Content Include="Images\DeleteVehicle.png" />
+    <Content Include="Images\del_act.jpg" />
+    <Content Include="Images\del_inc.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\editcall.png" />
+    <Content Include="Images\EditImage.png" />
+    <Content Include="Images\editimg.png" />
+    <Content Include="Images\EditPerson.png" />
+    <Content Include="Images\EditText.png" />
+    <Content Include="Images\EditVehicle.png" />
+    <Content Include="Images\EditVideo.png" />
+    <Content Include="Images\edit_act.jpg" />
+    <Content Include="Images\ImageBlock.png" />
+    <Content Include="Images\located.png" />
+    <Content Include="Images\play_btn.png" />
+    <Content Include="Images\popup_ajax-loader.gif" />
+    <Content Include="Images\popup_close.gif" />
+    <Content Include="Images\Remove.png" />
+    <Content Include="Images\TextBlock.png" />
+    <Content Include="Images\viemo.png" />
+    <Content Include="Images\youtube.png" />
+    <Content Include="KPDMediaRelease.aspx" />
+    <Content Include="KPDMediaRelease1.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="MediaRelease.aspx" />
+    <Content Include="MissingChild.aspx" />
+    <Content Include="MissingPerson.aspx" />
+    <Content Include="MissingVehicle.aspx" />
+    <Content Include="NewPrintPressRelease.aspx" />
+    <Content Include="obj\Debug\TempPE\App_GlobalResources.LabelMessages.Designer.cs.dll" />
+    <Content Include="obj\Debug\UserForms.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\UserForms.dll" />
+    <Content Include="obj\Debug\UserForms.pdb" />
+    <Content Include="PoliceActivity.aspx" />
+    <Content Include="PoliceActivityNew.aspx" />
+    <Content Include="PropertyListing.aspx" />
+    <Content Include="SchoolNotification.aspx" />
+    <Content Include="Scripts\AdapterUtils.js" />
+    <Content Include="Scripts\flyers\jquery.ui.core.js" />
+    <Content Include="Scripts\flyers\jquery.ui.draggable.js" />
+    <Content Include="Scripts\flyers\jquery.ui.droppable.js" />
+    <Content Include="Scripts\flyers\jquery.ui.mouse.js" />
+    <Content Include="Scripts\flyers\jquery.ui.sortable.js" />
+    <Content Include="Scripts\flyers\jquery.ui.widget.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\resize\animation-min.js" />
+    <Content Include="Scripts\resize\button-min.js" />
+    <Content Include="Scripts\resize\button.css" />
+    <Content Include="Scripts\resize\dom-min.js" />
+    <Content Include="Scripts\resize\dragdrop-min.js" />
+    <Content Include="Scripts\resize\element-min.js" />
+    <Content Include="Scripts\resize\event-min.js" />
+    <Content Include="Scripts\resize\resize-min.js" />
+    <Content Include="Scripts\resize\resize.css" />
+    <Content Include="Scripts\resize\yuiloader-min.js" />
+    <Content Include="Scripts\timePicker\jquery.timepicker.css" />
+    <Content Include="Scripts\timePicker\jquery.timepicker.js" />
+    <Content Include="Scripts\timePicker\lib\bootstrap-datepicker.css" />
+    <Content Include="Scripts\timePicker\lib\bootstrap-datepicker.js" />
+    <Content Include="Scripts\timePicker\lib\site.css" />
+    <Content Include="Scripts\timePicker\lib\site.js" />
+    <Content Include="SheriffActivity.aspx" />
+    <Content Include="SheriffCrimeHighlights.aspx" />
+    <Content Include="SheriffsMessageForm.aspx" />
+    <Content Include="src\wickedpicker.js" />
+    <Content Include="stylesheets\wickedpicker.css" />
+    <Content Include="Styles\ui-lightness\jquery-ui-1.8.19.custom.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\BulletinThumbs\button_bg.gif" />
+    <Content Include="Images\BulletinThumbs\preview.png" />
+    <Content Include="Images\Dashboard\mp-close.gif" />
+    <Content Include="Images\Dashboard\mpgotomenu.gif" />
+    <Content Include="Images\OuterImages\nav-bullet.png" />
+    <Content Include="Images\VerticalLogos\localhostlogo.png" />
+    <Content Include="MostWanted.aspx" />
+    <Content Include="Scripts\flyers\jquery-1.7.2.js" />
+    <Content Include="Scripts\flyers\jquery-ui-1.8.21.custom.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery.textarea-expander.js" />
+    <Content Include="Scripts\ModalPopups.js" />
+    <Content Include="Styles\AjaxControlsStyles.css" />
+    <Content Include="Styles\Bulletins.css" />
+    <Content Include="Styles\Calendar.css" />
+    <Content Include="Styles\dashboard.css" />
+    <Content Include="Styles\DashboardMenu.css" />
+    <Content Include="Styles\Menu.css" />
+    <Content Include="Styles\popupcss.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Styles\wowzzy_newcss.css" />
+    <Content Include="TimeControl.ascx" />
+    <Content Include="TrafficAlert.aspx" />
+    <Content Include="UCEditor.ascx" />
+    <Content Include="Upload\Bulletins\10001\957.jpg" />
+    <Content Include="Upload\Bulletins\10001\961.jpg" />
+    <Content Include="Upload\Bulletins\10001\962.jpg" />
+    <Content Include="Upload\Bulletins\10001\963.jpg" />
+    <Content Include="Upload\ErrorLog\2015_9_10_ErrorLog.txt" />
+    <Content Include="Upload\ErrorLog\2015_9_11_ErrorLog.txt" />
+    <Content Include="Upload\ErrorLog\2015_9_14_ErrorLog.txt" />
+    <Content Include="Upload\ErrorLog\2015_9_15_ErrorLog.txt" />
+    <Content Include="Upload\Logos\10001\10001_thumb.jpg" />
+    <Content Include="Wanted.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\LabelMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LabelMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ProfileAccessMessages1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProfileAccessMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinFlyer.aspx.cs">
+      <DependentUpon>BulletinFlyer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulletinFlyer.aspx.designer.cs">
+      <DependentUpon>BulletinFlyer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinsForm_ImageGallery.aspx.cs">
+      <DependentUpon>BulletinsForm_ImageGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulletinsForm_ImageGallery.aspx.designer.cs">
+      <DependentUpon>BulletinsForm_ImageGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinVideoGallery.aspx.cs">
+      <DependentUpon>BulletinVideoGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulletinVideoGallery.aspx.designer.cs">
+      <DependentUpon>BulletinVideoGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bulletin_Imagegallery.aspx.cs">
+      <DependentUpon>Bulletin_Imagegallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bulletin_Imagegallery.aspx.designer.cs">
+      <DependentUpon>Bulletin_Imagegallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChiefsMessageForm.aspx.cs">
+      <DependentUpon>ChiefsMessageForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChiefsMessageForm.aspx.designer.cs">
+      <DependentUpon>ChiefsMessageForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMChiefsMessage.aspx.cs">
+      <DependentUpon>CMChiefsMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMChiefsMessage.aspx.designer.cs">
+      <DependentUpon>CMChiefsMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMCrimeHighlights.aspx.cs">
+      <DependentUpon>CMCrimeHighlights.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMCrimeHighlights.aspx.designer.cs">
+      <DependentUpon>CMCrimeHighlights.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMFindMissing.aspx.cs">
+      <DependentUpon>CMFindMissing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMFindMissing.aspx.designer.cs">
+      <DependentUpon>CMFindMissing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMMediaRelease.aspx.cs">
+      <DependentUpon>CMMediaRelease.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMMediaRelease.aspx.designer.cs">
+      <DependentUpon>CMMediaRelease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMMissingPerson.aspx.cs">
+      <DependentUpon>CMMissingPerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMMissingPerson.aspx.designer.cs">
+      <DependentUpon>CMMissingPerson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMMissingVehicle.aspx.cs">
+      <DependentUpon>CMMissingVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMMissingVehicle.aspx.designer.cs">
+      <DependentUpon>CMMissingVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMMostWanted.aspx.cs">
+      <DependentUpon>CMMostWanted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMMostWanted.aspx.designer.cs">
+      <DependentUpon>CMMostWanted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMNewPrintPressRelease.aspx.cs">
+      <DependentUpon>CMNewPrintPressRelease.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMNewPrintPressRelease.aspx.designer.cs">
+      <DependentUpon>CMNewPrintPressRelease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMPoliceActivity.aspx.cs">
+      <DependentUpon>CMPoliceActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMPoliceActivity.aspx.designer.cs">
+      <DependentUpon>CMPoliceActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMPoliceActivityNew.aspx.cs">
+      <DependentUpon>CMPoliceActivityNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMPoliceActivityNew.aspx.designer.cs">
+      <DependentUpon>CMPoliceActivityNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSchoolNotification.aspx.cs">
+      <DependentUpon>CMSchoolNotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSchoolNotification.aspx.designer.cs">
+      <DependentUpon>CMSchoolNotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSheriffActivity.aspx.cs">
+      <DependentUpon>CMSheriffActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSheriffActivity.aspx.designer.cs">
+      <DependentUpon>CMSheriffActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSheriffCrimeHighlights.aspx.cs">
+      <DependentUpon>CMSheriffCrimeHighlights.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSheriffCrimeHighlights.aspx.designer.cs">
+      <DependentUpon>CMSheriffCrimeHighlights.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSheriffsMessage.aspx.cs">
+      <DependentUpon>CMSheriffsMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSheriffsMessage.aspx.designer.cs">
+      <DependentUpon>CMSheriffsMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMTrafficAlert.aspx.cs">
+      <DependentUpon>CMTrafficAlert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMTrafficAlert.aspx.designer.cs">
+      <DependentUpon>CMTrafficAlert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMWanted.aspx.cs">
+      <DependentUpon>CMWanted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMWanted.aspx.designer.cs">
+      <DependentUpon>CMWanted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrimeHighlights.aspx.cs">
+      <DependentUpon>CrimeHighlights.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrimeHighlights.aspx.designer.cs">
+      <DependentUpon>CrimeHighlights.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrimeWeeklyReport.aspx.cs">
+      <DependentUpon>CrimeWeeklyReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrimeWeeklyReport.aspx.designer.cs">
+      <DependentUpon>CrimeWeeklyReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrisisCallLog.aspx.cs">
+      <DependentUpon>CrisisCallLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrisisCallLog.aspx.designer.cs">
+      <DependentUpon>CrisisCallLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FindMissing.aspx.cs">
+      <DependentUpon>FindMissing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FindMissing.aspx.designer.cs">
+      <DependentUpon>FindMissing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="KPDMediaRelease.aspx.cs">
+      <DependentUpon>KPDMediaRelease.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPDMediaRelease.aspx.designer.cs">
+      <DependentUpon>KPDMediaRelease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KPDMediaRelease1.aspx.cs">
+      <DependentUpon>KPDMediaRelease1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPDMediaRelease1.aspx.designer.cs">
+      <DependentUpon>KPDMediaRelease1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MediaRelease.aspx.cs">
+      <DependentUpon>MediaRelease.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MediaRelease.aspx.designer.cs">
+      <DependentUpon>MediaRelease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MissingChild.aspx.cs">
+      <DependentUpon>MissingChild.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MissingChild.aspx.designer.cs">
+      <DependentUpon>MissingChild.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MissingPerson.aspx.cs">
+      <DependentUpon>MissingPerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MissingPerson.aspx.designer.cs">
+      <DependentUpon>MissingPerson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MissingVehicle.aspx.cs">
+      <DependentUpon>MissingVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MissingVehicle.aspx.designer.cs">
+      <DependentUpon>MissingVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostWanted.aspx.cs">
+      <DependentUpon>MostWanted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostWanted.aspx.designer.cs">
+      <DependentUpon>MostWanted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewPrintPressRelease.aspx.cs">
+      <DependentUpon>NewPrintPressRelease.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewPrintPressRelease.aspx.designer.cs">
+      <DependentUpon>NewPrintPressRelease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaidTools.master.cs">
+      <DependentUpon>PaidTools.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaidTools.master.designer.cs">
+      <DependentUpon>PaidTools.master</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceActivity.aspx.cs">
+      <DependentUpon>PoliceActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceActivity.aspx.designer.cs">
+      <DependentUpon>PoliceActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PoliceActivityNew.aspx.cs">
+      <DependentUpon>PoliceActivityNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PoliceActivityNew.aspx.designer.cs">
+      <DependentUpon>PoliceActivityNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyListing.aspx.cs">
+      <DependentUpon>PropertyListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PropertyListing.aspx.designer.cs">
+      <DependentUpon>PropertyListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolNotification.aspx.cs">
+      <DependentUpon>SchoolNotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolNotification.aspx.designer.cs">
+      <DependentUpon>SchoolNotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SheriffActivity.aspx.cs">
+      <DependentUpon>SheriffActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SheriffActivity.aspx.designer.cs">
+      <DependentUpon>SheriffActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SheriffCrimeHighlights.aspx.cs">
+      <DependentUpon>SheriffCrimeHighlights.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SheriffCrimeHighlights.aspx.designer.cs">
+      <DependentUpon>SheriffCrimeHighlights.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SheriffsMessageForm.aspx.cs">
+      <DependentUpon>SheriffsMessageForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SheriffsMessageForm.aspx.designer.cs">
+      <DependentUpon>SheriffsMessageForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeControl.ascx.cs">
+      <DependentUpon>TimeControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeControl.ascx.designer.cs">
+      <DependentUpon>TimeControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TrafficAlert.aspx.cs">
+      <DependentUpon>TrafficAlert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrafficAlert.aspx.designer.cs">
+      <DependentUpon>TrafficAlert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UCEditor.ascx.cs">
+      <DependentUpon>UCEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCEditor.ascx.designer.cs">
+      <DependentUpon>UCEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+    <Compile Include="Wanted.aspx.cs">
+      <DependentUpon>Wanted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wanted.aspx.designer.cs">
+      <DependentUpon>Wanted.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\Package\" />
+    <Folder Include="Upload\AppThumbs\Bulletins\10001\" />
+    <Folder Include="Upload\AppThumbs\CustomModules\10001\" />
+    <Folder Include="Upload\CustomModules\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UserFormsBLL\UserFormsBLL.csproj">
+      <Project>{F3156998-BDA8-433D-8493-2351B2504490}</Project>
+      <Name>UserFormsBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserFormsDAL\UserFormsDAL.csproj">
+      <Project>{55491956-B335-40E8-8D1E-15673B6A3402}</Project>
+      <Name>UserFormsDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\LabelMessages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>LabelMessages.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\ie.browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\firefox.browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\CSSMenuAdapter.browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Aurigma.GraphicsMill.lic" />
+    <None Include="fonts\fontello.eot" />
+    <None Include="fonts\fontello.ttf" />
+    <None Include="fonts\fontello.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\UserForms.csprojResolveAssemblyReference.cache" />
+    <Content Include="PaidTools.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ProfileAccessMessages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ProfileAccessMessages1.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63716</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

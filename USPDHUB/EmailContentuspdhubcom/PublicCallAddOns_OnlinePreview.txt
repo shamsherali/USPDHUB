@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<link href="http://www.uspdhub.com/css/wowzzy_general.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<table width="100%" border="0" align="center" style="padding:10px;  width: 700px;">
+			<tr>
+				<td>
+					<b>Call initiated from </b>: #AppName#  <br/>
+					<b>Call Directory Tab Used</b>: #TabName#<br/>
+					<b>Button Name</b>: #ItemTitle#<br/><br/>
+					<b>Message</b>: #Message#<br/><br/>
+					<b>Caller</b><br/>
+					<b>Name</b>: #Name#<br/>
+					<b>Phone</b>: #Phone#<br/>
+					<b>Email ID</b>: #EmailID#<br/><br/>					
+					<b>Time</b>: #Time#<br/>
+					<b>Location</b>: #Location#<br/><br/>
+					<b></b>#IMGSRC#<br/><br/><br/><br/>
+					
+					<br/>
+					<br/>
+				</td>
+			</tr> 
+			<br/><br/>
+		</table>
+	</body>
+</html>
+
+
+

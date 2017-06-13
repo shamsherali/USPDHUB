@@ -1,0 +1,240 @@
+*, body, html {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #cccccc;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: #000000;
+	box-sizing: border-box;
+}
+* {
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+}
+*::after, *::before {
+	box-sizing: border-box;
+}
+a, img {
+	border: none;
+	outline: 0;
+	text-decoration: none
+}
+artical, aside, audio, canvas, footer, nav, section, video {
+	margin: 0;
+	padding: 0
+}
+.clearfix {
+	clear: both
+}
+h1 {
+	color: #000;
+	font-size: 28px;
+	line-height: 35px;
+	font-weight: bold;
+}
+h2 {
+	color: #404041;
+	font-size: 3.375em;
+	padding: 10px 0;
+	margin: 5px 0;
+	font-weight: 300
+}
+.container {
+	width: 775px;
+	background: #FFF;
+	margin: 0 auto;
+	overflow: hidden;
+	height: auto;
+	margin-top: 15px;
+}
+header {
+	padding: 15px;
+}
+.logo {
+	float: left;
+	margin-left: 15px;
+}
+.reginal-events {
+	float: right;
+	margin: 25px 64px 0 0;
+}
+.strips-wrapper {
+	margin-top: 5px;
+	height: 17px;
+	width: 100%;
+}
+.strip1 {
+	background: #ff5700;
+	float: left;
+	width: 40%;
+	height: 17px;
+}
+.strip2 {
+	background: #201f1f;
+	float: left;
+	width: 12%;
+	height: 17px;
+	margin-left: 5px;
+}
+.strip3 {
+	background: #8f9092;
+	float: left;
+	width: 23%;
+	height: 17px;
+	margin-left: 5px;
+}
+.strip4 {
+	background: #5c8da9;
+	float: left;
+	width: 23%;
+	height: 17px;
+	margin-left: 5px;
+}
+.heading-section {
+	width: 100%;
+	padding: 0 20px;
+	margin-top: 30px;
+}
+.content-section {
+	width: 100%;
+	padding: 15px;
+	overflow: hidden;
+	height: auto;
+}
+.left-cont-section {
+	width: 50.32258064516129%;
+	float: left;
+}
+.left-list-section {
+}
+.left-list-section p {
+	margin-top: 15px;
+	padding-bottom: 10px;
+}
+.left-list-section ul {
+	margin-bottom: 30px;
+}
+.left-list-section ul li {
+	list-style-position: outside;
+	margin-left: 30px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+.venue-section {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.venue {
+	float: left;
+	width: 50%;
+}
+.venue p {
+	padding-bottom: 15px;
+}
+.venue-image {
+	float: right;
+	width: 47%;
+}
+.venue-image img {
+	width: 100%;
+}
+.devide-section {
+	float: left;
+	height: 485px;
+	width: 10px;
+	margin-left: 20px;
+	position: relative;
+}
+.devide-image {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: -45px;
+}
+.form-section {
+	float: left;
+	width: 42%;
+	margin-left: 20px;
+}
+#contact-area {
+}
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 471px;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #ccc;
+}
+#contact-area textarea {
+	height: 22px;
+}
+/*#contact-area textarea:focus, #contact-area input:focus {
+	border: 1px solid #900;
+}*/
+
+#contact-area input.submit-button {
+	width: 100px;
+	float: right;
+}
+label {
+	float: left;
+	margin-right: 10px;
+	width: 145px;
+	padding-top: 5px;
+	font-size: 13px;
+	color: #333;
+	font-weight: bold;
+	text-align: left;
+}
+label span {
+	float: right;
+	margin-top: 5px;
+	color: #bf0000;
+}
+#contact-area input, #contact-area textarea {
+	border: 1px solid #abadb3;
+	font-size: 13px;
+	margin: 0 0 10px;
+	padding: 5px;
+	width: 150px;
+}
+.button-area {
+	text-align: center;
+	margin-top: 10px;
+}
+#contact-area .firefox-button {
+	background-color: #82c43a;
+	background-image: -moz-linear-gradient(center top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+	border: medium none;
+	border-radius: 5px;
+	box-shadow: 0 -3px 0 rgba(0, 0, 0, 0.1) inset, 0 3px 0 rgba(0, 0, 0, 0.1);
+	color: white;
+	display: inline-block;
+	font: italic 14px/32px Georgia, serif;
+	margin: 2px;
+	padding: 0 15px 3px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+	vertical-align: middle;
+}
+#contact-area .firefox-button:hover {
+	background-image: -moz-linear-gradient(center top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.2));
+}
+#contact-area .firefox-button:active {
+	box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1) inset, 0 2px 0 rgba(0, 0, 0, 0.1);
+	position: relative;
+	top: 2px;
+}
+#contact-area .firefox-button {
+	background: #ff5800 none repeat scroll 0 0;
+}
+#contact-area button.firefox-button {
+	cursor: pointer;
+	margin: 0;
+}

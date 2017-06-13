@@ -1,0 +1,1561 @@
+﻿*
+{
+    margin: 0;
+}
+body
+{
+    background-image: url(../images/TVOuterImages/tile-body.jpg);
+}
+#outerwrapper
+{
+    background-image: url(../images/TVOuterImages/tile_wrapper.png);
+    background-repeat: repeat-x;
+    text-align: center;
+    width: 100%;
+    min-height: 225px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#wrapper
+{
+    text-align: center;
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#banner
+{
+    text-align: left;
+    width: 900px;
+    height: 184px;
+}
+#bannerright
+{
+    width: 544px;
+    height: 184px;
+    float: right;
+}
+#brand
+{
+    width: 351px;
+    height: 184px;
+    float: left;
+}
+#social
+{
+    text-align: right;
+    width: 544px;
+    height: 58px;
+    float: right;
+}
+#navspace
+{
+    width: 544px;
+    height: 29px;
+    float: right;
+}
+ul#nav
+{
+    width: 544px;
+    height: 29px;
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: block;
+}
+ul#nav li
+{
+    height: 29px;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+ul#nav a
+{
+    color: #b8b3b6;
+    font-size: 6px;
+    font-family: Arial, Helvetica, Geneva, SunSans-Regular, sans-serif;
+    line-height: 12px;
+    background-image: url(../images/TVOuterImages/navigation.png);
+    text-decoration: none;
+    text-align: left;
+    width: 81px;
+    height: 29px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+ul#nav a:link, ul#nav a:visited
+{
+    color: #b8b3b6;
+    background-image: url(../images/TVOuterImages/navigation.png);
+    background-repeat: no-repeat; /*background-position: 0 top; */
+    text-decoration: none;
+    text-indent: -9000px;
+    border-bottom-style: none;
+}
+ul#nav a:hover, ul#nav a:active
+{
+    background-image: url(../images/TVOuterImages/navigation.png);
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+    text-decoration: none;
+    text-indent: -9000px;
+    border-bottom-style: none;
+}
+
+
+ul#nav .home a:link, ul#nav .home a:visited
+{
+    background-position: 0 top;
+    text-indent: -9000px;
+    width: 81px;
+}
+ul#nav .home a:hover, ul#nav .home a.active
+{
+    background-position: 0 bottom;
+    text-indent: -9000px;
+    width: 81px;
+}
+ul#nav .contact a:link, ul#nav .contact a:visited
+{
+    background-position: -81px top;
+    text-indent: -9000px;
+    width: 139px;
+}
+ul#nav .contact a:hover, ul#nav .contact a.active
+{
+    background-position: -81px bottom;
+    text-indent: -9000px;
+    width: 139px;
+}
+ul#nav .pricing a:link, ul#nav .pricing a:visited
+{
+    background-position: -220px top;
+    text-indent: -9000px;
+    width: 106px;
+}
+ul#nav .pricing a:hover, ul#nav .pricing a.active
+{
+    background-position: -220px bottom;
+    text-indent: -9000px;
+    width: 106px;
+}
+ul#nav .about a:link, ul#nav .about a:visited
+{
+    background-position: -326px top;
+    text-indent: -9000px;
+    width: 121px;
+}
+ul#nav .about a:hover, ul#nav .about a.active
+{
+    background-position: -326px bottom;
+    text-indent: -9000px;
+    width: 121px;
+}
+ul#nav .login a:link, ul#nav .login a:visited
+{
+    background-position: -447px top;
+    text-indent: -9000px;
+    width: 83px;
+}
+ul#nav .login a:hover, ul#nav .login a.active
+{
+    background-position: -447px bottom;
+    text-indent: -9000px;
+    width: 83px;
+}
+#container
+{
+    text-align: left;
+    width: 960px;
+    margin-top: 35px;
+}
+
+#contentleft377
+{
+    width: 377px;
+    float: left;
+}
+#contentright473
+{
+    width: 473px;
+    float: right;
+}
+#contentleft500
+{
+    width: 500px;
+    float: left;
+}
+#contentleft564
+{
+    width: 564px;
+    float: left;
+}
+#contentright263
+{
+    width: 263px;
+    float: right;
+}
+#contentleft400
+{
+    width: 400px;
+    float: left;
+}
+#contentright150
+{
+    width: 150px;
+    float: right;
+}
+#clear564
+{
+    width: 564px;
+    height: 20px;
+    clear: both;
+}
+p
+{
+    color: #565656;
+    font-size: 14px;
+    font-family: Arial, Helvetica, Geneva, SunSans-Regular, sans-serif;
+    line-height: 17px;
+    margin-bottom: 12px;
+}
+.extendway
+{
+    font-size: 24px;
+    font-family: "Trebuchet MS" , Geneva, Arial, Helvetica, SunSans-Regular, sans-serif;
+    font-weight: bold;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+.ownapp
+{
+    font-size: 35px;
+    font-family: "Trebuchet MS" , Geneva, Arial, Helvetica, SunSans-Regular, sans-serif;
+    font-weight: bold;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin: 12px 0;
+    color: #db5634;
+}
+
+h1
+{
+    font-size: 35px;
+    font-family: "Trebuchet MS" , Geneva, Arial, Helvetica, SunSans-Regular, sans-serif;
+    font-weight: bold;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin: 12px 0;
+}
+h2
+{
+    color: #853035;
+    font-size: 20px;
+    font-family: Arial, Helvetica, Geneva, SunSans-Regular, sans-serif;
+    font-weight: bold;
+    line-height: 21px;
+    margin: 15px 0 3px;
+}
+td
+{
+}
+a:link, a:visited
+{
+    color: #565656;
+    text-decoration: underline;
+}
+a:hover
+{
+    color: #6bac53;
+    text-decoration: none;
+}
+a:active
+{
+    color: #256e92;
+    text-decoration: none;
+}
+#contentright150 p
+{
+    color: #f26522;
+}
+#contentright150 h3
+{
+    color: #f26522;
+    font-size: 18px;
+    font-family: "Trebuchet MS" , Geneva, Arial, Helvetica, SunSans-Regular, sans-serif;
+    font-weight: bold;
+}
+#contentright150 a:link, #contentright150 a:visited
+{
+    color: #f26522;
+    text-decoration: none;
+}
+#contentright150 a:hover, #contentright150 a:active
+{
+    color: #6bac53;
+    text-decoration: none;
+}
+#footer
+{
+    width: 899px;
+    height: 75px;
+    clear: both;
+    padding-top: 50px;
+}
+#footer p
+{
+    color: #7a7a7a;
+    font-size: 11px;
+    font-family: Arial, Helvetica, Geneva, SunSans-Regular, sans-serif;
+    line-height: 17px;
+    text-align: right;
+    margin-bottom: 12px;
+}
+#footer a:link, #footer a:visited
+{
+    color: #7a7a7a;
+    text-decoration: none;
+}
+#footer a:hover, #footer a:active
+{
+    color: #6bac53;
+    text-decoration: none;
+}
+/* *** Login *** */
+#login
+{
+    width: 500px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 99999;
+    top: 76px;
+    margin: 0 auto;
+    border: #d6dbcc solid 8px;
+    color: #565656;
+    font-size: 14px;
+    font-family: Arial, Helvetica, Geneva, SunSans-Regular, sans-serif;
+    line-height: 17px;
+}
+.clear15
+{
+    clear: both;
+    height: 15px;
+}
+.submit1
+{
+    margin: 0 auto;
+    text-align: center;
+}
+.formwrap
+{
+    float: left;
+    width: 500px;
+}
+.formwrap .label1
+{
+    color: #000000;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    padding: 4px 0 0 30px;
+    text-align: left;
+    width: 130px;
+}
+.formwrap .label2
+{
+    color: #565656;
+    font-size: 12px;
+    text-align: left;
+    float: left;
+    padding: 4px 0px 0px 0px;
+    width: 261px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.formwrap .label2 a
+{
+    color: #565656;
+    font-size: 12px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+.formwrap .label2 a:hover
+{
+    color: #565656;
+    font-size: 12px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+.txtfild1wrap
+{
+    float: left;
+    width: 275px;
+}
+.txtfild1
+{
+    border: solid 1px #bcc8d3;
+    float: left;
+    height: 24px;
+    outline: medium none;
+    padding: 2px;
+    width: 260px;
+    color: #666;
+    background-color: transparent;
+}
+.loginbg-mid
+{
+    font-family: Arial,Helvetica,sans-serif;
+    line-height: 20px;
+}
+.errormsg
+{
+    color: #FF0000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+    margin: 10px auto;
+    padding: 0 0 10px;
+    text-align: left;
+}
+/* *** Contct Us */
+#contactform
+{
+    width: 425px;
+    float: left;
+    padding: 25px;
+    margin-top: 10px;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.left
+{
+    text-align: left;
+}
+#contactform .clear50
+{
+    height: 100px;
+}
+#contactform .clear60
+{
+    height: 60px;
+}
+label
+{
+    float: left;
+    width: 135px;
+    font-size: 14px;
+}
+textarea
+{
+    width: 230px;
+    height: 60px;
+    margin-bottom: 5px;
+    border: solid 1px #bcc8d3;
+    padding: 2px;
+    font-size: 15px;
+    color: #666;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.inputtextarea
+{
+    width: 230px;
+    height: 24px;
+    line-height: 25px;
+    margin-bottom: 5px;
+    border: solid 1px #bcc8d3;
+    padding: 2px;
+    font-size: 15px;
+    color: #666;
+    background-color: transparent;
+}
+select
+{
+    width: 235px;
+    height: 30px;
+    margin-bottom: 5px;
+    border: solid 1px #bcc8d3;
+    padding: 2px;
+    font-size: 15px;
+    color: #666;
+    font-size: 14px;
+    background-color: transparent;
+}
+.boxes
+{
+    width: 1em;
+}
+#submitbutton
+{
+    margin-left: 125px;
+    margin-top: 5px;
+    width: 90px;
+    color: #fff;
+    background: #f15a29;
+    border: 0px;
+    height: 35px;
+    line-height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+br
+{
+    clear: left;
+}
+.h3
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.h3bold
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.h4
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 6px 0px;
+}
+/* *** Pricing *** */
+.features .title
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #000;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 75px;
+}
+.features .titlesmall
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: #853035;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: left;
+    margin-left: 75px;
+}
+.features ul
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #565656;
+    list-style: url(../images/TVOuterIMages/bullet.png);
+    margin-left: 60px;
+    text-align: left;
+    line-height: 30px;
+}
+
+
+
+#pricingcol2
+{
+    float: right;
+    width: 340px;
+}
+#pricingcol2 .phead
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin: 8px 0px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#pricingcol2 .bhead
+{
+    color: #853035;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: normal;
+    margin: 8px 0;
+    text-align: center;
+}
+#pricingcol2 .bcontent
+{
+    color: #853035;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    margin: 8px 0;
+    text-align: center;
+}
+#pricingcol2 .phead span
+{
+    font-size: 24px;
+    font-weight: bold;
+    color: #853035;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.not1
+{
+    float: left;
+    margin: 10px 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.not1 img
+{
+    margin: 0 auto;
+}
+.not1 span
+{
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    line-height: normal;
+    color: #535353;
+}
+/*.price
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #020000;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 10px 10px 50px;
+    line-height: 40px;
+}*/
+.ontimesetup
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #020000;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 10px 10px 50px;
+    line-height: 40px;
+}
+.ontimesetup span, .price span
+{
+    font-size: 12px;
+    color: #020000;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    bottom: 0;
+    line-height: 0;
+}
+.arrows
+{
+    margin: 0 auto;
+    width: 957px;
+    position: relative;
+    display: block;
+    top: -71px;
+    height: 259px;
+    z-index: -1;
+    background: url(../images/TVOuterIMages/arrow.png) no-repeat;
+}
+
+.navicon
+{
+    width: 540px;
+    overflow: hidden;
+    margin: 40px 0px 0px 15px;
+}
+
+.signup
+{
+    margin: 0px auto;
+    padding: 0px;
+    position: relative;
+    top: 30px;
+}
+.signup1
+{
+    margin: 32px 0px;
+}
+.not2
+{
+    width: 60px;
+    float: left;
+    margin: 8px 6px;
+}
+.not2 img
+{
+    float: left;
+    width: 35px;
+    height: 35px;
+    margin: 3px 10px;
+}
+.not2 span
+{
+    font-size: 14px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    line-height: normal;
+    color: #000;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.content_divisions
+{
+    width: 702px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.notifications
+{
+    width: 702px;
+    position: relative;
+}
+.notifications img
+{
+    float: left;
+}
+.width
+{
+    width: 400px;
+}
+.notifications_cont
+{
+    width: 470px;
+    float: right;
+    margin: 20px 0px 0px 0px;
+}
+.notifications p
+{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    color: #000;
+    margin: 8px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.notifications h3
+{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: normal;
+    color: #000;
+    margin: 8px 0px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.signuptxt
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #a3a3a3;
+    text-decoration: none;
+}
+.signuptxt a
+{
+    color: #a3a3a3;
+    text-decoration: none;
+}
+.signuptxt a:hover
+{
+    color: #a3a3a3;
+    text-decoration: none;
+}
+.notifications1
+{
+    width: 702px;
+    position: relative;
+}
+.notifications1 img
+{
+    float: right;
+}
+.notifications_cont1
+{
+    width: 470px;
+    float: left;
+    margin: 20px 0px 0px 0px;
+}
+.notifications1 p
+{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    color: #000;
+    margin: 8px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.notifications1 h3
+{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: normal;
+    color: #000;
+    margin: 8px 0px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.notifications11
+{
+    width: 702px;
+    position: relative;
+}
+.notifications11 img
+{
+    float: right;
+}
+.notifications_cont11
+{
+    width: 400px;
+    float: left;
+    margin: 20px 0px 0px 0px;
+}
+.notifications11 p
+{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    color: #000;
+    margin: 8px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.notifications11 h3
+{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: normal;
+    color: #000;
+    margin: 8px 0px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.notifications22
+{
+    width: 702px;
+    position: relative;
+}
+.notifications22 img
+{
+    float: left;
+}
+.notifications_cont22
+{
+    width: 410px;
+    float: left;
+    margin: 20px 0px 0px 0px;
+}
+.notifications22 p
+{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    color: #000;
+    margin: 8px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.notifications22 h3
+{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: normal;
+    color: #000;
+    margin: 8px 0px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* *** Signup *** */
+#signupform
+{
+    width: 500px;
+    float: left;
+    border: #d3d3d3 solid 1px;
+    padding: 5px;
+    margin-top: 10px;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+#signupform .label
+{
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+    float: left;
+    padding: 4px 5px 0px 3px;
+    width: 220px;
+    text-align: left;
+}
+.txtfildwrap
+{
+    float: right;
+    width: 270px;
+}
+.signuptextarea
+{
+    width: 235px;
+    height: 24px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    padding: 2px;
+    font-size: 15px;
+    color: #666;
+    border: solid 1px #bcc8d3;
+    background-color: transparent;
+}
+.txtarea
+{
+    width: 235px;
+}
+.signupbtn
+{
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 236px;
+}
+select
+{
+    width: 235px;
+    height: 30px;
+    margin-bottom: 5px;
+    border: solid 1px #bcc8d3;
+    padding: 2px;
+    font-size: 15px;
+    background-color: transparent;
+}
+br
+{
+    clear: left;
+}
+#registercontent
+{
+    float: right;
+    width: 280px;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.phone
+{
+    text-align: Center;
+    padding-left: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.parent_autocompletionListElement
+{
+    margin: 0px !important;
+    background-color: inherit;
+    color: windowtext;
+    border: buttonshadow;
+    border-width: 1px;
+    border-style: solid;
+    cursor: 'default';
+    overflow: auto;
+    text-align: left;
+    list-style-type: none;
+    position: absolute;
+    padding: 0px;
+}
+.SearchPlace
+{
+    top: 270px;
+    bottom: 100px;
+    position: absolute;
+    left: 400px;
+}
+.not-heading
+{
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 2px;
+    color: #000;
+    font-family: Arial;
+}
+
+.not1
+{
+    float: left;
+    margin-right: 0px;
+    text-align: center;
+}
+.not-heading a
+{
+    text-decoration: none;
+}
+.not1 img
+{
+}
+.not1 span
+{
+    font-size: 12px;
+    font-weight: normal;
+    font-family: Arial, helvetica, Sans-Serif;
+    padding-top: 10px;
+    line-height: normal;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+}
+.clear10
+{
+    clear: both;
+    height: 10px;
+}
+#learnmore
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #853035;
+    font-size: 30px;
+    font-family: Arial, Helvetica, Geneva, SunSans-Regular, sans-serif;
+    font-weight: bold;
+    line-height: 21px;
+}
+#learnmore img
+{
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: -6px;
+}
+#learnmore img a
+{
+    padding: 0px;
+    margin: 0px;
+}
+#learnmore img a:hover
+{
+    padding: 0px;
+    margin: 0px;
+}
+#learnmore a
+{
+    color: #565656;
+    font-size: 30px;
+    font-family: Arial, Helvetica, Geneva, SunSans-Regular, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+#learnmore a:hover
+{
+    color: #00b7b7;
+}
+
+#learnmore a.myvideo
+{
+    display: block;
+    width: 280px;
+    height: 210px;
+    background-image: url(../images/VideoImages/twovie_def.png);
+    text-align: center;
+    margin: 23px auto;
+}
+
+#learnmore a.myvideo:hover
+{
+    background-image: url(../images/VideoImages/twovie_play.png);
+}
+
+#col285fr
+{
+    text-align: center;
+    width: 300px;
+    float: left;
+    margin: 65px 0px 0px 43px;
+}
+#col285fl
+{
+    text-align: center;
+    width: 285px;
+    float: left;
+}
+#col520fl
+{
+    width: 520px;
+    float: left;
+}
+#contentright500
+{
+    width: 500px;
+    float: right;
+}
+#col430fl
+{
+    width: 430px;
+    float: left;
+}
+#innerwrapper
+{
+    text-align: left;
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.publishtext
+{
+    color: #3c3c3c;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+}
+.basicalign
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+.plan-features
+{
+    margin-bottom: 15px;
+    line-height: 2;
+    font-size: 16px;
+    color: #999;
+    text-align: center;
+    padding-left: 20px;
+}
+.plan-features li
+{
+    list-style-type: none;
+    text-align: left;
+    font-family: Verdana, Geneva, sans-serif;
+    position: relative;
+    color: #181819;
+    font-size: 14px;
+}
+.plan-features li:before
+{
+    content: "✔";
+    position: absolute;
+    top: 0px;
+    left: -13px;
+}
+
+/* -----------------------------------------*/
+/* Media Screen for Mobile Devices @ 667px */
+/* -----------------------------------------*/
+
+@media screen and (max-width:667px)
+{
+
+    *
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    #outerwrapper
+    {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    #innerwrapper
+    {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    #wrapper
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #banner
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #bannerright
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #brand
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #brand img
+    {
+        max-width: 100%;
+        width: 60%;
+        height: auto;
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+
+
+    #social
+    {
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+
+    #navspace
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    ul#nav
+    {
+        width: 100%;
+        height: auto;
+        list-style-type: none;
+        display: inline-block;
+        text-align: center;
+    }
+
+    ul#nav li
+    {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    ul#nav a
+    {
+        color: #b8b3b6;
+        font-size: 100%;
+        line-height: 30px;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        display: inline-block;
+    }
+
+
+    #container
+    {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* #container p{
+    width: 90%;
+    text-align: center;
+    font-size: 140%;
+    margin:5%;
+    line-height: 30px;
+    padding: 0;
+    } */
+
+    .ownapp
+    {
+        font-size: 140%;
+        line-height: 30px;
+        margin: 5;
+        color: #db5634;
+    }
+
+
+    #contentleft564
+    {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+
+    .extendway
+    {
+        width: 90%;
+        font-size: 125%;
+        text-align: center;
+        line-height: 30px;
+        text-transform: uppercase;
+        margin: 2% 5%;
+    }
+
+    #contentleft564
+    {
+        width: 90%;
+        font-size: 90%;
+        text-align: center;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin: 0 5%;
+    }
+
+
+    #contentleft564 b
+    {
+        width: 90%;
+        font-size: 90%;
+        text-align: center;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin: 0 5%;
+    }
+
+
+    .clear10
+    {
+        width: 100%;
+        height: auto;
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+
+
+    .plan-features li
+    {
+        color: #181819;
+        font-size: 80%;
+    }
+
+    .not-heading
+    {
+        width: 90%;
+        text-align: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .not1
+    {
+        width: 25%;
+    }
+
+    #contentright263
+    {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .pricingplan-page
+    {
+        width: 100%;
+        height: auto;
+    }
+
+
+}
+
+/* Media Screen for Tab Devices @ 668px to 996px */
+@media screen and (min-width:668px and max-width:996px)
+{
+    *
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    #outerwrapper
+    {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    #innerwrapper
+    {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    #wrapper
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #banner
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #bannerright
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #brand
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #brand img
+    {
+        max-width: 100%;
+        width: 60%;
+        height: auto;
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+
+
+    #social
+    {
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+
+    #navspace
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    ul#nav
+    {
+        width: 100%;
+        height: auto;
+        list-style-type: none;
+        display: inline-block;
+        text-align: center;
+    }
+
+    ul#nav li
+    {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    ul#nav a
+    {
+        color: #b8b3b6;
+        font-size: 100%;
+        line-height: 30px;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        display: inline-block;
+    }
+
+
+    #container
+    {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* #container p{
+    width: 90%;
+    text-align: center;
+    font-size: 140%;
+    margin:5%;
+    line-height: 30px;
+    padding: 0;
+    } */
+
+    .ownapp
+    {
+        font-size: 140%;
+        line-height: 30px;
+        margin: 5;
+        color: #db5634;
+    }
+
+
+    #contentleft564
+    {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+
+    .extendway
+    {
+        width: 90%;
+        font-size: 125%;
+        text-align: center;
+        line-height: 30px;
+        text-transform: uppercase;
+        margin: 2% 5%;
+    }
+
+    #contentleft564
+    {
+        width: 90%;
+        font-size: 90%;
+        text-align: center;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin: 0 5%;
+    }
+
+
+    #contentleft564 b
+    {
+        width: 90%;
+        font-size: 90%;
+        text-align: center;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin: 0 5%;
+    }
+
+
+    .clear10
+    {
+        width: 100%;
+        height: auto;
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+
+
+    .plan-features li
+    {
+        color: #181819;
+        font-size: 80%;
+    }
+
+    .not-heading
+    {
+        width: 90%;
+        text-align: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .not1
+    {
+        width: 25%;
+    }
+
+    #contentright263
+    {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .pricingplan-page
+    {
+        width: 100%;
+        height: auto;
+    }
+}

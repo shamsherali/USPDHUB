@@ -1,0 +1,4 @@
+﻿<b>Profile Details#</b>
+---------------------------
+MemberID: #MemberID#
+Profile Name: #ProfileName#

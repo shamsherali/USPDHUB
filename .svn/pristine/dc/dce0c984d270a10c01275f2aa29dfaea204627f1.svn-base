@@ -1,0 +1,94 @@
+﻿body { background-color:White;}
+.popuptable { border:1px solid #a8ce5e; background-color:#FFFFFF; padding-top:3px;padding-bottom:5px;padding-left:15px;padding-right:5px;
+}
+.popuptable .header{  color:Green; font-family:Arial; font-size:16px; font-weight:bold; padding-bottom:3px;
+}
+.popuplabel{ font-family:Arial; font-size:12px; font-weight:bold; color:#000000}
+
+
+.help-popup { border:2px solid #E29721; background-color:#B8EAFF;}
+.help-popup tr.helpheader{ background-color:#333333;  color:Green; font-family:Arial; font-size:16px; font-weight:bold; padding-bottom:3px; height:25px; vertical-align:middle;}
+.helplabel{ font-family:Arial; font-size:13px; font-weight:bold; color:#FFFFFF; padding-left:5px;}
+.helplist { line-height:22px; color:#333333;}
+.gotomenu { font-weight:bold; color:#EA9604!important; font-size:13px; text-align:center;}
+.gotomenu a{ color:#EA9604!important; text-decoration:underline;}
+.aligncenter { text-align:center; margin-left:25px; font-weight:bold;}
+
+
+.red{color:Red;}
+.smallpopup{font-family:Arial; font-size:12px; background-color:#ffffff; border:1px solid #FB7107;}
+.link{font-family:verdana; font-size:12px; color:#FB7101; font-weight:bold;}
+.link {color:#FB7101; text-decoration:none;}
+.link:hover{color:green;}
+.processing {font-family:arial; font-size:14px; color:Green; font-weight:bold; padding-left:5px;}
+.popuptablecheckbox { border:1px solid #889966; background-color:#FFFEF6; padding:3px 5px 5px 15px;
+}
+
+/************ Styles for popup ****************/
+
+/*********** Start Template 1: Green  *************************/
+.popupbg{ margin:5px; background-color:#ffffff; background-image:none; }
+.popup-tbl1 { border:10px solid #939c10; background-color:#ffffff; width:100%;}
+.popup-tbl { background-color:#ffffff; width:100%;}
+.popup-tbl td { padding:5px; padding-right:0px; font-size:13px; color:#333333; }
+.popup-tbl td input { background-color:#f4fde3; border:1px solid #a8ce5e; padding:2px; font-size:12px;}
+.popup-tbl td input.button { background:url(../images/btn_img.gif) repeat-x; padding:4px 10px 4px 10px; border:1px solid #333333; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#ffffff;}
+.popup-tbl .header{  color:Green; font-family:Arial; font-size:16px; font-weight:bold; padding-bottom:3px;
+}
+.modalpopup { border:1px solid #a8ce5e; background-color:#FFFFFF; padding-top:3px;padding-bottom:5px;padding-left:15px;padding-right:5px;
+}
+.modalpopup .header{  color:Green; font-family:Arial; font-size:16px; font-weight:bold; padding-bottom:3px;
+}
+.modalpopup td { padding:5px; padding-right:0px; font-size:13px; color:#333333; }
+.innermodal td {text-align: left;}
+/***********End Template 1: Green  *************************/
+
+
+
+/*********** Start Template 2: blue  *************************
+.popupbg{ margin:5px; background-color:#ffffff; background-image:none; }
+.popup-tbl { border:10px solid #1c799f; background-color:#ffffff; width:100%;}
+.popup-tbl td { padding:5px; font-size:13px; color:#333333; }
+.popup-tbl td input { background-color:#E7F8FF; border:1px solid #55CDFF; padding:2px; font-size:12px;}
+.popup-tbl td input.button { background:url(../images/btn_img.gif) repeat-x; padding:4px 10px 4px 10px; border:1px solid #333333; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#ffffff;}
+.popup-tbl .header{  color:Green; font-family:Arial; font-size:16px; font-weight:bold; padding-bottom:3px;
+}
+
+/***********End Template 2: blue  *************************/
+
+
+/*********** Start Template 3: dgreen  *************************
+.popupbg{ margin:5px; background-color:#ffffff; background-image:none; }
+.popup-tbl { border:10px solid #817228; background-color:#ffffff; width:100%;}
+.popup-tbl td { padding:5px; font-size:13px; color:#333333; }
+.popup-tbl td input { background-color:#FFF8D7; border:1px solid #FFF1AE; padding:2px; font-size:12px;}
+.popup-tbl td input.button { background:url(../images/btn_img.gif) repeat-x; padding:4px 10px 4px 10px; border:1px solid #333333; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#ffffff;}
+.popup-tbl .header{  color:Green; font-family:Arial; font-size:16px; font-weight:bold; padding-bottom:3px;
+}
+
+/***********End Template 3: dgreen  *************************/
+
+
+/*********** Start Template 4: pink  *************************
+.popupbg{ margin:5px; background-color:#ffffff; background-image:none; }
+.popup-tbl { border:10px solid #d02780; background-color:#ffffff; width:100%;}
+.popup-tbl td { padding:5px; font-size:13px; color:#333333; }
+.popup-tbl td input { background-color:#FFE4F2; border:1px solid #FF5BB1; padding:2px; font-size:12px;}
+.popup-tbl td input.button { background:url(../images/btn_img.gif) repeat-x; padding:4px 10px 4px 10px; border:1px solid #333333; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#ffffff;}
+.popup-tbl .header{  color:Green; font-family:Arial; font-size:16px; font-weight:bold; padding-bottom:3px;
+}
+
+/***********End Template 4: pink  *************************/
+
+
+
+/*********** Start Template 5: yellow  *************************
+.popupbg{ margin:5px; background-color:#ffffff; background-image:none; }
+.popup-tbl { border:10px solid #d0ad18; background-color:#ffffff; width:100%;}
+.popup-tbl td { padding:5px; font-size:13px; color:#333333; }
+.popup-tbl td input { background-color:#FFF7D6; border:1px solid #FEEB9B; padding:2px; font-size:12px;}
+.popup-tbl td input.button { background:url(../images/btn_img.gif) repeat-x; padding:4px 10px 4px 10px; border:1px solid #333333; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#ffffff;}
+.popup-tbl .header{  color:Green; font-family:Arial; font-size:16px; font-weight:bold; padding-bottom:3px;
+}
+
+/***********End Template 5: yellow *************************/

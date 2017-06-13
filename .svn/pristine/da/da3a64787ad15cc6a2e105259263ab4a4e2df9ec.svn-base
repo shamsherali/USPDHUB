@@ -1,0 +1,62 @@
+﻿<table border="0" style="font-size: 14px; text-align:left; line-height: 20px;">
+	<colgroup>
+	<col width="70px" />
+	<col width="*" />
+	</colgroup>
+	<tr>
+		<td colspan="2" style="font-weight: bold;">
+			##AdditionalDescTop##
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="font-bold: bold; font-size: 14px; padding-top: 10px;">
+			Registration Information:
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Name:
+		</td>
+		<td>
+			##RegisterName##
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Email:
+		</td>
+		<td>
+			##RegisterEmail##
+		</td>
+	</tr>
+	##RegisterPhone##
+	<tr>
+		<td>
+			Date:
+		</td>
+		<td>
+			##WebnairDate##
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Time: 
+		</td>
+		<td>
+			##WebnairTime## ##TimeZone##
+		</td>
+	</tr>
+	<tr>
+		<td style="vertical-align:top;">
+			Location: 
+		</td>
+		<td>
+			##WebnairLocation##
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			##AdditionalDesc##
+		</td>
+	</tr>
+</table>

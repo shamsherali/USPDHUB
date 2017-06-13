@@ -1,0 +1,14 @@
+﻿This email has been sent because the administrator of your USPDhub has invited you to become an admin user. With this information you can login into the all the websites(USPDhub, inSchoolHub, TwoVie) admin panel.
+
+<b>Login Details</b>
+--------------------
+Note: The following user name is your permanent login name:
+
+<b>Username</b>: #Email#
+
+<b>Your Assigned Password</b>: #Password#
+
+
+Thank you,
+
+The USPDhub<sup style="font-size: 14px;">&reg;</sup> Team

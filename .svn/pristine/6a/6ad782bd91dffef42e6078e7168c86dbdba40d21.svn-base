@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <PublishUrlHistory>E:\isapublish\|publish\</PublishUrlHistory>
+    <InstallUrlHistory>http://www.uspdhub.com/Upload/ISAWizard/|http://uspdhub.com/Upload/ISAWizard/|http://staging.uspdhub.com/Upload/ISAWizard/|http://staging.uspdhub.com/Upload/ISA Wizard/|http://staging.uspdhub.com/Upload/VersionCheck/new/</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory>http://staging.uspdhub.com/Upload/ISAWizard/|http://staging.uspdhub.com/Upload/VersionCheck/new/</UpdateUrlHistory>
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+</Project>

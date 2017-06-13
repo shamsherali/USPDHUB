@@ -1,0 +1,39 @@
+﻿<table width='100%' cellpadding='0' cellspacing='2' style='font-family: Verdana;
+    font-size: 14px;'>
+    <tr>
+        <td align='center'>
+            <span style='font-size: 21px; margin: 0; padding: 0;'>#SURVEY_NAME#</span>
+        </td>
+    </tr>
+    <tr>
+        <td align='center'>
+            <span style='font-size: 18px; font-weight: bold; margin: 0; padding: 0;'><span style='color: Gray;
+                margin: 0; padding: 0;'>#QUESTION_NO#.</span> #QUESTION_NAME#</span>
+        </td>
+    </tr>
+    <tr>
+        <td align='center'>
+            <span style='color: Gray; font-weight: bold; margin: 0; padding: 0;'>#ANSWER_COUNT#</span>
+        </td>
+    </tr>
+    <tr>
+        <td align='center'>
+            #REPORT_IMAGE#
+        </td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td align='center'>
+            #ANSWERS#
+        </td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;
+        </td>
+    </tr>
+</table>

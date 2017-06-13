@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9078994-A64C-42F8-968B-BDAFF63A5D86}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CopyPaste_POC</RootNamespace>
+    <AssemblyName>CopyPaste_POC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ajax">
+      <HintPath>..\..\USPDhub\ThirdParty\Ajax.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\USPDhub\ThirdParty\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AJAXExtensionsToolbox">
+      <HintPath>..\..\USPDhub\ThirdParty\AJAXExtensionsToolbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.GraphicsMill">
+      <HintPath>D:\ThirdParty\Aurigma.GraphicsMill.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.GraphicsMill.AjaxControls, Version=7.2.26.0, Culture=neutral, PublicKeyToken=f4bbbf243f314012, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\ThirdParty\Aurigma.GraphicsMill.AjaxControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.GraphicsMill.AjaxControls.VectorObjects, Version=7.2.26.0, Culture=neutral, PublicKeyToken=f4bbbf243f314012, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\ThirdParty\Aurigma.GraphicsMill.AjaxControls.VectorObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.GraphicsMill.WinControls, Version=7.2.26.0, Culture=neutral, PublicKeyToken=f4bbbf243f314012, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\ThirdParty\Aurigma.GraphicsMill.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.GraphicsMill.WinControls.VectorObjects, Version=7.2.26.0, Culture=neutral, PublicKeyToken=f4bbbf243f314012, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\ThirdParty\Aurigma.GraphicsMill.WinControls.VectorObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Aurigma.Svg, Version=7.2.26.0, Culture=neutral, PublicKeyToken=f4bbbf243f314012, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\ThirdParty\Aurigma.Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>C:\Users\balajimada\Documents\Visual Studio 2010\Projects\PDF_DocToText\PDF_DocToText\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Neodynamic.WebControls.ImageDraw">
+      <HintPath>..\..\USPDhub\ThirdParty\Neodynamic.WebControls.ImageDraw.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Doc">
+      <HintPath>C:\Program Files\e-iceblue\Spire.Office\Bin\NET4.0\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License">
+      <HintPath>C:\Program Files\e-iceblue\Spire.Office\Bin\NET4.0\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf">
+      <HintPath>C:\Program Files\e-iceblue\Spire.Office\Bin\NET4.0\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.Design">
+      <HintPath>..\..\USPDhub\ThirdParty\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\USPDhub\ThirdParty\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="wnvhtmlconvert">
+      <HintPath>E:\USPDhub\USPDhub\ThirdParty\wnvhtmlconvert.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Ajax.dll" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\AJAXExtensionsToolbox.dll" />
+    <Content Include="bin\Aurigma.GraphicsMill.AjaxControls.dll" />
+    <Content Include="bin\Aurigma.GraphicsMill.AjaxControls.VectorObjects.dll" />
+    <Content Include="bin\Aurigma.GraphicsMill.WinControls.dll" />
+    <Content Include="bin\Aurigma.GraphicsMill.WinControls.VectorObjects.dll" />
+    <Content Include="bin\Aurigma.Svg.dll" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\license.elic.xml" />
+    <Content Include="bin\Neodynamic.WebControls.ImageDraw.dll" />
+    <Content Include="bin\Telerik.Web.Design.dll" />
+    <Content Include="bin\Telerik.Web.UI.dll" />
+    <Content Include="Bulletin_Imagegallery.aspx" />
+    <Content Include="demo.aspx" />
+    <Content Include="Editor.aspx" />
+    <Content Include="flyers\cpicker\bg.png" />
+    <Content Include="flyers\cpicker\hue.png" />
+    <Content Include="flyers\cpicker\jquery.modcoder.excolor.js" />
+    <Content Include="flyers\cpicker\ok.png" />
+    <Content Include="flyers\cpicker\sel.gif" />
+    <Content Include="flyers\cpicker\shbg.png" />
+    <Content Include="flyers\cpicker\slider.gif" />
+    <Content Include="flyers\cpicker\transp0.gif" />
+    <Content Include="flyers\farbtastic.js" />
+    <Content Include="flyers\FTB-FreeTextBox.js" />
+    <Content Include="flyers\jquery-1.6.1.min.js" />
+    <Content Include="flyers\jquery-1.7.2.js" />
+    <Content Include="flyers\jquery-ui-1.8.21.custom.js" />
+    <Content Include="flyers\jquery.easyui.min.js" />
+    <Content Include="flyers\jquery.js" />
+    <Content Include="flyers\jquery.ui.core.js" />
+    <Content Include="flyers\jquery.ui.draggable.js" />
+    <Content Include="flyers\jquery.ui.droppable.js" />
+    <Content Include="flyers\jquery.ui.mouse.js" />
+    <Content Include="flyers\jquery.ui.sortable.js" />
+    <Content Include="flyers\jquery.ui.widget.js" />
+    <Content Include="HTMLPage1.htm" />
+    <Content Include="images\addimg.png" />
+    <Content Include="images\addnewimg.png" />
+    <Content Include="images\addnewtext.png" />
+    <Content Include="images\AddPaypalbtn.png" />
+    <Content Include="images\button_bg.gif" />
+    <Content Include="images\Dashboard\delete1.gif" />
+    <Content Include="images\Dashboard\ezSmartAjax.gif" />
+    <Content Include="images\Dashboard\upload.gif" />
+    <Content Include="images\deleteimg.png" />
+    <Content Include="images\EditImage.png" />
+    <Content Include="images\editimg.png" />
+    <Content Include="images\editpaypalbtn.png" />
+    <Content Include="images\EditText.png" />
+    <Content Include="images\popup_ajax-loader.gif" />
+    <Content Include="images\popup_close.gif" />
+    <Content Include="images\preview.png" />
+    <Content Include="images\Remove.png" />
+    <Content Include="images\x.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="Scripts\accordion\jquery-1.9.1.js" />
+    <Content Include="Scripts\accordion\jquery.ui.accordion.js" />
+    <Content Include="Scripts\accordion\jquery.ui.core.js" />
+    <Content Include="Scripts\accordion\jquery.ui.widget.js" />
+    <Content Include="Scripts\AdapterUtils.js" />
+    <Content Include="Scripts\colorPicker.js" />
+    <Content Include="Scripts\CSScriptLib.js" />
+    <Content Include="Scripts\dashboardstyle.js" />
+    <Content Include="Scripts\effects.js" />
+    <Content Include="Scripts\fadeslideshow.js" />
+    <Content Include="Scripts\float-div.js" />
+    <Content Include="Scripts\float.js" />
+    <Content Include="Scripts\fluidvids.js" />
+    <Content Include="Scripts\fluidvids.min.js" />
+    <Content Include="Scripts\flyers\cpicker\bg.png" />
+    <Content Include="Scripts\flyers\cpicker\hue.png" />
+    <Content Include="Scripts\flyers\cpicker\jquery.modcoder.excolor.js" />
+    <Content Include="Scripts\flyers\cpicker\ok.png" />
+    <Content Include="Scripts\flyers\cpicker\sel.gif" />
+    <Content Include="Scripts\flyers\cpicker\shbg.png" />
+    <Content Include="Scripts\flyers\cpicker\slider.gif" />
+    <Content Include="Scripts\flyers\cpicker\transp0.gif" />
+    <Content Include="Scripts\flyers\farbtastic.js" />
+    <Content Include="Scripts\flyers\FTB-FreeTextBox.js" />
+    <Content Include="Scripts\flyers\jquery-1.6.1.min.js" />
+    <Content Include="Scripts\flyers\jquery-1.7.2.js" />
+    <Content Include="Scripts\flyers\jquery-ui-1.8.21.custom.js" />
+    <Content Include="Scripts\flyers\jquery.easyui.min.js" />
+    <Content Include="Scripts\flyers\jquery.js" />
+    <Content Include="Scripts\flyers\jquery.ui.core.js" />
+    <Content Include="Scripts\flyers\jquery.ui.draggable.js" />
+    <Content Include="Scripts\flyers\jquery.ui.droppable.js" />
+    <Content Include="Scripts\flyers\jquery.ui.mouse.js" />
+    <Content Include="Scripts\flyers\jquery.ui.sortable.js" />
+    <Content Include="Scripts\flyers\jquery.ui.widget.js" />
+    <Content Include="Scripts\hs.png" />
+    <Content Include="Scripts\images\close.jpg" />
+    <Content Include="Scripts\images\crosshairs.png" />
+    <Content Include="Scripts\images\h.png" />
+    <Content Include="Scripts\images\layout_sprite.png" />
+    <Content Include="Scripts\images\lightbox-blank.gif" />
+    <Content Include="Scripts\images\lightbox-btn-close.gif" />
+    <Content Include="Scripts\images\lightbox-btn-next.gif" />
+    <Content Include="Scripts\images\lightbox-btn-prev.gif" />
+    <Content Include="Scripts\images\lightbox-ico-loading.gif" />
+    <Content Include="Scripts\images\loading.gif" />
+    <Content Include="Scripts\images\menu-button-arrow-disabled.png" />
+    <Content Include="Scripts\images\menu-button-arrow.png" />
+    <Content Include="Scripts\images\nocolor.jpg" />
+    <Content Include="Scripts\images\position.png" />
+    <Content Include="Scripts\images\split-button-arrow-active.png" />
+    <Content Include="Scripts\images\split-button-arrow-disabled.png" />
+    <Content Include="Scripts\images\split-button-arrow-focus.png" />
+    <Content Include="Scripts\images\split-button-arrow-hover.png" />
+    <Content Include="Scripts\images\sv.png" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\jquery-bubble-popup-v3.min.js" />
+    <Content Include="Scripts\jquery-latest.pack.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.ad-gallery.js" />
+    <Content Include="Scripts\jquery.ad-gallery.min.js" />
+    <Content Include="Scripts\jquery.contentcarousel.js" />
+    <Content Include="Scripts\jquery.datepicker.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\jquery.Jcrop.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.lightbox-0.5.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.textarea-expander.js" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\bottom-left.png" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\bottom-middle.png" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\bottom-right.png" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\ie\bottom-left.gif" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\ie\bottom-middle.gif" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\ie\bottom-right.gif" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\ie\middle-left.gif" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\ie\middle-right.gif" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\ie\tail-bottom.gif" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\ie\tail-left.gif" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\ie\tail-right.gif" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\ie\tail-top.gif" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\ie\top-left.gif" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\ie\top-middle.gif" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\ie\top-right.gif" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\middle-left.png" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\middle-right.png" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\tail-bottom.png" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\tail-left.png" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\tail-right.png" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\tail-top.png" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\top-left.png" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\top-middle.png" />
+    <Content Include="Scripts\jquerybubblepopup-themes\all-blue\top-right.png" />
+    <Content Include="Scripts\jquerybubblepopup-themes\bubble-popup-themes.png" />
+    <Content Include="Scripts\jsapi.js" />
+    <Content Include="Scripts\jscolor.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\MenuAdapter.js" />
+    <Content Include="Scripts\ModalPopups.js" />
+    <Content Include="Scripts\overlib_mini.js" />
+    <Content Include="Scripts\prototype.js" />
+    <Content Include="Scripts\radio.js" />
+    <Content Include="Scripts\resize\animation-min.js" />
+    <Content Include="Scripts\resize\button-min.js" />
+    <Content Include="Scripts\resize\button.css" />
+    <Content Include="Scripts\resize\dom-min.js" />
+    <Content Include="Scripts\resize\dragdrop-min.js" />
+    <Content Include="Scripts\resize\element-min.js" />
+    <Content Include="Scripts\resize\event-min.js" />
+    <Content Include="Scripts\resize\resize-min.js" />
+    <Content Include="Scripts\resize\resize.css" />
+    <Content Include="Scripts\resize\yuiloader-min.js" />
+    <Content Include="Scripts\rssfeeds.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\script1.js" />
+    <Content Include="Scripts\scriptaculous.js" />
+    <Content Include="Scripts\scrollbar.js" />
+    <Content Include="Scripts\setting_en.js" />
+    <Content Include="Scripts\Setting_enref.js" />
+    <Content Include="Scripts\window.js" />
+    <Content Include="Scripts\wowslider.js" />
+    <Content Include="Scripts\yahoo.color.js" />
+    <Content Include="Test.aspx" />
+    <Content Include="TestEditor.aspx" />
+    <Content Include="UCEditor.ascx" />
+    <Content Include="UCPayPalEditor.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bulletin_Imagegallery.aspx.cs">
+      <DependentUpon>Bulletin_Imagegallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bulletin_Imagegallery.aspx.designer.cs">
+      <DependentUpon>Bulletin_Imagegallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionManager.cs" />
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="demo.aspx.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demo.aspx.designer.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor.aspx.cs">
+      <DependentUpon>Editor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editor.aspx.designer.cs">
+      <DependentUpon>Editor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptDecrypt.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestEditor.aspx.cs">
+      <DependentUpon>TestEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestEditor.aspx.designer.cs">
+      <DependentUpon>TestEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UCEditor.ascx.cs">
+      <DependentUpon>UCEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCEditor.ascx.designer.cs">
+      <DependentUpon>UCEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCPayPalEditor.ascx.cs">
+      <DependentUpon>UCPayPalEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCPayPalEditor.ascx.designer.cs">
+      <DependentUpon>UCPayPalEditor.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UploadImages.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Aurigma.GraphicsMill.lic" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51884</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

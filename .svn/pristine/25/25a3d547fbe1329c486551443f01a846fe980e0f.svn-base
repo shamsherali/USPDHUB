@@ -1,0 +1,80 @@
+﻿body
+{
+}
+P
+{
+    margin-bottom: 0.08in;
+    direction: ltr;
+    color: #000000;
+    widows: 2;
+    orphans: 2;
+}
+P.western
+{
+    font-family: "Tahoma" , serif;
+    font-size: 8pt;
+}
+P.cjk
+{
+    font-size: 8pt;
+}
+P.ctl
+{
+    font-size: 12pt;
+}
+H1
+{
+    margin-top: 0in;
+    margin-bottom: 0in;
+    direction: ltr;
+    color: #ffffff;
+    text-align: center;
+    widows: 2;
+    orphans: 2;
+    page-break-after: auto;
+    text-transform: uppercase;
+}
+H1.western
+{
+    font-family: "Tahoma" , serif;
+    font-size: 12pt;
+}
+H1.cjk
+{
+    font-family: "Times New Roman";
+    font-size: 12pt;
+}
+H1.ctl
+{
+    font-family: "Times New Roman";
+    font-size: 12pt;
+    font-weight: normal;
+}
+H2
+{
+    margin-top: 0in;
+    margin-bottom: 0in;
+    direction: ltr;
+    color: #000000;
+    text-align: center;
+    widows: 2;
+    orphans: 2;
+    page-break-after: auto;
+    text-transform: uppercase;
+}
+H2.western
+{
+    font-family: "Tahoma" , serif;
+    font-size: 8pt;
+}
+H2.cjk
+{
+    font-family: "Times New Roman";
+    font-size: 8pt;
+}
+H2.ctl
+{
+    font-family: "Times New Roman";
+    font-size: 8pt;
+    font-weight: normal;
+}

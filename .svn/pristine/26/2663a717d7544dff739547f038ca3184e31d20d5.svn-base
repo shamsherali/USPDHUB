@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="user-scalable=no;" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>App Settings</title>
+    <!-- Bootstrap -->
+</head>
+<body>
+    <style>
+        .shd
+        {
+            font-size: 100%;
+            font-weight: bold;
+        }
+        
+        .txt p
+        {
+            font-size: 100%;
+        }
+        body
+        {
+            color: black;
+            font-family: "Helvetica Neue" ,Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+        }
+    </style>
+    <div class="container">
+        <div class="jumbotron txt" style="background-color: White; color: black;">
+            <div row="xs-col-12 sm-col-12 md-col-12 lg-col-12">
+                <h1 style="font-size: 40px;">
+                    App Settings</h1>
+                <p>
+                    <span class="shd">Notifications:</span></p>
+                <ul>
+                    <li>Turn push notifications on or off as well as sound and vibration.</li>
+                    <li>Set visual alert when new content becomes available.</li>
+                    <li>Choose a quiet time when notifications will be silenced.</li>
+                </ul>
+                <p style="color: black;">
+                    <span class="shd">My Profile:</span> Enter your name, email address and phone number.
+                    This information only prepopulates forms on the app. It is <span class="shd"><u><i>not</i></u></span>
+                    used in any other way to identify you. Contact forms may be sent anonymously at
+                    your discretion.</p>
+                <p style="color: black;">
+                    <span class="shd">Share:</span> Share this app with others to download.</p>
+                <p style="color: black;">
+                    <span class="shd">Data Sync:</span> Displays latest date and time the app updated
+                    information. You may sync immediately for the latest information. The app automatically
+                    syncs each time it is opened.</p>
+                <p style="color: black;">
+                    <span class="shd">Test:</span> Use test to verify that your device is receiving
+                    audible push notifications.</p>
+                <p style="color: black;">
+                    <span class="shd">Messaging Opt-In/Opt-Out:</span> Enter your name, phone number
+                    and check the apps to receive text messages when sent by them. You will be sent
+                    a "One Time Passcode" (OTP) to verify your approval. You may opt-out at any time
+                    by unchecking the box.</p>
+                <p style="color: black;">
+                    <span class="shd">Content Full Screen:</span> The app's content displays full screen
+                    by default. However, if you prefer to have the header and app buttons display above
+                    the content, uncheck the box.</p>
+                <p style="color: black;">
+                    <span class="shd">Event:</span> By checking the box you change the calendar default
+                    setting to view as a list of events. Left unchecked the calendar view will display.</p>
+                <p style="color: black;">
+                    <span class="shd">Passcode:</span> Available only when a <span class="shd">Private Call/Msg.
+                        Module Tab</span> is present on the app. The passcode can be used to prevent
+                    unauthorized use of the Private Call/Msg. Tab.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<ToolbarList>	
+	<Toolbar ID="Format">
+		<ToolbarItem Type="DropDown" ID="FontName" Command="FontName" AutoPopulateItems="True" SelectedValue="" />
+		<ToolbarItem Type="DropDown" ID="FontSize" Command="FontSize" SelectedValue="" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="ForeColor" Command="ForeColor" ButtonFile="ForeColor.gif" SelectedValue="" />
+		<ToolbarItem Type="Button" ID="ForeColorPicker" Command="ForeColorPicker" ButtonFile="TriangleDown.gif" />
+		<ToolbarItem Type="Button" ID="BackColor" Command="BackColor" ButtonFile="BackColor.gif" SelectedValue="" />
+		<ToolbarItem Type="Button" ID="BackColorPicker" Command="BackColorPicker" ButtonFile="TriangleDown.gif" />
+		<ToolbarItem Type="Button" ID="CreateLink" Command="CreateLink" ButtonFile="CreateLink.gif" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="InsertImage" Command="InsertImage" ButtonFile="InsertImage.gif" />
+	</Toolbar>
+	<Toolbar ID="Format" NewLine="True">
+		<ToolbarItem Type="Button" ID="Bold" Command="Bold" ButtonFile="Bold.gif" Selected="False" />
+		<ToolbarItem Type="Button" ID="Italic" Command="Italic" ButtonFile="Italic.gif" Selected="False" />
+		<ToolbarItem Type="Button" ID="Underline" Command="Underline" ButtonFile="Underline.gif" Selected="False" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="JustifyLeft" Command="JustifyLeft" ButtonFile="JustifyLeft.gif" Selected="False" />
+		<ToolbarItem Type="Button" ID="JustifyCenter" Command="JustifyCenter" ButtonFile="JustifyCenter.gif" Selected="False" />
+		<ToolbarItem Type="Button" ID="JustifyRight" Command="JustifyRight" ButtonFile="JustifyRight.gif" Selected="False" />
+		<ToolbarItem Type="Button" ID="JustifyFull" Command="JustifyFull" ButtonFile="JustifyFull.gif" Selected="False" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="InsertOrderedList" Command="InsertOrderedList" ButtonFile="InsertOrderedList.gif" />
+		<ToolbarItem Type="Button" ID="InsertUnorderedList" Command="InsertUnorderedList" ButtonFile="InsertUnorderedList.gif" />
+		<ToolbarItem Type="Separator" />
+		<ToolbarItem Type="Button" ID="Outdent" Command="Outdent" ButtonFile="Outdent.gif" />
+		<ToolbarItem Type="Button" ID="Indent" Command="Indent" ButtonFile="Indent.gif" />
+		<ToolbarItem Type="Separator" />
+
+	</Toolbar>
+</ToolbarList>

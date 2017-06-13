@@ -1,0 +1,108 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="SecurePage" CodeBehind="SecurePage.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">    
+    <meta name="verify-v1" content="erOswx4r5LDEkVlO+I3xwSGUGihm/b/YS4Dn9JwSD8k=" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    
+    <link href="<%=Page.ResolveClientUrl("~/css/wowzzy.css")%>"
+        rel="stylesheet" type="text/css" />
+    <link href="<%=Page.ResolveClientUrl("~/css/index.css")%>" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript">
+        function openWin(url) {
+            window.open(url, "composerwindow", "toolbar=no,width=600,height=655,status=no,scrollbars=no,resize=no,menubar=no");
+        }</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+        <!-- Start Header-->
+        <tr>
+            <td align="center">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="page-width">
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="main-nav">
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <colgroup>
+                                    <col width="717px" />
+                                    <col width="*" />
+                                </colgroup>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <img src="<%=LogoName%>" border="0" />
+                                    </td>
+                                    <td align="right">
+                                        <!-- BEGIN LivePerson Button Code -->
+                                        <div>
+                                            <table border='0' cellspacing='2' cellpadding='2'>
+                                                <tr>
+                                                    <td align="center">
+                                                    </td>
+                                                    <td align='center'>
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!-- END LivePerson Button code -->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- End Header-->
+        <!-- Start Body-->
+        <tr>
+            <td class="body_bg" align="center">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="page-width">
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <div style="padding-top: 25px;">
+                                <asp:ContentPlaceHolder ID="cphUser" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- End Body -->
+    </table>
+    <div id="footer-wrapper">
+        <div id="footer">
+            <div class="footerlinks">
+                <a href="<%= RootPath %>/OP/<%=DomainName %>/aboutus.html" target="_blank">About Us</a> | <a href="<%= RootPath %>/OP/<%=DomainName %>/contactus.aspx"
+                    target="_blank">Contact Us</a> | <%--<a href="<%= OuterURL %>/Privacy.html" target="_blank">
+                        Privacy Policy</a> |--%> <a href="<%= RootPath %>/OP/<%=DomainName %>/Terms.html" target="_blank">Terms of Service</a>
+            </div>
+            <%--   <div class="strip">
+                <div class="weaccept">
+                    <span>We Accept:</span><img src="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath") %>/images/Homepage/visa.gif"
+                        width="41" height="27">&nbsp;<img src="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath") %>/images/mastercardnew.gif"
+                            width="41" height="27">&nbsp;<img src="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath") %>/images/Homepage/americanexp.gif"
+                                width="41" height="27">&nbsp;<img src="<%=System.Configuration.ConfigurationManager.AppSettings.Get("RootPath") %>/images/Homepage/discover.gif"
+                                    width="43" height="29"></div>
+                <div class="weaccept">
+                    <span>Secure Website:</span><span id="siteseal"><script type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=4H5Bx6NnmtFy8MtChSTZzMlWwiCGOqhTriFF1UDvfXB0YAXHk7UWhic"></script></span>&nbsp;</div>
+            </div>--%>
+            <div class="clear">
+            </div>
+            <div class="copyright">
+                <%--<%=DomainName %><sup style="font-size: 14px;">&reg;</sup> is a trademark of LogicTree IT
+                Solutions, Inc, registered in the U.S, (R) 2012-2013 LogicTree IT Solutions, Inc.--%></div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

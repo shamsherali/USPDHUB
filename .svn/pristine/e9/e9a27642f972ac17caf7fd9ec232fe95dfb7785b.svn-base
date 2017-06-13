@@ -1,0 +1,2021 @@
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_GetUserDetails]    Script Date: 7/29/2016 12:12:43 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+CREATE PROCEDURE [dbo].[usp_GetForgotDetails]
+(
+	@UserName varchar(200),
+	@DomainName VARCHAR(40)
+)
+
+as 	 
+	IF EXISTS(SELECT TOP 1 User_ID FROM vw_UserDetails vwu Left OUTER JOIN L_Country_Verticals LCV ON vwu.Vertical_Name=LCV.Vertical_Name and vwu.Profile_County=LCV.Country
+			WHERE username = @UserName and Active_flag=1 AND Domain_Name=@DomainName)
+		BEGIN
+			SELECT vwu.*
+			FROM vw_UserDetails vwu Left OUTER JOIN L_Country_Verticals LCV ON vwu.Vertical_Name=LCV.Vertical_Name and vwu.Profile_County=LCV.Country
+			WHERE username = @UserName and Active_flag=1 AND Domain_Name=@DomainName
+		END
+	ELSE
+		BEGIN
+			DECLARE @SuperAdminId INT
+			DECLARE @UserID INT
+
+			SELECT  @SuperAdminId= U.SUPERADMIN_ID, @UserID= U.User_ID
+			FROM   T_USERS U LEFT OUTER JOIN T_BUSINESS_PROFILES P ON U.SUPERADMIN_ID = P.USER_ID LEFT OUTER JOIN
+									 T_Users TUSA ON U.SUPERADMIN_ID = TUSA.User_ID Left OUTER JOIN L_Country_Verticals LCV ON P.Vertical_Name=LCV.Vertical_Name and P.Profile_County=LCV.Country
+			WHERE        U.SUPERADMIN_ID IS NOT NULL AND U.ACTIVE_FLAG = 1 AND TUSA.ACTIVE_FLAG = 1 and U.username=@UserName  AND Domain_Name=@DomainName
+			IF(@SuperAdminId IS NOT NULL AND @UserID IS NOT NULL)
+				BEGIN
+					SELECT @UserID as User_ID
+					,TU.[Password_Changed]
+					,TU.[Firstname]
+					,TU.[Lastname]
+					,TU.[Username]
+					,TU.[Password]
+					,TU.[Forgot_Password_Q1]
+					,TU.[Forgot_Password_A1]
+					,TU.[Forgot_Password_Q2]
+					,TU.[Forgot_Password_A2]
+					,TU.[Role_ID]
+					,TU.[User_Status]
+					,TU.[Active_flag]
+					,TU.[IsFree]
+					,TU.[CREATED_DT]
+					,TU.[CREATED_USER]
+					,[User_address1]
+					,[User_address2]
+					,[User_city]
+					,[User_state]
+					,[User_Country]
+					,[User_zipcode]
+					,[User_email]
+					,[User_phone]
+					,TU.[IsTestAC]
+					,vwu.[IsTraining]
+					,[Profile_County]
+					,[Vertical_Name]
+					,[IsBranded_App]
+					,TU.[IsAssociate_SuperAdmin]
+					,[IsArchived]
+					,[Profile_ID] FROM T_Users TU LEFT OUTER JOIN vw_UserDetails vwu ON TU.[SuperAdmin_ID]=vwu.User_ID WHERE TU.User_ID=@UserID 
+				END
+		END
+
+
+GO
+
+
+
+
+
+--GetPSTDateTimeFromUTC
+ 
+
+CREATE FUNCTION [dbo].[GetPSTDateTimeFromUTC]()
+RETURNS DATETIME
+AS 
+BEGIN
+
+	DECLARE @UTCDateTime DATETIME = GETDATE()
+	DECLARE @y VARCHAR(4) --Year of @UTCDateTime
+	DECLARE @st DATETIME --UTC DateTime at which daylight savings (+1 hour) starts (second Sunday in March at 8am)
+	DECLARE @nd DATETIME --UTC DateTime at which daylight savings (+1 hour) stops (first Sunday in November at 7am)
+	DECLARE @i SMALLINT
+	SET @y = CONVERT(VARCHAR(4),DATEPART(YEAR,@UTCDateTime))
+	SET @st = CONVERT(DATETIME, @y + '-03-01 08:00:00', 120)
+	SET @i = @@DATEFIRST + DATEPART(weekday,@st)
+	IF @i > 8 
+		SET @i = @i-7
+		SET @st = DATEADD(day,15 - @i,@st)
+		SET @nd = CONVERT(DATETIME, @y + '-11-01 07:00:00', 120)
+		SET @i = @@DATEFIRST + DATEPART(weekday,@nd)
+
+	IF @i > 8 
+		SET @i = @i - 7
+		SET @nd = DATEADD(day,8 - @i,@nd)
+
+	IF @UTCDateTime BETWEEN @st AND @nd 
+		SET @UTCDateTime = DATEADD (hour, -7, @UTCDateTime)
+	ELSE 
+		SET @UTCDateTime = DATEADD (hour, -8, @UTCDateTime)
+	SET @UTCDateTime= DATEADD(Second,47,@UTCDateTime)
+	RETURN @UTCDateTime --Value is now PST despite the name 
+END
+
+
+GO
+
+
+======================================================================================================================================
+
+
+--Ser_GetPushTypeTabName
+
+
+
+/****** Object:  StoredProcedure [dbo].[Ser_GetPushTypeTabName]    Script Date: 07/14/2016 17:44:27 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[Ser_GetPushTypeTabName]
+(
+	@ProfileID INT,
+	@PushTypeID INT,
+	@PushType VARCHAR(50)
+)
+AS
+BEGIN
+	SET NOCOUNT ON;
+	DECLARE @TabName VARCHAR(20)=''
+	DECLARE @UserModuleID INT
+	IF(@PushType = 'Events')
+		BEGIN
+			SELECT @TabName = TabName FROM	T_UserCustom_Modules WHERE ProfileID=@ProfileID AND ButtonType='EventCalendar'
+		END
+	ELSE IF (@PushType = 'Bulletin')
+		BEGIN
+			SELECT @TabName = TabName FROM	T_UserCustom_Modules WHERE ProfileID=@ProfileID AND ButtonType='Bulletins'
+		END
+	ELSE IF (@PushType = 'Survey')
+		BEGIN
+			SELECT @TabName =  TabName FROM	T_UserCustom_Modules WHERE ProfileID=@ProfileID AND ButtonType='Surveys'
+		END
+	ELSE IF (@PushType = 'CustomModule')
+		BEGIN
+			SET @UserModuleID=(SELECT UserModuleID FROM T_Manage_CustomModule WHERE Profile_ID=@ProfileID AND Custom_ID=@PushTypeID)
+			IF(@UserModuleID IS NOT NULL)
+				BEGIN
+					SELECT @TabName =  TabName FROM	T_UserCustom_Modules WHERE UserModuleID=@UserModuleID
+				END
+		END
+	ELSE IF (@PushType = 'PrivateCallAddOns' OR @PushType = 'PrivateCallAddOnsTab')
+		BEGIN
+			SET @UserModuleID=(SELECT UserModuleID FROM T_Manage_PrivateCallAddOns WHERE ProfileID=@ProfileID AND CustomID=@PushTypeID)
+			IF(@UserModuleID IS NOT NULL)
+				BEGIN
+					SELECT @TabName =  TabName FROM	T_UserCustom_Modules WHERE UserModuleID=@UserModuleID
+				END
+		END
+	SELECT  @TabName
+END
+
+
+GO
+
+
+--Ser_GetScheduledNotifications
+
+
+/****** Object:  StoredProcedure [dbo].[Ser_GetScheduledNotifications]    Script Date: 07/14/2016 17:45:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[Ser_GetScheduledNotifications]
+(
+      @SchDate DATETIME
+)
+AS
+BEGIN
+      -- SET NOCOUNT ON added to prevent extra result sets from
+      -- interfering with SELECT statements.
+      SET NOCOUNT ON;
+ UPDATE M_PushNotifications SET Sent_Flag=1 WHERE Sending_Date<=[dbo].[GetPSTDateTimeFromUTC]() AND Sent_Flag=0 AND IsActive=1 AND NotificationType='SMSNotification'
+    -- Insert statements for procedure here
+      SELECT PushNotifyID,Profile_ID, REPLACE(REPLACE(REPLACE(M_PushNotifications.Message, CHAR(13),' '), CHAR(10),' '), CHAR(9),' ') as Message,
+      CASE WHEN (Type='PrivateCallAddOns') then 'PrivateCallAddOnsTab'
+			ELSE Type
+				END as Type,
+				Type_ID,Sending_Date, UMButtonType 
+      FROM M_PushNotifications WHERE  Sending_Date<=[dbo].[GetPSTDateTimeFromUTC]() AND Sent_Flag=0 AND IsActive=1
+END
+
+
+GO
+
+
+
+--usp_M_ManageMessages1
+
+
+
+/****** Object:  StoredProcedure [dbo].[usp_M_ManageMessages1]    Script Date: 07/14/2016 17:46:40 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE Procedure [dbo].[usp_M_ManageMessages1]
+(
+	@ToID int,
+	@ToTypeID int, -- 1 consumer 2 business
+	@FromID int,
+	@Subject varchar(250),
+	@Message varchar(max),
+	@RplyID int,
+	@IsActive bit,
+	@MsgID int,
+	@userID varchar(20),
+	@TType int, --- 1 ADD, 2 DELETE - Transaction Type
+	@Source varchar(50),
+	@PhotoName varchar(250),
+	@Latitude1 float,
+	@Longitude1 float,
+	@Address varchar(250),
+	@IsAnonymous bit,
+	@Device_ID varchar(max) = null,
+	@Device_Type varchar(250),
+	@App_ID int,
+	@UniqueDeviceID varchar(max)=null
+)
+AS
+BEGIN
+
+	IF (@TType = 1 AND @MsgID = 0) -- Insert Message details if it is 1
+		BEGIN
+			DECLARE @InsertFlag int = 1 
+			IF(@Device_ID IS NOT NULL AND ((select count(*) from T_Messages where (Device_ID =@Device_ID OR UniqueDeviceID=@UniqueDeviceID) and App_ID=@App_ID AND To_ID=@ToID AND IsBlocked=1)>0))
+				BEGIN
+					SET @InsertFlag=0
+					SET @MsgID = -1 -- Blocked
+				END
+			IF (@InsertFlag=1)
+				BEGIN
+					DECLARE @IsDuplicate BIT = 0
+					DECLARE @CompareTime DATETIME 
+					SET @CompareTime = DATEADD(mi,-1,[dbo].[GetPSTDateTimeFromUTC]())
+					IF EXISTS(SELECT TOP 1 Message_ID FROM T_Messages WHERE  App_ID=@App_ID AND To_ID=@ToID AND [Subject] = @Subject AND UniqueDeviceID = @UniqueDeviceID AND CREATED_DT > @CompareTime)
+						BEGIN
+							SET @IsDuplicate = 1
+						END
+					IF (@IsDuplicate=0)
+						BEGIN
+							INSERT INTO T_Messages
+								(To_ID,To_Type_ID,From_ID,[Subject],[Message],Reply_ID,Profile_Read_Flag,User_Read_Flag,Profile_Del_Flag,
+								User_Del_Flag,Active_flag,CREATED_DT,CREATED_USER,MODIFIED_DT,MODIFIED_USER,Source,PhotoName,Latitude1,
+								Longitude1,Address,IsAnonymous,Device_ID,IsBlocked,Device_Type,App_ID,UniqueDeviceID)
+							VALUES(@ToID,@ToTypeID,@FromID,@Subject,@Message,@RplyID,0,0,0,0,@IsActive,[dbo].[GetPSTDateTimeFromUTC](),@userID,[dbo].[GetPSTDateTimeFromUTC](),
+								@userID,@Source,@PhotoName,@Latitude1,@Longitude1,@Address,@IsAnonymous,@Device_ID,0,@Device_Type,@App_ID,@UniqueDeviceID)
+
+							set @MsgID = @@IDENTITY;
+						END
+				END
+		END
+	ELSE -- Message details are deleted if it is MsgID > 0
+		BEGIN
+			IF (@TType = 1 AND @MsgID > 0)
+				BEGIN
+					Update T_Messages SET User_Del_Flag = 1
+						WHERE Message_ID = @MsgID
+				END
+			ELSE IF (@TType = 2 AND @MsgID > 0)
+				BEGIN
+					Update T_Messages SET Profile_Del_Flag = 1
+						WHERE Message_ID = @MsgID
+				END
+		END
+
+	SELECT @MsgID
+
+END
+
+
+GO
+
+
+--usp_m_PrivateAddOns_MobileNumberForSMS   check with balaji
+
+
+
+/****** Object:  StoredProcedure [dbo].[usp_m_PrivateAddOns_MobileNumberForSMS]    Script Date: 07/14/2016 17:47:41 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- usp_m_PrivateAddOns_MobileNumberForSMS 93,2581,128
+CREATE PROCEDURE[dbo].[usp_m_PrivateAddOns_MobileNumberForSMS]
+( 
+@AppID INT,
+@UserModuleID INT ,
+@GroupID varchar(250)
+)
+AS
+ 
+DECLARE @UID INT
+
+SET @UID=(SELECT UserID FROM T_UserCustom_Modules WHERE UserModuleID=@UserModuleID)
+
+
+select DISTINCT REPLACE(MobileNumber,'-','') as MobileNumber from M_Business_Devices WHERE  App_ID=@AppID  AND BDID IN 
+				(SELECT BDID from T_PrivateModule_Invitations WHERE InviterID in 
+					(SELECT InviterID FROM T_PrivateModule_Invitees WHERE UserModuleiD=@UserModuleID AND ContactID IN 
+							(SELECT T_CallIndex_Contacts.ContactID  FROM   T_CallIndex_AssignGroupToContacts INNER JOIN
+								T_CallIndex_Contacts ON T_CallIndex_AssignGroupToContacts.ContactID = T_CallIndex_Contacts.ContactID
+								WHERE T_CallIndex_AssignGroupToContacts.GroupID=@GroupID AND IsDeleted=0
+							  )--contactid
+                      )--invterid
+                  )-- bdid
+
+--UNION
+--SELECT  DISTINCT   REPLACE(MobileNumber,'-','')
+--FROM         T_CallIndex_AssignGroupToContacts INNER JOIN
+--                      T_CallIndex_Contacts ON T_CallIndex_AssignGroupToContacts.ContactID = T_CallIndex_Contacts.ContactID
+--                      WHERE T_CallIndex_AssignGroupToContacts.GroupID=@GroupID and T_CallIndex_Contacts.IsDeleted=0
+--UNION
+--SELECT REPLACE(Mobile,'-','') as MobileNumber FROM T_User_Contacts where User_ID=761 AND ContactType='smsgroup' AND SMSOptIn=1
+
+
+GO
+
+
+
+===============================================================
+GO
+/****** Object:  StoredProcedure [dbo].[usp_GetInvoiceDetailsByID]    Script Date: 07/11/2016 14:30:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[usp_GetInvoiceDetailsByID]
+( 
+	@OrderID INT
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	DECLARE @PaidAmount DECIMAL(18,2)= NULL
+    -- Insert statements for procedure here
+    IF EXISTS(SELECT TOP  1 Payment_ID FROM T_OrderPayments WHERE SubscriptionType_ID = @OrderID)
+		BEGIN
+			SET @PaidAmount = (SELECT SUM(Payment_Amount) FROM T_OrderPayments WHERE SubscriptionType_ID = @OrderID)
+		END
+	SELECT *, @PaidAmount AS PaidAmount, 'Due Date' AS DueDateTitle FROM T_ProfileSubscriptions_Types WHERE SubscriptionType_ID=@OrderID
+END
+
+================================
+
+/****** Object:  StoredProcedure [dbo].[Ser_GetScheduledSilentNotifications]    Script Date: 7/8/2016 1:06:46 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[Ser_GetScheduledSilentNotifications]
+(
+      @SchDate DATETIME
+)
+AS
+BEGIN
+      -- SET NOCOUNT ON added to prevent extra result sets from
+      -- interfering with SELECT statements.
+      SET NOCOUNT ON;
+ 
+    -- Insert statements for procedure here
+	  DECLARE @CurrentDateTime  DATETIME = [dbo].[GetPSTDateTimeFromUTC]()
+      SELECT DISTINCT  Profile_Id FROM Ser_SilentPushMessages WHERE Publish_Date<=@CurrentDateTime AND Sent_Flag=0  
+	  UPDATE Ser_SilentPushMessages set Sent_Flag=1 WHERE Publish_Date<=@CurrentDateTime AND Sent_Flag=0
+END
+
+GO
+==============================
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[Ser_UpdatePushNotificationDevices]
+(
+	@ProfileID INT,
+	@PushNotifyID INT,
+	@PushType VARCHAR(20),
+	@PushTypeId INT
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    DECLARE @Devices AS VARCHAR(MAX)
+	DECLARE @Flag INT = 0
+	DECLARE @UserModuleId INT = 0
+	IF(@PushType ='CustomModule')
+		BEGIN
+			DECLARE @ButtonType varchar(20)
+			
+			SET @ButtonType = (SELECT ButtonType FROM T_Manage_CustomModule TMCM LEFT OUTER JOIN T_UserCustom_Modules TUCM ON TMCM.UserModuleID=TUCM.UserModuleID  WHERE Custom_ID=@PushTypeId)
+			SET @UserModuleId = (SELECT UserModuleID FROM T_Manage_CustomModule WHERE Custom_ID=@PushTypeId)
+			IF(@ButtonType='PrivateAddOn')
+				BEGIN
+					SET @Flag =1
+				END
+		END
+	ELSE IF(@PushType ='PrivateCallAddOns' OR @PushType ='PrivateCallAddOnsTab')
+		BEGIN
+			SET @UserModuleId = (SELECT UserModuleID FROM T_Manage_PrivateCallAddOns WHERE CustomID=@PushTypeId)
+			SET @Flag =1
+		END
+	-- *** Adding device ids in Pushnotication table *** --
+	IF(@Flag=0)
+		BEGIN
+			SET @Devices ='' (SELECT @Devices = CAST(BDID as varchar) +','+ @Devices FROM M_Business_Devices where 
+			Profile_ID=@ProfileID AND IsSendPushNotification = 1 AND IsDeleted=0  AND IsActive=1  AND Device_ID<>'null' 
+			AND Device_ID<>'(null)' AND Device_ID<>'' AND Device_Type IS NOT NULL AND Device_Type<>'' AND App_ID>0)
+		END
+	UPDATE M_PushNotifications set DeviceIDS=@Devices WHERE PushNotifyID=@PushNotifyID
+END
+GO
+===============================
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[Ser_GetPrivateMobileDevicesById]
+(
+	@ProfileID INT,
+	@PushNotifyID INT,
+	@PushType VARCHAR(20),
+	@PushTypeId INT
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	DECLARE @Devices AS VARCHAR(MAX)
+	DECLARE @Flag INT = 0
+	DECLARE @UserModuleId INT = 0
+	IF(@PushType ='CustomModule')
+		BEGIN
+			DECLARE @ButtonType varchar(20)
+			
+			SET @ButtonType = (SELECT ButtonType FROM T_Manage_CustomModule TMCM LEFT OUTER JOIN T_UserCustom_Modules TUCM ON TMCM.UserModuleID=TUCM.UserModuleID  WHERE Custom_ID=@PushTypeId)
+			SET @UserModuleId = (SELECT UserModuleID FROM T_Manage_CustomModule WHERE Custom_ID=@PushTypeId)
+			IF(@ButtonType='PrivateAddOn')
+				BEGIN
+					SET @Flag =1
+				END
+		END
+	ELSE IF(@PushType ='PrivateCallAddOns' OR @PushType ='PrivateCallAddOnsTab')
+		BEGIN
+			SET @UserModuleId = (SELECT UserModuleID FROM T_Manage_PrivateCallAddOns WHERE CustomID=@PushTypeId)
+			SET @Flag =1
+		END
+	IF(@Flag=1)
+		BEGIN
+			SET @Devices ='' (SELECT @Devices = CAST(BDID as varchar) +','+ @Devices FROM VW_PrivateModuleDevices 
+					WHERE ProfileID=@ProfileID AND  IsDeleted=0  AND UserModuleID=@UserModuleId AND Device_ID<>'null' AND 
+					Device_ID<>'(null)' AND Device_ID<>'' AND Device_Type IS NOT NULL AND Device_Type<>'' AND App_ID>0 AND IsActive=1 
+					AND Active_Flag=1 AND IsSendPushNotification=1 AND IsEnable=1)
+			UPDATE M_PushNotifications set DeviceIDS=@Devices WHERE PushNotifyID=@PushNotifyID
+			--- *** Retrieving private mobile devices *** ---
+			SELECT VPMD.BDID, MBD.Device_ID, MBD.UniqueDeviceID, MBD.Device_Type, MBD.App_ID, LMA.HubName, LMA.HubAccessKey FROM VW_PrivateModuleDevices VPMD
+				 LEFT OUTER JOIN M_Business_Devices MBD ON VPMD.BDID=MBD.BDID  LEFT OUTER JOIN L_Master_AppNames LMA ON MBD.App_ID = LMA.App_ID 
+				WHERE VPMD.ProfileID=@ProfileID AND VPMD.UserModuleID = @UserModuleId AND	MBD.IsSendPushNotification = 1 AND MBD.IsActive=1 AND MBD.IsDeleted=0 AND VPMD.IsEnable=1 AND MBD.Device_ID<>'null' AND 
+				MBD.Device_ID<>'(null)' AND MBD.Device_ID<>'' AND MBD.Device_Type IS NOT NULL AND MBD.Device_Type<>'' AND 
+				MBD.App_ID>0
+		END
+			
+END
+GO
+
+============================================== Start of 2.7.9 =======================================
+
+
+
+============================ Malli ************************************
+ 
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [USP_UpdateUserModuleExpiration]
+(
+	@UserId INT,
+	@UserModuleId INT =  NULL,
+	@ExpirationDate DATETIME
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	IF(@UserModuleId IS NULL)
+		BEGIN
+			DECLARE @IsLiteVersion BIT
+			SET @IsLiteVersion = (SELECT IsLiteVersion FROM T_Business_Profiles WHERE User_ID=@UserId)
+			IF(@IsLiteVersion=1)
+				BEGIN
+					SET @UserModuleId = (SELECT TOP 1 UserModuleID FROM T_UserCustom_Modules WHERE UserID=@UserId AND IsActive=1 AND ButtonType='PrivateCallAddOns')
+				END
+		END
+	IF(@UserModuleId IS NOT NULL)
+		BEGIN
+			UPDATE T_UserCustom_Modules SET ExpiredDate = @ExpirationDate WHERE UserModuleID = @UserModuleId
+		END
+END
+GO
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+============================ Balaji ************************************
+
+
+ 
+ --------------------------------------------------------------------------------------------------------------------------------
+
+============================ Ramya ************************************
+
+
+
+/****** Object:  Table [dbo].[L_SystemScheduled_Emails]    Script Date: 07/14/2016 17:49:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[L_SystemScheduled_Emails](
+	[SystemScheduled_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Receiver_EmailID] [varchar](200) NOT NULL,
+	[Sent_Flag] [int] NOT NULL,
+	[User_ID] [int] NULL,
+	[Optout_Flag] [bit] NOT NULL,
+	[User_Opened] [bit] NOT NULL,
+	[Latitude] [varchar](50) NULL,
+	[Longitude] [varchar](50) NULL,
+	[IPAddress] [varchar](50) NULL,
+	[Browser] [varchar](50) NULL,
+	[Country_Code] [varchar](50) NULL,
+	[Country_Name] [varchar](50) NULL,
+	[City_Name] [varchar](50) NULL,
+	[Region_Code] [varchar](50) NULL,
+	[Region_Name] [varchar](50) NULL,
+	[Zip_Code] [varchar](10) NULL,
+	[SystemTipId] [int] NOT NULL,
+	[Modified_Date] [datetime] NULL,
+	[Sending_Date] [datetime] NULL,
+	[ClickThroughs] [int] NOT NULL,
+ CONSTRAINT [PK_L_SystemScheduled_Emails] PRIMARY KEY CLUSTERED 
+(
+	[SystemScheduled_Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON)
+)
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[L_SystemScheduled_Emails] ADD  DEFAULT ((0)) FOR [Sent_Flag]
+GO
+
+ALTER TABLE [dbo].[L_SystemScheduled_Emails] ADD  DEFAULT ((0)) FOR [Optout_Flag]
+GO
+
+ALTER TABLE [dbo].[L_SystemScheduled_Emails] ADD  DEFAULT ((0)) FOR [User_Opened]
+GO
+
+ALTER TABLE [dbo].[L_SystemScheduled_Emails] ADD  CONSTRAINT [DF_L_SystemScheduled_Emails_ClickThroughs]  DEFAULT ((0)) FOR [ClickThroughs]
+GO
+
+
+
+
+--Usp_GetAllEmailsByTipId
+
+
+
+/****** Object:  StoredProcedure [dbo].[Usp_GetAllEmailsByTipId]    Script Date: 07/14/2016 17:51:55 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[Usp_GetAllEmailsByTipId]
+(
+	@SystemTipId INT,
+	@Webnairtitle varchar(500) OUTPUT
+)
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SET  @Webnairtitle=(select WebnairTitle from L_SystemTipHtml where SystemTipId=@SystemTipId)
+	SELECT Receiver_EmailID, City_Name, Country_Name, Browser, Sending_Date, Modified_Date,ClickThroughs from L_SystemScheduled_Emails  where SystemTipId=@SystemTipId  AND User_Opened=1 order by Modified_Date
+END
+
+
+GO
+
+
+
+
+--USP_UpdateLiteVersion
+
+
+
+/****** Object:  StoredProcedure [dbo].[USP_UpdateLiteVersion]    Script Date: 07/14/2016 17:53:18 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[USP_UpdateLiteVersion]
+(
+	@InquiryId INT,
+	@FlagType INT
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	 --- *** @FlagType = 1 means new registration *** ---
+	 --- *** @FlagType = 2 means Upgrade *** ---
+   IF(@FlagType=1)
+	   BEGIN
+		UPDATE T_Agency_Inquiry SET IsLiteVersion=1 WHERE Inquiry_ID=@InquiryId
+	   END
+	ELSE
+		BEGIN
+			DECLARE @MainVertical VARCHAR(20) =''
+			SET @MainVertical=(SELECT  TOP 1 MainVertical FROM L_Verticals_Sub WHERE SubVertical 
+			IN (SELECT  TOP 1 Vertical_Name FROM T_Business_Profiles WHERE Profile_ID=@InquiryId))
+			UPDATE T_Business_Profiles SET IsLiteVersion=0, Vertical_Name=@MainVertical WHERE Profile_ID=@InquiryId
+			
+			-- L_ISAUpgradeUsers
+			IF NOT EXISTS(SELECT TOP 1  ProfileID FROM L_ISAUpgradeUsers WHERE ProfileID=@InquiryId)
+			BEGIN
+				INSERT INTO L_ISAUpgradeUsers(ProfileID,UpgradeDate,IsShowAlert)
+				VALUES(@InquiryId,[dbo].[GetPSTDateTimeFromUTC](),1)
+			END
+	   END
+	
+END
+
+GO
+
+
+
+ --------------------------------------------------------------------------------------------------------------------------------
+
+
+
+============================ Ganga Raju ************************************
+CREATE PROC dbo.Usp_GetPSTDateTimeFromUTC
+AS
+BEGIN
+    SELECT [dbo].[GetPSTDateTimeFromUTC]() as ServerTime
+END
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+============================ Gayathri ************************************
+-------------2.8 Azure Migration DB changes-----------------
+
+
+--[dbo].[Ser_GetMobileDevicesById]
+
+
+/****** Object:  StoredProcedure [dbo].[Ser_GetMobileDevicesById]    Script Date: 07/14/2016 17:55:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+--exec [Ser_GetMobileDevicesById] 10726,785,'CustomModule',1255
+
+CREATE PROCEDURE [dbo].[Ser_GetMobileDevicesById]
+(
+	@ProfileID INT,
+	@PushNotifyID INT,
+	@PushType VARCHAR(20),
+	@PushTypeId INT
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	DECLARE @Devices AS VARCHAR(MAX)
+	DECLARE @Flag INT = 0
+	DECLARE @UserModuleId INT = 0
+	IF(@PushType ='CustomModule')
+		BEGIN
+			DECLARE @ButtonType varchar(20)
+			
+			SET @ButtonType = (SELECT ButtonType FROM T_Manage_CustomModule TMCM LEFT OUTER JOIN T_UserCustom_Modules TUCM ON TMCM.UserModuleID=TUCM.UserModuleID  WHERE Custom_ID=@PushTypeId)
+			SET @UserModuleId = (SELECT UserModuleID FROM T_Manage_CustomModule WHERE Custom_ID=@PushTypeId)
+			IF(@ButtonType='PrivateAddOn')
+				BEGIN
+					SET @Flag =1
+				END
+		END
+	ELSE IF(@PushType ='PrivateCallAddOns' OR @PushType ='PrivateCallAddOnsTab')
+		BEGIN
+			SET @UserModuleId = (SELECT UserModuleID FROM T_Manage_PrivateCallAddOns WHERE CustomID=@PushTypeId)
+			SET @Flag =1
+		END
+	-- *** Adding device ids in Pushnotication table *** --
+	IF(@Flag=0)
+		BEGIN
+			SET @Devices ='' (SELECT @Devices = CAST(BDID as varchar) +','+ @Devices FROM M_Business_Devices where 
+			Profile_ID=@ProfileID AND IsSendPushNotification = 1 AND IsDeleted=0  AND IsActive=1  AND Device_ID<>'null' 
+			AND Device_ID<>'(null)' AND Device_ID<>'' AND Device_Type IS NOT NULL AND Device_Type<>'' AND App_ID>0)
+		END
+	ELSE
+		BEGIN
+			SET @Devices ='' (SELECT @Devices = CAST(BDID as varchar) +','+ @Devices FROM VW_PrivateModuleDevices 
+				WHERE ProfileID=@ProfileID AND  IsDeleted=0  AND UserModuleID=@UserModuleId AND Device_ID<>'null' AND 
+				Device_ID<>'(null)' AND Device_ID<>'' AND Device_Type IS NOT NULL AND Device_Type<>'' AND App_ID>0 AND IsActive=1 
+				AND Active_Flag=1 AND IsSendPushNotification=1 AND IsEnable=1)
+		END
+		UPDATE M_PushNotifications set DeviceIDS=@Devices WHERE PushNotifyID=@PushNotifyID
+	IF(@Flag=0)
+		BEGIN 
+		INSERT INTO M_PushNotificationAnalysis(BDID, PushNotifyID) 
+		SELECT BDID, @PushNotifyID  FROM M_Business_Devices where Profile_ID=@ProfileID AND IsSendPushNotification = 1 AND IsDeleted=0 AND Device_ID<>'null' AND 
+				Device_ID<>'(null)' AND Device_ID<>''
+		END
+	ELSE
+		BEGIN
+			INSERT INTO M_PushNotificationAnalysis(BDID, PushNotifyID) 
+			SELECT BDID, @PushNotifyID FROM VW_PrivateModuleDevices where ProfileID=@ProfileID AND UserModuleID = @UserModuleId AND	IsSendPushNotification = 1 AND IsActive=1 AND IsDeleted=0 AND IsEnable=1 AND Device_ID<>'null' AND 
+				Device_ID<>'(null)' AND Device_ID<>'' AND Device_Type IS NOT NULL AND	Device_Type<>'' AND 
+				App_ID>0
+		END
+		--insert into tblOTPprofileId(ProfileID, PushNotifyID,PushType, PushTypeId) values(@ProfileID, @PushNotifyID,@PushType,@PushTypeId)
+		SELECT MPNA.PushScheduleID, MPNA.BDID, MBD.Device_ID, MBD.UniqueDeviceID, MBD.Device_Type, MBD.App_ID, MBD.AppVersion, 
+		coalesce(LMA.PemFile_Name, 'lt_uspdhub_prod.pem') as PemFile_Name FROM M_PushNotificationAnalysis  MPNA LEFT OUTER JOIN 
+		M_Business_Devices MBD ON MPNA.BDID=MBD.BDID  LEFT OUTER JOIN L_Master_AppNames LMA ON MBD.App_ID = LMA.App_ID 
+		WHERE MPNA.Sent_Flag=0 
+		
+		update M_PushNotificationAnalysis set Sent_Flag=1 where Sent_Flag=0
+		
+END
+
+
+GO
+
+
+
+
+
+--[dbo].[Ser_GetMobileDevicesByIdForSilentPush]
+
+
+
+/****** Object:  StoredProcedure [dbo].[Ser_GetMobileDevicesByIdForSilentPush]    Script Date: 07/14/2016 17:56:23 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[Ser_GetMobileDevicesByIdForSilentPush]
+(
+	@ProfileID INT 
+)
+AS
+BEGIN
+
+DECLARE @LastEngineDate DATETIME
+SET @LastEngineDate=(SELECT TOP(1)serviceEnd_Time  FROM  Ser_Notification_LogDetails WHERE serviceEnd_Time IS NOT NULL ORDER BY 1 DESC)
+
+
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+				
+			-- FOr Generic APP USPDhub
+			INSERT INTO Ser_SilentPushSentHistory(BDID,Sent_Date,Sent_flag) 
+			SELECT BDID, [dbo].[GetPSTDateTimeFromUTC](),0 FROM M_Business_Devices 
+			WHERE Profile_ID=@ProfileID AND IsSendPushNotification = 1 AND IsActive=1 AND IsDeleted=0 AND Device_ID<>'null' 
+			AND Device_ID<>'(null)' AND Device_ID<>'' AND Device_Type IS NOT NULL AND	Device_Type<>''
+			AND  M_Business_Devices.App_ID in (54,36,1,13,64,57,73,71,40,27,79,80,81,82,58, 46,49,50,83,
+			84,31,85,86,78,21,55,59,2,87,12,16,22,70,23,39,41,47,48,56,53,34,24,60,52,61,63,69,75,74,77,67,7,11,15,43,51,6,4,42,88,18,32,14,20,30,72,
+			25,28,44,33,37,38,29,62,35,65,66,68,89,91,92,94,95,96,97,98,99,100,101,102,103,104,105,106,107)
+			AND LastAccessed_Date<@LastEngineDate
+			--AND Device_Type !='WindowsPhone'
+				
+		SELECT MPNA.SilentPushHistoryID, MPNA.BDID, MBD.Device_ID, MBD.Device_Type, MBD.App_ID, MBD.AppVersion, 
+		coalesce(LMA.PemFile_Name, '') as PemFile_Name
+		 FROM Ser_SilentPushSentHistory  MPNA LEFT OUTER JOIN M_Business_Devices MBD ON MPNA.BDID=MBD.BDID
+		   LEFT OUTER JOIN L_Master_AppNames LMA ON MBD.App_ID = LMA.App_ID
+	WHERE Profile_ID=@ProfileID  AND Sent_flag=0 
+	AND MBD.App_ID in (54,36,1,13,64,57,73,71,40,27,79,80,81,82,58,46,49,50,83,84,31,85,86,78,21,55,59,2,
+	87,12,16,22,70,23,39,41,47,48,56,53,34,24,60,52,61,63,69,75,74,77,67,7,11,15,43,51,6,4,42,88,18,32,14,20,30,
+	72,25,28,44,33,37,38,29,62,35,65,66,68,89,91,92,94,95,96,97,98,99,100,101,102,103,104,105,106,107)
+	AND LastAccessed_Date<@LastEngineDate
+		
+		
+		-- Update Ser_SilentPushMessages
+UPDATE Ser_SilentPushMessages SET Sent_Flag=1 WHERE Profile_Id=@ProfileID AND Publish_Date<=[dbo].[GetPSTDateTimeFromUTC]() AND Sent_Flag=0   
+END
+
+GO
+
+
+
+
+
+/****** Object:  StoredProcedure [dbo].[ser_GetHubDetails]    Script Date: 07/14/2016 17:57:39 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[ser_GetHubDetails]
+@App_Id int
+AS
+BEGIN
+	select HubName,HubAccessKey from L_Master_AppNames where App_ID=@App_Id
+	SET NOCOUNT ON;
+
+    
+END
+
+
+
+GO
+
+
+
+
+
+/****** Object:  StoredProcedure [dbo].[Azure_InsertExceptionDetails]    Script Date: 07/14/2016 17:58:57 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[Azure_InsertExceptionDetails] 
+	-- Add the parameters for the stored procedure here
+	@dataTableName varchar(max),
+	@errorMessage varchar(max),
+	@innerException varchar(max),
+	@data varchar(max),
+	@typeOfService varchar(max)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	INSERT INTO WebJobsLogs (DataTableName,ErrorMessage,InnerException,Data,TypeOfService) values(@datatablename,@errorMessage,@innerexception,@data,@typeofservice)
+END
+
+
+GO
+
+
+
+
+/****** Object:  Table [dbo].[L_Master_AppNames]    Script Date: 07/14/2016 17:59:52 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[L_Master_AppNames](
+	[App_ID] [int] IDENTITY(1,1) NOT NULL,
+	[App_Name] [varchar](100) NOT NULL,
+	[PemFile_Name] [varchar](50) NOT NULL,
+	[IsActive] [bit] NOT NULL,
+	[HubName] [varchar](250) NULL,
+	[HubAccessKey] [varchar](250) NULL,
+ CONSTRAINT [PK_L_Master_AppNames] PRIMARY KEY CLUSTERED 
+(
+	[App_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON)
+)
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[L_Master_AppNames] ADD  CONSTRAINT [DF_L_Master_AppNames_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+
+
+
+
+
+/****** Object:  Table [dbo].[WebJobsLogs]    Script Date: 07/14/2016 18:01:03 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[WebJobsLogs](
+	[LogId] [int] IDENTITY(1,1) NOT NULL,
+	[DataTableName] [varchar](max) NULL,
+	[ErrorMessage] [varchar](max) NULL,
+	[InnerException] [varchar](max) NULL,
+	[Data] [varchar](max) NULL,
+	[TypeOfService] [varchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[LogId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON)
+)
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+
+--Ser_GetGenericAppAzureHubDetails
+
+ --Ser_GetGenericAppAzureHubDetails 10155
+ALTER PROCEDURE [dbo].[Ser_GetGenericAppAzureHubDetails]
+(
+	@ProfileId INT
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	DECLARE @Vertical VARCHAR(20)
+	DECLARE @GenericAppName VARCHAR(20)
+	DECLARE @BrandedAppName VARCHAR(100)
+	DECLARE @Parent_ProfileId INT
+	SET @Parent_ProfileId = (SELECT TOP 1 Parent_ProfileID FROM T_Business_Profiles WHERE Profile_ID=@ProfileId)
+	IF(@Parent_ProfileId IS NOT NULL)
+		BEGIN
+			SET @ProfileId = @Parent_ProfileId
+		END
+	SET @Vertical = (SELECT TOP 1 Vertical_Name FROM T_Business_Profiles WHERE Profile_ID=@ProfileId)
+
+	SET @BrandedAppName = (SELECT TOP 1 App_Name FROM M_BrandedApp_Favorites WHERE Profile_ID=@ProfileId)
+	IF(@Vertical IS NOT NULL)
+		BEGIN
+			IF(@Vertical='uspdhub')
+				BEGIN
+					SET @GenericAppName = 'USPDhub'
+				END
+			ELSE IF(@Vertical='inschoolhub')
+				BEGIN
+					SET @GenericAppName = 'inScoolHub'
+				END
+			ELSE IF(@Vertical='inschoolalert')
+			BEGIN
+					SET @GenericAppName = 'InschoolAlertLite'
+				END
+			ELSE IF(@Vertical='twovie')
+				BEGIN
+					SET @GenericAppName = 'TwoVie'
+				END
+			ELSE IF(@Vertical='myyouthhub')
+				BEGIN
+					SET @GenericAppName = 'MyYouthHub'
+				END
+		END
+	IF(@ProfileId=10276)
+		BEGIN
+			SELECT HubName,HubAccessKey, App_ID FROM L_Master_AppNames WHERE App_ID=1 
+		END
+	ELSE IF(@ProfileId=10151)
+		BEGIN
+			SELECT HubName,HubAccessKey, App_ID FROM L_Master_AppNames WHERE App_ID=54
+		END
+	ELSE IF(@ProfileId=10033)
+		BEGIN
+			SELECT HubName,HubAccessKey, App_ID FROM L_Master_AppNames WHERE App_ID=36
+		END
+	ELSE IF(@ProfileId=10392)
+		BEGIN
+			SELECT HubName,HubAccessKey, App_ID FROM L_Master_AppNames WHERE App_ID=93
+		END
+	ELSE IF(@ProfileId=10251)
+	BEGIN
+		SELECT HubName,HubAccessKey, App_ID FROM L_Master_AppNames WHERE App_ID=4
+	END
+	ELSE IF(@ProfileId=10020)
+	BEGIN
+		SELECT HubName,HubAccessKey, App_ID FROM L_Master_AppNames WHERE App_ID=4
+	END
+	ELSE IF(@ProfileId=10155)
+	BEGIN
+		SELECT HubName,HubAccessKey, App_ID FROM L_Master_AppNames WHERE App_ID=14
+	END
+	ELSE IF(@BrandedAppName IS NOT NULL)
+		BEGIN
+			SELECT  HubName,HubAccessKey, App_ID FROM L_Master_AppNames 
+			WHERE (App_name=@BrandedAppName OR App_name=@GenericAppName) 
+		END
+	ELSE IF(@GenericAppName IS NOT NULL)
+		BEGIN
+			SELECT  HubName,HubAccessKey, App_ID FROM L_Master_AppNames 
+			WHERE App_name=@GenericAppName 
+		END
+	--ELSE IF(@GenericAppName IS NOT NULL)
+	--	BEGIN
+	--		SELECT HubName,HubAccessKey,App_ID FROM L_Master_AppNames WHERE App_name=@GenericAppName
+	--	END    
+END 
+GO
+
+
+
+ 
+
+
+
+
+--Ser_GetTotalSlotCountByAppID
+
+
+
+/****** Object:  StoredProcedure [dbo].[Ser_GetTotalSlotCountByAppID]    Script Date: 07/14/2016 18:04:47 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[Ser_GetTotalSlotCountByAppID]
+(
+@ProfileID INT,
+@AppID INT
+)
+AS
+BEGIN
+
+DECLARE @TotalSlotCount INT=0
+
+		IF EXISTS (SELECT TOP(1) AzurePushSlot_Number FROM M_AzureNHPushRegistrations WHERE Profile_Id=@ProfileID AND App_Id=@AppID )
+		BEGIN
+			SET @TotalSlotCount=(SELECT MAX(AzurePushSlot_Number) FROM  M_AzureNHPushRegistrations
+			 WHERE Profile_Id=@ProfileID AND App_Id=@AppID)			 
+		END
+
+SELECT @TotalSlotCount
+END
+
+GO
+
+
+
+
+
+--Ser_GetGenericAppAzureHubDetails
+
+
+/****** Object:  StoredProcedure [dbo].[Ser_GetGenericAppAzureHubDetails]    Script Date: 07/14/2016 18:05:56 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+ --Ser_GetGenericAppAzureHubDetail 10033
+CREATE PROCEDURE [dbo].[Ser_GetGenericAppAzureHubDetails]
+(
+	@ProfileId INT
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	DECLARE @Vertical VARCHAR(20)
+	DECLARE @GenericAppName VARCHAR(20)
+	DECLARE @BrandedAppName VARCHAR(100)
+	DECLARE @Parent_ProfileId INT
+	SET @Parent_ProfileId = (SELECT TOP 1 Parent_ProfileID FROM T_Business_Profiles WHERE Profile_ID=@ProfileId)
+	IF(@Parent_ProfileId IS NOT NULL)
+		BEGIN
+			SET @ProfileId = @Parent_ProfileId
+		END
+	SET @Vertical = (SELECT TOP 1 Vertical_Name FROM T_Business_Profiles WHERE Profile_ID=@ProfileId)
+
+	SET @BrandedAppName = (SELECT TOP 1 App_Name FROM M_BrandedApp_Favorites WHERE Profile_ID=@ProfileId)
+	IF(@Vertical IS NOT NULL)
+		BEGIN
+			IF(@Vertical='uspdhub')
+				BEGIN
+					SET @GenericAppName = 'USPDhub'
+				END
+			ELSE IF(@Vertical='inschoolhub' OR @Vertical='inschoolalert')
+				BEGIN
+					SET @GenericAppName = 'inSchoolHub'
+				END
+			ELSE IF(@Vertical='twovie')
+				BEGIN
+					SET @GenericAppName = 'TwoVie'
+				END
+			ELSE IF(@Vertical='myyouthhub')
+				BEGIN
+					SET @GenericAppName = 'MyYouthHub'
+				END
+		END
+	IF(@ProfileId=10276)
+		BEGIN
+			SELECT HubName,HubAccessKey, App_ID FROM L_Master_AppNames WHERE App_ID=1 
+		END
+	ELSE IF(@ProfileId=10151)
+		BEGIN
+			SELECT HubName,HubAccessKey, App_ID FROM L_Master_AppNames WHERE App_ID=54
+		END
+	ELSE IF(@ProfileId=10033)
+		BEGIN
+			SELECT HubName,HubAccessKey, App_ID FROM L_Master_AppNames WHERE App_ID=36
+		END
+	ELSE IF(@BrandedAppName IS NOT NULL)
+		BEGIN
+			SELECT TOP(1) HubName,HubAccessKey, App_ID FROM L_Master_AppNames 
+			WHERE App_name=@BrandedAppName
+		END
+	ELSE IF(@GenericAppName IS NOT NULL)
+		BEGIN
+			SELECT TOP(1) HubName,HubAccessKey, App_ID FROM L_Master_AppNames 
+			WHERE App_name=@GenericAppName 
+		END
+	--ELSE IF(@GenericAppName IS NOT NULL)
+	--	BEGIN
+	--		SELECT HubName,HubAccessKey,App_ID FROM L_Master_AppNames WHERE App_name=@GenericAppName
+	--	END    
+END
+
+
+GO
+
+
+
+
+
+--USP_GetContactsByContactGroupID
+
+/****** Object:  StoredProcedure [dbo].[USP_GetContactsByContactGroupID]    Script Date: 07/14/2016 18:06:47 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+ -- USP_GetContactsByContactGroupID 26,412,1
+CREATE PROCEDURE [dbo].[USP_GetContactsByContactGroupID]
+(
+      @ContactGroupIds VARCHAR(200),
+      @UserID int,
+      @CheckFlag BIT
+)
+AS
+BEGIN
+      SELECT    ContactID,Firstname as ContactName,DBO.FormatPhoneNumber(Mobile) AS Mobile ,Contact_Group_Name, @CheckFlag AS CheckFlag
+      FROM T_User_Contacts
+      WHERE Contact_Group_Name IN(
+            SELECT Data
+            FROM Split(@ContactGroupIds, ',')
+      ) AND Mobile<>'' AND User_ID=@UserID AND SMSOptIn=1
+END
+
+
+GO
+
+
+
+
+--usp_m_UpdateDeviceDetails
+
+
+/****** Object:  StoredProcedure [dbo].[usp_m_UpdateDeviceDetails]    Script Date: 07/14/2016 18:07:29 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROC [dbo].[usp_m_UpdateDeviceDetails]
+(
+@DeviceID varchar(max),
+@PID int,
+@DeviceType varchar(250),
+@AppID int,
+@UniqueID varchar(max),
+@AppVersion varchar(50)
+)
+AS
+
+BEGIN
+	IF((LEN(@DeviceID) > 20) AND (LEN(@UniqueID) > 15) AND @AppID > 0 AND @DeviceType<>'')
+		BEGIN
+			IF((SELECT COUNT(*) from M_Business_Devices WHERE App_ID=@AppID AND UniqueDeviceID=@UniqueID AND Profile_ID = @PID)>0)
+				BEGIN
+					UPDATE M_Business_Devices SET Device_ID=@DeviceID,Device_Type=@DeviceType
+						WHERE UniqueDeviceID=@UniqueID AND Profile_ID= @PID AND App_ID=@AppID
+				END
+		END
+		
+	-- GET BDID
+	DECLARE @BDID INT
+	SET @BDID=(SELECT top(1) BDID FROM M_Business_Devices 
+	WHERE UniqueDeviceID=@UniqueID AND Profile_ID= @PID AND App_ID=@AppID AND IsActive=1 AND IsDeleted=0)
+
+
+	DECLARE @CurrentMonth DATETIME
+	SET @CurrentMonth=[dbo].[GetPSTDateTimeFromUTC]()--  (SELECT DATENAME(month, [dbo].[GetPSTDateTimeFromUTC]()))
+
+	DECLARE @SystemPusMessage VARCHAR(250)
+	SET @SystemPusMessage=(SELECT top(1) SystemPushMessage FROM M_SystemPushMessages 
+	WHERE IsActive=1 AND MessageDate=@CurrentMonth)
+		  
+SELECT @BDID
+ END
+
+
+GO
+
+
+/****** Object:  StoredProcedure [dbo].[usp_M_InsertAppDeviceDetails]    Script Date: 07/14/2016 18:13:17 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROC [dbo].[usp_M_InsertAppDeviceDetails]
+(
+	@Device_ID varchar(MAX),
+	@Profile_ID int,
+	@Device_Type varchar(250),
+	@Business_Name varchar(250)='',
+	@Address varchar(250)='',
+	@App_ID int,
+	@UniqueDeviceID varchar(max)=null,
+	@AppVersion varchar(50)=''
+)
+AS
+BEGIN
+
+DECLARE @IsUpdatedVersion BIT = 0
+
+
+	SET @Business_Name=(SELECT Profile_name FROM T_Business_Profiles WHERE Profile_ID=@Profile_ID)
+
+	declare @ExistingDeviceId varchar(max)
+	set @ExistingDeviceId=(SELECT TOP 1 Device_ID FROM M_Business_Devices_Web 
+	WHERE App_ID=@App_ID AND UniqueDeviceID=@UniqueDeviceID AND Profile_ID=@Profile_ID AND AppVersion=@AppVersion ORDER BY BDID DESC)
+	IF(@ExistingDeviceId IS NULL)
+		BEGIN
+				IF EXISTS(SELECT TOP 1 Device_ID FROM M_Business_Devices_Web 
+				WHERE App_ID=@App_ID AND UniqueDeviceID=@UniqueDeviceID AND Profile_ID=@Profile_ID )
+					BEGIN
+					SET @IsUpdatedVersion=1
+					END
+	
+			INSERT INTO M_Business_Devices_Web(Device_ID,Profile_ID,Created_Date,Device_Type,
+			Business_Name,App_ID,UniqueDeviceID,AppVersion,IsSendPushNotification,LastAccessed_Date,IsActive,IsDeleted,IsUpdatedVersion)
+			VALUES(@Device_ID,@Profile_ID,[dbo].[GetPSTDateTimeFromUTC](),@Device_Type,@Business_Name,@App_ID,
+			@UniqueDeviceID,@AppVersion,0,[dbo].[GetPSTDateTimeFromUTC](),1,0,@IsUpdatedVersion)
+		END
+	DECLARE @BDID INT = 0
+	IF((LEN(@Device_ID) > 20) AND (LEN(@UniqueDeviceID) > 15) AND @App_ID > 0 AND @Device_Type<>'')
+		BEGIN
+			DECLARE @COUNT INT
+			SET @COUNT=(SELECT count(*) FROM M_Business_Devices WHERE UniqueDeviceID=@UniqueDeviceID
+					and Profile_ID= @Profile_ID AND App_ID=@App_ID)
+			IF(@COUNT=0)
+				BEGIN 
+					INSERT INTO M_Business_Devices(Device_ID,
+						Profile_ID,
+						Created_Date,
+						Device_Type,
+						Business_Name,
+						App_ID,
+						UniqueDeviceID,
+						AppVersion)
+					VALUES(@Device_ID,
+						@Profile_ID,
+						[dbo].[GetPSTDateTimeFromUTC](),
+						@Device_Type,
+						@Business_Name,
+						@App_ID,
+						@UniqueDeviceID,
+						@AppVersion)
+					SET @BDID = SCOPE_IDENTITY();
+				END
+			ELSE
+				BEGIN
+					SET @BDID = (SELECT TOP 1 BDID FROM M_Business_Devices WHERE UniqueDeviceID=@UniqueDeviceID
+						AND Profile_ID= @Profile_ID AND App_ID=@App_ID)
+					UPDATE M_Business_Devices SET UniqueDeviceID=@UniqueDeviceID,AppVersion=@AppVersion, 
+						Created_Date=[dbo].[GetPSTDateTimeFromUTC](), IsActive=1,IsDeleted=0 WHERE UniqueDeviceID=@UniqueDeviceID
+						AND Profile_ID= @Profile_ID AND App_ID=@App_ID
+				END
+		END
+	SELECT @BDID
+END
+
+GO
+
+
+
+
+/****** Object:  StoredProcedure [dbo].[usp_m_GetInvitationDetailsByID]    Script Date: 07/14/2016 18:14:17 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- usp_m_GetInvitationDetailsByID 471,'',93,'',''
+ CREATE PROCEDURE[dbo].[usp_m_GetInvitationDetailsByID]
+ (
+ @InvitationID INT,
+ @UniqueID VARCHAR(MAX),
+ @AppID INT=0,
+ @DeviceID VARCHAR(MAX)='',
+ @DeviceType VARCHAR(50)=''
+ )
+ as
+ 
+ 
+ --SELECT * from T_UserCustom_Modules 
+ --where UserModuleID in ( SELECT UserModuleID FROM T_PrivateModule_Invitations WHERE InvitationID=@InvitationID)
+ 
+DECLARE @PID INT
+DECLARE @BDID INT
+DECLARE @UMID INT
+DECLARE @OUTPUTID INT
+
+ BEGIN		
+	SET @PID=(SELECT ProfileID FROM T_PrivateModule_Invitations  WHERE InvitationID=@InvitationID )
+	SET @BDID=(select top(1) BDID from M_Business_Devices 
+	WHERE (UniqueDeviceID=@UniqueID) AND Profile_ID=@PID AND IsActive=1 AND IsDeleted=0 AND App_ID=@AppID)
+	SET @UMID=(SELECT UserModuleID FROM T_PrivateModule_Invitations  WHERE InvitationID=@InvitationID)	
+	 
+		IF((SELECT COUNT(*) FROM T_PrivateModule_Invitations WHERE InvitationID=@InvitationID AND OTP='')>0)
+			BEGIN
+				SET @OUTPUTID=-1
+			END
+		ELSE IF((SELECT COUNT(*) FROM T_PrivateModule_Invitations WHERE InvitationID=@InvitationID)=0)
+				BEGIN
+					SET @OUTPUTID=-1
+				END				
+		ELSE IF(@BDID IS NULL OR @BDID=0)
+				BEGIN
+				 -- SET @OUTPUTID=-4				 
+				
+				 -- Its Validate Invitation -- Success
+				SET @OUTPUTID=-3	 	
+				END
+		ELSE IF((SELECT COUNT(*) FROM T_PrivateModule_Invitations WHERE BDID=@BDID AND UserModuleID=@UMID AND Status='Accepted')>0)
+				BEGIN
+					SET @OUTPUTID=-2
+				END
+		ELSE
+			BEGIN
+				-- Its Validate Invitation -- Success
+				SET @OUTPUTID=-3	 					
+			END
+			
+	END
+ 
+ SELECT     @OUTPUTID AS OUTPUTID,T_UserCustom_Modules.UserModuleID,T_UserCustom_Modules.TabName,T_UserCustom_Modules.ButtonType,
+  T_UserCustom_Modules.ProfileID, T_UserCustom_Modules.ButtonType, T_PrivateModule_Invitations.Status
+FROM         T_UserCustom_Modules INNER JOIN
+                      T_PrivateModule_Invitations ON T_UserCustom_Modules.UserModuleID = T_PrivateModule_Invitations.UserModuleID
+                      WHERE InvitationID=@InvitationID
+                      
+                      
+ IF(@OUTPUTID=-3)
+ BEGIN
+	EXEC usp_M_InsertAppDeviceDetails @DeviceID,@PID,@DeviceType,'','',@AppID,@UniqueID,''
+END
+
+GO
+
+
+
+/****** Object:  StoredProcedure [dbo].[USP_AddAdditionalTab]    Script Date: 07/14/2016 18:15:38 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE  procedure [dbo].[USP_AddAdditionalTab]
+(
+	@DomainName	VARCHAR(20),	
+	@ProfileID INT,
+	@ButtonType VARCHAR(50)
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	DECLARE @ParentID INT
+	DECLARE @SubApps INT
+	SET @ParentID=(SELECT Parent_ProfileID FROM T_Business_Profiles WHERE Profile_ID=@ProfileID)
+	IF(@ParentID IS NULL OR @ParentID = '')
+		BEGIN
+			SET @SubApps=(SELECT COUNT(*) FROM T_Business_Profiles WHERE Parent_ProfileID=@ProfileID AND Active_flag=1)
+		END
+	ELSE
+		BEGIN
+			SET @SubApps=1
+		END
+    
+	IF(@SubApps>0)
+		BEGIN
+			DECLARE @UserID INT
+			SET @UserID =(SELECT User_ID FROM T_Business_Profiles WHERE Profile_ID=@ProfileID)    
+			DECLARE @OrderNo INT = NULL
+			
+			SELECT @OrderNo=MAX(OrderNo) FROM T_UserCustom_Modules WHERE [UserID]=@UserID and IsActive=1
+			IF(@OrderNo IS NULL)
+				SET @OrderNo=1
+			ELSE
+				SET @OrderNo=@OrderNo+1	
+			IF EXISTS(SELECT UserModuleID FROM T_UserCustom_Modules WHERE ProfileID=@ProfileID AND ButtonType=@ButtonType)
+				BEGIN					
+					IF EXISTS(SELECT UserModuleID FROM T_UserCustom_Modules WHERE ProfileID=@ProfileID AND ButtonType=@ButtonType AND IsActive<>1)
+						BEGIN
+							UPDATE T_UserCustom_Modules SET IsActive =1,OrderNo=@OrderNo WHERE ProfileID=@ProfileID AND ButtonType=@ButtonType
+						END
+				END
+			ELSE
+				BEGIN
+					INSERT INTO T_UserCustom_Modules([ProfileID]
+							,[UserID]
+							,[AppIcon]
+							,[TabName]
+							,[CreatedDate]
+							,[ModifiedDate]		
+							,[CreatedUser]		
+							,[ManageUrl]
+							,[ModifiedUser]
+							,[OrderNo]
+							,[IsDefaultButton]
+							,[DefaultButtonID]
+							,[ButtonType]
+							,[IsHasChilds]
+							,[IsVisible])
+					SELECT	@ProfileID
+							,@UserID
+							,[AppIcon]
+							,[ButtonName]		
+							, [dbo].[GetPSTDateTimeFromUTC]()
+							, [dbo].[GetPSTDateTimeFromUTC]()
+							,@UserID
+							,[ManageUrl]
+							,@UserID
+							,@OrderNo
+							,1
+							,DefaultButtonID
+							,[ButtonType]
+							,0
+							,IsVisibleOn FROM L_Domain_DefaultButtons LDDB WHERE DomainName=@DomainName AND IsAddDefault =0 AND ButtonType=@ButtonType
+				END
+		END
+	ELSE
+		BEGIN
+			UPDATE T_UserCustom_Modules SET IsActive =0 WHERE ProfileID=@ProfileID AND ButtonType=@ButtonType
+		END
+END
+
+GO
+
+
+
+/****** Object:  StoredProcedure [dbo].[usp_UsersDeleteRecord]    Script Date: 07/14/2016 18:16:12 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+CREATE PROCEDURE [dbo].[usp_UsersDeleteRecord]
+(
+
+@Uid int,
+@UserID int,
+@IpAddress varchar(50)
+)
+AS
+BEGIN
+
+--Insert deleted Records into [L_Deleted_UsersDetails] table
+
+--INSERT INTO L_Deleted_UsersDetails
+--(
+-- User_ID,Firstname,Lastname,Username,Password,Role_ID,Profile_ID,
+-- Profile_name,Profile_City,Profile_State,DELETED_DT,IpAddress,AdminUserID
+--)
+-- SELECT U.User_ID,U.Firstname,U.Lastname,U.Username,U.Password,U.Role_ID,BP.Profile_ID,
+-- BP.Profile_name,BP.Profile_City,BP.Profile_State,[dbo].[GetPSTDateTimeFromUTC](),@IpAddress,@UserID FROM T_Users U, T_Business_Profiles BP
+
+--WHERE U.User_ID=@Uid and BP.User_ID=U.User_ID
+
+--Delete Records from T_Users table
+
+Update T_Users set Active_flag=0,User_Status='InActive'  WHERE User_ID=@Uid
+
+update T_Business_Profiles set  Active_flag=0 WHERE User_ID=@Uid
+
+DECLARE @ProfileID INT
+SET @ProfileID = (SELECT Profile_ID FROM T_Business_Profiles WHERE User_ID=@Uid)
+UPDATE T_Business_Profiles SET Parent_ProfileID = NULL WHERE Parent_ProfileID = @ProfileID
+
+update T_Profile_Subcriptions set Status_flag=0,Active_flag=0 WHERE User_ID=@Uid
+
+DECLARE @ParentProfileID INT
+DECLARE @DomainName VARCHAR(20)
+SET @ParentProfileID = (SELECT Parent_ProfileID FROM T_Business_Profiles WHERE User_ID=@Uid)
+IF(@ParentProfileID IS NOT NULL)
+	BEGIN
+		SET @DomainName = (SELECT Domain_Name FROM L_Country_Verticals WHERE Vertical_Name=(SELECT Vertical_Name FROM T_Business_Profiles WHERE User_ID=@Uid) AND Country=(SELECT Profile_County FROM T_Business_Profiles WHERE User_ID=@Uid))
+		EXEC [dbo].[USP_AddAdditionalTab] @DomainName,@ParentProfileID,'SubApps';
+		
+	END
+END
+
+
+GO
+
+
+
+
+
+/****** Object:  StoredProcedure [dbo].[UpdateAppUserMobileNumber]    Script Date: 07/14/2016 18:16:53 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+ 
+
+CREATE PROCEDURE[dbo].[UpdateAppUserMobileNumber]
+(
+@UniqueDeviceID VARCHAR(MAX),
+@DeviceID VARCHAR(MAX),
+@AppID INT,
+@MobileNumber VARCHAR(20),
+@DeviceType VARCHAR(50),
+@PIDs VARCHAR(MAX),
+@Name VARCHAR(250),
+@EmailID VARCHAR(250),
+@InvitationID INT=0
+)
+AS
+
+SET @MobileNumber=(dbo.FormatPhoneNumber(@MobileNumber))
+
+IF(@InvitationID>0)
+BEGIN
+	UPDATE T_PrivateModule_Invitations SET MobileNumber=@MobileNumber WHERE InvitationID=@InvitationID
+	SET @PIDs=(SELECT ProfileID FROM T_PrivateModule_Invitations WHERE InvitationID=@InvitationID)
+END
+
+DECLARE @A INT =1
+DECLARE @PIDsCount INT
+
+SET @PIDsCount =(select count(*) from dbo.Split(@PIDs,','))
+DECLARE @PID int
+
+ -- WHILE LOOP START=========================== 
+WHILE(@A <=@PIDsCount)
+BEGIN 
+	
+	-- Get One by One Profile from Split Method
+	SET @PID=(SELECT data FROM dbo.Split(@PIDs,',') WHERE id=@A)
+
+	EXEC usp_M_InsertAppDeviceDetails @DeviceID,@PID,@DeviceType,'','',@AppID,@UniqueDeviceID,''
+
+	-- Update Mobile Numer for Each Profile Base AppID and UniqueID
+	UPDATE M_Business_Devices
+	SET MobileNumber=@MobileNumber,
+		Name=@Name,
+		EmailID=@EmailID
+	WHERE UniqueDeviceID=@UniqueDeviceID AND App_ID=@AppID AND Profile_ID=@PID
+
+-- WHILE LOOP VALUES A Increment
+SET @A = @A + 1
+
+END
+ -- WHILE LOOP END===========================
+
+
+GO
+
+
+
+
+/****** Object:  Table [dbo].[T_Audio_TipsManager]    Script Date: 07/14/2016 18:18:25 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_Audio_TipsManager](
+	[AudioID] [int] IDENTITY(1,1) NOT NULL,
+	[ProfileID] [int] NOT NULL,
+	[UserID] [int] NOT NULL,
+	[AudioName] [varchar](max) NULL,
+	[AudioFile] [varchar](max) NOT NULL,
+	[IsDeleted] [bit] NOT NULL,
+	[CreatedDate] [datetime] NULL,
+	[ModifiedDate] [datetime] NULL,
+	[DefaultID] [int] NULL,
+	[IsDefault] [bit] NOT NULL,
+ CONSTRAINT [PK_T_Audio_TipsManager] PRIMARY KEY CLUSTERED 
+(
+	[AudioID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON)
+)
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[T_Audio_TipsManager] ADD  DEFAULT ((0)) FOR [IsDeleted]
+GO
+
+ALTER TABLE [dbo].[T_Audio_TipsManager] ADD  DEFAULT ((0)) FOR [IsDefault]
+GO
+
+
+----------------------------------------------------------------------
+
+
+CREATE PROCEDURE [dbo].[USP_M_GetAzureAvailableSlotNumber]
+(
+	@ProfileId INT,
+	@App_Id	INT
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	DECLARE @MaxSlots INT
+	SET @MaxSlots = (SELECT COUNT(*) FROM M_AzureNHPushRegistrations WHERE Profile_Id = @ProfileId AND App_Id = @App_Id)
+    IF(@MaxSlots=0)
+		BEGIN
+			INSERT INTO M_AzureNHPushRegistrations(Profile_Id,AzurePushSlot_Number,App_Id) VALUES(@ProfileId, 1, @App_Id)
+		END
+	DECLARE @AvailableSlot INT
+	SET @AvailableSlot = (SELECT TOP 1 AzurePushSlot_Number FROM M_AzureNHPushRegistrations WHERE Profile_Id = @ProfileId AND App_Id = @App_Id AND Device_Registrations<10000)
+	IF(@AvailableSlot IS NULL)
+		BEGIN
+			SET @AvailableSlot= @MaxSlots + 1
+			INSERT INTO M_AzureNHPushRegistrations(Profile_Id,AzurePushSlot_Number,App_Id) VALUES(@ProfileId, @AvailableSlot, @App_Id)
+		END
+	UPDATE M_AzureNHPushRegistrations SET Device_Registrations= Device_Registrations+1 WHERE Profile_Id = @ProfileId AND App_Id = @App_Id AND AzurePushSlot_Number=@AvailableSlot
+	SELECT @AvailableSlot
+END
+
+GO
+
+
+-------------------------------------------------------------------------------------------
+
+
+CREATE TABLE [dbo].[M_AzureNHPushRegistrations](
+	[Profile_Id] [int] NOT NULL,
+	[AzurePushSlot_Number] [int] NOT NULL,
+	[Device_Registrations] [int] NOT NULL,
+	[App_Id] [int] NOT NULL
+)
+
+GO
+
+ALTER TABLE [dbo].[M_AzureNHPushRegistrations] ADD  CONSTRAINT [DF_M_AzureNHPushRegistrations_Devise_Registrations]  DEFAULT ((0)) FOR [Device_Registrations]
+GO
+
+
+-----------------------------------------------------------------------------------------
+
+ 
+ALTER PROC [dbo].[usp_m_Insert_OTP_Log]
+(
+@OTP VARCHAR(max)='',
+@PID INT,
+@AppID INT,
+@UniqueID VARCHAR(MAX), 
+@MobileNumber VARCHAR(20),
+@Name VARCHAR(50),
+@EmailID VARCHAR(50),
+@ModuleType VARCHAR(50)
+)
+AS
+
+
+DECLARE @BDID INT
+
+SET @BDID=(select top(1) BDID from M_Business_Devices 
+	WHERE (UniqueDeviceID=@UniqueID) AND Profile_ID=@PID AND IsActive=1 AND IsDeleted=0 AND App_ID=@AppID)
+
+INSERT INTO T_Manage_OTP_Logs(OTP,BDID,MobileNumber,EmailID,Name,CreatedDate,ModuleType,PID)
+VALUES(@OTP,@BDID,@MobileNumber,@EmailID,@Name,[dbo].[GetPSTDateTimeFromUTC](),@ModuleType,@PID)
+
+
+GO
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+ALTER PROCEDURE [dbo].[USP_DeleteCallIndexItem]
+(
+	@CustomID INT,
+	@UserID INT
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	DECLARE @Profile_Id  INT
+	SET @Profile_Id = (SELECT ProfileID FROM T_Manage_PrivateCallAddOns WHERE CustomID=@CustomID AND PublishDate IS NOT NULL AND IsPublish=1)
+	IF @Profile_Id IS NOT NULL
+		BEGIN
+			DELETE FROM Ser_SilentPushMessages 
+					WHERE ContentType_Id = @CustomID AND ContentType = 'PrivateCallModule' AND Sent_Flag = 0
+				
+					INSERT INTO Ser_SilentPushMessages(Profile_Id,Publish_Date,Sent_Flag,ContentType_Id,ContentType,ActionType)
+					VALUES (@Profile_Id,[dbo].[GetPSTDateTimeFromUTC](),@CustomID,NULL,'PrivateCallModule','Delete')
+		END
+    -- Insert statements for procedure here
+	UPDATE T_Manage_PrivateCallAddOns SET IsDeleted=1,ModifyDate=[dbo].[GetPSTDateTimeFromUTC]() WHERE CustomID=@CustomID
+	UPDATE T_CallIndex_Groups SET IsDeleted=1,ModifyDate=[dbo].[GetPSTDateTimeFromUTC]() WHERE CustomID=@CustomID
+	UPDATE T_CallIndex_AssignGroupToContacts SET GroupID=(SELECT TOP 1 GroupID from T_CallIndex_Groups WHERE Group_Type='System' and UserID=@UserID ORDER BY 1 DESC)
+      WHERE GroupID=(SELECT GroupID FROM T_CallIndex_Groups WHERE CustomID=@CustomID and UserID=@UserID)
+
+END
+
+GO
+
+----------------------------------------------------------------------------
+ 
+
+CREATE proc [dbo].[usp_Delete_QuestionOptions]
+(
+@Question_ID INT
+)
+as
+delete T_SurveyQuestion_Options where  QuestionID=@Question_ID
+
+GO
+
+
+------------------------------------------------------------------------
+
+ 
+-- usp_m_GetInvitationDetailsByID 471,'',93,'',''
+ ALTER PROCEDURE[dbo].[usp_m_GetInvitationDetailsByID]
+ (
+ @InvitationID INT,
+ @UniqueID VARCHAR(MAX)='',
+ @AppID INT=0,
+ @DeviceID VARCHAR(MAX)='',
+ @DeviceType VARCHAR(50)=''
+ )
+ as
+ 
+ 
+ --SELECT * from T_UserCustom_Modules 
+ --where UserModuleID in ( SELECT UserModuleID FROM T_PrivateModule_Invitations WHERE InvitationID=@InvitationID)
+ 
+DECLARE @PID INT
+DECLARE @BDID INT
+DECLARE @UMID INT
+DECLARE @OUTPUTID INT
+
+ BEGIN		
+	SET @PID=(SELECT ProfileID FROM T_PrivateModule_Invitations  WHERE InvitationID=@InvitationID )
+	SET @BDID=(select top(1) BDID from M_Business_Devices 
+	WHERE (UniqueDeviceID=@UniqueID) AND Profile_ID=@PID AND IsActive=1 AND IsDeleted=0 AND App_ID=@AppID)
+	SET @UMID=(SELECT UserModuleID FROM T_PrivateModule_Invitations  WHERE InvitationID=@InvitationID)	
+	 
+		IF((SELECT COUNT(*) FROM T_PrivateModule_Invitations WHERE InvitationID=@InvitationID AND OTP='')>0)
+			BEGIN
+				SET @OUTPUTID=-1
+			END
+		ELSE IF((SELECT COUNT(*) FROM T_PrivateModule_Invitations WHERE InvitationID=@InvitationID)=0)
+				BEGIN
+					SET @OUTPUTID=-1
+				END				
+		ELSE IF(@BDID IS NULL OR @BDID=0)
+				BEGIN
+				 -- SET @OUTPUTID=-4				 
+				
+				 -- Its Validate Invitation -- Success
+				SET @OUTPUTID=-3	 	
+				END
+		ELSE IF((SELECT COUNT(*) FROM T_PrivateModule_Invitations WHERE BDID=@BDID AND UserModuleID=@UMID AND Status='Accepted')>0)
+				BEGIN
+					SET @OUTPUTID=-2
+				END
+		ELSE
+			BEGIN
+				-- Its Validate Invitation -- Success
+				SET @OUTPUTID=-3	 					
+			END
+			
+	END
+ 
+ SELECT     @OUTPUTID AS OUTPUTID,T_UserCustom_Modules.UserModuleID,T_UserCustom_Modules.TabName,T_UserCustom_Modules.ButtonType,
+  T_UserCustom_Modules.ProfileID, T_UserCustom_Modules.ButtonType, T_PrivateModule_Invitations.Status
+FROM         T_UserCustom_Modules INNER JOIN
+                      T_PrivateModule_Invitations ON T_UserCustom_Modules.UserModuleID = T_PrivateModule_Invitations.UserModuleID
+                      WHERE InvitationID=@InvitationID
+                      
+                      
+ IF(@OUTPUTID=-3)
+ BEGIN
+	EXEC usp_M_InsertAppDeviceDetails @DeviceID,@PID,@DeviceType,'','',@AppID,@UniqueID,''
+END
+
+GO
+
+
+-------------------------------------------Ramya-------------------------------------------------
+
+ CREATE PROCEDURE USP_GetWebLinksByCategoryID
+	@Category_ID int
+AS
+BEGIN
+	SELECT * FROM T_WebLinks WHERE Category_ID=@Category_ID and IsDeleted=0 ORDER BY Order_No,OrderModified_Date DESC
+END
+
+
+
+-------------------------------------------Ramya-------------------------------------------------
+ALTER PROCEDURE [dbo].[usp_Insert_Update_Suvery](	@SurveyID int,	@ProfileID int,	@UserID int,	@Name varchar(200),	@Description varchar(200),	@SurveyTypeID int,	@ThankseMSG varchar(500),	@Expiration_Date datetime= NULL,	@IsPrivate bit, 	@Publish_Date datetime = NULL, 	@Published_By int= NULL,	@IsPublished bit,	@CUserId INT)ASBEGIN	SET NOCOUNT ON; 	IF((SELECT COUNT(*) from T_Manage_Surveys 			WHERE Name=@Name and Survey_ID!=@SurveyID and STypeID=@SurveyTypeID AND ProfileID=@ProfileID AND IsDeleteD=0)>0)		BEGIN			SET @SurveyID= -1		END	ELSE		BEGIN		-- *** Check Publish Date with current date *** --			DECLARE @IsMakingPrivate BIT=0  
+			DECLARE @ExistingPublishDate DATETIME = NULL 			DECLARE @CheckSilentPush BIT = 1			IF(@IsPrivate=1)				BEGIN					DECLARE @SetDate DATETIME					DECLARE @PublishDateCheck DATETIME					DECLARE @UserDateTime DATETIME					SET @UserDateTime=dbo.ConvertPSTToUserTimeZone(@ProfileID,[dbo].[GetPSTDateTimeFromUTC]()) --- *** Converting server time to user time *** --					SET @SetDate = convert(datetime,convert(nvarchar,(datepart(yyyy,@UserDateTime))) + '/'+convert(nvarchar,(datepart(MM,@UserDateTime))) + '/'+convert(nvarchar,(datepart(dd,@UserDateTime))))					SET @PublishDateCheck = convert(datetime,convert(nvarchar,(datepart(yyyy,@Publish_Date))) + '/'+convert(nvarchar,(datepart(MM,@Publish_Date))) + '/'+convert(nvarchar,(datepart(dd,@Publish_Date))))					IF(@SurveyID=0)						BEGIN										IF(@SetDate = @PublishDateCheck)								BEGIN									SET @UserDateTime = [dbo].[GetPSTDateTimeFromUTC]()								END							ELSE								BEGIN									SET @UserDateTime = dbo.ConvertUserTimeZoneToPST(@ProfileID,@Publish_Date)								END						END					ELSE						BEGIN							IF (@SetDate = @PublishDateCheck)									BEGIN										SET @UserDateTime = [dbo].[GetPSTDateTimeFromUTC]()									END								ELSE								BEGIN									SET @UserDateTime = dbo.ConvertUserTimeZoneToPST(@ProfileID,@Publish_Date)								END								END					SET @Publish_Date = @UserDateTime				END			IF(@SurveyID=0)				BEGIN					 INSERT INTO T_Manage_Surveys(ProfileID,UserID,Name,Description,STypeID,Thanks_Message,					 Created_Date,Created_User,Expiration_Date,Modified_Date,Modified_User,IsPrivate,Publish_Date,Published_By,IsPublished)					 VALUES(@ProfileID,@UserID,@Name,@Description,@SurveyTypeID,@ThankseMSG,[dbo].[GetPSTDateTimeFromUTC](),					 @CUserId,@Expiration_Date,[dbo].[GetPSTDateTimeFromUTC](), @CUserId,@IsPublished,@Publish_Date,@Published_By,@IsPrivate)					 SET @SurveyID= @@identity				END				ELSE				BEGIN					IF(@ThankseMSG='')						BEGIN							UPDATE T_Manage_Surveys SET  Name=@Name,								Description=@Description,								STypeID=@SurveyTypeID,								Modified_Date=[dbo].[GetPSTDateTimeFromUTC](),								Modified_User=@CUserId							WHERE Survey_ID=@SurveyID							SET @CheckSilentPush = 0						END					ELSE						BEGIN							IF EXISTS(SELECT Survey_ID  FROM  T_Manage_Surveys WHERE Survey_ID=@SurveyID   AND IsPublished = 1 AND Publish_Date IS NOT NULL)
+								BEGIN
+									SET @IsMakingPrivate = 1
+									SET @ExistingPublishDate = (SELECT Publish_Date  FROM  T_Manage_Surveys WHERE Survey_ID=@SurveyID)
+								END								UPDATE T_Manage_Surveys SET  Name=@Name,								Description=@Description,								STypeID=@SurveyTypeID,								Thanks_Message=@ThankseMSG,								Modified_Date=[dbo].[GetPSTDateTimeFromUTC](),								Modified_User=@CUserId,								Expiration_Date=@Expiration_Date,								IsPrivate=@IsPublished,								Publish_Date=@Publish_Date,								Published_By=@Published_By,								IsPublished=@IsPrivate							WHERE Survey_ID=@SurveyID							IF EXISTS(SELECT Survey_ID  FROM  T_Manage_Surveys WHERE Survey_ID=@SurveyID   AND IsPrivate = @IsPublished AND IsPublished=@IsPrivate AND Rejected_By IS NOT NULL)							BEGIN							  UPDATE T_Manage_Surveys SET Rejected_By=NULL WHERE Survey_ID=@SurveyID							END						END				END			-- *** Adding row for Silent Push Notification if it is published by publisher ***
+			IF(@CheckSilentPush=1)
+				BEGIN
+					DECLARE @Count int
+					DELETE FROM Ser_SilentPushMessages WHERE ContentType_Id = @SurveyID AND ContentType = 'Surveys' AND ActionType = 'Expiring' AND Sent_Flag = 0
+					DELETE FROM Ser_SilentPushMessages WHERE ContentType_Id = @SurveyID AND ContentType = 'Surveys' AND ActionType = 'Publish' AND Sent_Flag = 0
+					SET @Count=(SELECT COUNT(*) FROM T_Manage_Surveys WHERE Survey_ID=@SurveyID and IsPublished=1)
+					IF(@Count >=1) 
+						BEGIN
+							EXEC [Ser_InsertSilentPushMessages] @ProfileID,@Publish_Date,false,@SurveyID,'Surveys','Publish' 
+							IF(@Expiration_Date IS NOT NULL)
+								BEGIN					
+									EXEC [Ser_InsertSilentPushMessages] @ProfileID,@Expiration_Date,false,@SurveyID,'Surveys','Expiring' 
+								END
+						END  
+					ELSE IF(@IsMakingPrivate = 1 AND @Publish_Date IS NULL AND @ExistingPublishDate<=[dbo].[GetPSTDateTimeFromUTC]())
+						BEGIN
+							EXEC [Ser_InsertSilentPushMessages] @ProfileID,@Expiration_Date,false,@SurveyID,'Surveys','Unpublish' 
+						END				END		END	IF(@ThankseMSG!='')		BEGIN			IF(@IsPrivate=1)				BEGIN					UPDATE T_Manage_Surveys SET IsAlreadyPublishDate=@Publish_Date WHERE Survey_ID=@SurveyID AND IsAlreadyPublishDate IS NULL				END			ELSE				BEGIN					UPDATE T_Manage_Surveys SET IsAlreadyPublishDate= NULL WHERE Survey_ID=@SurveyID 				END	 		END		SELECT @SurveyID
+END
+
+
+==================================================
+
+
+Alter Procedure [dbo].[Ser_GetEventCaledarCampanMail]
+(
+		@SchDate DATETIME	,
+		@VerticalID INT,
+		@EmailType VARCHAR(10)  
+)
+AS
+BEGIN
+	IF(@EmailType='EC')
+		BEGIN
+			SELECT DISTINCT TSE.ScheduleEvent_ID,TSE.Event_ID,TSE.Sender_UserID,TSE.Sender_ProfileID,TSE.SchduleEventSubject, TSE.Receiver_EmailID,TSE.Contactuschecked,TSE.ShareEvent,TSE.StoreLinksChecked, TEC.EventTitle,REPLACE(CAST(TEC.EventDesc as NVarchar(MAX)),'&apos;','''') as EventDesc,TEC.EventStartDate,TEC.EventEndDate,TEC.AutosendTo_Admin,TBP.Profile_name, TUD.User_email
+				FROM 
+				T_Schedule_Events TSE LEFT OUTER JOIN T_EventsCalendar TEC ON TSE.Event_ID=TEC.EventId LEFT OUTER JOIN T_Business_Profiles TBP ON TSE.Sender_UserID=TBP.User_ID LEFT OUTER JOIN T_User_Contacts TUC ON TSE.Sender_UserID=TUC.User_ID LEFT OUTER JOIN T_User_Details TUD ON TSE.Sender_UserID = TUD.User_ID
+			WHERE 
+				TSE.Sending_Date < @SchDate AND
+				TSE.Sent_Flag=0 AND
+				TSE.Receiver_EmailID=TUC.Email AND
+				TUC.Opt_Flag <>1 AND VerticalID=@VerticalID
+		END
+	ELSE
+		BEGIN
+			SELECT DISTINCT TSCA.ScheduleCalendar_ID,TSCA.CalendarId,TSCA.Sender_UserID,TSCA.Sender_ProfileID,TSCA.SchduleSubject,TSCA.Receiver_EmailID,TSCA.Contactuschecked,TSCA.ShareCalendar,TSCA.StoreLinksChecked, TMCA.EventTitle,REPLACE(CAST(TMCA.EventDesc as NVarchar(MAX)),'&apos;','''') as EventDesc,TMCA.EventStartDate,TMCA.EventEndDate,TMCA.AutosendTo_Admin,TBP.Profile_name, TUD.User_email
+				FROM 
+				T_Schedule_CalendarAddOns TSCA LEFT OUTER JOIN T_ManageCalendarAddons TMCA ON TSCA.CalendarId=TMCA.CalendarId LEFT OUTER JOIN T_Business_Profiles TBP ON TSCA.Sender_UserID=TBP.User_ID LEFT OUTER JOIN T_User_Contacts TUC ON TSCA.Sender_UserID=TUC.User_ID LEFT OUTER JOIN T_User_Details TUD ON TSCA.Sender_UserID = TUD.User_ID
+			WHERE 
+				TSCA.Sending_Date < @SchDate AND
+				TSCA.Sent_Flag=0 AND
+				TSCA.Receiver_EmailID=TUC.Email AND
+				TUC.Opt_Flag <>1 AND VerticalID=@VerticalID
+	END
+
+END
+
+GO
+
+
+
+
+
+*******************************************************************************************
+
+
+   <add key="WinnovativePDFKey" value="tTsrOisvOikiKjorKDQqOikrNCsoNCMjIyM6Kg==" />
+    <add key="WinnovativeImageKey" value="tTsrOisvOikiKjorKDQqOikrNCsoNCMjIyM6Kg==" />
+
+

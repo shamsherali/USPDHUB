@@ -1,0 +1,62 @@
+<html>
+<head>
+	<style>
+		.imgStyle img {
+    border-radius: 30px;
+    width: 60px;
+	height: 60px;
+}
+</style>
+</head>
+<body style="background: url(#RootPath#/images/BulletinThumbs/dotted.png) repeat; font-family: Arial, Helvetica, sans-serif; 
+	color: #313131; font-size: 14px; text-align: left;">
+    <div style="width: 450px; padding: 0px; margin: 0px auto; border: 1px solid #CCC;">
+		<div style="clear: both;"></div>
+		<div align="center" style="margin : auto 0px;">
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<table>
+								<tr>
+									<td valign="top">
+											#IMGTag#
+									</td>
+									<td valign="top">
+										<table style="margin-bottom: 10px; margin-left: 20px;">
+											<tbody>
+												<tr>
+													<td style="page-break-inside: avoid;">
+														Button Name: <span style="color:#FF6600; font-weight: bold;">#Title#</span>
+													</td>
+												</tr>
+#PhoneNumber#
+																								<tr>
+													<td style="page-break-inside: avoid;">
+														Description: <span style="color:#FF6600; font-weight: bold;">#Description#</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					#ROWS#
+					<tr>
+					<td style="padding: 5px;">
+						##DeviceInfo##
+					</td>
+					</tr>
+                                       <tr>
+					<td style="padding: 5px;">
+						##Anonymous##
+					</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

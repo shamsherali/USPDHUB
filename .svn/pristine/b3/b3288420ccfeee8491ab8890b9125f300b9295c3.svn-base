@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="no-js fallback" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js weak" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js body-white" lang="en">
+<!--<![endif]-->
+<style>
+    .label-names
+    {
+        position: absolute;
+        top: -30px;
+        font-size: 20px;
+        color: #fff;
+    }
+</style>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mobile App for instant two way communication for organizations and their customers
+    </title>
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/component.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="preloader" style="display: none;">
+    </div>
+    <div class="jumbotable">
+        <div class="jumbo">
+            <a href="http://www.twovie.com/OP/twoviecom/login.aspx" class="link-login">
+                <!--<img alt="" src="images/login.svg" class="login-svg">-->
+                <svg class="login-svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 612 612"
+                    style="enable-background: new 0 0 612 612;" xml:space="preserve">
+                    <g>
+                        <g id="_x36__30_">
+                            <g>
+                                <path d="M331.685,425.378c-7.478,7.479-7.478,19.584,0,27.043c7.479,7.478,19.584,7.478,27.043,0l131.943-131.962
+				c3.979-3.979,5.681-9.276,5.412-14.479c0.269-5.221-1.434-10.499-5.412-14.477L358.728,159.56
+				c-7.459-7.478-19.584-7.478-27.043,0c-7.478,7.478-7.478,19.584,0,27.042l100.272,100.272H19.125C8.568,286.875,0,295.443,0,306
+				c0,10.557,8.568,19.125,19.125,19.125h412.832L331.685,425.378z M535.5,38.25H153c-42.247,0-76.5,34.253-76.5,76.5v76.5h38.25
+				v-76.5c0-21.114,17.117-38.25,38.25-38.25h382.5c21.133,0,38.25,17.136,38.25,38.25v382.5c0,21.114-17.117,38.25-38.25,38.25H153
+				c-21.133,0-38.25-17.117-38.25-38.25v-76.5H76.5v76.5c0,42.247,34.253,76.5,76.5,76.5h382.5c42.247,0,76.5-34.253,76.5-76.5
+				v-382.5C612,72.503,577.747,38.25,535.5,38.25z" />
+                            </g>
+                        </g>
+                </svg>
+                <span>Login</span> </a>
+            <div class="cover-container">
+                <div class="logo-sm">
+                    <img alt="Sharetribe logo" src="images/logo.png" class="svg"></div>
+                <div class="promo-img">
+                    <div class="promo-images promo-slider">
+                        <img src="images/promo-4.png">
+                        <img src="images/promo-3.png">
+                        <img src="images/promo-2.png">
+                        <img src="images/promo-1.png">
+                    </div>
+                </div>
+                <div class="promo">
+                    <div class="logo">
+                        <img alt="Sharetribe logo" src="images/logo.png" class="svg"></div>
+                    <h1>
+                        Create a mobile app on TwoVie Hub. It's as easy as 1-2-3! <span class="azs">Try it for
+                            FREE!</span>
+                    </h1>
+                    <p>
+                        Share your events, news, offers and activites with your audience.
+                        <br class="promo-break">
+                        Set up your mobile app in no time. You don't need a developer.</p>
+                    <div class="btn-group promo-btns">
+                        <a href="#" class="btn btn-default" data-target="get-started"><span class="icon-get">
+                            Get started <small class="trail">30 day free trial</small> </span></a><a href="http://www.twovie.com/OP/twoviecom/Default.aspx"
+                                class="btn btn-outline learn-more"><span>Learn more</span></a>
+                    </div>
+                    <!-- modal-->
+                    <div class="modal-overlay" id="get-started">
+                        <a href="#" class="modal-close" data-dismiss="close">Close</a>
+                        <div class="modal-container">
+                            <div class="top-pos">
+                                <h4 class="title-h4">
+                                    No credit card required.</h4>
+                                <h3 class="title-h3">
+                                    Start your free trial.</h3>
+                                <div>
+                                    <div style="display: none;" id="loadingbar" class="CheckUsername">
+                                        <img src='images/jq_loader.gif' />
+                                        <br />
+                                        <b>Progressing …</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="minimal-form">
+                                <form id="theForm" class="simform" autocomplete="off">
+                                <div class="simform-inner">
+                                    <ol class="questions">
+                                        <li><span class="label-names">
+                                            <label class="q5">
+                                                Organization Name</label></span>
+                                            <input id="q1" name="q1" type="text" placeholder="Organization Name" />
+                                        </li>
+                                        <li><span class="label-names">
+                                            <label class="q5">
+                                                Your Name<label></span>
+                                            <input id="q2" name="q2" type="text" placeholder="Your Name" />
+                                        </li>
+                                        <li><span class="label-names">
+                                            <label class="q5">
+                                                Organization Phone Number</label></span>
+                                            <input id="q3" name="q3" type="text" placeholder="Organization Phone Number" />
+                                        </li>
+                                        <li><span class="label-names">
+                                            <label class="q5">
+                                                Your Email Address</label></span>
+                                            <input id="q4" name="q4" type="text" placeholder="Your Email Address" />
+                                        </li>
+                                    </ol>
+                                    <!-- /questions -->
+                                    <button class="submit" type="submit">
+                                        Send answers</button>
+                                    <div class="controls">
+                                        <!--Input Button-->
+                                        <button class="next show">
+                                        </button>
+                                        <div class="progress">
+                                        </div>
+                                        <span class="number"><span class="number-current"></span><span class="number-total">
+                                        </span></span><span id="error" class="error-message"></span>
+                                    </div>
+                                    <!-- / controls -->
+                                </div>
+                                <!-- /simform-inner -->
+                                <span class="final-message"></span>
+                                </form>
+                                <!-- /simform -->
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/stepsForm.js"></script>
+    <script>
+        var theForm = document.getElementById('theForm');
+        new stepsForm(theForm, {
+            onSubmit: function (form) {
+                ValidateEmailID();
+            }
+        });
+  	
+    </script>
+    <script src="../../Scripts/flyers/jquery-1.7.2.js" type="text/javascript"></script>
+    <script>
+
+        var signUpdetails = {};
+        signUpdetails.Vertical = "twovie";
+        signUpdetails.Country = "United States";
+        signUpdetails.DomainName = "twoviecom";
+        $(function () {
+            $('#q3').keyup(function (event) {
+                // Allow: backspace, delete, tab, escape, and enter // Allow: home, end, left, right
+                if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 ||
+                (event.keyCode >= 35 && event.keyCode <= 39)) {
+                    return;
+                }
+                else {
+                    // Ensure that it is a number and stop the keypress
+                    if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+                        event.preventDefault();
+                    }
+                }
+                var val = this.value.replace(/\D/g, '');
+                var newVal = '';
+                if (val.length > 10) {
+                    val = val.substring(0, 10)
+                }
+                while (val.length >= 3 && newVal.length <= 7) {
+                    newVal += val.substr(0, 3) + '-';
+                    val = val.substr(3);
+                }
+                newVal += val;
+                this.value = newVal;
+            });
+        });
+
+        function ValidateEmailID() {
+            console.log("Validate Mail ID");
+            var mailID = $('#q4').val();
+            signUpdetails.EmailID = mailID;
+
+            document.getElementById("error").innerHTML = "";
+
+
+            if (mailID.replace(/ /g, '') != '') {
+                divstyle = document.getElementById("loadingbar").style.visibility;
+                if (divstyle.toLowerCase() == "none" || divstyle == "") {
+                    document.getElementById("loadingbar").style.display = "block";
+                    // hide form
+                    $(".simform-inner").css("display", "none");
+                    $(".simform-inner").css("opacity", "0");
+                }
+                else {
+                    document.getElementById("loadingbar").style.display = "none";
+                }
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://trial.twovie.com/MarketingService/m_service/AdminService.asmx/ValidateEmailID',
+                    data: "{pobjSignUpDetails:" + JSON.stringify(signUpdetails) + "}",
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (da) {
+                        var result = da.d;
+                        //alert(result);
+
+                        console.log("Mail ID Success of : " + result);
+                        if (result == 1) {
+                            $('.progress').css("width", 4 * (100 / 4) + '%');
+                            //Here Save
+                            SaveData();
+                        }
+                        if (result == 2) {
+                            $('#error').append('Email Address is already in use; please use a different one.');
+                            $('#q4').focus();
+                            $('#error').addClass('show');
+
+                            document.getElementById("loadingbar").style.display = "none";
+                            // show form
+                            $(".simform-inner").css("display", "block");
+                            $(".simform-inner").css("opacity", "1");
+                        }
+                        if (result == 3) {
+                            $('#error').append('Please enter a valid Email Address.');
+                            $('#q4').focus();
+                            $('#error').addClass('show');
+
+                            document.getElementById("loadingbar").style.display = "none";
+                            // show form
+                            $(".simform-inner").css("display", "block");
+                            $(".simform-inner").css("opacity", "1");
+                        }
+                        if (result == 4) {
+                            $('#error').append('Email Address is already associated with another user.');
+                            $('#q4').focus();
+                            $('#error').addClass('show');
+
+                            document.getElementById("loadingbar").style.display = "none";
+                            // show form
+                            $(".simform-inner").css("display", "block");
+                            $(".simform-inner").css("opacity", "1");
+                        } //
+
+                        $('.progress').css("width", 3 * (100 / 4) + '%');
+
+                        return false;
+                    } //
+                });
+
+            }
+            else {
+                $('#error').append('Please enter a valid Email Address.');
+                $('#q4').focus();
+                $('#error').addClass('show');
+
+                $('.progress').css("width", 3 * (100 / 4) + '%');
+            }
+        } //
+
+
+
+        //http://localhost:2107/m_service/AdminService.asmx 
+        function SaveData() {
+
+            console.log("Save Data Calling");
+            // Step1: Company Name
+            // Step2: First Name
+            // Step3: Phone Number
+            // Step4: EmailID
+
+            signUpdetails.OrganizationName = $('#q1').val();
+            signUpdetails.FirstName = $('#q2').val();
+            signUpdetails.OrganizationPhoneNumber = $('#q3').val();
+            signUpdetails.LastName = "";
+            signUpdetails.HowDidYouHearAboutUs = "";
+            signUpdetails.Address = "";
+            signUpdetails.City = "";
+            signUpdetails.State = "";
+            signUpdetails.Zipcode = "";
+
+
+            $.ajax({
+                type: 'POST',
+                url: 'http://trial.twovie.com/MarketingService/m_service/AdminService.asmx/FreeTrailAccountSignUp',
+                data: "{pobjSignUpDetails:" + JSON.stringify(signUpdetails) + "}",
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (da) {
+                    //alert(da.d);
+
+                    // hide form
+                    $(".simform-inner").css("display", "none");
+                    $('#q1').val('');
+                    $('#q2').val('');
+                    $('#q3').val('');
+                    $('#q4').val('');
+
+                    // let's just simulate something...
+                    var messageEl = theForm.querySelector('.final-message');
+                    messageEl.innerHTML = '<p>Thank you for registering for TwoVie. An email has been sent to ' + signUpdetails.EmailID + ' with your username and password.</p> ';
+                    classie.addClass(messageEl, 'show');
+
+                    document.getElementById("loadingbar").style.display = "none";
+                }
+            });
+
+        }
+
+
+
+    </script>
+</body>
+</html>

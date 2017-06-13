@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+body {
+	transition: all 0.3s ease-in-out;
+}
+header {
+	background: #FFFFFF;
+	border-bottom: 3px solid #3cbc9f;
+	padding: 6px 0px;
+}
+.logo {
+	float: left;
+}
+.top-btn-right {
+	float: right;
+	margin: 1.8em 0;
+}
+.no-padding {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.btn-green {
+	color: #fff;
+	background-color: #3cbc9f;
+	border-color: #3cbc9f;
+}
+.btn-green:focus, .btn-green.focus {
+	color: #fff;
+	background-color: #3cbc9f;
+	border-color: #3cbc9f;
+}
+.btn-green:hover {
+	color: #fff;
+	background-color: #34ad92;
+	border-color: #34ad92;
+}
+.btn-blue {
+	color: #fff;
+	background-color: #2d3e50;
+	border-color: #2d3e50;
+}
+.btn-blue:focus, .btn-blue.focus {
+	color: #fff;
+	background-color: #243342;
+	border-color: #243342;
+}
+.btn-blue:hover {
+	color: #fff;
+	background-color: #243342;
+	border-color: #243342;
+}
+.top-btn-right .btn {
+	padding: 5px 15px;
+}
+.btn-signup .btn {
+	font-weight: 400;
+	padding: 5px 20px;
+	font-size: 18px;
+}
+.slide-header {
+	font-size: 40px;
+	color: #fff;
+	font-weight: 700;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.slider-text {
+	font-size: 22px;
+	color: #f1592b;	
+}
+.banner-bg {
+	background: url(../images/inschoolalert-banner.jpg) no-repeat top center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	-moz-background-size: cover;
+	position: relative;
+	min-height: 400px;
+}
+.img-overly {
+	background: rgba(0,0,0,0.7);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+.green-bg {
+	background: #3cbc9f;
+	padding-top: 30px;
+}
+.service-main {
+	margin-bottom: 20px;
+}
+.service-wrap {
+	border-radius: 100%;
+	height: 250px;
+	margin-bottom: 52px;
+	overflow: hidden;
+	padding-top: 0px;
+	position: relative;
+	text-align: center;
+	transition: all 0s ease 0s, all 0.3s ease 0s, all 0s ease 0s;
+	width: 250px;
+	background: #FFF;
+	margin: 0 auto;
+}
+.margintop10 {
+	margin-top: 10px
+}
+.margintop20 {
+	margin-top: 20px
+}
+.margintop30 {
+	margin-top: 30px
+}
+.margintop40 {
+	margin-top: 40px
+}
+.marginbot10 {
+	margin-bottom: 10px
+}
+.marginbot20 {
+	margin-bottom: 20px
+}
+.service-title {
+	color: #FFF;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 400;
+	margin-top: 5px;
+}
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+.video-container iframe, .video-container object, .video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.buy-btn {
+	margin-bottom: 30px;
+	text-align: center;
+}
+footer {
+	padding: 20px 0px;
+	background: #2d3e50;
+}
+.footer-text {
+	text-align: center;
+	color: #3cbc9f;
+	font-size: 14px;
+}
+.footer-text a {
+	color: #3cbc9f;
+}
+.footer-text a:hover {
+	color: #3cbc9f;
+	
+}
+
+/*Rresponsive*/
+@media (max-width:640px) {
+.slide-header {
+	font-size: 26px;
+}
+}

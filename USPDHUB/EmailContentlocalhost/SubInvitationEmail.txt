@@ -1,0 +1,14 @@
+﻿
+Dear #ContactPerson#
+
+
+This Sub-App invitation has been sent through USPDHub.com from #ProfileName#.
+ 
+
+
+To login click below link or copy paste in the browser window.
+#LoginLink#
+
+Thank you,
+
+The USPDHub<sup style="font-size: 14px;">&reg;</sup> Team

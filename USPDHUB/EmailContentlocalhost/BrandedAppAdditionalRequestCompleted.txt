@@ -1,0 +1,6 @@
+Your branded app additional request changes are completed.
+
+Profile Name: ##ProfileName##
+MemberID: ##UserID##
+
+You can start the updating the app.

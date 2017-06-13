@@ -1,0 +1,5007 @@
+SQL Queries List
+=============================================================================================================================================
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+            font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+            Add Image to Bulletin</span>
+        <br />
+        <br />
+        <span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">On the Bulletin Template:</span>
+        <br />
+        <table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px; padding-left: 25px;"
+            width="100%">
+            <tr>
+                <td valign="bottom">
+                    1.
+                </td>
+                <td>
+                    Select ‘Add Image Block’.
+    				<img src="/Images/HelpImages/AddImageBlock.jpg" />
+                </td>
+            </tr>
+            <tr>
+                <td valign="bottom">
+                    2.
+                </td>
+                <td>
+                    Click ‘Add/Edit Image’.
+                    <img src="/Images/HelpImages/AddEditImage.jpg" />
+                </td>
+            </tr>
+    	</table>
+    	<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">On the Bulletin Form:</span>
+    	<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px; padding-left: 25px;"
+            width="100%">
+    		<tr>
+                <td valign="bottom">
+                    3.
+                </td>
+                <td>
+                    Click ‘Browse Image’.
+                    <img src="/Images/HelpImages/Browse.jpg" />
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    4.
+                </td>
+                <td>
+                    If the image is in your image gallery click on the image (not the check box)
+    				and go to step 10.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    5.
+                </td>
+                <td>
+                    To add an image to the gallery from your computer, click ‘Browse’.
+                </td>
+            </tr>
+    		<tr>
+                <td colspan="2" align="center">
+                    <img src="/Images/HelpImages/imgBrowse.jpg" />
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    6.
+                </td>
+                <td>
+                   Double click on the image file that you would like to upload.  Note: You may only upload
+    			   images that are jpeg, jpg, gif or png.
+                </td>
+            </tr>
+    		<tr>
+                <td>
+                    7.
+                </td>
+                <td>
+                    Enter a name for the image.
+                </td>
+            </tr>
+    		<tr>
+                <td>
+                    8.
+                </td>
+                <td>
+                    Select ‘Upload’. 
+                </td>
+            </tr>
+    		<tr>
+                <td valign="top"> 
+                    9.
+                </td>
+                <td>
+                    Your image will now appear in the Image Editor. Click on the image (not the check
+    				box).
+                </td>
+            </tr>
+    		<tr>
+                <td valign="top">
+                    10.
+                </td>
+                <td>
+                    The system will automatically resize your image to fit the width of the image block. 
+                </td>
+            </tr>
+    		<tr>
+                <td valign="top"> 
+                    11.
+                </td>
+                <td>
+                    To adjust the image height, go to the bottom of the image until you see the grabbers.
+    				Pull the grabber with your mouse up or down until your image is adjusted properly.
+                </td>
+            </tr>
+    		<tr>
+                <td colspan="2" align="center">
+                    <img src="/Images/HelpImages/ResizeImgforBulletin.jpg" />
+                </td>
+            </tr>
+    		<tr>
+                <td valign="top">
+                    12.
+                </td>
+                <td>
+                    Note: The system will not allow you to make the image <u>wider</u> than the image block.
+                </td>
+            </tr>
+    		<tr>
+                <td valign="top">
+                    13.
+                </td>
+                <td>
+                    If using the bulletin template, choose the alignment of your image by selecting from the drop down box in step 3.
+                </td>
+            </tr>
+    		<tr>
+                <td colspan="2" align="center">
+                    <img src="/Images/HelpImages/ChooseAlign.jpg" />
+                </td>
+            </tr>
+    		<tr>
+                <td valign="top">
+                    14.
+                </td>
+                <td>
+                    To hyperlink your image, see ‘Create Link to Image’ in the Help Menu.
+                </td>
+            </tr>
+    		<tr>
+                <td valign="bottom">
+                    15.
+                </td>
+                <td>
+                    Lastly, select the ‘Insert’ button in Step 5.
+    				<img src="/Images/HelpImages/Insert.jpg" />
+                </td>
+            </tr>
+    		<tr>
+                <td valign="top">
+                    16.
+                </td>
+                <td>
+                    Your image will now appear in the image block on your bulletin.
+                </td>
+            </tr>
+    </table>' WHERE Help_ID=20
+
+
+UPDATE L_Help_Content SET Help_content='
+<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+          font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">          Add Text to Bulletin</span>
+          <br />      <br />      <span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">On Bulletin Template:</span>
+          <br />      <table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px; padding-left: 25px;"
+          width="100%">          <tr>              <td valign="bottom"> 
+                           1.              </td>              <td>                  Select ‘Add Text Block’.      <img src="/Images/HelpImages/AddTextBlock.jpg">              </td>          </tr>          <tr>              <td valign="top">                  2.              </td>              <td>                  Click on the ''Add/Edit Text'' button next to the text box you wish to use.              </td>          </tr>    <tr>              <td colspan="2" align="center">                  <img src="/Images/HelpImages/AddEditText.jpg">              </td>          </tr>          <tr>              <td valign="top">                  3.              </td>              <td>                  Enter your text.  You may format your text using the editor tool bar.  You      may choose fonts, font size, color and font style from the drop down menus.               </td>          </tr>    <tr>              <td colspan="2" align="center">                  <img src="/Images/HelpImages/FontMenu.jpg" />              </td>          </tr>          <tr>              <td>                  4.              </td>              <td>                  Note: This formats the text for the <u>entire</u> <u><b>box</b></u>.              </td>          </tr>    
+                           <tr><td valign="top"> 5. </td> <td> If you would like to format the <u>entire</u> <u><b>bulletin</b></u> the same, check the box by Master Editor at the top <img src="/Images/HelpImages/masterEditorChanges.jpg" />  and format your text. </td></tr>
+                           <tr>              <td valign="bottom">                  6.              </td>              <td>                  When finished click ‘Submit’.      <img src="/Images/HelpImages/Submit.jpg" />    </td>          </tr>      </table>' WHERE Help_ID = 21
+
+
+
+UPDATE L_Help_Content SET Help_content='
+<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;  font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">          Copy Bulletin</span>      <br />      <br />      <span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From Dashboard or Menu:</span>      <table style="font-family: Arial,Helvetica,sans-serif; line-height:22px;  font-size: 15px; padding-left: 25px;"          width="100%">          <tr>              <td valign="bottom">                  1.              </td>              <td>                  Select ''Bulletins''.      <img src="/Images/HelpImages/Bulletins.jpg">              </td>          </tr>          <tr>              <td valign="top">                  2.              </td>              <td>                  Click on the radio button by the bulletin you would like to copy.              </td>          </tr>    <tr>              <td colspan="2" align="center">                  <img src="/Images/HelpImages/ToArchive.jpg" />              </td>          </tr>          <tr>              <td valign="bottom">                  3.              </td>              <td>                  Select ''Copy'' on the right.      <img src="/Images/HelpImages/Copy.jpg" />              </td>          </tr>    <tr>              <td valign="top">                  4.              </td>              <td>                  Create a new name for your bulletin in the box provided.              </td>          </tr>    <tr>              <td colspan="2" align="center">                  <img src="/Images/HelpImages/NewBulletinName.jpg" />              </td>          </tr>    <tr>              <td valign="top">                  5.              </td>              <td>                  Select ''Continue''.              </td>          </tr>    <tr>              <td valign="top">                  6.              </td>              <td>                  You may update or edit your bulletin if you wish.              </td>          </tr>    <tr>              <td valign="top">                  7.              </td>              <td>                  If you enter an expiration date, the system will automatically archive      your bulletin on the date entered.      <img src="/Images/HelpImages/ExpirationDateTime.jpg" />              </td>          </tr>    <tr>              <td valign="top">                  8.              </td>              <td>                  Choose if you would like to include any action buttons on this bulletin.              </td>          </tr>    <tr>              <td colspan="2" align="center">                  <img src="/Images/HelpImages/DisplayCallBtn.jpg" />              </td>          </tr>    <tr>              <td valign="top">                  9.              </td>              <td>                  Choose whether you would like to display it on your App or keep it private for internal use by clicking the appropriate radio buttons.      <img src="/Images/HelpImages/PublicPrivate.jpg" />              </td>          </tr>    <tr>              <td valign="top">                  10.              </td>              <td>                  If you choose Public you may choose a date to publish it.      <img src="/Images/HelpImages/PublishDate.jpg" />              </td>          </tr>    <tr>              <td valign="top">                  11.              </td>              <td>   If Category Level appears, choose an appropriate category from the drop down menu.     </td>          </tr>    <tr>              <td colspan="2" align="center">                  <img src="/Images/HelpImages/PriorityLevel.jpg" />              </td>          </tr>    <tr>              <td valign="top" style="padding-top:14px;">                  12.              </td>              <td>                  If you choose to keep your bulletin Private click ‘Save’.      <img src="/Images/HelpImages/Save.jpg" />  If you choose Public click ‘Submit’. <img src="/Images/HelpImages/Submit.jpg" />              </td>          </tr>      </table>' WHERE Help_ID = 24
+
+
+
+UPDATE L_Help_Content SET 
+Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Create Bulletin Using Templates</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From Dashboard
+    or Menu:</span>
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Bulletins''.
+            <img src="/Images/HelpImages/Bulletins.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ''Create''.
+            <img src="/Images/HelpImages/CreateBulletinBtn.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            Name your bulletin. Note: This will appear as the bulletin title on your App.
+            <img src="/Images/HelpImages/BulletinTitle.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            Click ''Select'' under your chosen template.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/BulletinTemplate.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            Refer to the Help Menu to add text and images.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            You may enter an expiration date and the system will automatically archive your
+            bulletin on the date entered.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ExpirationDateTime.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            7.
+        </td>
+        <td>
+            When you have completed your bulletin, choose whether you would like to display
+            it on your App or keep it private by clicking the appropriate radio buttons.
+            <img src="/Images/HelpImages/PublicPrivate.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            8.
+        </td>
+        <td>
+            If you chose Public you may pick a date to publish it.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/publishOn.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            9.
+        </td>
+        <td>
+            If Category Level appears, choose an appropriate category from the drop down menu.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/CategoryLevel.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 15px;">
+        10.
+        </td>
+        <td>
+            If you chose to keep your bulletin Private click ‘Save’.
+            <img src="/Images/HelpImages/Save.jpg" />
+            If you chose Public click ‘Submit’
+            <img src="/Images/HelpImages/Submit.jpg" />
+            and your bulletin will be displayed on the App.
+        </td>
+    </tr>
+</table>
+' WHERE Help_ID = 26
+
+
+UPDATE L_Help_Content SET 
+Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Print Bulletin</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Bulletins''.
+            <img src="/Images/HelpImages/Bulletins.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Select the radio button by the bulletin you would like to print.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ToArchive.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Print Bulletin''.
+            <img src="/Images/HelpImages/PrintBulletinBtn.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td style="padding-top:14px;">
+            4.
+        </td>
+        <td>
+            Select ‘Open’ <img src="/Images/HelpImages/OpenSaveCancel.jpg"> at the bottom of the screen.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            5.
+        </td>
+        <td>
+            Print your bulletin.
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 31
+
+
+
+UPDATE L_Help_Content SET 
+Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    ''Push'' Bulletins</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Bulletins''.
+            <img src="/Images/HelpImages/Bulletins.jpg">
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Select the radio button by the bulletin you wish to push.
+            <img src="/Images/HelpImages/ToArchive.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Push Notification'' on the right. &nbsp;<img src="/Images/HelpImages/PushNotification.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            4.
+        </td>
+        <td>
+            You may add a note.
+            <img src="/Images/HelpImages/AddNotes.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Click ''Send''
+            <img src="/Images/HelpImages/SendButton.jpg">
+            and the bulletin will be sent immediately.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            An alert will sound on the user’s smart device with the notification that directs
+            them to your App to view the bulletin.
+        </td>
+    </tr>
+</table>
+' WHERE Help_ID = 106
+
+
+
+
+INSERT INTO L_Help_Content
+           ([Help_Name]
+           ,[IsMaster]
+           ,[Master_ID]
+           ,[Help_content]
+           ,[IsActive]
+           ,[Video_File]
+           ,[Pdf_Name])
+     VALUES
+           ('Email Bulletin'
+           ,'False'
+           ,19
+           ,'<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Email Bulletin</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Bulletins’.
+            <img src="/Images/HelpImages/Bulletins.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click on the radio button by the bulletin you would like to email.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ToArchive.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3.
+        </td>
+        <td>
+            Select ‘Email’ on the right.
+            <img src="/Images/HelpImages/sendemail.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            Click ‘Select Contacts’ to choose from your contacts list
+            <img src="/Images/HelpImages/ContactsBox.jpg">
+            or manually type in your contacts’ email addresses.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Enter a subject line
+            <img src="/Images/HelpImages/entersubject.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Choose the date on which you would like your bulletin to begin being sent in step
+            3..
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/datetosend.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            7.
+        </td>
+        <td>
+            In step 4 you have the option to send your bulletin to all your contacts at one time or spread them out over time by choosing to send it to a specific number of contacts per day.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/sendtoall.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding>
+            8.
+        </td>
+        <td>
+            Step 5 allows you to add a ‘Contact Us’ button on your bulletin email by checking
+            the box.
+            <img src="/Images/HelpImages/emailcontactus.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            9.
+        </td>
+        <td>
+            You may test the looks of your bulletin by selecting ''Send Test Bulletin''
+            <img src="/Images/HelpImages/SendTestBulletin.jpg" />
+            and filling in your email address. This will send your bulletin immediately for
+            your review.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            When you are satisfied, click ''Send''.
+            <img src="/Images/HelpImages/emailsend.jpg" />
+        </td>
+    </tr>
+</table>
+'
+           ,'True'
+           ,NULL
+           ,'EmailBulletin.pdf')
+GO
+
+
+
+INSERT INTO L_Help_Content
+           ([Help_Name]
+           ,[IsMaster]
+           ,[Master_ID]
+           ,[Help_content]
+           ,[IsActive]
+           ,[Video_File]
+           ,[Pdf_Name])
+     VALUES
+           ('Email Bulletin to Multiple Groups'
+           ,'False'
+           ,19
+           ,'<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Email Bulletin to Multiple Groups</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Bulletins’.
+            <img src="/Images/HelpImages/Bulletins.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click on the radio button by the bulletin you would like to send.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ToArchive.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3.
+        </td>
+        <td>
+            Select ‘Email’ on the right.
+            <img src="/Images/HelpImages/sendemail.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            Click ‘Select Contacts’
+            <img src="/Images/HelpImages/BtnSelectContacts.jpg">
+            to choose multiple groups from your contacts list.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            5.
+        </td>
+        <td>
+            Check the box by each group you would like to include.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AllGroups.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Now you have the following options:
+            <ol type="i">
+                <li>Check the ‘Select All’ box
+                    <img src="/Images/HelpImages/selectallemail.jpg">
+                    to send to all the selected group''s contacts,</li>
+                <li>Check the box by each name in your selected groups that you wish to send your bulletin,
+                    <img src="/Images/HelpImages/CheckEmails.jpg">
+                    Or</li>
+                <li>Check the ‘Select All’ box; then, uncheck the boxes by those contacts to whom you do not want to send your bulletin.</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            7.
+        </td>
+        <td>
+            Select ‘Submit’.
+            <img src="/Images/HelpImages/Submit.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            8.
+        </td>
+        <td>
+            Enter a subject line for your bulletin.
+            <img src="/Images/HelpImages/entersubject.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            9.
+        </td>
+        <td>
+            Choose the date on which you would like your bulletin to begin being sent.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/datetosend.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            In step 4 you have the option to send your bulletin all your contacts at one time or spread them
+            out over time by choosing to send it to a specific number of contacts per day.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/sendtoall.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 4px;">
+            11.
+        </td>
+        <td>
+            Step 5 allows you to add a ‘Contact Us’ button
+            <img src="/Images/HelpImages/emailcontactus.jpg">
+            on your bulletin email by checking the box.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            12.
+        </td>
+        <td>
+            You may test the looks of your bulletin by selecting ''Send Test Bulletin''
+            <img src="/Images/HelpImages/SendTestBulletin.jpg" />
+            and filling in your email address. This will send your bulletin immediately for
+            your review.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            13.
+        </td>
+        <td>
+            When you are satisfied, select ''Send''.
+            <img src="/Images/HelpImages/emailsend.jpg" />
+        </td>
+    </tr>
+</table>
+    '
+           ,'True'
+           ,NULL
+           ,'EmailBulletintoMultipleGroups.pdf')
+GO
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Display/Hide About Us Button</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Mobile App’.
+            <img src="/Images/HelpImages/MobileApp.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ‘General App Settings’.
+            <img src="/Images/HelpImages/GeneralAppSettings.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            Go to App Display Settings on the right; click ‘Continue’.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AppDisplaySettings.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            <b>To display</b> the About Us button on your Mobile App, check the box by About
+            Us.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AppAboutUs.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+             Note: You may rename this button.  See ‘Change Button Name’ under Mobile App in Help Menu.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            6.
+        </td>
+        <td>
+            <b>To hide</b> the button, uncheck the box.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            7.
+        </td>
+        <td>
+            Select ''Update''.
+            <img src="/Images/HelpImages/Update.jpg">
+        </td>
+    </tr>
+</table>' WHERE Help_ID=6
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Add Group</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Contacts’.
+            <img src="/Images/HelpImages/Contacts.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click on ‘Add Group’ in Step1.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/addGroup.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3.
+        </td>
+        <td>
+            Enter Group name.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/GroupName.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            4.
+        </td>
+        <td>
+            Enter a brief description for your group.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/GroupDesc.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Select ‘Add’.
+            <img src="/Images/HelpImages/AddBtn.jpg">
+        </td>
+    </tr>
+</table>' WHERE Help_ID=38
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Add Contact Manually</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Contacts’.
+            <img src="/Images/HelpImages/Contacts.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ‘Add Contact’ in Step 2. <img src="/Images/HelpImages/addContacts.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3.
+        </td>
+        <td>
+            Select a Contact Group from the drop down menu.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ContactInformation.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            4.
+        </td>
+        <td>
+            Fill in the fields.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            Note: Be sure to check the box if they have agreed to accept emails from you.
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            <img src="/Images/HelpImages/ConfirmationtoSend.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            6.
+        </td>
+        <td>
+            Click ‘Add’.
+            <img src="/Images/HelpImages/AddBtn.jpg">
+        </td>
+    </tr>
+</table>
+' WHERE Help_ID=42
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Import Contacts Using CSV Files</span>
+<br />
+<br />
+<span style="color:#83150f; font-weight:bold;font-size:20px;">Note: Only CSV files may be uploaded.</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Contacts’.
+            <img src="/Images/HelpImages/Contacts.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Select ‘Import Contacts’.
+            <img src="/Images/HelpImages/importUserContacts.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            Click ''Browse'' to locate the saved CSV file on your computer.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/uploadCsvtoImport.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="justify">
+            Note: Be sure each column in the CSV file has a description of the data located
+            in the top row as a header, e.g. name, email address, etc.
+            <center>
+                <img src="/Images/HelpImages/csvHeader.jpg"></center>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            Double click on the file name on your computer.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Select ''Upload''.
+            <img src="/Images/HelpImages/Upload.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Select the appropriate fields from the drop down menus that match the headers in
+            your CSV file.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/CSVFile.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            7.
+        </td>
+        <td>
+            Click ‘Continue’.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            8.
+        </td>
+        <td>
+            Click ‘Proceed’ if your group(s) looks correct. Otherwise, click ‘Remap Data’ to
+            make any corrections.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/Proceed.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            9.
+        </td>
+        <td>
+            Check the box if the contacts you are importing have agreed to receive emails from
+            you.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ContactsAgree.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            Click ‘Continue’ and your contacts will be imported.
+        </td>
+    </tr>
+</table>' WHERE Help_ID=48
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Create Event</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select Event Calendar.
+            <img src="/Images/HelpImages/EventCalendar.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ‘Create Event’ on the right.
+            <img src="/Images/HelpImages/CreateEvent.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            Enter a name for your event. Note: The first 20 characters of the event name will
+            be displayed on your event calendar.
+            <img src="/Images/HelpImages/NameYourEvent.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            In step 2 enter the event start date. If the event runs for more than one day enter
+            the end date.
+            <img src="/Images/HelpImages/EventStartEndDates.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            Enter details about your event such as location, time, etc. in Step 3. You may also
+            insert images and add links. (Refer to the Help Menu for instructions.)
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            If you enter an expiration date, the system will automatically archive your bulletin on the date entered. 
+            <img src="/Images/HelpImages/ExpirationDateTime.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            7.
+        </td>
+        <td>
+            When your event has been completed decide whether the status should be Public to
+            display it on your App’s event calendar or kept Private by clicking the appropriate
+            radio buttons in step 4.
+            <img src="/Images/HelpImages/Public.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            8.
+        </td>
+        <td>
+            If you have chosen Public you may pick a date to publish it.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/PublishDate.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            9.
+        </td>
+        <td>
+            Click ''Submit''.
+            <img src="/Images/HelpImages/submitpublish.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            10.
+        </td>
+        <td>
+            If you chose to keep it Private click ‘Save’.
+            <img src="/Images/HelpImages/Save.jpg">
+        </td>
+    </tr>
+</table>' WHERE Help_ID=63
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Add Logo</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="top" style="padding-top: 34px;">
+            1.
+        </td>
+        <td>
+            Select ‘Gallery’.
+            <img src="/Images/HelpImages/Gallery.jpg">
+            Note: You may also access logo by selecting ‘Mobile App’.
+            <img src="/Images/HelpImages/MobileApp.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2.
+        </td>
+        <td>
+            Go to Logo and click ‘Continue’.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/LogoContinue.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            Click on ‘Browse’
+            <img src="/Images/HelpImages/BrowseBtn.jpg">
+            to locate the logo file on your computer. Note: The file must be in gif, jpeg, png
+            or bmp format and no greater than 150px by 150px large.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            4.
+        </td>
+        <td>
+            Double click on the logo file you wish to upload.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 12px;">
+            5.
+        </td>
+        <td>
+            Select ‘Upload’
+            <img src="/Images/HelpImages/UploadBtnLogoImg.jpg">
+            and your logo will appear in the header on your App.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            6.
+        </td>
+        <td>
+            Select ‘Go to Dashboard’.
+            <img src="/Images/HelpImages/GotoDashboardBtn.jpg">
+        </td>
+    </tr>
+</table>
+' WHERE Help_ID=83
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Change Logo</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Gallery’.
+            <img src="/Images/HelpImages/Gallery.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2.
+        </td>
+        <td>
+            Go to Logo and click ‘Continue’.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/LogoContinue.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Click ‘Delete Logo.’
+            <img src="/Images/HelpImages/DeleteLogo.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            4.
+        </td>
+        <td>
+            Click ‘OK’.
+            <img src="/Images/HelpImages/OK.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            Click on ‘Browse’
+            <img src="/Images/HelpImages/BrowseBtn.jpg">
+            to locate the logo file on your computer. Note: The file must be in gif, jpeg, png
+            or bmp format and no greater than 150px by 150px large.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Double click on the logo file you wish to upload.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 12px;">
+            7.
+        </td>
+        <td>
+            Select ‘Upload’
+            <img src="/Images/HelpImages/UploadBtnLogoImg.jpg">
+            and your logo will appear in the header on your App.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            8.
+        </td>
+        <td>
+            Click ‘Go to Dashboard’.
+            <img src="/Images/HelpImages/GotoDashboardBtn.jpg">
+        </td>
+    </tr>
+</table>' WHERE Help_ID=84
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Change Button Name</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px; word-wrap: break-word;">
+    Note: The button names in the dialog boxes will display on your App.</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Mobile App''.
+            <img src="/Images/HelpImages/MobileApp.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2.
+        </td>
+        <td>
+            Select ‘App Display Settings’.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AppDisplaySettings.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            Type the name you prefer in the dialog box next to the button you wish to change. There is a maximum of 13 characters.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ChangeButtonNames.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            <span style="color:Red;">Note:</span> The button name <u>in parentheses</u> is the default name on your Dashboard’s icons.  However, when you hover over the icon the new name will display.
+            <img src="/Images/HelpImages/toolTip.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Click ''Update''
+            <img src="/Images/HelpImages/Update.jpg" />
+            at the bottom of the screen.
+        </td>
+    </tr>
+</table>
+' WHERE Help_ID=94
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Display/Hide Button</span><br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px; word-wrap: break-word;">
+    Note: The button is set to display on your App by default.</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;"><b>To display</b>
+    your Calendar:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Mobile App’.
+            <img src="/Images/HelpImages/MobileApp.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ‘General App Settings’.
+            <img src="/Images/HelpImages/GeneralAppSettings.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            On the right go to ‘App Display Settings’ and click ‘Continue’.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AppDisplaySettings.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            4.
+        </td>
+        <td>
+            Make sure the box by Calendar is checked.
+            <img src="/Images/HelpImages/CalendarCheck.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            Note: You may rename this button.  See ‘Change Button Name’ under Mobile App in Help Menu.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            A Calendar button will display on your App and when clicked a calendar with your
+            events will appear.
+        </td>
+    </tr>
+</table>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;"><b>To disable</b>
+    Calendar button:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td>
+            1.
+        </td>
+        <td>
+            Follow steps 1 - 3 above.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Uncheck the box by Calendar.
+            <img src="/Images/HelpImages/CalendarCheck.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            When this box is not checked, the Calendar button will not appear on your App.
+        </td>
+    </tr>
+</table>
+' WHERE Help_ID=66
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Edit Event</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Event Calendar’.
+            <img src="/Images/HelpImages/EventCalendar.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click the radio button by the event you would like to edit.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/SelectEvent.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ‘Edit’ on the right.
+            <img src="/Images/HelpImages/EditBulletin.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            4.
+        </td>
+        <td>
+            Make your changes.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            If you enter an expiration date, the system will automatically archive your event on the date entered.
+            <img src="/Images/HelpImages/ExpirationDateTime.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Choose the Public status if you are ready for your event to be published on your
+            App’s event calendar or you may choose to keep it private.
+            <img src="/Images/HelpImages/Public.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            7.
+        </td>
+        <td>
+            If you chose Public you may pick a date to publish it.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/PublishDate.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            8.
+        </td>
+        <td>
+            Click ‘Submit’.
+            <img src="/Images/HelpImages/submitpublish.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            9.
+        </td>
+        <td>
+            If you chose to keep it Private click ‘Save’.
+            <img src="/Images/HelpImages/Save.jpg">
+        </td>
+    </tr>
+</table>
+' WHERE Help_ID=67
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Display/Hide Buttons on Mobile App</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Mobile App''.
+            <img src="/Images/HelpImages/MobileApp.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ''General App Settings''.
+            <img src="/Images/HelpImages/GeneralAppSettings.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3.
+        </td>
+        <td>
+            Go to App Display Settings on the right and click ''Continue''.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AppDisplaySettings.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            <b>To display</b> buttons on your Mobile App, check the box by each button name you wish to include.
+            Note:  Buttons may be renamed; however, the names in the parentheses are the default titles on your Dashboard’s icons.
+            (See Change Button Name in the Help Menu.)
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/Buttons.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            <b>To hide</b> buttons, uncheck the box by each button name you wish to hide.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            6.
+        </td>
+        <td>
+            Select ''Update''.
+            <img src="/Images/HelpImages/updateaction.jpg" />
+        </td>
+    </tr>
+</table>
+' WHERE Help_ID=100
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Display/Hide Mobile App Details</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">Note: Choose
+    which details you would like displayed in the header on your App.</span><br />
+<br>
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Mobile App''.
+            <img src="/Images/HelpImages/MobileApp.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ''General App Settings''.
+            <img src="/Images/HelpImages/GeneralAppSettings.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3.
+        </td>
+        <td>
+            Go to App Display Settings on the right and click ''Continue''.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AppDisplaySettings.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            <b>To display</b> details, first check the ''Display Details'' box.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/appdetails.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            Check the box for each item you wish to display. Note: Organization Name, Logo and
+            Zip Code <u>must</u> be displayed.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            If you wish to have additional text in your header such as a motto, hours of operation,
+            etc., you may enter it in the dialog box provided.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/emergencyNum.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            7.
+        </td>
+        <td>
+            <b>To hide</b> the details, uncheck the box for each item you wish to hide or…
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            8.
+        </td>
+        <td>
+            If you wish to hide all the details, uncheck the ''Display Details'' box.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            9.
+        </td>
+        <td>
+            Click ''Update''.
+            <img src="/Images/HelpImages/updateaction.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID=101
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Create Web Links</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Mobile App''.
+            <img src="/Images/HelpImages/MobileApp.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ''Web Links''.
+            <img src="/Images/HelpImages/WebLinks.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            If you would like to create a category for you links select ‘Add Web Link Category’. <img src="/Images/HelpImages/addWebLinkCategory.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            4.
+        </td>
+        <td>
+            Click ‘Create’. <img src="/Images/HelpImages/CreateBulletinBtn.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Enter a name. <img src="/Images/HelpImages/categoryName.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            6.
+        </td>
+        <td>
+            Click ‘Submit’. <img src="/Images/HelpImages/submit.png" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            7.
+        </td>
+        <td>
+            Select ''Add Web Link''.
+            <img src="/Images/HelpImages/AddWebLinksBtn.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            8.
+        </td>
+        <td>
+            Enter a name for your web link as you would like it to appear in Web Links on the
+            App.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+        </td>
+        <td>
+            <img src="/Images/HelpImages/AddWebLinksScreen.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            9.
+        </td>
+        <td>
+            Enter the web address (URL) for your link.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            10.
+        </td>
+        <td>
+            If you have categories choose from the drop down menu.
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            <img src="/Images/HelpImages/selectCategory.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            11.
+        </td>
+        <td>
+            Click &apos;Add&apos;.
+            <img src="/Images/HelpImages/Add.jpg">
+        </td>
+    </tr>
+</table>' WHERE Help_ID=96
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Display/Hide Action Buttons</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Mobile App''.
+            <img src="/Images/HelpImages/MobileApp.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ''General App Settings''.
+            <img src="/Images/HelpImages/GeneralAppSettings.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3.
+        </td>
+        <td>
+            Go to App Display Settings on the right and click ''Continue''.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AppDisplaySettings.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            There are two action buttons that <u>may be included on the information you are publishing:</u> 
+            a Contact Us button and Phone (click to call) where you may choose the number 
+            you prefer the public to call. You also have the option of including three buttons that
+            allow the community to include Photo Capture, Feedback and Geo Location <u>when they contact you</u>.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            <b>To display</b> these buttons, first check the ''Display Action Buttons'' box.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/displayaction.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Then check the box by each action button you wish to display.
+            <img src="/Images/HelpImages/actionbuttons.jpg" />
+            You may change the phone number and email address at this time.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            7.
+        </td>
+        <td>
+            <b>To hide</b> the buttons, uncheck the box by each action button you wish to hide
+            or uncheck the ''Display Action Buttons''
+            <img src="/Images/HelpImages/displayaction.jpg" />
+            box to hide them all.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            8.
+        </td>
+        <td>
+            Select ''Update''.
+            <img src="/Images/HelpImages/updateaction.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID=99
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    ‘Push’ Bulletins</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px; word-wrap: break-word;">
+    Note: When a bulletin is sent (pushed) an alert will sound on the user’s smart device
+    with the notification that directs them to your App to view the bulletin.</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Bulletins’.
+            <img src="/Images/HelpImages/Bulletins.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Select the radio button by the bulletin you wish to push.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ToArchive.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Push Notification'' on the right.
+            <img src="/Images/HelpImages/PushNotification.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            4.
+        </td>
+        <td>
+            You may add a note.
+            <img src="/Images/HelpImages/AddNotes.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Click ''Send''
+            <img src="/Images/HelpImages/SendButton.jpg">
+            and the bulletin will be sent immediately.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            An alert will sound on the user’s smart device with the notification that directs
+            them to your App to view the bulletin.
+        </td>
+    </tr>
+</table>
+' WHERE Help_ID=33
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    ‘Push’ Events</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Event Calendar’.
+            <img src="/Images/HelpImages/EventCalendar.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Select the radio button by the event you wish to push.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/SelectEvent.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Push Notification'' on the right.
+            <img src="/Images/HelpImages/PushNotification.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            4.
+        </td>
+        <td>
+            You may add a note.
+            <img src="/Images/HelpImages/AddNotes.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Click ''Send''
+            <img src="/Images/HelpImages/SendButton.jpg">
+            and the event will be sent immediately.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            An alert will sound on the user’s smart device with the notification that directs
+            them to your App to view the event.
+        </td>
+    </tr>
+</table>
+' WHERE Help_ID=72
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    ''Push'' Events</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Event Calendar''.
+            <img src="/Images/HelpImages/EventCalendar.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Select the radio button by the event you wish to push.
+            <img src="/Images/HelpImages/SelectEvent.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select &apos;Push Notification&apos; on the right. &nbsp;<img src="/Images/HelpImages/PushNotification.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            4.
+        </td>
+        <td>
+            You may add a note.
+            <img src="/Images/HelpImages/AddNotes.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Click ''Send''
+            <img src="/Images/HelpImages/SendButton.jpg">
+            and the event will be sent immediately.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            An alert will sound on the user''s smart device with the notification that directs
+            them to your App to view the event.
+        </td>
+    </tr>
+</table>' WHERE Help_ID=107
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    ''Push'' Updates</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Updates’.
+            <img src="/Images/HelpImages/updates.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Select the radio button by the update you wish to send.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/updateselect.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Push Notification'' on the right.
+            <img src="/Images/HelpImages/PushNotification.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 7px;">
+            4.
+        </td>
+        <td>
+            On the notification screen, select ''Send''
+            <img src="/Images/HelpImages/SendButton.jpg" />
+            and the update will be sent immediately.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            An alert will sound on the user’s smart device with the notification that directs
+            them to your App to view the update.
+        </td>
+    </tr>
+</table>' WHERE Help_ID=109
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    ‘Push’ Updates</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Updates''.
+            <img src="/Images/HelpImages/updates.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click the radio button by the update you wish to send.
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <img src="/Images/HelpImages/updateselect.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Push Notification'' on the right.
+            <img src="/Images/HelpImages/PushNotification.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 7px;">
+            4.
+        </td>
+        <td>
+            On the notification screen, select ''Send''
+            <img src="/Images/HelpImages/SendButton.jpg" />
+            and the update will be sent immediately.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            An alert will sound on the user’s smart device with the notification that directs
+            them to your App to view the update.
+        </td>
+    </tr>
+</table>' WHERE Help_ID=127
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    App Usage Report</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">On the Dashboard</span>
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px; line-height: 30px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            Click the icon to the right of App Download Statistics.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="/Images/HelpImages/appStatisticsDashboard.jpg" />
+        </td>
+    </tr>
+</table>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px; padding-left:100px;">OR</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Mobile App''.
+            <img src="/Images/HelpImages/MobileApp.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ‘App Usage Report’.
+            <img src="/Images/HelpImages/AppUsageReport.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            A pie chart will display showing the total number of users by type of device from
+            the date you first established your App to present.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/PieChart.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            You may change the dates by inputting the dates you wish and clicking ‘Generate
+            Downloads’.
+            <img src="/Images/HelpImages/GenerateDownloads.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Choose ‘Print’
+            <img src="/Images/HelpImages/printreport.jpg" />
+            if you wish to print the report.
+        </td>
+    </tr>
+</table>
+' WHERE Help_ID=181
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Copy Update</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Updates''.
+            <img src="/Images/HelpImages/updates.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click on the radio button by the update you would like to copy.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/updateselect.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Copy'' on the right.
+            <img src="/Images/HelpImages/Copy.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            Create a new name for your update in the box provided.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/copyupdate.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            5.
+        </td>
+        <td>
+            Select ''Continue''.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            6.
+        </td>
+        <td>
+            You may edit your update if you wish.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            7.
+        </td>
+        <td>
+            If you enter an expiration date, the system will automatically archive your update on the date entered.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ExpirationDateTime.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            8.
+        </td>
+        <td>
+            Choose whether you would like to display it on your App or keep it private by clicking
+            the appropriate radio buttons.
+            <img src="/Images/HelpImages/private.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            9.
+        </td>
+        <td>
+            If you chose ‘Private’, click ‘Save’.
+            <img src="/Images/HelpImages/Save.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            If you chose ‘Public’, choose a date to publish it.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/PublishDate.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 13px;">
+            11.
+        </td>
+        <td>
+            Select ''Submit''
+            <img src="/Images/HelpImages/submitpublish.jpg">
+            and it will appear in your Updates on your App.
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 119
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Create Update</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Updates''.
+            <img src="/Images/HelpImages/updates.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ''Create''.
+            <img src="/Images/HelpImages/Create.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 23px;">
+            3.
+        </td>
+        <td>
+            Name your update.
+            <img src="/Images/HelpImages/nameupdate.jpg"><br/>
+            Note: This will appear as the update title on your App.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            Add your text and images. Refer to the Help Menu.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            If you enter an expiration date, the system will automatically archive your update on the date entered.
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <img src="/Images/HelpImages/ExpirationDateTime.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Choose whether you would like to display it on your App or keep it private by clicking
+            the appropriate radio buttons.
+            <img src="/Images/HelpImages/private.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            7.
+        </td>
+        <td>
+            If you chose ‘Private’, click ‘Save’.
+            <img src="/Images/HelpImages/Save.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            8.
+        </td>
+        <td>
+            If you chose ‘Public’, choose a date to publish it.
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <img src="/Images/HelpImages/PublishDate.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 15px;">
+            9.
+        </td>
+        <td>
+            Select ''Submit''
+            <img src="/Images/HelpImages/submitpublish.jpg" />
+            and it will appear in your Updates on your App.
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 121
+
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Display/Hide Updates Button</span><br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px; word-wrap: break-word;">
+    Note: The Updates button is set to display on your App by default.</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;"><b>To display</b>
+    your updates:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Mobile App’.
+            <img src="/Images/HelpImages/MobileApp.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ‘General App Settings’.
+            <img src="/Images/HelpImages/GeneralAppSettings.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            Go to App Display Settings on the right; click ''Continue''.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AppDisplaySettings.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            Make sure the box by Updates is checked.
+            <img src="/Images/HelpImages/UpdatesButtonCheckBox.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            An Updates button will display on your App and when clicked your updates will appear.
+        </td>
+    </tr>
+</table>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;"><b>To disable</b>
+    the Updates button:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td>
+            1.
+        </td>
+        <td>
+            Follow steps 1 - 3 above.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Uncheck the box by Updates.
+            <img src="/Images/HelpImages/UpdatesButtonCheckBox.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            When this box is not checked, the Updates button will not appear on your App.
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 123
+
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Edit Update</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Updates''.
+            <img src="/Images/HelpImages/updates.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click on the radio button by the update you would like to edit.
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <img src="/Images/HelpImages/updateselect.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Edit'' on the right .
+            <img src="/Images/HelpImages/EditBulletin.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            Select the ''Add/Edit'' button next to the block you would like to edit.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Make your changes and select ''Submit''.
+            <img src="/Images/HelpImages/Submit.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Enter an expiration date if you would like the system to automatically remove the update from displaying on your App.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ExpirationDateTime.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 13px;">
+            7.
+        </td>
+        <td>
+            When you are satisfied, choose the status and select ‘Save’
+            <img src="/Images/HelpImages/Save.jpg">
+            if your update is Private or if Public, ''Submit''
+            <img src="/Images/HelpImages/submitpublish.jpg">
+            to display it on your App.
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 124
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Email Update</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Updates''.
+            <img src="/Images/HelpImages/updates.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click the radio button by the update you wish to send.
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <img src="/Images/HelpImages/updateselect.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Email'' on the right.
+            <img src="/Images/HelpImages/sendemail.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 14px;">
+            4.
+        </td>
+        <td>
+            Click ''Select Contacts''
+            <img src="/Images/HelpImages/selectcontacts.jpg" />
+            to choose from your contacts list or manually type in the recipients’ email addresses.
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <img src="/Images/HelpImages/selectcontactsmanl.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            Enter a subject line for your update in step 2.
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <img src="/Images/HelpImages/entersubject.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Choose the date on which you would like your update to begin being sent in step
+            3.
+            <img src="/Images/HelpImages/datetosend.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            7.
+        </td>
+        <td>
+            In step 4 you have the option to send your update to all your contacts at one time
+            or choose to send to a specific number of contacts per day.
+            <img src="/Images/HelpImages/sendtoall.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            8.
+        </td>
+        <td>
+            Step 5 allows you to add a ‘Contact Us’ link on your update email by checking the
+            box.
+            <img src="/Images/HelpImages/emailcontactus.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            9.
+        </td>
+        <td>
+            You may test the looks of your update by selecting ''Send Test Update''
+            <img src="/Images/HelpImages/testupdate.jpg" />. This will send your update immediately
+            for your review.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            When you are satisfied, select ''Send''.
+            <img src="/Images/HelpImages/emailsend.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 128
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Email Update to Multiple Groups</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Updates''.
+            <img src="/Images/HelpImages/updates.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click the radio button by the update you would like to send.
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <img src="/Images/HelpImages/updateselect.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Email'' on the right.
+            <img src="/Images/HelpImages/sendemail.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 15px;">
+            4.
+        </td>
+        <td>
+            Click ''Select Contacts''
+            <img src="/Images/HelpImages/selectcontacts.jpg" />
+            to choose multiple groups from your contacts list.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            Check the box by each group you would like to include.
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <img src="/Images/HelpImages/selectgroups.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Now you have the following options:
+            <ol type="a">
+                <li>Check the ''Select All'' box
+                    <img src="/Images/HelpImages/selectallemail.jpg" />
+                    to send to all the selected group''s contacts,</li>
+                <li>Check the box by each name in your selected groups that you wish to send your update
+                    <img src="/Images/HelpImages/selectallemail.jpg" />
+                    or</li>
+                <li>Check the ''Select All'' box; then, uncheck the boxes by those contacts to whom you
+                    do not want to send your update.</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            7.
+        </td>
+        <td>
+            Select ''Submit''.
+            <img src="/Images/HelpImages/Submit.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top:12px;">
+            8.
+        </td>
+        <td>
+            Enter a subject line for your update.
+            <img src="/Images/HelpImages/entersubject.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            9.
+        </td>
+        <td>
+            Choose the date on which you would like your update to begin being sent.
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <img src="/Images/HelpImages/datetosend.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            In step 4 you have the option to send your update to all your contacts at one time
+            or spread them out over time by choosing to send it to a specific number of contacts
+            per day.
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <img src="/Images/HelpImages/sendtoall.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 5px;">
+            11.
+        </td>
+        <td>
+            Step 5 allows you to add a ''Contact Us'' button
+            <img src="/Images/HelpImages/emailcontactus.jpg" />
+            on your update email by checking the box.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            12.
+        </td>
+        <td>
+            You may test the looks of your update by selecting ''Send Test Update''
+            <img src="/Images/HelpImages/testupdate.jpg" />
+            and filling in your email address. This will send your update immediately for your
+            review.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            13.
+        </td>
+        <td>
+            When you are satisfied, select ''Send''.
+            <img src="/Images/HelpImages/emailsend.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 129
+
+
+
+update L_Help_Content set Help_Name='Disable Mobile App',Pdf_Name='DisableMobileAppListing.pdf'  where Help_ID=104
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Disable Mobile App Listing</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">Note:  The box for the mobile app listing is enabled by default.  If checked, your app listing will display in the Hub''s master app.</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;"><b>To disable</b> this listing:</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Mobile App''.
+            <img src="/Images/HelpImages/MobileApp.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Choose ''General App Settings''.
+            <img src="/Images/HelpImages/GeneralAppSettings.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Go to App Display Settings and click ''Continue''.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AppDisplaySettings.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            Uncheck the ''Enable Mobile App Listing'' box at the top of the screen.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/mobileappsettings.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Click ''Update''.
+            <img src="/Images/HelpImages/updateaction.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 104
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Copy Survey/Poll</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Surveys''.
+            <img src="/Images/HelpImages/SelectSurvey.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2.
+        </td>
+        <td>
+            Click on the radio button by the survey you wish to copy.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/SelectrdbtnSurvey.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Copy'' on the right.
+            <img src="/Images/HelpImages/Copy.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            4.
+        </td>
+        <td>
+            Create a new name for your survey in the box provided.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/NewSurveyName.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Select ''Continue''.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            6.
+        </td>
+        <td>
+            You may edit your survey if you wish.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            7.
+        </td>
+        <td>
+            Choose an expiration date and the system will automatically remove it from displaying on your App.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ExpirationDatewoutTime.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            8.
+        </td>
+        <td>
+            Choose whether you would like to display it on your App or keep it private by clicking
+            the appropriate radio buttons.
+            <img src="/Images/HelpImages/PublicPrivate.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 12px;">
+            9.
+        </td>
+        <td>
+            If you chose ''Private'', click ''Save & Continue'';
+            <img src="/Images/HelpImages/SaveContinue.jpg" />
+            then select ''Finish'' when you are done.
+            <img src="/Images/HelpImages/Finish.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            10.
+        </td>
+        <td>
+            If you chose ''Public'', choose a date to publish it.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/PublishDate.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            11.
+        </td>
+        <td>
+            Click ''Save & Continue''.
+            <img src="/Images/HelpImages/SaveContinue.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            12.
+        </td>
+        <td>
+            Make any changes; then select ''Finish''.
+            <img src="/Images/HelpImages/Finish.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 175
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Create Survey</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Surveys''.
+            <img src="/Images/HelpImages/SelectSurvey.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ''Create''.
+            <img src="/Images/HelpImages/create.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 10px;">
+            3.
+        </td>
+        <td>
+            Enter a name for your Survey.
+            <img src="/Images/HelpImages/SurevyName.jpg" />
+            <br />
+            Note: The survey name will be displayed on the App.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            For Survey type, select the ''Survey'' radio button.
+            <img src="/Images/HelpImages/SurveyTypeSurvey.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            Enter a Thank you message that survey participants will read upon completing the
+            survey.
+            <img src="/Images/HelpImages/ThankYouMessage.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 10px;">
+            6.
+        </td>
+        <td>
+            You may enter an expiration date
+            <img src="/Images/HelpImages/ExpirationDate.jpg" />
+            and the system will automatically remove the survey from the App on that date.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            7.
+        </td>
+        <td>
+            Choose whether you would like to display it on your App or keep it private by clicking
+            the appropriate radio buttons.
+            <img src="/Images/HelpImages/PublicPrivate.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            8.
+        </td>
+        <td>
+            Click ''Save & Continue''.
+            <img src="/Images/HelpImages/SaveContinue.jpg" />
+    </tr>
+    <tr>
+        <td>
+            9.
+        </td>
+        <td>
+            Enter your first survey question in the question text box.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/PollQuestion.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            Select the type of answer your question requires by selecting the appropriate radio
+            buttons.
+            <img src="/Images/HelpImages/QuestionType.jpg" />
+            Check boxes allow users to check multiple answers; radio buttons allow only one
+            answer and free text boxes provide for comments or detailed answers.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            11.
+        </td>
+        <td>
+            Enter your answer options. If you need additional answer fields select ''Add''.
+            <img src="/Images/HelpImages/AnswerOptions.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            12.
+        </td>
+        <td>
+            Check the ‘require answer’ box if you need a specific question answered.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/RequireAnswer.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            13.
+        </td>
+        <td>
+            Select an answer option from the drop down and enter the number of answer choices
+            in the box provided, e.g. ‘Respondent must answer <u>at least 3</u> choices’.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AnswersOptionDropdown.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            14.
+        </td>
+        <td>
+            If a required question is not answered, a pre-populated error message will display
+            that you may edit.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/RequiredQuestionErrorMessage.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            15.
+        </td>
+        <td>
+            Select ''Save & Continue''
+            <img src="/Images/HelpImages/SaveContinue.jpg" />
+            to add additional questions.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            16.
+        </td>
+        <td>
+            Follow steps 9 thru 16 for each additional survey question.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            17.
+        </td>
+        <td>
+            When you complete your survey, select ''Finish''.
+            <img src="/Images/HelpImages/Finish.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 177
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Add Image to Bulletin</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">On the Bulletin
+    Template:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Add Image Block’.
+            <img src="/Images/HelpImages/AddImageBlock.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Click ‘Add/Edit Image’.
+            <img src="/Images/HelpImages/AddEditImage.jpg" />
+        </td>
+    </tr>
+</table>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">On the Bulletin
+    Form:</span>
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Click ‘Browse Image’.
+            <img src="/Images/HelpImages/Browse.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            If the image is in your image gallery click on the image (not the check box) and
+            go to step 10.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            5.
+        </td>
+        <td>
+            To add an image to the gallery from your computer, click ‘Browse’.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/imgBrowse.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Double click on the image file that you would like to upload. Note: You may only
+            upload images that are jpeg, jpg, gif or png.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            7.
+        </td>
+        <td>
+            Enter a name for the image.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            8.
+        </td>
+        <td>
+            Select ‘Upload’.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            9.
+        </td>
+        <td>
+            Your image will now appear in the Image Editor. Click on the image (not the check
+            box).
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            The system will automatically resize your image to fit the width of the image block.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            11.
+        </td>
+        <td>
+            To adjust the image height, go to the bottom of the image until you see the grabbers.
+            Pull the grabber with your mouse up or down until your image is adjusted properly.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ResizeImgforBulletin.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            12.
+        </td>
+        <td>
+            Note: The system will not allow you to make the image <u>wider</u> than the image
+            block.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            13.
+        </td>
+        <td>
+            If using the bulletin template, choose the alignment of your image by selecting
+            from the drop down box in step 3.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ChooseAlign.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            14.
+        </td>
+        <td>
+            To hyperlink your image, see ‘Create Link to Image’ in the Help Menu.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            15.
+        </td>
+        <td>
+            Lastly, select the ‘Insert’ button in Step 5.
+            <img src="/Images/HelpImages/Insert.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            16.
+        </td>
+        <td>
+            Your image will now appear in the image block on your bulletin.
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 20
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Copy Bulletin</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From Dashboard
+    or Menu:</span>
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Bulletins''.
+            <img src="/Images/HelpImages/Bulletins.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click on the radio button by the bulletin you would like to copy.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ToArchive.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Copy'' on the right.
+            <img src="/Images/HelpImages/Copy.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            Create a new name for your bulletin in the box provided.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/NewBulletinName.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            Select ''Continue''.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            You may update or edit your bulletin if you wish.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            7.
+        </td>
+        <td>
+            If you enter an expiration date, the system will automatically archive your bulletin
+            on the date entered.
+            <img src="/Images/HelpImages/ExpirationDateTime.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            8.
+        </td>
+        <td>
+            Choose if you would like to include any action buttons on this bulletin.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/DisplayCallBtn.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            9.
+        </td>
+        <td>
+            Choose whether you would like to display it on your App or keep it private for internal
+            use by clicking the appropriate radio buttons.
+            <img src="/Images/HelpImages/PublicPrivate.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            If you chose Public you may choose a date to publish it.
+            <img src="/Images/HelpImages/PublishDate.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            11.
+        </td>
+        <td>
+            If Category Level appears, choose an appropriate category from the drop down menu.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/PriorityLevel.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top:12px;">
+            12.
+        </td>
+        <td>
+            If you have chosen to keep your bulletin Private click ‘Save’.
+            <img src="/Images/HelpImages/Save.jpg" />
+            If you chose Public click ‘Submit’.
+            <img src="/Images/HelpImages/Submit.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 24
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Delete Associate Login</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px; word-wrap: break-word;">
+    Note: Only administrators are allowed to make changes to associate login credentials.</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Mobile App''.
+            <img src="/Images/HelpImages/MobileApp.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2.
+        </td>
+        <td>
+            Select ''Manage Logins''.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/linkmanagelogins.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3.
+        </td>
+        <td>
+            Select the radio button by the associate you wish to delete.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/selectlogin.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            4.
+        </td>
+        <td>
+            Select ''Delete''.
+            <img src="/Images/HelpImages/DeleteBulletin.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Click ''OK''.
+            <img src="/Images/HelpImages/OK.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 97
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Create Poll</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px; word-wrap: break-word;">
+    Note: A poll entails one question with only one answer.</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Surveys''.
+            <img src="/Images/HelpImages/SelectSurvey.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ''Create''.
+            <img src="/Images/HelpImages/create.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 10px;">
+            3.
+        </td>
+        <td>
+            Enter a name for your poll.
+            <img src="/Images/HelpImages/SurevyName.jpg" />
+            Note: The name will be displayed on the App.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            For Survey type, select the ''Poll'' radio button.
+            <img src="/Images/HelpImages/SurveyType.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            Enter a thank you message that survey participants will read upon completing the
+            poll.
+            <img src="/Images/HelpImages/ThankYouMessage.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 10px;">
+            6.
+        </td>
+        <td>
+            You may enter an expiration date
+            <img src="/Images/HelpImages/ExpirationDate.jpg" />
+            and the system will automatically remove the poll from the App on that date.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            7.
+        </td>
+        <td>
+            Choose whether you would like to display it on your App or keep it private by clicking
+            the appropriate radio buttons.
+            <img src="/Images/HelpImages/PublicPrivate.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 10px;">
+            8.
+        </td>
+        <td>
+            Click ''Save & Continue''.
+            <img src="/Images/HelpImages/SaveContinue.jpg" />
+    </tr>
+    <tr>
+        <td>
+            9.
+        </td>
+        <td>
+            Enter your poll question in the question text box.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/PollQuestion.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            Enter your answer options. If you need additional answer fields click ''Add''.
+            <img src="/Images/HelpImages/AnswerOptions.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            11.
+        </td>
+        <td>
+            Select ''Submit''.
+            <img src="/Images/HelpImages/submitpublish.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 176
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    ''Push'' Updates</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Updates’.
+            <img src="/Images/HelpImages/updates.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Select the radio button by the update you wish to send.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/updateselect.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Push Notification'' on the right.
+            <img src="/Images/HelpImages/PushNotification.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            4.
+        </td>
+        <td>
+            You may add a note. <img src="/Images/HelpImages/PushEvent.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 7px;">
+            5.
+        </td>
+        <td>
+            On the notification screen, select ''Send''
+            <img src="/Images/HelpImages/SendButton.jpg" />
+            and the update will be sent immediately.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            An alert will sound on the user’s smart device with the notification that directs
+            them to your App to view the update.
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 109
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    ‘Push’ Updates</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Updates''.
+            <img src="/Images/HelpImages/updates.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click the radio button by the update you wish to send.
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">
+            <img src="/Images/HelpImages/updateselect.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            3.
+        </td>
+        <td>
+            Select ''Push Notification'' on the right.
+            <img src="/Images/HelpImages/PushNotification.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            4.
+        </td>
+        <td>
+            You may add a note.
+            <img src="/Images/HelpImages/PushEvent.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 7px;">
+            5.
+        </td>
+        <td>
+            On the notification screen, select ''Send''
+            <img src="/Images/HelpImages/SendButton.jpg" />
+            and the update will be sent immediately.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            An alert will sound on the user’s smart device with the notification that directs
+            them to your App to view the update.
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 127
+
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Add Text to Bulletin</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">On Bulletin
+    Template:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Add Text Block’.
+            <img src="/Images/HelpImages/AddTextBlock.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click on the ''Add/Edit Text'' button next to the text box you wish to use.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AddEditText.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            Enter your text. You may format your text using the editor tool bar. You may choose
+            fonts, font size, color and font style from the drop down menus.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/FontMenu.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            4.
+        </td>
+        <td>
+            Note: This formats the text for the <u>entire <b>box</b></u>.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            If you would like to format the <u>entire <b>bulletin</b></u> the same, check
+            the box by Master Editor at the top
+            <img src="/Images/HelpImages/masterEditorChanges.jpg" />
+            and format your text.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            6.
+        </td>
+        <td>
+            When finished click ‘Submit’.
+            <img src="/Images/HelpImages/Submit.jpg" />
+        </td>
+    </tr>
+</table>
+' WHERE Help_ID=21
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Display/Hide Calendar Button</span><br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px; word-wrap: break-word;">
+    Note: The Calendar button is set to display on your App by default.</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;"><b>To display</b>
+    the Calendar:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Mobile App’.
+            <img src="/Images/HelpImages/MobileApp.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ‘General App Settings’.
+            <img src="/Images/HelpImages/GeneralAppSettings.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            On the right go to ‘App Display Settings’ and click ‘Continue’.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AppDisplaySettings.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            4.
+        </td>
+        <td>
+            Make sure the box by Calendar is checked.
+            <img src="/Images/HelpImages/CalendarCheck.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            Note: You may rename this button. See ‘Change Button Name’ under Mobile App in Help
+            Menu.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            A Calendar button will display on your App and when clicked a calendar with your
+            events will appear.
+        </td>
+    </tr>
+</table>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;"><b>To disable</b>
+   the Calendar button:</span>
+<br />
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td>
+            1.
+        </td>
+        <td>
+            Follow steps 1 - 3 above.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Uncheck the box by Calendar.
+            <img src="/Images/HelpImages/CalendarCheck.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            3.
+        </td>
+        <td>
+            When this box is not checked, the Calendar button will not appear on your App.
+        </td>
+    </tr>
+</table>' WHERE Help_ID=66
+
+
+
+
+UPDATE L_Help_Content SET Help_Name='Display/Hide Calendar Button', Pdf_Name='DisplayHideCalendarButton.pdf' WHERE Help_ID=66
+
+
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Email Bulletin to Multiple Groups</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Bulletins’.
+            <img src="/Images/HelpImages/Bulletins.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click on the radio button by the bulletin you would like to send.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ToArchive.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3.
+        </td>
+        <td>
+            Select ‘Email’ on the right.
+            <img src="/Images/HelpImages/sendemail.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            Click ‘Select Contacts’
+            <img src="/Images/HelpImages/BtnSelectContacts.jpg">
+            to choose multiple groups from your contacts list.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            5.
+        </td>
+        <td>
+            Check the box by each group you would like to include.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/AllGroups.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Now you have the following options:
+            <ol type="a">
+                <li>Check the ‘Select All’ box
+                    <img src="/Images/HelpImages/selectallemail.jpg">
+                    to send to all the selected groups’ contacts,</li>
+                <li>Check the box by each name in your selected groups that you wish to send your bulletin,
+                    <img src="/Images/HelpImages/CheckEmails.jpg">
+                    Or</li>
+                <li>Check the ‘Select All’ box; then, uncheck the boxes by those contacts you do not
+                    want to send your bulletin.</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            7.
+        </td>
+        <td>
+            Select ‘Submit’.
+            <img src="/Images/HelpImages/Submit.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            8.
+        </td>
+        <td>
+            Enter a subject line
+            <img src="/Images/HelpImages/entersubject.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            9.
+        </td>
+        <td>
+            Choose the date on which you would like your bulletin to begin being sent.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/datetosend.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            In step 4 you have the option to send your bulletin all your contacts at one time
+            or spread them out over time by choosing to send it to a specific number of contacts
+            per day.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/sendtoall.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 4px;">
+            11.
+        </td>
+        <td>
+            Step 5 allows you to add a ‘Contact Us’ button
+            <img src="/Images/HelpImages/emailcontactus.jpg">
+            on your bulletin email by checking the box.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            12.
+        </td>
+        <td>
+            You may test the looks of your bulletin by selecting ''Send Test Bulletin''
+            <img src="/Images/HelpImages/SendTestBulletin.jpg" />
+            and filling in your email address. This will send your bulletin immediately for
+            your review.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            13.
+        </td>
+        <td>
+            When you are satisfied, select ''Send''.
+            <img src="/Images/HelpImages/emailsend.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID=190
+
+
+
+UPDATE L_Help_Content set Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Create Affiliate Sub App</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px; word-wrap: break-word;">
+    Note: If you purchase Sub Apps from the Market Place follow the steps 4 through
+    11 below.</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ''Mobile App''.
+            <img src="/Images/HelpImages/MobileApp.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            2.
+        </td>
+        <td>
+            Select ''Setup Affiliate Apps''.
+            <img src="/Images/HelpImages/SelectAffiliateApps.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3.
+        </td>
+        <td>
+            Click ''Request Activation Codes''.
+            <img src="/Images/HelpImages/RequestActivationCodes.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            4.
+        </td>
+        <td>
+            Enter the number of Affiliate Sub Apps you wish to purchase.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/HowmanySubApps.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            5.
+        </td>
+        <td>
+            The billable amount will display. Click ‘Continue to Pay’.
+            <img src="/Images/HelpImages/ContinuePay.jpg" />
+            This will take you to payment processing where you may complete your order.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="padding-top: 28px;">
+            6.
+        </td>
+        <td>
+            On the payment Thank You screen
+            <img src="/Images/HelpImages/ThankYou.jpg" />
+            click the ‘DASHBOARD’ button.
+            <img src="/Images/HelpImages/dashboardBtn.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            7.
+        </td>
+        <td>
+            Follow steps 1 and 2 above.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            8.
+        </td>
+        <td>
+            Your activation code(s) will display.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            9.
+        </td>
+        <td>
+            Click ‘Invite’ on the right.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/RequestActivationCode.jpg" />
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            Fill in your affiliate’s information. You may edit the invitation message to suit
+            your needs.
+            <img src="/Images/HelpImages/EditInvitation.jpg" />
+            <br />
+            Note: The email address you utilize here will become your affiliate’s login id.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            11.
+        </td>
+        <td>
+            Click ''Send''.
+            <img src="/Images/HelpImages/SendButton.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID = 182
+
+
+UPDATE L_Help_Content SET Help_content='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+    font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+    Email Bulletin</span>
+<br />
+<br />
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">From the Dashboard
+    or Menu:</span>
+<br />
+<table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+    padding-left: 25px;" width="100%">
+    <tr>
+        <td valign="bottom">
+            1.
+        </td>
+        <td>
+            Select ‘Bulletins’.
+            <img src="/Images/HelpImages/Bulletins.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            2.
+        </td>
+        <td>
+            Click on the radio button by the bulletin you would like to email.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/ToArchive.jpg"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3.
+        </td>
+        <td>
+            Select ‘Email’ on the right.
+            <img src="/Images/HelpImages/sendemail.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            4.
+        </td>
+        <td>
+            Click ‘Select Contacts’ to choose from your contacts list
+            <img src="/Images/HelpImages/ContactsBox.jpg">
+            or manually type in your contacts’ email addresses.
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            5.
+        </td>
+        <td>
+            Enter a subject line
+            <img src="/Images/HelpImages/entersubject.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            6.
+        </td>
+        <td>
+            Choose the date on which you would like your bulletin to begin being sent in step
+            3..
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/datetosend.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            7.
+        </td>
+        <td>
+            In step 4 you have the option to send your bulletin to all your contacts at one
+            time or spread them out over time by choosing to send it to a specific number of
+            contacts per day.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="/Images/HelpImages/sendtoall.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            8.
+        </td>
+        <td>
+            Step 5 allows you to add a ‘Contact Us’ button on your bulletin email by checking
+            the box.
+            <img src="/Images/HelpImages/emailcontactus.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            9.
+        </td>
+        <td>
+            You may test the looks of your bulletin by selecting ''Send Test Bulletin''
+            <img src="/Images/HelpImages/SendTestBulletin.jpg" />
+            and filling in your email address. This will send your bulletin immediately for
+            your review.
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            10.
+        </td>
+        <td>
+            When you are satisfied, click ''Send''.
+            <img src="/Images/HelpImages/emailsend.jpg" />
+        </td>
+    </tr>
+</table>' WHERE Help_ID=189
+
+
+
+UPDATE L_Help_Content SET Help_Content =  REPLACE(Help_Content,' Chose ',' Choose ')
+
+
+============================================================================================================================
+																VERSION 2.0
+============================================================================================================================
+UPDATE L_Help_Content SET Help_content ='<span style="color: #005AA0; font-family: Arial,Helvetica,sans-serif; font-size: 15px;
+        font-weight: bold; margin-bottom: 5px; margin-top: 5px; text-transform: uppercase;">
+        Display/Hide Action Buttons</span>
+    <br />
+    <br />
+    <span style="font-family: Arial,Helvetica,sans-serif; font-size: 15px;">There are two
+        action buttons that may be included on the <b>information you are publishing:</b>
+        a Contact Us button and Phone (click to call) where you may choose the number you
+        prefer the public to call. You also have the option of including two buttons that
+        allow the community to include Photo Capture and Geo Location <b>when they contact you</b>.</span>
+    <br />
+    <table style="font-family: Arial,Helvetica,sans-serif; line-height: 22px; font-size: 15px;
+        padding-left: 25px;" width="100%">
+        <tr>
+            <td valign="top">
+                1.
+            </td>
+            <td>
+                <b>To display</b> these buttons, first check the ''Display Action Buttons'' box.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <img src="/Images/HelpImages/displayaction.jpg" />
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                2.
+            </td>
+            <td>
+                Then check the box by each action button you wish to display.
+                <img src="/Images/HelpImages/actionbuttons.jpg" />
+                You may change the phone number and email address at this time.
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                3.
+            </td>
+            <td>
+                <b>To hide</b> the buttons, uncheck the box by each action button you wish to hide or uncheck
+                the ''Display Action Buttons''
+                <img src="/Images/HelpImages/displayaction.jpg" />
+                box to hide them all.
+            </td>
+        </tr>
+        <tr>
+            <td valign="bottom">
+                4.
+            </td>
+            <td>
+                Select ''Update''.
+                <img src="/Images/HelpImages/updateaction.jpg" />
+            </td>
+        </tr>
+    </table>' WHERE Help_ID = 155
+==================================================================================================================================

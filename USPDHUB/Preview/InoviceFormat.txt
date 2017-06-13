@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        #container
+        {
+            
+            padding: 10px;
+            width: 680px;
+        }
+        #container table
+        {
+            font-family: Arial, Helvetica, sans-serif;
+             font-size:18px;
+ 	line-height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" >
+        <table cellpadding="0" cellspacing="0" border="0" width="930px">
+            <tr>
+                <td colspan="2" valign="top">
+                    <div style="border: 0px solid black; margin-left: 10px;">
+                       <img src='#Logo#' border="0" />
+                    </div>
+					 
+                    <div style="margin-left: 50px; margin-top:5px;">
+                        6060 Sunrise Vista Drive, Suite 3500
+                        <br />
+                        Citrus Heights, CA 95610
+						<br/>
+						Phone (916) 676-7335 &nbsp;&nbsp;Fax (916) 676-7337
+						<br/>
+						accounts@logictreeit.com
+                    </div>
+                </td>
+                <td valign="top" align="right">
+                    <div style="margin-left: 10px; margin-right: 10px;">
+                       <span style="font-size:22px;"> Invoice </span>
+                    </div>
+					<div style="margin-left: 50px; margin-top:50px;">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td style="padding-right:15px;">
+								Date
+							</td>
+							<td style="text-align:left;">
+								#InvoiceDate#
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-right:15px;">
+								Invoice#
+							</td>
+							<td style="text-align:left;">
+								#InvoiceNumber#
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-right:15px;">
+								#DueDateTitle#
+							</td>
+							<td style="text-align:left;">
+								#DueDate#
+							</td>
+						</tr>
+					</table>
+					</div>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <table width="50%" cellpadding="5" cellspacing="0" border="0" style="margin-left: 50px; margin-top: 20px;">
+                        <tr>
+                            <td>
+                                Bill To
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+								<div style="min-height: 130px; height: auto;">
+                                	#BillingAddress#
+								</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td valign="top">
+                    <table width="100%" cellpadding="5" cellspacing="0" border="0" style="border: 1px solid black;
+                        margin-top: 70px;">
+                        <tr>
+                            <td>
+                                P.O Number
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-top: 1px solid black; min-height: 40px;">
+								<div style="min-height: 20px; height: auto;">
+                                	#PONumber#
+								</div>                                
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table cellpadding="5" cellspacing="0" border="0" style="border: 0px solid black;
+            margin-top: 20px; margin-left:50px; width: 880px;">
+            <colgroup>
+                <col width="720px" />
+                <col width="160px" />
+            </colgroup>
+            <tr>
+                <td align="center" style="border-bottom: 1px solid black; border-left: 1px solid black; border-top: 1px solid black; font-weight: bold;">
+                    Description
+                </td>
+                <td align="center" style="border-bottom: 1px solid black; border-left: 1px solid black; border-top: 1px solid black; border-right: 1px solid black; font-weight: bold;">
+                    Amount
+                </td>
+            </tr>
+            #OrderDetailsRows#
+			<tr>
+				<td style="padding-bottom: 450px; border-left: 1px solid black;">&nbsp;</td>
+				<td style="padding-bottom: 450px; border-left: 1px solid black; border-right: 1px solid black;">&nbsp;</td>
+			</tr>
+            <tr>
+                <td valign="top" style="border-top: 1px solid black; border-left: 1px solid black; font-weight: bold;">
+					<table cellpadding="3" cellspacing="0" width="100%" style="font-weight: bold;">
+						<tr><td style="text-align:left;">NOTE: Remit to Logictree IT Solution, Inc.</td>
+						<td style="text-align:right;">Total </td></tr>							
+					</table>                        
+                </td>
+                <td align="right" style="border-left: 1px solid black; padding-right: 10px; border-top: 1px solid black; border-right: 1px solid black;">
+                    <table cellpadding="3" cellspacing="0" width="100%">
+						<tr><td valign="top"><table width="100%"><tr><td align="left">$</td><td align="right">#TotalBill#</td></table></td></tr>
+						<!--<tr><td>$#PaidBill#</td></tr>
+						<tr><td>$#BalanceBill#</td></tr>-->
+					</table>   
+                </td>
+            </tr>
+			<tr>
+				<td style="border-bottom:1px solid black; border-left:1px solid black;">
+				&nbsp;
+				 </td>
+				<td style="border-left:1px solid black; border-top:1px solid black; border-bottom:0px solid black; "> &nbsp;</td>
+			</tr>
+        </table>
+		<table border="0" cellpadding="0" cellspacing="0" width="930px">
+			<tr>
+				<td style="text-align:center; padding-top:50px;">
+					THANK YOU FOR YOUR BUSINESS!
+				</td>
+			</tr>
+		</table>
+    </div>
+</body>
+</html>

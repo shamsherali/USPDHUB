@@ -1,0 +1,11 @@
+﻿<html>
+<head>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif; color: #313131; font-size: 14px; text-align: left;">
+    <div style="width: 300px; margin: 0 auto; padding: 0px; border: 0px solid #CCC;">
+		<div align="center" style="margin : auto 0px;">
+			#BuildHtmlForForm#
+		</div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+﻿
+/* Master Page Menu Css*/
+
+.SimpleEntertainmentMenu, .AspNet-Menu-Vertical
+{
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+}
+.SimpleEntertainmentMenu ul.AspNet-Menu
+{
+    height: 24px;
+}
+.SimpleEntertainmentMenu ul.AspNet-Menu ul
+{
+    left: 0px;
+    top: 26px;
+    background-color: #DCDCDC;
+    border-bottom: solid 1px #D0D0D0;
+    border-right: solid 1px #D0D0D0;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 195px;
+}
+
+.AspNet-Menu-WithChildren
+{
+    color: #898989;
+    padding: 4px 2px 4px 8px; /*border:1px solid #cccccc;     background: transparent url(arrowRight.gif) right center no-repeat;*/
+}
+
+/*.dbli 
+{  
+    padding-left:8px !Important;
+}*/
+
+
+.AspNet-Menu-WithChildren1
+{
+    padding: 4px 2px 4px 2px;
+    background-color: #DCDCDC;
+    cursor: pointer;
+    right: 0px;
+}
+
+
+.AspNet-Menu-WithChildren1 a.sublink
+{
+    padding-left: 8px !important;
+    color: #000 !important;
+}
+
+.AspNet-Menu-WithChildren1 a.sublink:hover
+{
+    padding-right: 0px !important;
+    color: #FFF !important;
+}
+.AspNet-Menu-WithChildren1 a.ezmenu
+{
+    padding-left: 3px !important;
+    color: #000000 !important;
+}
+
+.AspNet-Menu-WithChildren1 a.ezmenu:hover
+{
+    color: #000000 !important;
+}
+.AspNet-Menu-WithChildren1 div
+{
+    right: 391px;
+    top: -28px;
+    position: absolute; /*border:solid 1px #CCCCCC;*/
+}
+
+
+.AspNet-Menu-WithChildren:hover
+{
+    color: #FFF;
+}
+.SimpleEntertainmentMenu ul.AspNet-Menu li a
+{
+    color: #FFF;
+    padding: 0px 2px 0px 9px;
+    width: 150px;
+}
+.SimpleEntertainmentMenu ul.AspNet-Menu li span
+{
+    padding: 0px 7px 10px 7px;
+    position: absolute;
+}
+.SimpleEntertainmentMenu ul.AspNet-Menu li a:hover
+{
+    color: #000;
+}
+.SimpleEntertainmentMenu ul.AspNet-Menu li span:hover
+{
+    color: #8eb5d0;
+    text-decoration:none;
+}
+.AspNet-Menu-Leaf
+{
+    padding-top: 6px;
+    height: 23px;
+    border-bottom: solid 1px #D0D0D0;
+    background-color: #DCDCDC;
+    white-space: nowrap;
+}
+.AspNet-Menu-Leaf span.AspNet-Menu-Test1
+{
+	color:#939393;
+}
+.SimpleEntertainmentMenu ul.AspNet-Menu li.AspNet-Menu-Leaf a
+{
+    background-image: none;
+    color: #000 !important;
+    background-color: #DCDCDC;
+}
+.SimpleEntertainmentMenu ul.AspNet-Menu li.AspNet-Menu-Leaf a:hover
+{
+    background-image: none;
+    color: #FB8B2A;
+}
+
+.SimpleEntertainmentMenu ul.AspNet-Menu li.AspNet-Menu-WithChildren span
+{
+    border-style: none;
+    vertical-align: middle;
+    position: relative;
+    top:-4px;
+}
+.AspNet-Menu-WithChildren-1
+{
+    left: 150px;
+}
+.SimpleEntertainmentMenu ul.AspNet-Menu li:hover
+{
+    color: #8eb5d0 !important;
+    font-family: Arial;
+}
+.SimpleEntertainmentMenu ul.AspNet-Menu li.AspNet-Menu-WithChildren1
+{
+    color: #000 !important;
+    font-family: Arial;
+    height: 13px;
+    margin-top:4px;
+}
+.SimpleEntertainmentMenu ul.AspNet-Menu li.AspNet-Menu-WithChildren1 span:hover 
+{
+     color: #053B98 !important;
+     font-family: Arial;
+}
+.SimpleEntertainmentMenu ul.AspNet-Menu li a:hover, .SimpleEntertainmentMenu ul.AspNet-Menu li span.Asp-Menu-Hover
+{
+    color: #053B98 !important;
+}
+
+.SimpleEntertainmentMenu ul.AspNet-Menu li.AspNet-Menu-Leaf a:hover
+{
+    background-image: none;
+}
+.SimpleEntertainmentMenu .AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren1
+{   
+    padding-top: 4px;
+    height: 20px;
+    border-bottom: solid 1px #D0D0D0;
+    background-color: #DCDCDC;
+    white-space: nowrap;
+    
+}
+.AspNet-Menu-WithChildren li.AspNet-Menu-WithChildren1 .AspNet-Menu-Test1
+{
+    color:#000000 !important;
+}
+.AspNet-Menu-Leaf a.AspNet-Menu-Test1
+{
+    color: #000;
+    padding: 0px;
+}
+.AspNet-Menu-Leaf a.AspNet-Menu-Test1:hover
+{
+    color: #000 !important;
+}
+
+AspNet-Menu-WithChildren .AspNet-Menu-Leaf .AspNet-Menu-Test1
+{
+    color: #FFF;
+}
+
+
+.settingicon
+{
+    width:100px;
+    height:75px;
+    position:relative;
+    float:left;
+}
+
+

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="POC.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false"/>
+    </sectionGroup>
+  </configSections>
+  <appSettings>
+
+    <!--<add key="NotifyIconTitle" value="USPDhub POC"/>
+    <add key="CountryVerticalName" value="localhost"/>-->
+
+    <!--USPDHub.com-->
+    <add key="NotifyIconTitle" value="USPDhub POC"/>
+    <add key="CountryVerticalName" value="uspdhubcom"/>
+
+    <!--InSchoolHub.com-->
+    <!--<add key="notifyicontitle" value="inSchoolHub POC"/>
+    <add key="countryverticalname" value="inschoolhubcom"/>-->
+
+    <!-- InSchoolHub.in-->
+    <!--<add key="NotifyIconTitle" value="inSchoolHub POC"/>
+    <add key="CountryVerticalName" value="inschoolhubin"/>-->
+
+    <!--twovie.com-->
+    <!--<add key="NotifyIconTitle" value="TwoVie POC"/>
+    <add key="CountryVerticalName" value="twoviecom"/>-->
+
+    <!--myyouthhub.com-->
+    <!--<add key="NotifyIconTitle" value="MyYouthHub POC"/>
+    <add key="CountryVerticalName" value="myyouthhubcom"/>-->
+    <!--http://test.uspdhub.com/USPDhubClientService/m_service/ClientService.asmx-->
+  </appSettings>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="ClientServiceSoap" allowCookies="true" maxBufferPoolSize="2147483647"
+          maxReceivedMessageSize="2147483647" />
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://www.inschoolhub.com/USPDhubClientService2.0/m_service/ClientService.asmx"
+        binding="basicHttpBinding" bindingConfiguration="ClientServiceSoap"
+        contract="USPDhubClientService.ClientServiceSoap" name="ClientServiceSoap" />
+    </client>
+  </system.serviceModel>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0,Profile=Client"/>
+  </startup>
+  <userSettings>
+    <POC.Properties.Settings>
+      <setting name="ProfileID" serializeAs="String">
+        <value>0</value>
+      </setting>
+      <setting name="UserID" serializeAs="String">
+        <value>0</value>
+      </setting>
+      <setting name="UserName" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="Password" serializeAs="String">
+        <value />
+      </setting>
+    </POC.Properties.Settings>
+  </userSettings>
+</configuration>

@@ -1,0 +1,11 @@
+  <div style="margin: 0px auto; width: 0px; float: left;">
+                              #Logo# </div>
+                            <div style="margin: 0px 0px 0px 90px;">
+                                <h1 style="font-size: 28px; line-height: 25px; font-weight: bold; color: #fcb040;
+                                    text-align: center; margin: 0px; padding: 0px;">
+                                  #ProfileName#</h1>
+                                <br />
+                                <div style="text-align: center;">
+                                    #ProfileAddress#
+                                </div>
+                            </div>

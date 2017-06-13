@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddContactGroupList" xml:space="preserve">
+    <value>Your groups were successfully added.</value>
+  </data>
+  <data name="AddContactGroupListcountExceeded" xml:space="preserve">
+    <value>Sorry, you have exceeded the maximum limit of groups.</value>
+  </data>
+  <data name="AddcontactinAddcontact" xml:space="preserve">
+    <value>Your contacts were successfully added.</value>
+  </data>
+  <data name="Affiliateinvitationfailmessage" xml:space="preserve">
+    <value>We are sorry, there is a temporary problem with our e-mail service. Please try after some time.</value>
+  </data>
+  <data name="Affiliateinvitationsendmessage" xml:space="preserve">
+    <value>Your invitation(s) have been sent successfully.</value>
+  </data>
+  <data name="AlreadyHaveBusinessEventCampaign" xml:space="preserve">
+    <value>Sorry, you cannot send event now as you have event campaign scheduled till</value>
+  </data>
+  <data name="AlreadyHaveBusinessUpdateCampaign" xml:space="preserve">
+    <value>Sorry, you cannot send update now as you have update campaign scheduled till</value>
+  </data>
+  <data name="AlreadyHaveCouponCampan" xml:space="preserve">
+    <value>Sorry, you cannot market your coupon now as you have a coupon campaign scheduled till</value>
+  </data>
+  <data name="AlreadyHaveEmailCampan" xml:space="preserve">
+    <value>You cannot send another email campaign until the current campaign has ended. Your current email campaign is scheduled until</value>
+  </data>
+  <data name="AlreadyHaveNewsletterCampan" xml:space="preserve">
+    <value>Sorry, you are not able to send another campaign now as you already have 3 campaigns scheduled till</value>
+  </data>
+  <data name="ArchiveSchedulenewsletter" xml:space="preserve">
+    <value>Sorry, you cannot archive your flyer now as you have an flyer campaign scheduled.</value>
+  </data>
+  <data name="BusinessName" xml:space="preserve">
+    <value>organization name</value>
+  </data>
+  <data name="checkforlistingvalues" xml:space="preserve">
+    <value>Sorry, you have no group names. Please add group name and try again..!</value>
+  </data>
+  <data name="CoponCampaignstoped" xml:space="preserve">
+    <value>Your coupon campaign has been cancelled successfully.</value>
+  </data>
+  <data name="CouponScheduledSuccessfully" xml:space="preserve">
+    <value>Your coupon campaign  has been scheduled successfully.</value>
+  </data>
+  <data name="Deletecontactinshowcontact" xml:space="preserve">
+    <value>Are you sure you want to delete this contact? </value>
+  </data>
+  <data name="DeleteScheduleCoupon" xml:space="preserve">
+    <value>Sorry, you cannot delete your coupon now as you have a coupon campaign scheduled till</value>
+  </data>
+  <data name="DeleteScheduleEmail" xml:space="preserve">
+    <value>Sorry, you cannot delete your email now as you have an email campaign scheduled till</value>
+  </data>
+  <data name="DeleteScheduleEvent" xml:space="preserve">
+    <value>Sorry, you cannot delete your event now as you have a event campaign scheduled till</value>
+  </data>
+  <data name="DeleteSchedulenewsletter" xml:space="preserve">
+    <value>Sorry, you cannot delete your flyer now as you have a flyer campaign scheduled till</value>
+  </data>
+  <data name="Duplicatecontactmessage" xml:space="preserve">
+    <value>This contact is already present in the selected group. Please choose another group in which to add this contact.</value>
+  </data>
+  <data name="DuplicateInvitations" xml:space="preserve">
+    <value>One or more of your contacts could not be invited as they have received an Affiliate invitation from you in the past.</value>
+  </data>
+  <data name="DuplicateListingmessage" xml:space="preserve">
+    <value>Duplicate group name. Please choose a different name and try again.</value>
+  </data>
+  <data name="EditScheduleCoupon" xml:space="preserve">
+    <value>Sorry, you cannot edit your coupon now because it has already been scheduled.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>email address</value>
+  </data>
+  <data name="EmailCampaignstoped" xml:space="preserve">
+    <value>Your email campaign has been cancelled successfully.</value>
+  </data>
+  <data name="EMailsCountExceeded" xml:space="preserve">
+    <value>Sorry, #Available emails are  available to you. You have selected #Selected emails. Please select less than or equal to #Available email(s).</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>first name</value>
+  </data>
+  <data name="GeneralTabtosameprofile" xml:space="preserve">
+    <value>Sorry, you cannot send the invite to yourself.</value>
+  </data>
+  <data name="Generealtabsendmessage" xml:space="preserve">
+    <value>Your invitation(s) were sent successfully.</value>
+  </data>
+  <data name="newsletterCampaignstoped" xml:space="preserve">
+    <value>Your campaign has been cancelled successfully.</value>
+  </data>
+  <data name="NoContactsSelected" xml:space="preserve">
+    <value>Please select or add at least one contact and try again.</value>
+  </data>
+  <data name="NoCountforScheduledcoupon" xml:space="preserve">
+    <value>We are sorry, you cannot schedule this coupon today. Please try tomorrow.</value>
+  </data>
+  <data name="NoListEnterederrormessage" xml:space="preserve">
+    <value>Please enter a group name.</value>
+  </data>
+  <data name="Passwordupdated" xml:space="preserve">
+    <value>Your password has been updated successfully.</value>
+  </data>
+  <data name="Referafriendmailsentsuccessfully" xml:space="preserve">
+    <value>Your referral has been sent successfully.</value>
+  </data>
+  <data name="ScheduleBusinessEvent" xml:space="preserve">
+    <value>Your event campaign has been scheduled successfully.</value>
+  </data>
+  <data name="ScheduleBusinessUpdate" xml:space="preserve">
+    <value>Your update campaign has been scheduled successfully.</value>
+  </data>
+  <data name="ScheduledCouponCountExceededforselecteddate" xml:space="preserve">
+    <value>Sorry, you have exceeded the maximum limit for today.</value>
+  </data>
+  <data name="ScheduleEmail" xml:space="preserve">
+    <value>Your email campaign has been scheduled successfully.</value>
+  </data>
+  <data name="Schedulenewsletter" xml:space="preserve">
+    <value>Your campaign has been scheduled successfully.</value>
+  </data>
+  <data name="SelectedbusinesseventlimitExceedstheAvailablevalue" xml:space="preserve">
+    <value>We are sorry, the day limit for sending event emails is #day_lmit, you had already sent #used event emails. From the available options, please choose a value 
+
+less than or equal to #available.
+
+</value>
+  </data>
+  <data name="SelectedBusinessEventlimitlessthanAvailablevalue" xml:space="preserve">
+    <value>Your selected event limit value is less than or equal to the available limit value.Please schedule your event</value>
+  </data>
+  <data name="SelectedbusinessupdatelimitExceedstheAvailablevalue" xml:space="preserve">
+    <value>We are sorry, the day limit for sending update emails is #day_lmit, you had already sent #used update emails. From the available options, please choose a value 
+
+less than or equal to #available.
+
+</value>
+  </data>
+  <data name="SelectedBusinessUpdatelimitlessthanAvailablevalue" xml:space="preserve">
+    <value>Your selected update limit value is less than or equal to the available limit value.Please schedule your update.</value>
+  </data>
+  <data name="SelectedCouponlimitExceedstheAvailablevalue" xml:space="preserve">
+    <value>We are sorry, the day limit for sending coupons is #day_lmit, you had already sent #used coupons. From the available options, please choose a value less than or equal to #available.</value>
+  </data>
+  <data name="SelectedCouponlimitlessthanAvailablevalue" xml:space="preserve">
+    <value>Your selected coupon limit value is less than or equal to the available limit value.Please schedule your coupon.</value>
+  </data>
+  <data name="SelectedEmailslimitExceedstheAvailablevalue" xml:space="preserve">
+    <value>We are sorry, the day limit for sending emails is #day_lmit, you had already sent #used emails. From the available options, please choose a value less than or equal to #available.</value>
+  </data>
+  <data name="SelectednewsletterlimitExceedstheAvailablevalue" xml:space="preserve">
+    <value>We are sorry, the day limit for sending flyer is #day_lmit, you had already sent #used flyers. From the available options, please choose a value 
+
+less than or equal to #available.
+
+</value>
+  </data>
+  <data name="SelectednewsletterlimitlessthanAvailablevalue" xml:space="preserve">
+    <value>Your selected flyer limit value is less than or equal to the available limit value.Please schedule your flyer.</value>
+  </data>
+  <data name="sendaffiliatecountExceeded" xml:space="preserve">
+    <value>Sorry, you have exceeded the maximum limit for today.</value>
+  </data>
+  <data name="sendBusinessEventcountExceeded" xml:space="preserve">
+    <value>Sorry, you have exceeded the maximum limit for today.</value>
+  </data>
+  <data name="sendBusinessEventmail" xml:space="preserve">
+    <value>Your event has been scheduled successfully.</value>
+  </data>
+  <data name="sendBusinessUpdatecountExceeded" xml:space="preserve">
+    <value>Sorry, you have exceeded the maximum limit for today.</value>
+  </data>
+  <data name="sendBusinessUpdatemail" xml:space="preserve">
+    <value>Your update has been scheduled successfully.</value>
+  </data>
+  <data name="sendcouponcountExceeded" xml:space="preserve">
+    <value>Sorry, you have exceeded the maximum limit for today.</value>
+  </data>
+  <data name="sendcouponmail" xml:space="preserve">
+    <value>Your coupon has been sent successfully.</value>
+  </data>
+  <data name="sendEmailcountExceeded" xml:space="preserve">
+    <value>Sorry, you have exceeded the maximum limit for today.</value>
+  </data>
+  <data name="sendgeneraltabcountExceeded" xml:space="preserve">
+    <value>Sorry, you have exceeded the maximum limit for today.</value>
+  </data>
+  <data name="SendMailfromMessageLabelMessage" xml:space="preserve">
+    <value>Your email campaign has been sent successfully.</value>
+  </data>
+  <data name="SendMessagecountExceeded" xml:space="preserve">
+    <value>Sorry, you have exceeded the maximum limit for today.</value>
+  </data>
+  <data name="sendnewslettercountExceeded" xml:space="preserve">
+    <value>Sorry, you have exceeded the maximum limit for today.</value>
+  </data>
+  <data name="sendnewslettermail" xml:space="preserve">
+    <value>Your campaign has been scheduled to be sent.</value>
+  </data>
+  <data name="ArchiveCurrentSuccess" xml:space="preserve">
+    <value>Your #type# has been reinstated successfully.</value>
+  </data>
+  <data name="ArchiveSuccess" xml:space="preserve">
+    <value>Your #type# has been archived successfully.</value>
+  </data>
+  <data name="BulletingCreateSuccess" xml:space="preserve">
+    <value>#BulletinName# has been created successfully.</value>
+  </data>
+  <data name="BulletingUpdateSuccess" xml:space="preserve">
+    <value>#BulletinName# has been updated successfully.</value>
+  </data>
+  <data name="ExpirationDate" xml:space="preserve">
+    <value>Expiration date should be later than current date.</value>
+  </data>
+  <data name="LastContactDate" xml:space="preserve">
+    <value>Last contact date should be equal or later than date of birth.</value>
+  </data>
+  <data name="LastSeenDate" xml:space="preserve">
+    <value>Last seen date should be equal or less than current date.</value>
+  </data>
+  <data name="LastContactCurrentDate" xml:space="preserve">
+    <value>Last contact date should be equal or less than current date.</value>
+  </data>
+  <data name="Manufacturedyear" xml:space="preserve">
+    <value>Year should be less than or equal to current year.</value>
+  </data>
+  <data name="PublishStatusChange" xml:space="preserve">
+    <value>Your #Type# has been #Status# successfully.</value>
+  </data>
+  <data name="NoDevicesAdded" xml:space="preserve">
+    <value>Notification has been sent.</value>
+  </data>
+  <data name="SentPartialPushNotification" xml:space="preserve">
+    <value>Your notification has been sent successfully to few devices only.</value>
+  </data>
+  <data name="SentPushNotification" xml:space="preserve">
+    <value>Your notification has been sent successfully.</value>
+  </data>
+  <data name="PublishDateAlert" xml:space="preserve">
+    <value>Publish date should be equal or later than current date.</value>
+  </data>
+  <data name="MobileMessage" xml:space="preserve">
+    <value>The selected mobile app message has been deleted successfully.</value>
+  </data>
+  <data name="MobileTip" xml:space="preserve">
+    <value>The selected mobile app tip has been deleted successfully.</value>
+  </data>
+  <data name="URLshortcutUsername" xml:space="preserve">
+    <value>Your USPDhub shortcut to desktop with username has been created successfully.</value>
+  </data>
+  <data name="URLshortcutUserPwd" xml:space="preserve">
+    <value>Your USPDhub shortcut to desktop with username and password has been created successfully.</value>
+  </data>
+  <data name="ComingSoon" xml:space="preserve">
+    <value>Coming Soon</value>
+  </data>
+  <data name="CheckOutSuccess" xml:space="preserve">
+    <value>Payment process has been completed.</value>
+  </data>
+  <data name="AlreadyHaveBulletinCampaign" xml:space="preserve">
+    <value>Sorry, you cannot send bulletin now as you have bulletin campaign scheduled till</value>
+  </data>
+  <data name="DeleteMessagesandTips" xml:space="preserve">
+    <value>Selected items have been deleted successfully.</value>
+  </data>
+  <data name="ParentProfileNotExists" xml:space="preserve">
+    <value>Your parent organization doesn't exists.</value>
+  </data>
+  <data name="GoogleEventsImportSuccess" xml:space="preserve">
+    <value>Google events have been imported successfully.</value>
+  </data>
+  <data name="GoogleEventsNotExists" xml:space="preserve">
+    <value>There are no google events to import.</value>
+  </data>
+  <data name="ReportError" xml:space="preserve">
+    <value>Report will be available once survey participation begins.</value>
+  </data>
+  <data name="SubInvitationFailed" xml:space="preserve">
+    <value>Invitation has not send. Please try again.</value>
+  </data>
+  <data name="SubInvitationSuccess" xml:space="preserve">
+    <value>Invitation has been sent successfully.</value>
+  </data>
+  <data name="AlreadySent" xml:space="preserve">
+    <value>You have already sent an invitation to ##Email##.</value>
+  </data>
+  <data name="InvitationActivated" xml:space="preserve">
+    <value>Your account has already been activated.</value>
+  </data>
+  <data name="InvitationCancelled" xml:space="preserve">
+    <value>Your invitation has been cancelled successfully.</value>
+  </data>
+  <data name="NoUsageResult" xml:space="preserve">
+    <value>No installs between #StartDate# and #EndDate#.</value>
+  </data>
+  <data name="SubAppReqCodesFailed" xml:space="preserve">
+    <value>We have created #ResultCount#. Please try again for remaining codes.</value>
+  </data>
+  <data name="SubAppReqCodesPaidSuccess" xml:space="preserve">
+    <value>We will contact you soon to activate the requested #Count# code(s) for Pre-Paid.</value>
+  </data>
+  <data name="SubAppReqCodesUnPaidSuccess" xml:space="preserve">
+    <value>Requested #Count# code(s) for Unpaid have been generated successfully.</value>
+  </data>
+  <data name="ResendSuccess" xml:space="preserve">
+    <value>Your invitation has been resent successfully.</value>
+  </data>
+  <data name="BlockedAllSenders" xml:space="preserve">
+    <value>The selected sender(s) have been blocked successfully.</value>
+  </data>
+  <data name="BlockedPartialSenders" xml:space="preserve">
+    <value>In the selected sender(s), few of them have been blocked successfully. &lt;br/&gt; For remaining message(s) do not exists the device id.</value>
+  </data>
+  <data name="BlockedSendersFailed" xml:space="preserve">
+    <value>Blocking is unavailable for the selected sender(s).</value>
+  </data>
+  <data name="UnblockedAllSenders" xml:space="preserve">
+    <value>The selected sender(s) have been unblocked successfully.</value>
+  </data>
+  <data name="CustomModuleExpired" xml:space="preserve">
+    <value>Your custom module expired, please renew again to use it.</value>
+  </data>
+  <data name="AuthorPublishTitle" xml:space="preserve">
+    <value>Submit for approval</value>
+  </data>
+  <data name="PublishChange" xml:space="preserve">
+    <value>Your #Type# has been changed to #Status# successfully.</value>
+  </data>
+  <data name="LonglogoUploadMessage" xml:space="preserve">
+    <value>Your long logo must be a minimum of</value>
+  </data>
+  <data name="ShortlogoUploadMessage" xml:space="preserve">
+    <value>Your short logo must be a minimum of</value>
+  </data>
+  <data name="DateofBirth" xml:space="preserve">
+    <value>date of birth should be equal or less than current date.</value>
+  </data>
+  <data name="RenameSuccess" xml:space="preserve">
+    <value>'#ExistingContentName#' has successfully been renamed to '#NewContentName#'.</value>
+  </data>
+  <data name="SchedulePushNotification" xml:space="preserve">
+    <value>Your notification has been sent successfully.</value>
+  </data>
+  <data name="LastSyncDate" xml:space="preserve">
+    <value>&lt;b&gt;Last Synced On: &lt;/b&gt;</value>
+  </data>
+  <data name="PrivateModuleDeclinedTitle" xml:space="preserve">
+    <value>Your invitation have been successfully cancelled.</value>
+  </data>
+  <data name="PrivateinvitationDeleteMSG" xml:space="preserve">
+    <value>Selected contacts have been deleted successfully.</value>
+  </data>
+  <data name="PrivateInvitationDisableMSG" xml:space="preserve">
+    <value>Selected contacts have been disabled successfully.</value>
+  </data>
+  <data name="PrivateInvitationEnableMSG" xml:space="preserve">
+    <value>Selected contacts have been enabled successfully.</value>
+  </data>
+  <data name="PrivateInvitationPleaseSelectatleastMSG" xml:space="preserve">
+    <value>You must select a contact to send an invitation.</value>
+  </data>
+  <data name="PrivateInvitationSentMSG" xml:space="preserve">
+    <value>Your invitation(s) have been sent successfully.</value>
+  </data>
+  <data name="PrivateInvitationDelete" xml:space="preserve">
+    <value>Your invitation has been deleted succesfully.</value>
+  </data>
+  <data name="PrivateInvitationDeviceDisable" xml:space="preserve">
+    <value>Your device has been disabled successfully.</value>
+  </data>
+  <data name="PrivateInvitationDeviceEnable" xml:space="preserve">
+    <value>Your device has been enabled successfully.</value>
+  </data>
+  <data name="PrivateInvitationExpiration" xml:space="preserve">
+    <value>Your invitation has expired. Please request another invitation from the App owner.</value>
+  </data>
+  <data name="NetworkErrors" xml:space="preserve">
+    <value>There is a network problem in your location. Please check it.</value>
+  </data>
+  <data name="WebnairError" xml:space="preserve">
+    <value>An error has been occured. Please try again after some time.</value>
+  </data>
+  <data name="WebnairSuccess" xml:space="preserve">
+    <value>Thank you for registering.</value>
+  </data>
+  <data name="WebnairAlreadyRegistered" xml:space="preserve">
+    <value>You have already been registered.</value>
+  </data>
+  <data name="BGImageSubmitted" xml:space="preserve">
+    <value>Your image has been updated successfully.</value>
+  </data>
+  <data name="FileNotSelected" xml:space="preserve">
+    <value>Please select a file to upload.</value>
+  </data>
+  <data name="ImageHeightNotReached" xml:space="preserve">
+    <value>Your image height should be between #MinHeight#px and #MaxHeight#px for the #Width#px of width. Your Image Specification: #Width#x#Height#</value>
+  </data>
+  <data name="ImageSizeNotReached" xml:space="preserve">
+    <value>Your uploaded image should be minimum of  #DefinedWidth#px width and #DefinedHeight#px height.</value>
+  </data>
+  <data name="ImageHeightLessthanWidth" xml:space="preserve">
+    <value>Your image height should be higher than width.Your image specification is #Width#x#Height#</value>
+  </data>
+  <data name="BannerAdsAppdisplaySuccess" xml:space="preserve">
+    <value>App Display status has been updated for banner ads.</value>
+  </data>
+  <data name="BannerAdLinkSaved" xml:space="preserve">
+    <value>Link has been updated for banner ad.</value>
+  </data>
+  <data name="BannerAdLinkEdit" xml:space="preserve">
+    <value>Edit Banner Ad Link</value>
+  </data>
+  <data name="BannerAdDeleteSuccess" xml:space="preserve">
+    <value>Selected banner ad has been deleted successfully.</value>
+  </data>
+  <data name="PermissionSignOut" xml:space="preserve">
+    <value>For the changes to take effect you will need to logout and then log back in. &lt;a class="operatelogins" href="##logoutlink##"&gt;Click here&lt;/a&gt; to logout.</value>
+  </data>
+  <data name="NoAppOpenUsageResult" xml:space="preserve">
+    <value>No opens between #StartDate# and #EndDate#.</value>
+  </data>
+  <data name="NoClickUsageResult" xml:space="preserve">
+    <value>No clicks between #StartDate# and #EndDate#.</value>
+  </data>
+  <data name="ImportContactsSuccess" xml:space="preserve">
+    <value>Your contacts(#successcount#) were successfully imported.</value>
+  </data>
+  <data name="SMSAvailableExceeded" xml:space="preserve">
+    <value>You do not have sufficient SMS credits to send now. Please buy more SMS credits.</value>
+  </data>
+  <data name="CallAddOnVisibilityFailed" xml:space="preserve">
+    <value>Failed to change the visiblity.</value>
+  </data>
+  <data name="CallAddOnVisibilityOff" xml:space="preserve">
+    <value>Selected Button has been changed to Off.</value>
+  </data>
+  <data name="CallAddOnVisibilityOn" xml:space="preserve">
+    <value>Selected Button is now On.</value>
+  </data>
+  <data name="NotFoundSearchHelpVideo" xml:space="preserve">
+    <value>No video available for '##SearchHelpVideo##'.</value>
+  </data>
+  <data name="NoAddFavoritesAvailable" xml:space="preserve">
+    <value>Currently you have no forms are available to add to your favorites list.</value>
+  </data>
+  <data name="AddFavoriteSuccess" xml:space="preserve">
+    <value>Selected forms have been added  successfully to your favorites list.</value>
+  </data>
+  <data name="NoRemoveFavoritesAvailable" xml:space="preserve">
+    <value>Currently you have no forms are available to remove from your favorites list.</value>
+  </data>
+  <data name="RemoveFavoriteSuccess" xml:space="preserve">
+    <value>Selected forms have been removed successfully from your favorites list.</value>
+  </data>
+  <data name="UnsubscribeNotListed" xml:space="preserve">
+    <value>Email has already been unsubscribed from this list.</value>
+  </data>
+  <data name="UnsubscribeSucess" xml:space="preserve">
+    <value>You have been successfully removed from this subscriber list.</value>
+  </data>
+  <data name="RenewalAlert" xml:space="preserve">
+    <value>Your membership will be renewed on #RenewalDate#.</value>
+  </data>
+  <data name="OrderChangedPublishedContent" xml:space="preserve">
+    <value>Order can only be changed for published content.Make sure you have published content and try again.</value>
+  </data>
+  <data name="ItemTitleEmpty" xml:space="preserve">
+    <value>Please enter a title.</value>
+  </data>
+  <data name="SponsorBGImageSubmitted" xml:space="preserve">
+    <value>Your image has been uploaded successfully.</value>
+  </data>
+  <data name="SponsorBannerAdLinkEdit" xml:space="preserve">
+    <value>Edit sponsor Ad Link</value>
+  </data>
+  <data name="SponsorBannerAdLinkSaved" xml:space="preserve">
+    <value>Link has been updated for sponsor ad.</value>
+  </data>
+  <data name="SponsorAdDeleteSuccess" xml:space="preserve">
+    <value>Selected sponsor ad has been deleted successfully.</value>
+  </data>
+  <data name="SponsorAdsAppdisplaySuccess" xml:space="preserve">
+    <value>App Display status has been updated for Sponsor ads.</value>
+  </data>
+  <data name="SponsorAdsUpdateSuccess" xml:space="preserve">
+    <value>Sponser Ad Status has been updated Sucessfully</value>
+  </data>
+  <data name="OrderCompletedMessage" xml:space="preserve">
+    <value>We have received your information and a customer service representative will be calling you to complete the verification process and account setup or feel free to call us at:  1-800-281-0263</value>
+  </data>
+  <data name="PublicCallHistoryDeleteMsg" xml:space="preserve">
+    <value>The selected public call history has been deleted successfully.</value>
+  </data>
+  <data name="PublicCallAddOnVisibilityOff" xml:space="preserve">
+    <value>Selected button has been changed to off.</value>
+  </data>
+  <data name="PublicCallAddOnVisibilityOn" xml:space="preserve">
+    <value>Selected button is now on.</value>
+  </data>
+  <data name="SmartConnectCreated" xml:space="preserve">
+    <value>SmartConnect button created successfully</value>
+  </data>
+  <data name="SmartConnectDeleted" xml:space="preserve">
+    <value>SmartConnect button has been deleted successfully</value>
+  </data>
+  <data name="SmartConnectUpdated" xml:space="preserve">
+    <value>SmartConnect button details updated successfully</value>
+  </data>
+  <data name="SendEmailContacts" xml:space="preserve">
+    <value>Your content has been emailed successfully.</value>
+  </data>
+  <data name="AssociateEmptySearch" xml:space="preserve">
+    <value>Please enter a text to find associates.</value>
+  </data>
+  <data name="SubAppInvitationRequest" xml:space="preserve">
+    <value>Your invitation have been sent successfully.</value>
+  </data>
+  <data name="RenewalAlertCheckProcess" xml:space="preserve">
+    <value>Your subscription is set to expire on #RenewalDate#. Please ensure your payment has been sent.</value>
+  </data>
+  <data name="SubappsEmptySearch" xml:space="preserve">
+    <value>Please enter a text to find affiliate(s).</value>
+  </data>
+  <data name="PrivateCallHistoryDeleteMsg" xml:space="preserve">
+    <value>The selected private call history has been deleted successfully.</value>
+  </data>
+  <data name="DeleteSmartConnectMessages" xml:space="preserve">
+    <value>Your selection(s) have been deleted successfully.</value>
+  </data>
+  <data name="NoSmartConnectMessages" xml:space="preserve">
+    <value>You do not have SmartConnect Messages.</value>
+  </data>
+  <data name="SmartConnectCategoryPermission" xml:space="preserve">
+    <value>You do not have permission to access Categories</value>
+  </data>
+  <data name="SmartConnectPermission" xml:space="preserve">
+    <value>You do not have permission to manage smartconnect messages.</value>
+  </data>
+  <data name="BlockSender" xml:space="preserve">
+    <value>The sender have been blocked successfully</value>
+  </data>
+  <data name="UnblockSender" xml:space="preserve">
+    <value>The sender have been unblocked successfully</value>
+  </data>
+  <data name="VMSuccess" xml:space="preserve">
+    <value>Your message has been sent successfully.</value>
+  </data>
+  <data name="PrivateSmartConnectCreated" xml:space="preserve">
+    <value>Private QR Connect button created successfully</value>
+  </data>
+  <data name="PrivateSmartConnectDeleted" xml:space="preserve">
+    <value>Private QR Connect buttom deleted succesfully</value>
+  </data>
+  <data name="PrivateSmartConnectUpdated" xml:space="preserve">
+    <value>Private QR Connect button updated successfully</value>
+  </data>
+  <data name="PSCNoImage" xml:space="preserve">
+    <value>Image is not available</value>
+  </data>
+  <data name="NoPrivateSmartConnectMessages" xml:space="preserve">
+    <value>You do not have any Private QR Connect Messages.</value>
+  </data>
+  <data name="PrivateSmartConnectPermission" xml:space="preserve">
+    <value>You do not have permission to manage Private QR Connect messages.</value>
+  </data>
+  <data name="QRInvalidAddress" xml:space="preserve">
+    <value>Invalid Address</value>
+  </data>
+  <data name="PrivateSmartConnectCopied" xml:space="preserve">
+    <value>Private QR Connect button copied successfully</value>
+  </data>
+  <data name="DuplicateEmail" xml:space="preserve">
+    <value>Phone number  is already in use; please use a different one.</value>
+  </data>
+  <data name="DuplicateQRTitle" xml:space="preserve">
+    <value>Button name already exists. Please use another one.</value>
+  </data>
+</root>

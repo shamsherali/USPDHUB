@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\Publish" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/AJAXExtensionsToolbox.dll" publishTime="05/08/2014 10:02:50" />
+    <file relUrl="bin/SchemaNameChange.pdb" publishTime="05/19/2017 13:08:52" />
+    <file relUrl="images/popup_ajax-loader.gif" publishTime="07/15/2016 11:55:01" />
+    <file relUrl="RenewalExpiryDate.aspx" publishTime="05/19/2017 13:07:16" />
+    <file relUrl="bin/SchemaNameChange.dll" publishTime="05/19/2017 13:08:52" />
+    <file relUrl="Web.config" publishTime="05/19/2017 13:08:57" />
+    <file relUrl="bin/Ajax.dll" publishTime="05/08/2014 10:02:50" />
+    <file relUrl="SchemaNameChange.aspx" publishTime="07/15/2016 11:55:01" />
+    <file relUrl="CountryCodeChange.aspx" publishTime="07/16/2016 14:12:43" />
+    <file relUrl="bin/AjaxControlToolkit.dll" publishTime="05/08/2014 10:02:50" />
+    <file relUrl="OTPDetails.aspx" publishTime="07/15/2016 11:55:01" />
+  </publishProfile>
+</publishData>

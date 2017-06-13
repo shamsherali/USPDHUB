@@ -1,0 +1,167 @@
+﻿<Page x:Class="ISANotifications.ManageAudio"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISANotifications"
+      mc:Ignorable="d" 
+      xmlns:c="clr-namespace:ISANotifications"
+     d:DesignWidth="550"
+      Title="ManageAudio" FontSize="16">
+    <Page.Resources>
+        <c:UserBO x:Key="user"/>
+        <Style x:Key="tbStyle" TargetType="TextBlock">
+            <Setter Property="Width" Value="130"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+        </Style>
+        <Style x:Key="txtStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="200"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+            <Setter Property="Height" Value="23"></Setter>
+        </Style>
+
+
+        <Style x:Key="Link" TargetType="Button">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <TextBlock TextDecorations="Underline" 
+                    Text="{TemplateBinding Content}"
+                    Background="{TemplateBinding Background}"/>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Foreground" Value="Red"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Page.Resources>
+    <Grid  >
+        <StackPanel>
+            <StackPanel>
+                <TextBlock Text="Manage Audio Files" Style="{StaticResource pageTitleStyle}"></TextBlock>
+            </StackPanel>
+            <StackPanel>
+                <Border Style="{StaticResource pageBorderStyle}">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                            <TextBlock Name="ErrorTemplate" FontSize="14" Foreground="Red" 
+                                        >
+                            </TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Foreground="red">*</TextBlock>
+                            <TextBlock Text=" Audio Title:" PreviewTextInput="TextBlock_PreviewTextInput" Style="{StaticResource tbStyle}"></TextBlock>
+                            <TextBox Name="txtAudioTitle" PreviewTextInput="txtAudioTitle_PreviewTextInput"  Width="200">
+                            </TextBox>
+                            <Label Name="Audio" FontSize="10" Foreground="Red"  Width="120"></Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <TextBlock Foreground="red">*</TextBlock>
+                            <TextBlock Text=" Upload File:"  Style="{StaticResource tbStyle}" ></TextBlock>
+                            <TextBox Name="txtAudio" IsReadOnly="True" Width="200">
+                            </TextBox>
+
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <Button Content="Browse"  Click="brwse_Click" Style="{StaticResource btnStyle}" Margin="137,0,0,0"></Button>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,1,0,0">
+                            <TextBlock Text="Note: Max allowed file size is 4MB. Please use .wav format."></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <TextBlock Text="Set as default audio" Style="{StaticResource tbStyle}"></TextBlock>
+                            <CheckBox    Name="chkDefault"  Margin="8,4,0,0"></CheckBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                            <Button x:Name="btnUpload" Content="Upload" Width="100" Margin="137,0,0,0"  Click="btnUpload_Click">
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+
+                                        <Style.Triggers>
+                                            <!-- Require the controls to be valid in order to press OK -->
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding ElementName=txtAudioTitle, Path=Audiotitle}" Value="false" />
+                                                    <Condition Binding="{Binding ElementName=txtAudio, Path=Uploadfile}" Value="false" />
+                                                </MultiDataTrigger.Conditions>
+                                            </MultiDataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Triggers>
+                                    <EventTrigger  RoutedEvent="Button.Click">
+                                        <BeginStoryboard>
+                                            <Storyboard TargetName="ErrorTemplate">
+                                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1"  To="0" Duration="0:0:5" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </Button.Triggers>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel x:Name="sp" Orientation="Horizontal" Margin="180,0,0,0" >
+                            <local:LoadingAnimation  x:Name="loadingControl" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+                            <TextBlock x:Name="tbErrorMessage" Foreground="Red" FontSize="14" TextAlignment="Center"  ></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <DataGrid AutoGenerateColumns="false"   Name="grdAudioFiles" ItemsSource="{Binding}"
+                                      GridLinesVisibility="All"    MaxHeight="250" SelectionMode="Single" CanUserAddRows="False"  >
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}"  Header="Title" Width="170" Binding="{Binding AudioName}" IsReadOnly="True"/>
+                                    <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}"  Header="Play" CanUserResize="False" Width="80">
+                                        <DataGridTemplateColumn.CellTemplate >
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal" x:Name="spAudio" Background="White" HorizontalAlignment="Center" >
+                                                    <Image Source="Images/Play.png" Tag="{Binding AudioPlayUrl}" x:Name="imgPlay" MouseLeftButtonDown="imgPlay_MouseLeftButtonDown"></Image>
+                                                    <Image Source="Images/Pause.png" Visibility="Collapsed" Tag="{Binding AudioPlayUrl}" x:Name="imgPause" MouseLeftButtonDown="imgPause_MouseLeftButtonDown"></Image>
+                                                    <Image Source="Images/Stop.png" x:Name="imgStop" Visibility="Collapsed" Margin="5,0,0,0" MouseLeftButtonDown="imgStop_MouseLeftButtonDown"></Image>
+                                                </StackPanel>
+                                                <!--<MediaElement Tag="{Binding AudioPlayUrl}" Loaded="MediaElement_Loaded"></MediaElement>-->
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}"  Header="Delete" CanUserResize="False" Width="60">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Image Source="Images/delete.png"  Tag="{Binding AudioID}" x:Name="imgAudioDelete"
+                                                       MouseLeftButtonDown="imgAudioDelete_MouseLeftButtonDown" Width="30" Height="30"
+                                                       HorizontalAlignment="Center" VerticalAlignment="Center" Loaded="imgAudioDelete_Loaded"></Image>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn  HeaderStyle="{DynamicResource CenterGridHeaderStyle}"  Header="Notification Alert" CanUserResize="False" Width="180">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button Content="Enable" Tag="{Binding AudioID}" Style="{StaticResource Link}"
+                                                        x:Name="btnSetasDefault" Click="btnSetasDefault_Click" Loaded="btnSetasDefault_Loaded"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Label Name="emptyAudioRow" Foreground="red" FontSize="16" Content="No audio files uploaded." Visibility="Collapsed"></Label>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0"></StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0"></StackPanel>
+                    </StackPanel>
+
+
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

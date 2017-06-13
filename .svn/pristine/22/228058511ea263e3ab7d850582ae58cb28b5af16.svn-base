@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="USPDhubDevServer" value="Network Library=DBMSSOCN;Data Source=HQ\WOWZZY;Initial Catalog=USPDHUB;User ID=wowzzydbusa;Password=Nitin2003;pooling=true;"/>
+    <add key="AndroidAPI" value="AIzaSyA3lGgQwAfMoWr004r4KPgr48PeTjzSMTo" />
+    <add key="IOSAPI_LTSchool" value="AIzaSyA3lGgQwAfMoWr004r4KPgr48PeTjzSMTo" />
+  </appSettings>
+</configuration>

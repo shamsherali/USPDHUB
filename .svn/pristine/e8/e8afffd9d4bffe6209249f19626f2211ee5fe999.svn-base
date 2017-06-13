@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Messaging OPT-in</title>
+    <link rel="stylesheet" type="text/css" href="http://staging.uspdhub.com/MUSPDHubStaging/Htmls/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="http://staging.uspdhub.com/MUSPDHubStaging/Htmls/css/structure.css">
+    <script src="http://staging.uspdhub.com/MUSPDHubStaging/Htmls/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        var RootUrl = ""; RootUrl = "http://staging.uspdhub.com/MUSPDHubStaging";    
+            //RootUrl = "http://localhost:51564"     
+               function NoThanksSubmit_CallbacktoMobileApp(value)
+                       { Android.showToast(value); }   
+                            function Submit() {     
+                                   if (document.getElementById("chkNoThanks").checked == true) { 
+                                                  alert('No Thanks');           
+                                                       NoThanksSubmit_CallbacktoMobileApp(0);    
+                                                                   window.external.notify('0');          
+                                                                     }            else {              
+                                                                       // // Sending Verification code to Mobile whatever user type in Phone Number Textbox. 
+                                                                                      var name = $("#txtname").val();           
+                                                                                           var phonenumber = "+999" + $("#txtphone").val();                var emailid = $("#txtemail").val();                var uniqueID = $("#hdnUniqueID").val();                var deviceID = $("#hdnDeviceID").val();                var appid = $("#hdnAppID").val();                var devicetype = $("#hdnDeviceType").val();                var pids = $("#hdnPID").val();                if (document.getElementById("txtemail").validity.valid == false) {                    emailid = "";                } if (document.getElementById("txtphone").validity.valid == false) {                    phonenumber = "";                }                if (name == "" || $("#txtphone").val() == "" || emailid == "" || phonenumber == "") {                }                else {                    localStorage.setItem("name", name);                    localStorage.setItem("phonenumber", phonenumber);                    localStorage.setItem("emailid", emailid);                    localStorage.setItem("uniqueID", uniqueID);                    localStorage.setItem("deviceID", deviceID);                    localStorage.setItem("appid", appid);                    localStorage.setItem("pids", pids);                    localStorage.setItem("devicetype", devicetype);                    $.ajax({                        type: "POST",                        url: RootUrl + "/MService_Phone.asmx/SendVerificationCodeTo_Mobile",                        data: "{pPhoneNumber: '" + phonenumber + "',pName: '" + name + "',pEmailID: '" + emailid + "',pUniqueDeviceID: '" + uniqueID + "',pDeviceID: '" + deviceID + "',pAppID: '" + appid + "',pPIDs: '" + pids + "'}",                        contentType: "application/json; charset=utf-8",                        dataType: "json",                        success: function(response) {                            //                            //alert(response);                            console.log(response.d);                            // Respone AS OTP                            localStorage.setItem("otp", response.d);                            NoThanksSubmit_CallbacktoMobileApp(1);                            window.external.notify('1');                            //alert("Now going to Open Phone Verfication Page");                            window.location.href = RootUrl + "/htmls/phone-verification.html";                            window.location.href = RootUrl + "/htmls/phone-verification.html";                            window.location.href = "";                            window.location.href = RootUrl + "/htmls/phone-verification.html";                        },                        error: function(error) {                            console.log(error);                        }                    }); //ajax end                } // validate ELSE                //staging.uspdhub.com/MUSPDHubStaging/htmls/phone-verification.html            } // NO thanks        } // END FUNCTIOn          </script>
+    <form class="box login">
+    <input type="hidden" id="hdnDeviceID" value="http://am3.notify.live.net/throttledthirdparty/01.00/AQFToK-gnLqdSZy00ggpa0ukAgAAAAADAQAAAAQUZm52OkJCMjg1QTg1QkZDMkUxREQFBkVVV0UwMQ" />
+    <input type="hidden" id="hdnPID" value="" />
+    <input type="hidden" id="hdnAppID" value="36" />
+    <input type="hidden" id="hdnUniqueID" value="gBlo1q08HhEGitRuvafeWJWy7rs=" />
+    <input type="hidden" id="hdnDeviceType" value="WindowsPhone" />
+    <fieldset class="boxBody">
+        <div class="headg">
+            Messaging OPT-in</div>
+        <label>
+            Name</label>
+        <input type="text" tabindex="1" placeholder="Name" required>
+        <label>
+            Phone</label>
+        <input type="tel" tabindex="2" placeholder="Phone" required>
+        <label>
+            Email</label>
+        <input type="email" tabindex="3" placeholder="Email" required>
+    </fieldset>
+    <div class="term-con">
+        I Accept <a href="#">Terms & Conditions</a></div>
+    <div class="or">
+        OR</div>
+    <footer>
+        <label>
+            <input id="chkNoThanks" type="checkbox" tabindex="4">No Thanks</label>
+        <input type="submit" class="btnLogin" value="Submit" tabindex="5" onclick="Submit();">
+    </footer>
+    </form>
+</body>
+</html>

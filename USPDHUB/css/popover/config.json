@@ -1,0 +1,33 @@
+{
+  "vars": {
+    "@tooltip-max-width": "200px",
+    "@tooltip-color": "#fff",
+    "@tooltip-bg": "#000",
+    "@tooltip-opacity": ".9",
+    "@tooltip-arrow-width": "5px",
+    "@tooltip-arrow-color": "@tooltip-bg",
+    "@popover-bg": "#fff",
+    "@popover-max-width": "276px",
+    "@popover-border-color": "rgba(0,0,0,.2)",
+    "@popover-fallback-border-color": "#ccc",
+    "@popover-title-bg": "darken(@popover-bg, 3%)",
+    "@popover-arrow-width": "10px",
+    "@popover-arrow-color": "@popover-bg",
+    "@popover-arrow-outer-width": "(@popover-arrow-width + 1)",
+    "@popover-arrow-outer-color": "fadein(@popover-border-color, 5%)",
+    "@popover-arrow-outer-fallback-color": "darken(@popover-fallback-border-color, 20%)",
+    "@close-font-weight": "bold",
+    "@close-color": "#000",
+    "@close-text-shadow": "0 1px 0 #fff"
+  },
+  "css": [
+    "close.less",
+    "tooltip.less",
+    "popovers.less"
+  ],
+  "js": [
+    "tooltip.js",
+    "popover.js"
+  ],
+  "customizerUrl": "http://getbootstrap.com/customize/?id=64d603ce97956e376fcd21a6d789edab"
+}

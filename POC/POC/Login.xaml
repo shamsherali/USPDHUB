@@ -1,0 +1,39 @@
+﻿<Window x:Class="POC.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login" MinHeight="200" MaxHeight="300" Width="420" FontSize="16"
+       xmlns:local="clr-namespace:POC.Control" WindowStartupLocation="CenterScreen" 
+        xmlns:POC="clr-namespace:POC"
+         
+        WindowStyle="SingleBorderWindow" ResizeMode="NoResize" Background="#EFEFEF" 
+        Closed="Window_Closed" Closing="Window_Closing">
+    <Grid >
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0" HorizontalAlignment="Center" >
+                <local:LoadingAnimation  x:Name="loading" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
+                <TextBlock x:Name="tbErrorMessage" Foreground="Red"  TextAlignment="Center" FontSize="18" ></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="Username:" Width="80"  ></TextBlock>
+                <TextBox x:Name="txtUsername" Width="250"  Height="35"  >
+                </TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <TextBlock Text="Password:" Width="80" ></TextBlock>
+                <PasswordBox x:Name="txtPassword"  Width="250" Height="35" ></PasswordBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <TextBlock Width="80"></TextBlock>
+                <CheckBox x:Name="chkRememberme" Content="Remember Me"   ></CheckBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,15,20,10">
+                <TextBlock  Width="80"></TextBlock>
+                <Button x:Name="btnLogin"  Content="Login" Width="200" Click="btnLogin_Click"  Background="#db5634"
+                        FontSize="24"  >
+                </Button>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>

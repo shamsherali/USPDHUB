@@ -1,0 +1,327 @@
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=windows-1252">
+    <title>Channel code Management</title>
+    <style type="text/css">
+        @page
+        {
+            margin-left: 1in;
+            margin-right: 1in;
+            margin-top: 0.75in;
+            margin-bottom: 0.5in;
+        }
+        P
+        {
+            margin-bottom: 0.08in;
+            direction: ltr;
+            color: #000000;
+            widows: 2;
+            orphans: 2;
+        }
+        P.western
+        {
+            font-family: "Tahoma" , serif;
+            font-size: 8pt;
+        }
+        P.cjk
+        {
+            font-size: 8pt;
+        }
+        P.ctl
+        {
+            font-size: 12pt;
+        }
+        H1
+        {
+            margin-top: 0in;
+            margin-bottom: 0in;
+            direction: ltr;
+            color: #ffffff;
+            text-align: center;
+            widows: 2;
+            orphans: 2;
+            page-break-after: auto;
+            text-transform: uppercase;
+        }
+        H1.western
+        {
+            font-family: "Tahoma" , serif;
+            font-size: 12pt;
+        }
+        H1.cjk
+        {
+            font-family: "Times New Roman";
+            font-size: 12pt;
+        }
+        H1.ctl
+        {
+            font-family: "Times New Roman";
+            font-size: 12pt;
+            font-weight: normal;
+        }
+        H2
+        {
+            margin-top: 0in;
+            margin-bottom: 0in;
+            direction: ltr;
+            color: #000000;
+            text-align: center;
+            widows: 2;
+            orphans: 2;
+            page-break-after: auto;
+            text-transform: uppercase;
+        }
+        H2.western
+        {
+            font-family: "Tahoma" , serif;
+            font-size: 8pt;
+        }
+        H2.cjk
+        {
+            font-family: "Times New Roman";
+            font-size: 8pt;
+        }
+        H2.ctl
+        {
+            font-family: "Times New Roman";
+            font-size: 8pt;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body lang="en-US" text="#000000" dir="LTR">
+    <center>
+        <table width="100%" border="1" cellpadding="2" cellspacing="0">
+            <colgroup>
+                <col width="224px" />
+                <col width="182px" />
+                <col width="216px" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <td colspan="3" width="629px" height="29px" bgcolor="#808080">
+                        <h1 class="western">
+                            Logictree IT &ndash; channel code Management</h1>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="350px" height="13px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3"><b>Agreement Start Date: ##lblAgreementSDate##
+                            </b></font></font>
+                        </p>
+                    </td>
+                    <td width="182px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3"><b>End Date: ##lblAgreementEDate## </b></font>
+                            </font>
+                        </p>
+                    </td>
+                    <td width="316px" bgcolor="#ffffff">
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3"><b>Sales Code: ##lblSalesCode## </b></font>
+                            </font>
+                        </p>
+                    </td>
+                </tr>
+                <tr id="trCP" runat="server" style="display: block;">
+                    <td colspan="3" width="629px" height="15px" bgcolor="#d9d9d9">
+                        <h2 class="western">
+                            <font face="Arial, serif"><font size="3">Channel Partner</font></font></h2>
+                    </td>
+                </tr>
+                <tr id="trCPName" runat="server" style="display: block;">
+                    <td colspan="3" width="629px" height="13px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3">CHANNEL PARTNER Name: ##lblCPName## </font>
+                            </font>
+                        </p>
+                    </td>
+                </tr>
+                <tr id="trCPDetails" runat="server" style="display: block;">
+                    <td colspan="2" width="410px" height="13px" bgcolor="#ffffff">
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Address : ##lblCPAddress## </font></font>
+                        </p>
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Email : ##lblCPEmail## </font></font>
+                        </p>
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Phone : ##lblCPPhone## </font></font>
+                        </p>
+                    </td>
+                    <td width="216px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3"><b>Commission Percentage : ##lblCPCP## </b>
+                            </font></font>
+                        </p>
+                    </td>
+                </tr>
+                <tr id="trLTManager" runat="server" style="display: block;">
+                    <td colspan="3" width="629px" height="15px" bgcolor="#d9d9d9">
+                        <h2 class="western">
+                            <font face="Arial, serif"><font size="3">LT Manager</font></font></h2>
+                    </td>
+                </tr>
+                <tr id="trLTManagerName" runat="server" style="display: block;">
+                    <td colspan="3" width="629px" height="13px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3">LT MANAGER Name: ##lblLTName## </font></font>
+                        </p>
+                    </td>
+                </tr>
+                <tr id="trLTDetails" runat="server" style="display: block;">
+                    <td colspan="2" width="410px" height="13px" bgcolor="#ffffff">
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Address: ##lblLTAddress## </font></font>
+                        </p>
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Email : ##lblLTEmail## </font></font>
+                        </p>
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Phone : ##lblLTPhone## </font></font>
+                        </p>
+                    </td>
+                    <td width="216px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3"><b>Commission Percentage : ##lblLTCP## </b>
+                            </font></font>
+                        </p>
+                    </td>
+                </tr>
+                <tr id="trCM" runat="server" style="display: block;">
+                    <td colspan="3" width="629px" height="15px" bgcolor="#d9d9d9">
+                        <h2 class="western">
+                            <font face="Arial, serif"><font size="3">Channel manager</font></font></h2>
+                    </td>
+                </tr>
+                <tr id="trCMName" runat="server" style="display: block;">
+                    <td colspan="3" width="629px" height="13px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3">CHANNEL MANAGER Name : ##lblCMName## </font>
+                            </font>
+                        </p>
+                    </td>
+                </tr>
+                <tr id="trCMDetails" runat="server" style="display: block;">
+                    <td colspan="2" width="410px" height="13px" bgcolor="#ffffff">
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Address: ##lblCMAddress## </font></font>
+                        </p>
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Email : ##lblCMEmail## </font></font>
+                        </p>
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Phone : ##lblCMPhone## </font></font>
+                        </p>
+                    </td>
+                    <td width="216px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3"><b>Commission Percentage : ##lblCMCP## </b>
+                            </font></font>
+                        </p>
+                    </td>
+                </tr>
+                <tr id="trCA" runat="server" style="display: block;">
+                    <td colspan="3" width="629px" height="15px" bgcolor="#d9d9d9">
+                        <h2 class="western">
+                            <font face="Arial, serif"><font size="3">Channel Affiliate</font></font></h2>
+                    </td>
+                </tr>
+                <tr id="trCAName" runat="server" style="display: block;">
+                    <td colspan="3" width="629px" height="13px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3">CHANNEL Affiliate Name : ##lblRName## </font>
+                            </font>
+                        </p>
+                    </td>
+                </tr>
+                <tr id="trCADetails" runat="server" style="display: block;">
+                    <td colspan="2" width="410px" height="13px" bgcolor="#ffffff">
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Address: ##lblCAAddress## </font></font>
+                        </p>
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Email : ##lblCAEmail## </font></font>
+                        </p>
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Phone : ##lblCAPhone## </font></font>
+                        </p>
+                    </td>
+                    <td width="216px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3"><b>Commission Percentage : ##lblCACP## </b>
+                            </font></font>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" width="629px" height="15px" bgcolor="#d9d9d9">
+                        <h2 class="western">
+                            <font face="Arial, serif"><font size="3">Logictree IT &ndash; Internal use only</font></font></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" width="629px" height="34px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3">NOTES : ##lblNotes## </font></font>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" width="410px" height="13px" bgcolor="#ffffff">
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Created by : ##lblCreated## </font></font>
+                        </p>
+                    </td>
+                    <td width="216px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3">Date: ##lblCreatedDate## </font></font>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" width="410px" height="12px" bgcolor="#ffffff">
+                        <p class="western" style="margin-bottom: 0in">
+                            <font face="Arial, serif"><font size="3">Approved by : ##lblApproved## </font></font>
+                        </p>
+                    </td>
+                    <td width="216px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3">Date: ##lblApprovedDate## </font></font>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" width="629px" height="15px" bgcolor="#d9d9d9">
+                        <h2 class="western">
+                            <font face="Arial, serif"><font size="3">Sign Up Links</font></font></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" width="629px" height="34px" bgcolor="#ffffff">
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3">USPDhub : <a id='hlinkuspd' target="_blank">
+                                ##hlinkuspd## </a></font></font>
+                        </p>
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3">TwoVieHub : <a id='hlinkTwoive' target="_blank">
+                                ##hlinkTwoive## </a></font></font>
+                        </p>
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3">InSchoolHub : <a id='hlinkInSchool' target="_blank">
+                                ##hlinkInSchool##</a> </font></font>
+                        </p>
+                        <p class="western">
+                            <font face="Arial, serif"><font size="3">MyYouthHub : <a id='hlinkMyYouth' target="_blank">
+                                ##hlinkMyYouth##</a> </font></font>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<link href="http://www.uspdhub.com/css/wowzzy_general.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<table width="100%" border="0" align="center" style="padding:10px;">
+			<tr>
+				<td>
+					#ProfileLogo#
+				</td>
+			</tr>			
+			<tr>
+				<td>
+					<br/>
+					<br/>
+					<table width="470px" border="0">
+						<tr>
+							<td nowrap>
+								<HR size="1" style="color: #fff; background-color: #fff; border: 1px dotted #025586; border-style: none none dotted;">
+								<br/>
+								<strong style="color:#B3B3B3;">This is an Automated Email from #AppName#. Please do not reply to it.</strong>
+								<br>
+								<HR size="1" style="color: #fff; background-color: #fff; border: 1px dotted #025586; border-style: none none dotted;">								
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">Problems viewing? <a href="#ShortUrl#" style="color:green;">Click here</a> to view it online.</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Call initiated from </b>: #AppName#  <br/>
+					<b>Call Directory Tab Used</b>: #TabName#<br/>
+					<b>Button Name</b>: #ItemTitle#<br/><br/>
+					<b>Message</b>: #Message#<br/><br/>
+					<b>Caller</b><br/>
+					<b>Name</b>: #Name#<br/>
+					<b>Phone</b>: #Phone#<br/>
+					<b>Email ID</b>: #EmailID#<br/><br/>					
+					<b>Time</b>: #Time#<br/>
+					<b>Location</b>: #Location#<br/><br/><br/><br/>
+					
+					Please do not send a reply to this email. This address is not monitored for response.
+					
+					<br/>
+					<br/>
+				</td>
+			</tr>
+			<tr style="color:#B3B3B3;">
+				<td>
+					<strong style="color: #0071B3">Disclaimer Notice:</strong>
+					<br/><br/>
+					This email and its attachments may be confidential and are intended solely for the use of the individual to whom it is addressed. Any views or opinions expressed are solely those of the author.<br><br>If you are not the intended recipient of this email and its attachments, you must take no action based upon them, nor must you copy or show them to anyone.<br><br>Please contact <u style="color: #0071B3">#AgencyOwnerEmailID#</u>  if you believe you have received this email in error and you would like to be taken off our email list.
+				</td>
+			</tr>
+			<br/><br/>
+		</table>
+	</body>
+</html>
+
+
+

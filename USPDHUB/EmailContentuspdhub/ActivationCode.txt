@@ -1,0 +1,29 @@
+Thank you for joining inReachHub.com.
+
+This email has been sent as part of the registration process for your inReachHub.com membership.
+
+Please do not send a reply to this email. If you have questions or comments, please direct your questions to support@inreachhub.com or call customer care at 1-866-676-7335 (8AM - 5PM PST) Toll Free.
+
+
+To complete your registration process and activate your membership, please visit the home page at www.inReachHub.com and click member login or click the link below.
+
+#Link#
+
+
+<b>Login Details</b>
+--------------------
+Note: The following user name is your permanent login name:
+
+<b>Username</b>: #Email#
+
+<b>Temporary Password</b>: #Password#
+
+
+
+Note: Use the temporary password to log into USPDhub.com for the first time. You will be asked to change this password during the first login process.
+
+
+
+Thank you,
+
+The USPDhub<sup style="font-size: 14px;">&reg;</sup> Team

@@ -1,0 +1,18 @@
+﻿<table width='750px' border='0' cellspacing='0' cellpadding='0' align='center' style='border: solid 2px Blue;'>
+ <tr><td colspan='2' align='center'>
+   A new #Type# has been created and is ready for your review and approval.
+ </td></tr>
+   <tr><td colspan='2' align='center'>
+	#Link# &nbsp;&nbsp;&nbsp;&nbsp; #Link1# &nbsp;&nbsp;&nbsp;&nbsp; #Link2#
+  </td></tr>
+
+  <tr><td colspan='2' style='padding: 30px;'> 
+Thank you,
+
+The USPDhub<sup style="font-size: 14px;">&reg;</sup> Team
+    </td></tr>
+</table>
+
+
+
+

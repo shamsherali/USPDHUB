@@ -1,0 +1,4 @@
+Company Name: #CompanyName# Subject: #Subject# Call initiated from the #AppName# mobile app Call Directory Tab Used: #TabName# Button Name: #ItemTitle# Message: #Message#  CALLER  Name: #Name# Phone: #Phone# Email: #EmailID# Location: #Location# Time: #Time# 
+
+
+

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\Publish" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="images/popup_ajax-loader.gif" publishTime="05/11/2015 18:00:33" />
+    <file relUrl="bin/SchemaNameChange.pdb" publishTime="05/12/2015 13:13:07" />
+    <file relUrl="bin/SchemaNameChange.dll" publishTime="05/12/2015 13:13:07" />
+    <file relUrl="SchemaNameChange.aspx" publishTime="05/12/2015 12:27:31" />
+    <file relUrl="Web.config" publishTime="05/12/2015 12:18:01" />
+  </publishProfile>
+</publishData>

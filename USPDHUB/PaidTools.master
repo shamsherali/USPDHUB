@@ -1,0 +1,8 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" Inherits="PaidTools"
+    CodeBehind="PaidTools.master.cs" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="cphUser" runat="Server">
+    
+    <asp:ContentPlaceHolder ID="cphUser" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

@@ -1,0 +1,465 @@
+#pricingtbl {
+	width: 965px;
+	background: #f4f4f4;
+	background: url(../images/OuterImages/pricing-bg.png) repeat-y top left;
+	border-top: #ccc solid 1px;
+	border-bottom: #ccc solid 1px;
+	margin: 0 auto;
+	padding: 0px;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: 9999;
+}
+#include {
+	width: 84px;
+	height: 87px;
+	float: right;
+	margin-right: -45px;
+	margin-top: -70px;
+}
+#pricingtbl .col1 {
+	width: 215px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 12px;
+	color: #9b9594;
+	font-family: Arial, Helvetica, sans-serif;
+	float: left;
+}
+#pricingtbl .col1 .plan {
+	font-size: 20px;
+	color: #333340;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding: 20px;
+	padding-bottom: 0px;
+}
+#pricingtbl .col1 .price {
+	font-size: 30px;
+	color: #020000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+#pricingtbl .col1 .price span {
+	font-size: 12px;
+	color: #020000;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	bottom: 0;
+	line-height: 0;
+}
+#pricingtbl .col1 .divider {
+	height: 1px;
+	background: #dddddd;
+	margin: 0 auto;
+	width: 150px;
+	margin-top: 20px;
+	margin-bottom: 8px;
+}
+#pricingtbl .col1 {
+}
+#pricingtbl .col1 ul {
+	font-size: 13px;
+}
+#pricingtbl .col1 ul li {
+	color: #666;
+	padding-bottom: 10px;
+}
+/*highlight*/
+#pricingtbl .col_highlight {
+	width: 220px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 12px;
+	color: #9b9594;
+	font-family: Arial, Helvetica, sans-serif;
+	float: left;
+	background: #fff;
+	border: #ccc solid 1px;
+	padding-bottom: 25px;
+}
+#pricingtbl .col_highlight .plan {
+	font-size: 20px;
+	color: #333340;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding: 20px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+#pricingtbl .col_highlight .price {
+	font-size: 30px;
+	color: #020000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+#pricingtbl .col_highlight .price span {
+	font-size: 12px;
+	color: #020000;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	bottom: 0;
+	line-height: 0;
+}
+#pricingtbl .col_highlight .divider {
+	height: 1px;
+	background: #dddddd;
+	margin: 0 auto;
+	width: 150px;
+	margin-top: 20px;
+	margin-bottom: 8px;
+}
+#pricingtbl .col_highlight {
+	line-height: 25px;
+}
+#pricingtbl .col_highlight ul {
+	font-size: 13px;
+}
+#pricingtbl .col_highlight ul li {
+	color: #666;
+	line-height: 25px;
+}
+#pricingtbl .col_highlight .most {
+	margin-top: -20px;
+	background: #036ca5;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	height: 30px;
+	line-height: 28px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#pricingcontent {
+	font-size: 15px;
+	padding: 25px;
+	text-align: center;
+	line-height: 30px;
+}
+#pricingcontent span {
+	font-size: 15px;
+	text-decoration: none;
+	color: #f15a29;
+}
+/*Upgrade page styles*/
+
+#sub {
+	width: 650px;
+	margin: 10px;
+	margin-bottom: 30px;
+}
+#sub .headingrow {
+	background: url(../images/sub-headbg.png) repeat-x;
+	color: #fff;
+	line-height: 60px;
+	height: 60px;
+	font-weight: bold;
+	font-size: 28px;
+	font-family: "ITC Leawood LT Bold";
+}
+#sub .uprow1 {
+	background: #eeeeee;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	font-size: 13px;
+}
+#sub .uprow1 .radio {
+	float: left;
+	width: 30px;
+	padding-top: 8px;
+}
+#sub .uprow1 .more {
+	float: left;
+	padding-top: 7px;
+	padding-right: 6px;
+	cursor: pointer;
+}
+#sub .uprow1 .planname {
+	float: left;
+	width: 220px;
+}
+#sub .uprow1 .planprice {
+	float: left;
+	width: 150px;
+}
+#sub .uprow1 .package {
+	float: left;
+	width: 150px;
+	color: #7b2902;
+}
+#sub .uprow2 {
+	background: #ffe1d7;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	font-size: 13px;
+}
+#sub .uprow2 .radio {
+	float: left;
+	width: 30px;
+	padding-top: 8px;
+}
+#sub .uprow2 .more {
+	float: left;
+	padding-top: 7px;
+	padding-right: 6px;
+	cursor: pointer;
+}
+#sub .uprow2 .planname {
+	float: left;
+	width: 220px;
+}
+#sub .uprow2 .planprice {
+	float: left;
+	width: 150px;
+}
+#sub .uprow2 .package {
+	float: left;
+	width: 150px;
+	color: #7b2902;
+}
+#upgradeaddons {
+	width: 650px;
+	margin: 10px;
+	margin-bottom: 30px;
+}
+#upgradeaddons .headingrow {
+	background: url(../images/upgrade-addons-headbg.png) repeat-x;
+	color: #fff;
+	line-height: 60px;
+	height: 60px;
+	font-weight: bold;
+	font-size: 28px;
+	font-family: "ITC Leawood LT Bold";
+}
+#upgradeaddons .uprow1 {
+	background: #eeeeee;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	font-size: 13px;
+}
+#upgradeaddons .uprow1 .radio {
+	float: left;
+	width: 30px;
+	padding-top: 8px;
+}
+#upgradeaddons .uprow1 .more {
+	float: left;
+	padding-top: 7px;
+	padding-right: 6px;
+	cursor: pointer;
+}
+#upgradeaddons .uprow1 .planname {
+	float: left;
+	width: 220px;
+}
+#upgradeaddons .uprow1 .planprice {
+	float: left;
+	width: 150px;
+}
+#upgradeaddons .uprow1 .package {
+	float: left;
+	width: 150px;
+	color: #01224f;
+}
+#upgradeaddons .uprow2 {
+	background: #d5e6fc;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	font-size: 13px;
+}
+#upgradeaddons .uprow2 .radio {
+	float: left;
+	width: 30px;
+	padding-top: 8px;
+}
+#upgradeaddons .uprow2 .more {
+	float: left;
+	padding-top: 7px;
+	padding-right: 6px;
+	cursor: pointer;
+}
+#upgradeaddons .uprow2 .planname {
+	float: left;
+	width: 220px;
+}
+#upgradeaddons .uprow2 .planprice {
+	float: left;
+	width: 150px;
+}
+#upgradeaddons .uprow2 .package {
+	float: left;
+	width: 150px;
+	color: #01224f;
+}
+#upgradeaddons .row3 {
+	float: right;
+	width: 230px;
+	margin: 5px;
+}
+.row_Wrap {
+	width: 965px;
+	position: relative;
+	left: 128px;
+	margin: 0 auto;
+}
+.icons_menu {
+	margin: 0px 0px 0px 35px;
+	padding: 0px;
+}
+.icons_menu ul {
+	margin: 0px;
+	padding: 0px;
+}
+.icons_menu ul li {
+	margin: 0px 2px;
+	padding: 0px;
+	display: inline;
+	width: 35px;
+	height: 35px;
+}
+/*  17-Apr*/
+.row_Wrap1 {
+	width: 945px;
+	position: relative;
+	margin: 0 auto;
+}
+.col1_new {
+	width: 430px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 12px;
+	color: #9b9594;
+	font-family: Arial, Helvetica, sans-serif;
+	float: left;
+}
+#pricingcontent {
+	font-size: 15px;
+	padding: 0px 25px;
+	text-align: center;
+	line-height: 30px;
+}
+.col1_new {
+	width: 430px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	float: left;
+}
+.col1_new h1 {
+	color: #595959;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 29px;
+	padding: 0px 0px 20px 0px;
+	font-weight: bold;
+}
+#pricingtb_new {
+	width: 945px;
+	background: #f4f4f4;
+	background: url(../images/OuterImages/pricing-bg.png) repeat-y top left;
+	border-top: #ccc solid 1px;
+ 	margin: 0 auto;
+	padding: 10px 0px 10px 20px;
+ 	overflow: hidden;
+	position: relative;
+	z-index: 9999;
+}
+#pricingtb_new ul li {
+	font-size: 13px;	color: #666666;
+ 	line-height: 20px;
+ }
+#pricingtb_new ul {
+
+}
+.clear40 {
+	clear: both;
+	height: 40px;
+}
+.col1_new1 {
+	width: 350px;
+	margin-left: 0px;
+	margin-right: 20px;
+	font-size: 12px;
+	color: #9b9594;
+	font-family: Arial, Helvetica, sans-serif;
+	float: right;
+	text-align: center;
+}
+.col1_new1 h1 {
+	color: #595959;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	padding: 0px 0px 20px 0px;
+	font-weight: bold;
+}
+.not1 {
+	float: left;
+	margin: 10px 24px;
+}
+.not1 img {
+}
+.not1 span {
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	line-height: normal;
+	color: #666;
+ }
+ #pricingtb_new .col1_new1 .price {
+	font-size: 18px;
+	color: #020000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+	line-height:34px;
+}
+#pricingtb_new .col1_new1 .price span {
+	font-size: 12px;
+	color: #020000;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	bottom: 0;
+	line-height: 0;
+}
+.brandapp{
+	font-size: 16px;
+	color: #020000;
+	text-align: center;
+	padding: 0px;
+	margin: 20px;
+	bottom: 0;
+ 	line-height: 1.5;}
+	.brandapp_red{
+	font-size: 16px;
+	color: #ff0000;
+	text-align: center;
+	padding: 0px;
+ }	.brandapp_contact{font-size: 16px;
+	color: #020000;
+	text-align: center;
+	padding: 0px;}
+	.brandapp_contact a{font-size: 16px;
+	color: #020000;
+	text-align: center;
+	padding: 0px;}
+		.brandapp_contact a:hover{font-size: 16px;
+	color: #020000;
+	text-align: center;
+	padding: 0px;}
+	
+	 
+

@@ -1,0 +1,481 @@
+﻿.heading
+{
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 16px;
+}
+.heading .label
+{
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 16px;
+}
+.heading span
+{
+    color: #333;
+    font-size: 12px;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-bottom: 16px;
+}
+#storeswrap
+{
+    background: #fff;
+    border: #ccc solid 1px;
+    border-radius: 4px;
+}
+#store
+{
+    border-right: #ccc solid 1px;
+    padding: 19px;
+    width: 265px;
+    height: 315px;/*250px;*/
+    text-align: center;
+    float: left;
+}
+#store img
+{
+    text-align: center;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#store .storename
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    color: #194978;
+}
+#store .storetext
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+    padding-top: 20px;
+    line-height: 22px;
+}
+#storelast
+{
+    border-right: 0px;
+    padding: 19px;
+    width: 265px;
+    height: 250px;
+    text-align: center;
+    float: left;
+}
+#storelast img
+{
+    text-align: center;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#storelast .storename
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #194978;
+}
+#storelast .storetext
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+    padding-top: 20px;
+    line-height: 22px;
+}
+
+#checkoutwrap
+{
+    background: #fff;
+    border: #ccc solid 1px;
+    border-radius: 4px;
+}
+#checkout
+{
+    text-align: left;
+}
+#checkoutapp img
+{
+    padding: 8px;
+    text-align: center;
+    float: left;
+}
+#checkout-apptext
+{
+    padding: 15px;
+    float: left;
+    width: 760px;
+}
+#checkout-apptext .head
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    color: #194978;
+    padding-top: 5px;
+}
+#checkout-apptext
+{
+    float: left;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+}
+
+.adminformwrap
+{
+    width: 800px;
+    margin: 20px;
+}
+.labeldsh
+{
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+    float: left;
+    padding: 4px 0px 0px 0px;
+    width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.txtfildwrapdsh
+{
+    width: 400px;
+    float: left;
+    font-weight: normal;
+    font-size: 13px;
+}
+.browse
+{
+    width: 190px;
+    height: 70px;
+    float: left;
+    font-size: 12px;
+    margin-top: 80px;
+    text-align: center;
+}
+.txtfilddsh
+{
+    width: 380px;
+    height: 24px;
+    border: 1px solid #f2f5f5;
+    padding: 2px;
+    float: left;
+    outline: none;
+    background: url(../images/bg_txtfild.jpg) no-repeat;
+}
+.txtfilddsh
+{
+    width: 380px;
+    height: 24px;
+    border: 1px solid #f2f5f5;
+    padding: 2px;
+    float: left;
+    outline: none;
+    background: url(../images/bg_txtfild.jpg) no-repeat;
+}
+.txtfilddsh-small
+{
+    width: 235px;
+    height: 24px;
+    border: 1px solid #ccc;
+    padding: 2px;
+    float: right;
+    outline: none;
+    background: url(../images/bg_txtfild.jpg) no-repeat;
+}
+.txtfilddsh-count
+{
+    width: 25px;
+    height: 24px;
+    border: 1px solid #ccc;
+    padding: 2px;
+    float: left;
+    outline: none;
+    text-align: center;
+    background: url(../images/bg_txtfild.jpg) no-repeat;
+}
+.txtfilddsh-billable
+{
+    width: 80px;
+    height: 24px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-right: 0px;
+    border-left: 0px;
+    padding: 2px;
+    float: left;
+    outline: none;
+    text-align: center;
+}
+.txtfilddsh-amt
+{
+    width: 150px;
+    height: 24px;
+    border: 1px solid #ccc;
+    padding: 2px;
+    float: left;
+    outline: none;
+    background: url(../images/bg_txtfild.jpg) no-repeat;
+}
+.submitdsh
+{
+    margin: 0 auto;
+    text-align: center;
+}
+.submitdsh img
+{
+    margin: 0 auto;
+    text-align: center;
+    margin-right: 20px;
+}
+.textareadsh
+{
+    max-width: 550px;
+    max-height: 100px;
+    width: 550px;
+    height: 100px;
+    border: 1px solid #ccc;
+    font: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 2px;
+    float: left;
+    outline: none;
+    padding: 5px;
+}
+
+.errormsgdsh
+{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+    text-align: center;
+    color: #ff0000;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 300px;
+    padding: 0px 0px 10px 0px;
+    margin: 10px auto;
+}
+#payment-rightcol
+{
+    background: #fff;
+    width: 183px;
+    border: #ccc solid 1px;
+    padding: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+#payment-rightcol a
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #333;
+}
+#payment-rightcol a:hover
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #333;
+}
+#payment-rightcol .payheading a
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+#payment-rightcol .cost
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: #093;
+    font-weight: bold;
+    padding-left: 32px;
+}
+#payment-rightcol .line
+{
+    border-bottom: #CCC solid 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 1px;
+}
+#payment-rightcol .savings
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: #F60;
+    font-weight: bold;
+    padding-left: 20px;
+}
+#paymentwrap
+{
+    float: left;
+    width: 680px;
+    padding: 10px;
+}
+#checkoutwrapper
+{
+    width: 680px;
+    margin: 0 auto;
+    border: 0px;
+}
+#paymentslider
+{
+    height: 80px;
+    text-align: center;
+}
+#process-two
+{
+}
+#infobox
+{
+    background: #fff;
+    border: #ccc solid 1px;
+    margin-bottom: 10px;
+}
+#infobox .head
+{
+    background: #666;
+    font-size: 15px;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+}
+#infobox .head .lefthead
+{
+    background: #666;
+    font-size: 15px;
+    color: #fff;
+    text-align: left;
+    float: left;
+}
+#infobox .head .righthead
+{
+    background: #666;
+    font-size: 15px;
+    color: #fff;
+    text-align: left;
+    float: right;
+    cursor: pointer;
+}
+#infobox .infocontent
+{
+    text-align: left;
+    padding: 10px;
+    line-height: 25px;
+    color: #1d1d1d;
+    font-size: 13px;
+}
+.paymentselect
+{
+    background: #fff;
+    border: #b3b3b3 solid 1px;
+    padding: 8px;
+    color: #666;
+}
+.divider
+{
+    border-bottom: #CCC solid 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 1px;
+}
+.paymenttxtfld
+{
+    background: #fff;
+    border: #b3b3b3 solid 1px;
+    padding: 8px;
+    color: #666;
+}
+#paymentformwrap
+{
+}
+#paymentleft
+{
+    float: left;
+    width: 250px;
+}
+#paymentleft .lgtxt
+{
+    float: left;
+    font-size: 22px;
+}
+#leftlabel
+{
+    float: left;
+    color: #666;
+    width: 110px;
+}
+#rightlabel
+{
+    float: left;
+    color: #333;
+}
+#paymentright
+{
+    float: left;
+    width: 250px;
+}
+#paymentright .lgtxt
+{
+    float: left;
+    font-size: 22px;
+}
+.paymenttxtfld-lg
+{
+    background: #fff;
+    border: #b3b3b3 solid 1px;
+    padding: 8px;
+    width: 400px;
+    color: #666;
+}
+
+.review
+{
+    color: #333;
+    font-size: 19px;
+}
+#revieworder
+{
+    float: left;
+    padding: 15px 34px 10px 34px;
+}
+.clear
+{
+    clear: both;
+    height: 0px;
+}
+.clear10
+{
+    clear: both;
+    height: 10px;
+}
+#rightcol {
+	float:right;
+	width:226px;
+	padding-top:90px;
+}
+#rightcolplace {
+	float:right;
+	width:226px;
+	padding-top:145px;
+}
+#rightcolthanks {
+	float:right;
+	width:226px;
+	padding-top:148px;
+}
+.support
+{
+    padding-top:10px;
+}
+#payment-rightcol .payheading {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:22px;
+}

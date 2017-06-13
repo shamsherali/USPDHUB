@@ -1,0 +1,20 @@
+Call Placed To: #DailNumber#
+Subject: #Subject#
+Message: #Message#
+
+<b>Caller</b>
+Company Name: #CompanyName#
+Name: #Name#
+Phone: #Phone#
+Email ID: #EmailID#
+
+Time: #Time#
+Location: #Location#
+
+App Name: #AppName#
+Tab Name: #TabName#
+Button Name: #ItemTitle#
+
+
+
+

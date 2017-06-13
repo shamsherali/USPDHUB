@@ -1,0 +1,13 @@
+﻿Following user has signed up with P.O. please find the attachement for invoice.
+
+User Contact Information
+
+Contact Name: #ContactPerson#
+
+Phone Number: #PhoneNumber#
+
+Best Time To Call: #BestCallTime#
+
+P.O. Number: #PONumber#
+
+

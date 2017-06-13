@@ -1,0 +1,245 @@
+*, body, html
+{
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    outline: 0; /* box-sizing: border-box; */ /*transition: all .4s ease-in*/
+}
+body
+{
+    background-color: red;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #000000;
+}
+*
+{
+    /*	transition: all .4s ease-in;*/
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+a, a:active, a:focus, a:hover
+{
+    outline: 0;
+    text-decoration: none;
+}
+a, img
+{
+    border: none;
+    outline: 0;
+    text-decoration: none;
+}
+header, artical, aside, audio, canvas, footer, nav, section, video
+{
+    margin: 0;
+    padding: 0;
+}
+.clearfix
+{
+    clear: both;
+}
+*::after, *::before
+{
+    box-sizing: border-box;
+}
+.container
+{
+    padding-top: 63px;
+    width: 320px;
+    margin: 20px auto 0 auto;
+    text-align: center; /*background-image: url("../../images/MobileDevice/phonevector.png") ;*/
+    background-repeat: no-repeat;
+}
+
+.phone-bg
+{
+    background: url("../../images/MobileDevice/phonevector.png") no-repeat;
+    width: 354px;
+    height: 678px;
+}
+
+
+.toolbar
+{
+    width: 320px;
+    height: 17px;
+}
+header
+{
+    width: 100%;
+}
+.profilesettinguspdhubcom
+{
+    height: 30px;
+    background-color: #373A36;
+    line-height: 30px;
+}
+.profilesettingtwoviecom
+{
+    height: 30px;
+    background-color: #00ABAD;
+    line-height: 30px;
+}
+.profilesettinginschoolhubcom
+{
+    height: 30px;
+    background-color: #22A3BD;
+    line-height: 30px;
+}
+.profilesettingmyyouthhubcom
+{
+    height: 30px;
+    background-color: #373A36;
+    line-height: 30px;
+}
+.profilesettinglocalhost
+{
+    height: 30px;
+    background-color: #373A36;
+    line-height: 30px;
+}
+.navgird
+{
+    float: left;
+    margin: 8px 0 0 10px;
+}
+.settings
+{
+    float: right;
+    margin: 8px 10px 0 0px;
+}
+.appname
+{
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    display: inline-block;
+}
+.address-section
+{
+    background: #FFFFFF;
+    width: 100%;
+    clear: both;
+    display: table;
+    float: left;
+}
+.logo
+{
+    display: table-cell;
+    vertical-align: top;
+}
+.shortlogo
+{
+    width: 52px;
+    height: 52px;
+    padding: 4px 0px 4px 5px;
+}
+.cominglogo
+{
+    width: 52px;
+    height: 52px;
+    padding: 4px 0px 4px 5px;
+}
+.longlogo
+{
+    width: 320px;
+    height: 60px;
+}
+.Address
+{
+    font-size: 12px;
+    line-height: 17px;
+    padding-left: 10px;
+    text-align: left;
+    display: table-cell;
+    vertical-align: top;
+    padding-top: 5px;
+}
+.bg-image-section
+{
+    width: 100%;
+    height: auto;
+    clear: both;
+}
+footer
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.mainFooter
+{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 430px;
+    position: relative;
+}
+.mainFooter a
+{
+    color: #000;
+}
+#app_navigation_bar
+{
+    width: 100%;
+    height: 65px;
+    table-layout: fixed;
+}
+#app_navigation_bar td
+{
+    height: 50px;
+}
+#app_navigation_bar .ui-btn-up
+{
+    display: table-cell;
+    width: 24%;
+}
+#app_navigation_bar .item_image
+{
+    width: auto;
+    height: 30px;
+    margin-top: 5px;
+    vertical-align: bottom;
+}
+#app_navigation_bar .navigation_bar_item .item_text
+{
+    width: 100%;
+    text-align: center;
+    bottom: 2px;
+    font-weight: bold;
+    height: 15px;
+    line-height: 15px;
+    overflow: hidden;
+    word-break: break-all;
+    font-size: 11px;
+    padding-top: 10px;
+}
+
+
+
+.bottom-tab
+{
+    position: absolute;
+    bottom: 0;
+}
+.footerNav
+{
+    width: 100%;
+    padding: 10px;
+}
+#app_navigation_bar .ui-btn-separator
+{
+    content: "";
+    display: inline-block;
+    width: 0px;
+    height: 40px;
+    border-right: 1px solid #fafafa;
+    border-left: 1px solid #b4b4b4;
+    padding: 0;
+}
+#tabNavigation
+{
+    background: #fff;
+}
+#bannerNavigation
+{
+    height: 51px;
+    background-color: #FFF;
+}

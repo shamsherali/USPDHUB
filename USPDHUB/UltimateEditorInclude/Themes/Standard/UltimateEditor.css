@@ -1,0 +1,265 @@
+.EditorContainer {
+	background-color:#D6D3CE;
+	padding:2px;
+}
+.EditorToolbar {
+	border-top:1px solid #FFFFFF;
+	background-color:#D6D3CE;
+	margin-bottom:1px;
+}
+.EditorToolbarBottomLine {
+	background-color:#848284;
+	height:1px;
+}
+.EditorToolbarSpacing {
+	width:2px;
+}
+.EditorButtonOut {
+	padding:1px;
+}
+.EditorButtonOver {
+	border-top:1px solid #FFFFFF;
+	border-left:1px solid #FFFFFF;
+	border-bottom:1px solid #848284;
+	border-right:1px solid #848284;
+}
+.EditorButtonSelect {
+	border:1px solid #848284;
+}
+.EditorButtonSelectOver {
+	border-top:1px solid #FFFFFF;
+	border-left:1px solid #FFFFFF;
+	border-bottom:1px solid #848284;
+	border-right:1px solid #848284;
+}
+.EditorDropDownOut {
+	border:1px solid #DBDCE3;
+	background-color:#FFFFFF;
+	margin-right:1px;
+}
+.EditorDropDownOver {
+	border:1px solid #000000;
+	background-color:#FFFFFF;
+	margin-right:1px;
+}
+.EditorDropDownText {
+	width:80px;
+	padding:2px;
+	padding-left:4px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	font-family:Tahoma;
+	font-size:11px;
+	color:#000000;
+	cursor:default;
+}
+.EditorDropDownShortText {
+	width:40px;
+	padding:2px;
+	padding-left:4px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	font-family:Tahoma;
+	font-size:11px;
+	color:#000000;
+	cursor:default;
+}
+.EditorTabOn {
+	background-color:#B8B8B8;
+	font-family:Tahoma;
+	font-size:11px;
+	cursor:default;
+}
+.EditorTabOff {
+	background-color:#D6D3CE;
+	font-family:Tahoma;
+	font-size:11px;
+	cursor:pointer;
+}
+.EditorTabOver {
+	background-color:#C8C8C8;
+	font-family:Tahoma;
+	font-size:11px;
+	cursor:pointer;
+}
+.EditorTabOut {
+	background-color:#D6D3CE;
+	font-family:Tahoma;
+	font-size:11px;
+	color:#000000;
+	text-align:right;
+}
+.EditorTextBox {
+	border-style:solid;
+	border-width:1px;
+	border-color:#808080;
+	background-color:#FFFFFF;
+}
+.EditorDialog {
+	background-color:#ECE9D8;
+	font-family:Tahoma;
+	font-size:11px;
+	border-style:solid;
+	border-color:#2457CA;
+	border-width:2px;
+}
+.EditorDialog FIELDSET {
+	padding:7px;
+	color:#0046D5;
+}
+.EditorDialog INPUT {
+	font-family:Tahoma;
+	font-size:11px;
+	color:#000000;
+}
+.EditorDialog SELECT {
+	font-family:Tahoma;
+	font-size:11px;
+	color:#000000;
+}
+.EditorDialog TD {
+	font-family:Tahoma;
+	font-size:11px;
+	color:#000000;
+}
+.EditorAttachments {
+	font-family:Tahoma;
+	font-size:11px;
+	padding-bottom:3px;
+	color:#000000;
+}
+.EditorDropDownContextMenu {
+	font-family:Tahoma;
+	font-size:12pt;
+	border:1px solid #666666;
+	width:195px;
+	height:217px;
+	overflow:auto;
+	background-color:#FFFFFF;
+}
+.EditorDropDownContextMenuAutoHeight {
+	font-family:Tahoma;
+	font-size:12pt;
+	border:1px solid #666666;
+	width:59px;
+	overflow:auto;
+	background-color:#FFFFFF;
+}
+.EditorDropDownContextMenuStyleItem {
+	font-size:11px;
+	background-color:#FFFFFF;
+	color:#000000;
+	border:1px solid #AAAAAA;
+	margin:2px;
+	padding-left:5px;
+	overflow:hidden;
+	cursor:default;
+}
+.EditorDropDownContextMenuStyleItemOver {
+	font-size:11px;
+	background-color:#FFFFFF;
+	color:#000000;
+	border:1px solid #0A246A;
+	margin:2px;
+	padding-left:5px;
+	overflow:hidden;
+	cursor:default;
+}
+.EditorDropDownContextMenuFormatItem {
+	font-size:11px;
+	background-color:#FFFFFF;
+	color:#000000;
+	border:1px solid #AAAAAA;
+	margin:2px;
+	padding-left:5px;
+	overflow:hidden;
+	cursor:default;
+}
+.EditorDropDownContextMenuFormatItemOver {
+	font-size:11px;
+	background-color:#FFFFFF;
+	color:#000000;
+	border:1px solid #0A246A;
+	margin:2px;
+	padding-left:5px;
+	overflow:hidden;
+	cursor:default;
+}
+.EditorDropDownContextMenuFormatHItem {
+	font-size:11px;
+	background-color:#FFFFFF;
+	color:#000000;
+	border:1px solid #AAAAAA;
+	margin:2px;
+	padding-left:5px;
+	height:40px;
+	overflow:hidden;
+	cursor:default;
+}
+.EditorDropDownContextMenuFormatHItemOver {
+	font-size:11px;
+	background-color:#FFFFFF;
+	color:#000000;
+	border:1px solid #0A246A;
+	margin:2px;
+	padding-left:5px;
+	height:40px;
+	overflow:hidden;
+	cursor:default;
+}
+.EditorDropDownContextMenuFontItem {
+	background-color:#FFFFFF;
+	color:#000000;
+	padding-left:5px;
+	height:20px;
+	overflow:hidden;
+	cursor:default;
+}
+.EditorDropDownContextMenuFontItemOver {
+	background-color:#000080;
+	color:#FFFFFF;
+	padding-left:5px;
+	height:20px;
+	overflow:hidden;
+	cursor:default;
+}
+.EditorContextMenu {
+	font-family:Tahoma;
+	font-size:11px;
+	word-wrap:break-word;
+	border:1px solid #666666;
+	padding:1px;
+	width:140px;
+	background-color:#F9F8F7;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#AAAAAA,direction=135,strength=3);
+}
+.EditorContextMenuItem {
+	border:1px solid #F9F8F7;
+	background-color:#F9F8F7;
+	color:#000000;
+	overflow:hidden;
+	cursor:default;
+}
+.EditorContextMenuItemOver {
+	border:1px solid #0A246A;
+	background-color:#B6BDD2;
+	color:#000000;
+	overflow:hidden;
+	cursor:default;
+}
+.EditorContextMenuDisabledItem {
+	border:1px solid #F9F8F7;
+	background-color:#F9F8F7;
+	color:#A6A6A6;
+	overflow:hidden;
+	cursor:default;
+}
+.EditorContextMenuSeparator {
+	background-color:#A6A6A6;
+	margin:1px;
+	height:1px;
+	overflow:hidden;
+	cursor:default;
+}

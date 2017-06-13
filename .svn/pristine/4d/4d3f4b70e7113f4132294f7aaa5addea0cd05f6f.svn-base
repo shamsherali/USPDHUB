@@ -1,0 +1,23 @@
+﻿#ProfileName# has sent you this email invitation so that you can view a PRIVATE BUTTON on their mobile app when their app is installed on your mobile device.
+
+<b>Instructions:</b>
+The set up process will check your device to determine if the #AppName# mobile app is installed as well as check the version level of the app.  If the app is not installed or the version level is incorrect, the setup process will open the install/update screen in your App Store with the #AppName# App displayed. Click "Install" or "Update", whichever is appropriate. 
+
+<b>To begin the process:</b>
+Open this email on your mobile device.
+
+<b>Step 1: </b> If you do not have the #AppName# installed on your device, please install it by clicking the Install App button below.<br/>
+#AppInstallLink#<br/>
+
+<b>Step 2:</b> Click the Accept button below.
+
+
+#SetupLink#  &nbsp; #NoThanksLink#
+
+If the App <b>is installed and the version is correct,</b> the setup process will register your device with #ProfileName# and allow the app to display the private button.
+Once your device is registered a message will appear confirming a successful registration.
+
+Note: The Registration "SET UP" button will only process a request one time.  In the event you require another setup process in the future for this device or for other devices, please contact #ProfileName# and request an email invitation for the registration setup. 
+
+Thank you,
+The USPDhub<sup style="font-size: 14px;">&reg;</sup> Team

@@ -1,0 +1,482 @@
+﻿/***********************************************************/
+/********************* price plans *************************/
+/***********************************************************/
+.pricingplan-page h4
+{
+    font-size: 18px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.plans
+{
+    margin: 80px auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    zoom: 1;
+}
+.plans:before, .plans:after
+{
+    content: '';
+    display: table;
+}
+.plans:after
+{
+    clear: both;
+}
+
+.plan
+{
+    float: left;
+    width: 30%;
+    min-height: 600px;
+    margin: 10px 20px 0px 0px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 25px !important;
+    background-clip: padding-box;
+    border: solid #fafbfc;
+    border-width: 2px 2px 2px 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.plan h2
+{
+    color: #1e5081;
+    font-size: 22px;
+    font-weight: 500;
+}
+.plan:first-child
+{
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+.plan:last-child
+{
+    border-width: 2px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.plan-title
+{
+    position: relative;
+    line-height: 1;
+    color: #595f6b;
+}
+.plan.plan-tall p img[src="assets/premium.png"]
+{
+    position: relative;
+    top: 15px;
+    margin-bottom: 15px;
+}
+div.plan-title
+{
+    min-height: 70px;
+}
+.plan-tall h2.plan-title
+{
+    margin: 10px 0px 0px 0px;
+}
+
+
+.plan-price span
+{
+    font-size: 18px;
+    color: #56aaff;
+    padding: 0px 5px;
+}
+.plan-price
+{
+    margin-bottom: 30px;
+}
+
+.plan-features
+{
+    margin-bottom: 45px;
+    line-height: 2;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    padding-left: 20px;
+}
+.plan-features li
+{
+    list-style-type: none;
+    text-align: left;
+    font-family: Verdana, Geneva, sans-serif;
+    position: relative;
+    color: #181819;
+    font-size: 11px;
+}
+.plan-features li:before
+{
+    content: "✔";
+    position: absolute;
+    top: 0px;
+    left: -13px;
+}
+
+.plan:hover
+{
+    background-color: #f9f9f9;
+}
+.plan .plan-button
+{
+    position: absolute;
+    bottom: 20px;
+}
+.plan-button:active
+{
+    color: rgba(255, 255, 255, 0.95);
+    background: #22366b;
+    border-color: black #222 #222;
+}
+.plan-button
+{
+    padding: 10px 25px;
+    color: #fff !important;
+    text-decoration: none;
+    background: #c4de5c;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, sans-serif;
+    left: calc(50% - 60px); /*margin:30px auto;*/
+}
+.plan-tall
+{
+    background-color: white;
+    border-width: 2px;
+    background-color: #fafbfc;
+}
+.plan-tall > .plan-features
+{
+    font-size: 13px;
+}
+.plan-tall + .plan
+{
+    /* border-left: 0;*/
+}
+.thrown
+{
+    font-size: 15px;
+    color: #e9aa00;
+    text-transform: uppercase;
+}
+.plan center
+{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    color: #3c3c3c;
+}
+.upgradetext
+{
+    font-size: 25px;
+    color: #1e5081;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.publish
+{
+    text-align: center;
+}
+.publish span:first-child
+{
+    color: #3c3c3c;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+}
+.publish span:last-child
+{
+    color: #56aaff;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.favcenter
+{
+    font-family: Verdana, Geneva, sans-serif;
+    margin: 15px auto;
+    color: #757575;
+    font-size: 13px;
+}
+.app_center a
+{
+    padding: 0px 5px;
+}
+
+
+/********************** table pricing **********************/
+/********************************************/
+/*.pricingplan-page 
+{
+    font-family: "proxima-nova","Open Sans","Gill Sans MT","Gill Sans",Corbel,Arial,sans-serif;
+}
+.pricingplan-page table {
+    width: 100%;
+    margin-top: 2em;
+    text-align: center;
+    background: none;
+    overflow: hidden;
+    color: #001c1f;
+    border-spacing: 2rem;
+    border-collapse: collapse;
+}
+.pricingplan-page table thead {
+    padding: 1em 0;
+    background: none;
+}
+.pricingplan-page table th {
+    border: none;
+    line-height: 1.7em;
+}
+.pricingplan-page table thead .value-callout th {
+    height: 2em;
+    padding: 1em 0 0;
+    color: #11a73f;
+    font-weight: bold;
+    position: relative;
+    top: .5em;
+}
+.pricingplan-page table thead .value-callout .highlight {
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px;
+    border-radius: 10px 10px 0 0;
+}
+.pricingplan-page table thead .plan {
+    color: #fff;
+    font-size: 2em;
+    display: block;
+    margin-top: .2em;
+}
+.pricingplan-page table thead .price {
+    font-weight: bold;
+    color: #8d8d8d;
+}
+.pricingplan-page table .table-top-left {
+    -moz-border-radius: 10px 0 0;
+    -webkit-border-radius: 10px;
+    border-radius: 10px 0 0;
+}
+.pricingplan-page table .table-heading {
+    background-color: #3f3f3f;
+    height: 6em;
+}
+.pricingplan-page table th.highlight {
+    background-color: #001c1f;
+}
+.pricingplan-page table .table-heading {
+    background-color: #3f3f3f;
+    height: 6em;
+}
+.pricingplan-page table th.highlight .plan {
+    font-weight: bold;
+}
+.pricingplan-page table .table-top-right {
+    -moz-border-radius: 0 10px 0 0;
+    -webkit-border-radius: 0;
+    border-radius: 0 10px 0 0;
+}
+.pricingplan-pages table tfoot {
+    font-size: 1.2em;
+}
+.pricingplan-page table tfoot td {
+    border: none;
+    background-color: #cccccc;
+}
+ .pricingplan-page table tfoot a {
+    color: #3f3f3f;
+    font-weight: normal;
+    text-decoration: none;
+} 
+.pricingplan-page table tfoot .highlight {
+    background-color: #11a73f;
+    font-size: 1.3em;
+    height: 1em;
+}
+.pricingplan-page table tfoot .highlight a {
+    color: #fff;
+    position: relative;
+    top: .5em;
+}
+.pricingplan-page table .table-bottom-right {
+    -moz-border-radius: 0 0 10px 0;
+    -webkit-border-radius: 0;
+    border-radius: 0 0 10px 0;
+}
+.pricingplan-page table .table-bottom-left {
+    -moz-border-radius: 0 0 0 10px;
+    -webkit-border-radius: 0;
+    border-radius: 0 0 0 10px;
+}
+.pricingplan-page table tfoot .value-callout td {
+    height: 1em;
+    background: none;
+}
+.pricingplan-page table tfoot .value-callout .highlight {
+    -moz-border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0;
+    border-radius: 0 0 10px 10px;
+    background-color: #11a73f;
+}
+.pricingplan-page table td {
+    background-color: #f0f0f0;
+}
+.pricingplan-page table td, .pricing .pricing-plans table th {
+    text-align: center;
+    border: 1px solid #e2e2e2;
+    height: 3em;
+}
+.pricingplan-page table td strong, .pricing .pricing-plans table th strong {
+    font-weight: bold;
+}*/
+
+@media screen and (max-width:667px)
+{
+
+    *
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    #outerwrapper
+    {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    #wrapper
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #banner
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #bannerright
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .pricingplan-page h4
+    {
+        font-size: 110%;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .plans, .plan
+    {
+        width: 100%;
+        height: auto;
+        zoom: 1;
+    }
+
+    .plan
+    {
+        width: 80%;
+        height: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+    }
+
+    #footer
+    {
+        width: 100%;
+        clear: both;
+        margin-top: 10px;
+    }
+    #footer p
+    {
+        text-align: center;
+        color: #858585;
+        font-size: 80%;
+    }
+}
+
+
+
+
+/* Media Screen for Tab Devices @ 668px to 996px */
+@media screen and (min-width:668px and max-width:996px)
+{
+    *
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    #outerwrapper
+    {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    #wrapper
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #banner
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #bannerright
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .pricingplan-page h4
+    {
+        font-size: 110%;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .plans, .plan
+    {
+        width: 100%;
+        height: auto;
+        zoom: 1;
+    }
+
+    .plan
+    {
+        width: 80%;
+        height: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+    }
+
+    #footer
+    {
+        width: 100%;
+        clear: both;
+        margin-top: 10px;
+    }
+    #footer p
+    {
+        text-align: center;
+        color: #858585;
+        font-size: 80%;
+    }
+}

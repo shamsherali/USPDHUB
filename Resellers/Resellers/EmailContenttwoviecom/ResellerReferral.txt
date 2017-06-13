@@ -1,0 +1,21 @@
+This email has been sent because of a referral from TwoVie.com.
+
+Channel Partner: #ChannelPartner#
+
+Channel Partner Code: #ChannelCode#
+
+Contact Name: #Name#
+
+Business Name: #BusinessName#
+
+Phone Number: #PhoneNumber#
+
+Email Address: #EmailAddress#
+
+City: #City#
+
+State: #State#
+
+Best Day to Call: #BestTime#
+
+Referral Date: #ReferalDate#

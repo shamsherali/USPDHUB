@@ -1,0 +1,477 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" CodeBehind="PrivateSmartConnect.master.cs" Inherits="USPDHUB.Business.MyAccount.PrivateSmartConnect" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphUser" runat="server">
+    <link href="../../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/pop-up.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/ManageCallDirectory.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../Scripts/jquery-latest.pack.js"></script>
+    <link href="../../css/Jquery-order-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/jquery-ui.min.js"
+        type="text/javascript"></script>
+    <style type="text/css">
+        #manage1 h1
+        {
+            font-size: 18px;
+            color: #EC2027;
+            height: 35px;
+            line-height: 35px;
+            font-weight: bold;
+        }
+        #sortable
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: auto;
+        }
+        #sortable li
+        {
+            margin: 0 5px 5px 5px;
+            padding: 5px;
+            font-size: 1.2em;
+            height: 1.5em;
+            cursor: move;
+        }
+        html > body #sortable li
+        {
+            height: 1.5em;
+            line-height: 1.2em;
+        }
+        #ctl00_pnlpopuphelp td img, #ctl00_pnlpopuphelp table td
+        {
+            vertical-align: baseline !important;
+        }
+        #ctl00_TreeView1 table tr:first-child td img
+        {
+            vertical-align: middle !important;
+        }
+    </style>
+    <script type="text/javascript">
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        prm.add_endRequest(function () {
+            var IndexValue = document.getElementById("<%=hdnIndexValue.ClientID %>").value;
+            if (IndexValue == "") IndexValue = "0";
+            LoadExpandsEvents(IndexValue);
+            var currentPage = window.location.toString().toLowerCase();
+            if (currentPage.search("managepsccallindexaddons") > -1) {
+                $("#<%=lblcurrentPage.ClientID %>").text("- Manage Private QR Connect");
+            }
+        });
+        var isSelectedtab = false;
+        window.onload = function () {
+
+            var currentPage = window.location.toString().toLowerCase();
+            if (currentPage.search("managepsccallindexaddons") > -1) {
+                $("#<%=lblcurrentPage.ClientID %>").text("- Manage Private QR Connect");
+            }
+            else if (currentPage.search("managepsccontacts") > -1) {
+                $("#<%=lblcurrentPage.ClientID %>").text("- Manage Contacts");
+            }
+            else if (currentPage.search("sendpscinvitation") > -1) {
+                $("#<%=lblcurrentPage.ClientID %>").text("- Send Invitation");
+            }
+            else if (currentPage.search("managepscinvitation") > -1) {
+                $("#<%=lblcurrentPage.ClientID %>").text("- Manage Invitations");
+            }
+            else if (currentPage.search("setuppscinvitations") > -1) {
+                $("#<%=lblcurrentPage.ClientID %>").text("- Setup Invitation");
+            }
+        
+        }
+        var order = '';
+        function ShowOrderScript() {
+            $('#sortable').sortable({
+                placeholder: 'ui-state-highlight',
+                update: OnSortableUpdate
+            });
+            $('#sortable').disableSelection();
+
+
+            function OnSortableUpdate(event, ui) {
+                order = $('#sortable').sortable('toArray').join(',').replace(/id_/gi, '');
+            }
+        }
+
+        $(function () {
+            var currentPage = window.location.toString().toLowerCase();
+            if (currentPage.search("Managepsccallindexaddons") > -1) {
+                LoadExpandsEvents(0);
+            }
+            else {
+                LoadExpandsEvents(document.getElementById("<%=hdnIndexValue.ClientID %>").value);
+            }
+
+        });
+
+        function GetFiredEvent() {
+            isSelectedtab = true;
+        }
+        function LoadExpandsEvents(selectedIndex) {
+            $(".collapse-content").hide();
+            $(".collapse-content:eq(" + selectedIndex + ")").show();
+
+        }
+
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if ((charCode > 47 && charCode < 58) || (charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 32)
+                return true;
+            else
+                return false;
+        }
+
+        function ValidateAppButton() {
+            var returnValue = false;
+            var appButton = document.getElementById("<%=txtAppButtonName.ClientID %>").value;
+            if (appButton == "")
+                alert("Please enter app button name.");
+            else {
+                var re = /^[a-zA-Z0-9 ]*$/;
+                if ((re.test(appButton)) == true) {
+                    returnValue = true;
+                }
+                else {
+                    alert("Special characters are not allowed in tab names.");
+                    returnValue = false;
+                }
+            }
+            return returnValue;
+        }
+
+        function Maxlength(text) {
+            var textLength = text.value.length;
+            if (parseInt(textLength) > 13) {
+                alert("The maximum allowable length should be 13 characters only.");
+                return false;
+            }
+            else
+                return true;
+        }
+
+        function GetSelectAppButton(moduleAppButton) {
+            var prvAppIcon = document.getElementById("<%=hdnModuleAppButton.ClientID %>").value;
+            $("#img" + moduleAppButton).parent("li").addClass("iconselect").siblings().removeClass('iconselect');
+            $("#img" + prvAppIcon).parent("li").addClass("icon")
+            document.getElementById("<%=hdnModuleAppButton.ClientID %>").value = moduleAppButton;
+
+        }
+        function HideCustomModuleModalWindow() {
+            $find("<%=ModalCustomModule.ClientID %>").hide();
+            document.getElementById("<%=hdnModuleTemplateID.ClientID %>").value = "";
+        }
+        function FireOrderEvent() {
+            document.getElementById("<%=lnkOrder.ClientID %>").click();
+        }
+        function FireEditEvent() {
+            if ($(location).attr('pathname').toLowerCase().indexOf('Managepsccallindexaddons.aspx') == -1)
+                location.href = 'ManagePSCCallIndexAddOns.aspx';
+            if (ValidateItem("lnkEdit")) {
+                document.getElementById("<%=lnkEdit.ClientID %>").click();
+            }
+        }
+
+        function FireDeleteEvent() {
+            if ($(location).attr('pathname').toLowerCase().indexOf('Managepsccallindexaddons.aspx') == -1)
+                location.href = 'ManagePSCCallIndexAddOns.aspx';
+            if (ValidateItem("lnkdelete")) {
+                document.getElementById("<%=lnkdelete.ClientID %>").click();
+            }
+        }
+        function UpdateCallOrder() {
+            var typeval = PageMethods.UpdatePSCItemsOrder(order, OnSuccess, OnFailure);
+            return false;
+        }
+        function OnSuccess(result) {
+            if (result == "success") {
+                $find('<%=ModalPopupImgOrderNo.ClientID %>').hide();
+            }
+            else
+                OnFailure(result);
+        }
+        function OnFailure(result) {
+            $find('<%=ModalPopupImgOrderNo.ClientID %>').show();
+            alert("Failure occurs while updating the ontent order.");
+        }
+        function PassURL() {
+            document.getElementById("<%=lnkDummmy.ClientID %>").click();
+          
+        }
+
+    </script>
+    <asp:UpdatePanel runat="server" ID="UpdatePanelCall">
+        <ContentTemplate>
+            <div class="grey">
+                <div class="container">
+                    <div class="header-wrap">
+                        <div class="mangae-lefwrap">
+                            <%--<div class="manage-call-title">
+                                Manage Call Directory</div>   --%>
+                            <div class="manage-invitation-head" style="margin-top: 0px;">
+                                <span class="manage-invitation-title">
+                                    <asp:HiddenField runat="server" ID="hdnIndexValue" />
+                                    <asp:Literal ID="Literal1" runat="server"></asp:Literal>&nbsp; <span style="vertical-align: middle">
+                                        <%=hdnAddOnName.Value %></span> <b>
+                                            <asp:Label runat="server" ID="lblcurrentPage"></asp:Label>
+                                        </b></span>
+                            </div>
+                        </div>
+                        <div class="mangae-rightwrap">
+                            <div class="displayed">
+                                <asp:Label runat="server" ID="lblOn" Visible="false">Displayed on App: <font class="showonapp">On</font></asp:Label>
+                                <asp:Label runat="server" ID="lblOff">Displayed on App: <font class="showoffapp">Off</font></asp:Label>
+                            </div>
+                            <%if (Request.Url.AbsolutePath.ToLower().Contains("managepsccallindexaddons.aspx"))
+                              { %>
+                            <div class="display-orderWrap">
+                                <div class="display-ordertitle">
+                                    App Display Order:</div>
+                                <div class="display-checkboxgroup">
+                                    <asp:RadioButtonList ID="RBAppOrder" runat="server" RepeatDirection="Horizontal"
+                                        Style="color: Black; font-size: 14px; margin-left: -8px; padding-left: -8px;"
+                                        AutoPostBack="true" OnSelectedIndexChanged="RBAppOrder_OnSelectedIndexChanged">
+                                        <asp:ListItem Value="1" Selected="True">   <label class="radio-inline">
+
+                                        By Date
+                                    </label></asp:ListItem>
+                                        <asp:ListItem Text="By Custom Order" Value="2"> <label class="radio-inline">
+                                        
+                                        By Custom Order
+                                    </label></asp:ListItem>
+                                    </asp:RadioButtonList>
+                                </div>
+                            </div>
+                            <%} %>
+                        </div>
+                    </div>
+                    <div>
+                        <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                        <asp:HiddenField runat="server" ID="hdnModuleTemplateID" />
+                        <asp:HiddenField runat="server" ID="hdnModuleAppButton" />
+                        <asp:HiddenField ID="hdnAddOnName" runat="server" />
+                        <asp:HiddenField ID="hdnIsLiteVersion" runat="server" Value="false" />
+                      
+                    </div>
+                    <div class="containermain">
+                        <div class="nav-wrap">
+                            <!--Nav Container-->
+                            <div class="collapse">
+                                <asp:LinkButton ID="lnkEdit" runat="server" CausesValidation="false" OnClick="lnkEdit_Click"
+                                    Style="display: none;"></asp:LinkButton>
+                                <asp:LinkButton ID="lnkdelete" runat="server" CausesValidation="false" OnClick="lnkdelete_Click"
+                                    Style="display: none;"></asp:LinkButton>
+                                <asp:LinkButton ID="lnkOrder" runat="server" CausesValidation="false" OnClick="lnkOrder_Click"
+                                    Style="display: none;"></asp:LinkButton>
+                                     <asp:LinkButton ID="lnkDummmy" runat="server" CausesValidation="false" OnClick="lnkDummmy_Click"
+                                    Style="display: none;"></asp:LinkButton>
+                                <asp:DataList ID="DLButtons" runat="server" RepeatColumns="1" DataKeyField="rowid">
+                                    <ItemTemplate>
+                                        <div class="collapse-header">
+                                            <div class="collapse-title">
+                                                <img src='../../Images/CustomModulesAppIcons/<%#Eval("AppIcon") %>.png' />
+                                                <asp:Label ID="lblTabName" runat="server" Text='<%#Eval("TabName") %>' CssClass="collapse-headtitle"
+                                                    Style="display: none;"></asp:Label>
+                                                <asp:LinkButton runat="server" ID="lnkSelectButton" OnClick="lnkSelectButton_OnClick"
+                                                    Text='<%#Eval("TabName") %>' OnClientClick="GetFiredEvent();" CommandArgument='<%#Eval("UserModuleID") %>'
+                                                    CssClass="collapse-select" Style="text-decoration: underline;"></asp:LinkButton>
+                                                <i class="collapse-school-icon"></i>
+                                            </div>
+                                            <div class="collapse-iconedit">
+                                                <asp:LinkButton runat="server" OnClick="lnkEditButtonName_OnClick" ID="lnkEditButtonName"
+                                                    Style="float: right;" CommandArgument='<%#Eval("UserModuleID") %>'><img src='../../images/Dashboard/icon_modify.gif' /><br />Edit</asp:LinkButton>
+                                            </div>
+                                        </div>
+                                        <div class="collapse-content">
+                                            <div class="collasp-inner-wrap">
+                                                <ul>
+                                                
+                                                    <li><a href="javascript:PassURL();"><i class="icon-createQRCode">
+                                                    </i>Create Button & QR Code</a></li>
+                                                     <li><a href="/Business/MyAccount/SetupPSCInvitations.aspx"><i class="icon-invitation">
+                                                    </i>Manage Invitations</a></li>
+                                                 <%--   <li><a href="/Business/MyAccount/ManagePSCContacts.aspx"><i class="icon-invitation">
+                                                    </i>Manage Contacts</a></li>--%>
+                                                
+                                                    <li><a href="javascript:FireOrderEvent();"><i class="icon-order"></i>Change Order</a></li>
+                                                    <li><a href="/Business/MyAccount/ManagePSCCategories.aspx"><i class="icon-category"></i>Categories</a></li>
+                                                    <li><a href="/Business/MyAccount/PrivateSmartConnectMessages.aspx"><i class="icon-reports"></i>Message Reports</a></li>
+                                                    <%-- <li><a href="javascript:FireEditEvent();"><i class="icon-edit"></i>Edit</a></li>
+                                                    <li><a href="javascript:FireDeleteEvent();"><i class="icon-delete"></i>Delete</a></li>--%>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </div>
+                        </div>
+                        <!--Right Container-->
+                        <%if (Request.Url.AbsolutePath.ToLower().Contains("managepubliccallindexaddons.aspx"))
+                          { %><div class="content-wrap" style="overflow-x: auto;">
+                              <%}
+                          else
+                          { %>
+                              <div class="content-wraplite" style="overflow-x: auto;">
+                                  <%} %>
+                                  <asp:ContentPlaceHolder ID="cphUser1" runat="server">
+                                  </asp:ContentPlaceHolder>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+                <table width="100%" cellpadding="0" cellspacing="0" id="manage1" style="display: none;">
+                    <colgroup>
+                        <col width="10%" />
+                        <col width="90%" />
+                    </colgroup>
+                    <tr>
+                        <td colspan="2">
+                            <h1>
+                                <asp:Literal ID="ltrlTitleImage" runat="server"></asp:Literal>&nbsp; <span style="vertical-align: middle">
+                                    Manage Public Call Directory</span>
+                            </h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <asp:Label ID="lblstatusmessage" runat="server" ForeColor="Green" Font-Bold="true"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                        </td>
+                        <td valign="top">
+                        </td>
+                    </tr>
+                </table>
+                <table border="0" width="50%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td valign="top">
+                            <asp:Label ID="lblCustomModule" runat="server"></asp:Label>
+                            <cc1:ModalPopupExtender ID="ModalCustomModule" runat="server" TargetControlID="lblCustomModule"
+                                PopupControlID="pnlCustomModulepop" BackgroundCssClass="modal">
+                            </cc1:ModalPopupExtender>
+                            <asp:Panel ID="pnlCustomModulepop" runat="server" Width="600px" Style="display: none;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <div id="popup-cont">
+                                                    <div class="top">
+                                                        <a href="javascript:HideCustomModuleModalWindow();"></a>
+                                                    </div>
+                                                    <div class="middle">
+                                                        <h2 class="lft">
+                                                            1. Show In App
+                                                            <asp:CheckBox ID="chkIndVisible" runat="server" /></h2>
+                                                        <br />
+                                                        <br />
+                                                        <p class="lft">
+                                                            <h2>
+                                                                2. App Button name
+                                                                <asp:TextBox ID="txtAppButtonName" runat="server" onkeypress="return isNumberKey(event);"
+                                                                    onkeydown="return Maxlength(this);" MaxLength="13" class="txt-input"></asp:TextBox></h2>
+                                                        </p>
+                                                        <h2>
+                                                            3. App Button Icon (Select any one from the below list)</h2>
+                                                        <div class="scrollablebox">
+                                                            <div class="auto">
+                                                                <ul class="AppIcons">
+                                                                    <asp:Literal ID="ltrlCustomAppIcons" runat="server"></asp:Literal>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <asp:LinkButton ID="lnkSubmit" runat="server" class="btn" Text="Submit" OnClick="lnkSubmit_Click"
+                                                            OnClientClick="return ValidateAppButton();"></asp:LinkButton>
+                                                    </div>
+                                                    <div class="bottom">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </asp:Panel>
+                        </td>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td>
+                            <cc1:ModalPopupExtender ID="ModalPopupImgOrderNo" runat="server" PopupControlID="pnlpopup2"
+                                TargetControlID="lbl2" BackgroundCssClass="modal" CancelControlID="ImageButton1">
+                            </cc1:ModalPopupExtender>
+                            <asp:Panel ID="pnlpopup2" runat="server" Style="display: none;">
+                                <table class="popuptable" cellspacing="0" cellpadding="0" width="500px" border="0">
+                                    <tr>
+                                        <td align="center" colspan="2">
+                                            <asp:UpdateProgress ID="UpdateProgress3" runat="server" DisplayAfter="3">
+                                                <ProgressTemplate>
+                                                    <img src="../../images/popup_ajax-loader.gif" border="0"><span class="processing">Processing....</span>
+                                                </ProgressTemplate>
+                                            </asp:UpdateProgress>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            <span style="color: Green; font-size: 14px; font-weight: bold;">
+                                                <% = hdnAddOnName.Value %></span>
+                                        </td>
+                                        <td align="right">
+                                            <asp:ImageButton ID="ImageButton1" runat="server" CausesValidation="false" ImageUrl="~/images/popup_close.gif" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" align="center">
+                                            <br />
+                                            <asp:Label ID="lbl2" runat="server"></asp:Label>
+                                        </td>
+                                    </tr>
+                                    <caption>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div id="Div1" style="height: 300px; overflow-y: auto; border: solid 1px #ccc; padding-top: 5px;">
+                                                    <ul id="sortable">
+                                                        <asp:ListView ID="OrderListView" OnItemDataBound="OrderListView_ItemDataBound" runat="server"
+                                                            DataKeyNames="CustomID" ItemPlaceholderID="myItemPlaceHolder">
+                                                            <LayoutTemplate>
+                                                            </LayoutTemplate>
+                                                            <LayoutTemplate>
+                                                                <asp:PlaceHolder ID="myItemPlaceHolder" runat="server"></asp:PlaceHolder>
+                                                            </LayoutTemplate>
+                                                            <ItemTemplate>
+                                                                <li class="ui-state-default" id='id_<%# Eval("CustomID") %>' style="border: 1px solid #ccc;
+                                                                    background: #EEEEEE; font-weight: normal; color: #8C8C8C;">
+                                                                    <asp:Label ID="lblKey" runat="server" Text='<%#Eval("CustomID") %>' Visible="false" />
+                                                                    <asp:Label ID="lblOrderThumb" runat="server" />
+                                                                    &nbsp&nbsp;&nbsp;
+                                                                    <%# Eval("Title")%></li>
+                                                            </ItemTemplate>
+                                                        </asp:ListView>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td style="padding-top: 10px; padding-left: 120px;">
+                                                <asp:Button ID="btnUpdateImgOrderNumber" runat="server" Text="Update" ValidationGroup="g"
+                                                    OnClientClick="return UpdateCallOrder();" Width="60px" Height="20px" />
+                                                <asp:Button ID="btnCancelImgOrderNumber" runat="server" CausesValidation="false"
+                                                    Text="Cancel" Width="50px" Height="20px" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="height: 25px;">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                    </caption>
+                                </table>
+                            </asp:Panel>
+                        </td>
+                    </tr>
+                </table>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+</asp:Content>

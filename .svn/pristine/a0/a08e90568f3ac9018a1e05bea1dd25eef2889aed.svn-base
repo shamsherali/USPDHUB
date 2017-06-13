@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <!--<add key="USPDhubDevServer" value="Network Library=DBMSSOCN;Data Source=HQ\WOWZZY;Initial Catalog=USPDHUB;User ID=wowzzydbusa;Password=Nitin2003;pooling=true;"/>-->
+    <!--<add key="USPDhubDevServer" value="Network Library=DBMSSOCN;Data Source=HQ2\TESTUSPDHUB;Initial Catalog=StagingDB;User Id=sa;Password=WowMail2010;pooling=true;"/>-->
+    <add key="USPDhubDevServer" value="Server=tcp:poc-azure.database.windows.net,1433;Data Source=poc-azure.database.windows.net;Initial Catalog=StagingDB;Persist Security Info=False;User ID=pocazure;Password=India@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" />
+
+    <add key="SMSAccountSid" value="AC4254f5aa60a56b3fe52492fd60a8002c"/>
+    <add key="SMSAuthToken" value="816cb14c5406b495df243768750149c4"/>
+    <add key="FromNumber" value="+19162779445"/>
+    <add key="CountryPhoneCode" value="+1"/>
+    <!--<add key="CountryPhoneCode" value="+91"/>-->
+  </appSettings>
+</configuration>

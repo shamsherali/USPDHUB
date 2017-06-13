@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+   <!-- <script src="http://rangy.googlecode.com/svn/trunk/currentrelease/rangy-core.js"></script>-->
+    <style type="text/css">
+        #myarea
+        {
+            border: 1px solid #000;
+            padding: 5px;
+            height: 150px;
+            width: 400px;
+            overflow: scroll;
+        }
+        #divContent
+        {
+            width: 1000px;
+            height: 1000px;
+            border: solid 2px green;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    Highlight text below and click "Get HTML" button
+    <div id="myarea" contenteditable="true">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quam orci, ornare
+        <span style="font-weight: bold;">sed ullamcorper id, eleifend in quam. Nulla facilisi.
+            Aliquam vitae orci arcu. Aenean a nulla volutpat ante</span> ultrices euismod
+        ut et magna. Nulla vitae vulputate urna. Donec tempus, nisi a pharetra placerat,
+        diam nisi aliquam elit, a consectetur magna enim sed ligula. Aliquam iaculis rutrum
+        dui et tristique. Nulla facilisi. <a href='http://www.google.com'>Cras eu</a> ante
+        fringilla erat convallis rutrum in ac magna. Praesent porta bibendum augue sit amet
+        rhoncus. Vestibulum nibh quam, posuere non consectetur eget, pharetra sit amet lectus.</div>
+    <button onclick="getSelectionHtml();">
+        Get HTML</button>
+    <br />
+    <br />
+    <input type="text" id="url" size="30" value="http://stackoverflow.com/">
+    <input type="button" value="Link" onclick="createLink()">
+    <div contenteditable="true">
+        Select <b>some</b> of this content and click the link button</div>
+    <!--<br />
+    <br />
+    <div id="divContent" contenteditable="true">
+        <br>
+        <div style="background-color: orange; width: 50%;">
+            testing!
+        </div>
+    </div>-->
+    <script type="text/javascript">
+        function getCharacterOffsetWithin(range, node) {
+            var treeWalker = document.createTreeWalker(
+        node,
+        NodeFilter.SHOW_TEXT,
+        function (node) {
+            var nodeRange = document.createRange();
+            nodeRange.selectNodeContents(node);
+            return nodeRange.compareBoundaryPoints(Range.END_TO_END, range) < 1 ?
+                NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+        },
+        false
+    );
+
+            var charCount = 0;
+            while (treeWalker.nextNode()) {
+                charCount += treeWalker.currentNode.length;
+            }
+            if (range.startContainer.nodeType == 3) {
+                charCount += range.startOffset;
+            }
+            return charCount;
+        }
+        function getSelectionHtml() {
+            var html = "";
+            var el = document.getElementById("myarea");
+            var range = window.getSelection().getRangeAt(0);
+            alert("Caret char pos: " + getCharacterOffsetWithin(range, el))
+            if (typeof window.getSelection != "undefined") {
+                var sel = window.getSelection();
+                if (sel.rangeCount) {
+                    var container = document.createElement("div");
+                    for (var i = 0, len = sel.rangeCount; i < len; ++i) {
+                        container.appendChild(sel.getRangeAt(i).cloneContents());
+                    }
+                    html = container.innerHTML;
+                }
+            } else if (typeof document.selection != "undefined") {
+                if (document.selection.type == "Text") {
+                    html = document.selection.createRange().htmlText;
+                }
+            }
+            alert(html);
+        }
+//        window.onload = function () {
+//            rangy.init();
+//            var el = document.getElementById("divContent");
+//            el.focus();
+//            var range = rangy.createRange();
+//            range.setStartAfter(el.getElementsByTagName("div")[0]);
+//            range.collapse(true);
+//            rangy.getSelection().setSingleRange(range);
+//        };
+    </script>
+    <script type="text/javascript">
+        function saveSelection() {
+            if (window.getSelection) {
+                sel = window.getSelection();
+                if (sel.getRangeAt && sel.rangeCount) {
+                    var ranges = [];
+                    for (var i = 0, len = sel.rangeCount; i < len; ++i) {
+                        ranges.push(sel.getRangeAt(i));
+                    }
+                    alert(ranges);
+                    return ranges;
+                }
+            } else if (document.selection && document.selection.createRange) {
+                alert(document.selection.createRange());
+                return document.selection.createRange();
+            }
+            return null;
+        }
+
+        function restoreSelection(savedSel) {
+            if (savedSel) {
+                if (window.getSelection) {
+                    sel = window.getSelection();
+                    sel.removeAllRanges();
+                    for (var i = 0, len = savedSel.length; i < len; ++i) {
+                        sel.addRange(savedSel[i]);
+                    }
+                } else if (document.selection && savedSel.select) {
+                    savedSel.select();
+                }
+            }
+        }
+
+        function createLink() {
+            // There's actually no need to save and restore the selection here. This is just an example.
+            var savedSel = saveSelection();
+            var url = document.getElementById("url").value;
+            restoreSelection(savedSel);
+            document.execCommand("CreateLink", false, url);
+        }
+    </script>
+</body>
+</html>

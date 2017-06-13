@@ -1,0 +1,766 @@
+================================09/10/2015 03:55:43 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 44
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 04:17:59 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 44
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 04:30:47 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 44
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 04:32:17 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 572
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 04:35:58 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 44
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 04:36:06 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 572
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 04:46:40 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 44
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 04:52:24 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Could not find a part of the path 'E:\USPDHub\USPDHUB\UserForms\UserForms\BulletinPreview\LogoHeaderText.txt'.
+ 
+STACKTRACE :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at System.IO.File.OpenText(String path)
+   at UserFormsBLL.CommonBLL.GetLogoHeaderText(Int32 pUserID, Int32 pProfileID, String pRootPath) in E:\USPDHub\USPDHUB\UserForms\UserFormsBLL\CommonBLL.cs:line 535
+   at UserForms.MostWanted.LoadFormDefaultData() in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 110
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 82
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 04:56:40 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 44
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:00:18 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 44
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:01:00 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 572
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:09:29 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:14:56 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 50
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:15:16 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 575
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:32:47 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:33:17 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 575
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:35:02 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:35:34 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 50
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:35:34 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 575
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:36:21 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:36:39 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 575
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:37:44 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Could not find a part of the path 'E:\USPDHub\USPDHUB\UserForms\UserForms\BulletinPreview\LogoHeaderText.txt'.
+ 
+STACKTRACE :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at System.IO.File.OpenText(String path)
+   at UserFormsBLL.CommonBLL.GetLogoHeaderText(Int32 pUserID, Int32 pProfileID, String pRootPath) in E:\USPDHub\USPDHUB\UserForms\UserFormsBLL\CommonBLL.cs:line 535
+   at UserForms.MostWanted.LoadFormDefaultData() in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 112
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 84
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:40:05 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:40:19 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 575
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:40:49 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:41:01 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 575
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:41:53 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:42:11 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 575
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:43:08 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:43:22 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 575
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:44:50 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:45:10 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 575
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:46:20 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:46:31 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : BtnCancel_Click
+ 
+MESSAGE : Thread was being aborted.
+ 
+STACKTRACE :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at UserForms.MostWanted.BtnCancel_Click(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 575
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:58:45 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:59:24 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Object reference not set to an instance of an object.
+ 
+STACKTRACE :    at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 45
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 05:59:57 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Could not find a part of the path 'E:\USPDHub\USPDHUB\UserForms\UserForms\BulletinPreview\LogoHeaderText.txt'.
+ 
+STACKTRACE :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at System.IO.File.OpenText(String path)
+   at UserFormsBLL.CommonBLL.GetLogoHeaderText(Int32 pUserID, Int32 pProfileID, String pRootPath) in E:\USPDHub\USPDHUB\UserForms\UserFormsBLL\CommonBLL.cs:line 535
+   at UserForms.MostWanted.LoadFormDefaultData() in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 112
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 84
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 06:00:54 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Could not find a part of the path 'E:\USPDHub\USPDHUB\UserForms\UserForms\BulletinPreview\LogoHeaderText.txt'.
+ 
+STACKTRACE :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at System.IO.File.OpenText(String path)
+   at UserFormsBLL.CommonBLL.GetLogoHeaderText(Int32 pUserID, Int32 pProfileID, String pRootPath) in E:\USPDHub\USPDHUB\UserForms\UserFormsBLL\CommonBLL.cs:line 535
+   at UserForms.MostWanted.LoadFormDefaultData() in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 112
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 84
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 06:47:34 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Could not find a part of the path 'E:\USPDHub\USPDHUB\UserForms\UserForms\BulletinPreview\LogoHeaderText.txt'.
+ 
+STACKTRACE :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at System.IO.File.OpenText(String path)
+   at UserFormsBLL.CommonBLL.GetLogoHeaderText(Int32 pUserID, Int32 pProfileID, String pRootPath) in E:\USPDHub\USPDHUB\UserForms\UserFormsBLL\CommonBLL.cs:line 535
+   at UserForms.MostWanted.LoadFormDefaultData() in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 112
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 84
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 
+================================09/10/2015 06:53:01 PM================================
+ 
+Type : ERROR
+ 
+Page Name : MostWanted.aspx.cs
+ 
+Method Name : Page_Load
+ 
+MESSAGE : Could not find a part of the path 'E:\USPDHub\USPDHUB\UserForms\UserForms\BulletinPreview\LogoHeaderText.txt'.
+ 
+STACKTRACE :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at System.IO.File.OpenText(String path)
+   at UserFormsBLL.CommonBLL.GetLogoHeaderText(Int32 pUserID, Int32 pProfileID, String pRootPath) in E:\USPDHub\USPDHUB\UserForms\UserFormsBLL\CommonBLL.cs:line 535
+   at UserForms.MostWanted.LoadFormDefaultData() in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 112
+   at UserForms.MostWanted.Page_Load(Object sender, EventArgs e) in E:\USPDHub\USPDHUB\UserForms\UserForms\MostWanted.aspx.cs:line 84
+ 
+INNEREXCEPTION : 
+ 
+DATA : System.Collections.ListDictionaryInternal
+ 

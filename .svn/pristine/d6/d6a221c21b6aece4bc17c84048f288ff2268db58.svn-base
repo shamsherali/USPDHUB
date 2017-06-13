@@ -1,0 +1,79 @@
+﻿<Page x:Class="POC.Business.Dashboard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+       xmlns:local="clr-namespace:POC.Control"
+      d:DesignHeight="300" d:DesignWidth="800"
+	Title="File History"   Background="#EFEFEF" >
+
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <local:LoadingAnimation  x:Name="loading" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"  />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <StackPanel>
+                        <TextBlock Text="HISTORY" Margin="0,0,0,0" Foreground="{StaticResource GlyphBrush}" FontSize="20"  FontWeight="Bold"></TextBlock>
+                    </StackPanel>
+                    <TextBlock x:Name="tbMessage" Foreground="Red" Margin="0,0,0,10" Visibility="Collapsed" FontSize="14"></TextBlock>
+                    <DataGrid x:Name="dgHistory"   AutoGenerateColumns="False" AreRowDetailsFrozen="False"  FontSize="14"
+                          BorderBrush="#a7c942"   HorizontalGridLinesBrush="#a7c942" VerticalGridLinesBrush="#a7c942" 
+                          CanUserDeleteRows="False" CanUserAddRows="False"   CanUserResizeColumns="False" 
+                          CanUserResizeRows="False"   MaxHeight="300" MinHeight="250" VerticalScrollBarVisibility="Auto">
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style  TargetType="DataGridColumnHeader">
+                                <Setter  Property="Background" Value="#a7c942"></Setter>
+                                <Setter Property="Padding" Value="5,5,0,5"></Setter>
+                                <Setter Property="Foreground" Value="White"></Setter>
+                                <Setter Property="FontSize" Value="16"></Setter>
+                                <Setter Property="FontWeight" Value="Bold"></Setter>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="Title" Width="190" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=Title}"  TextWrapping="Wrap"></TextBlock>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Expiration Date" Width="130">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=Expiration_Date,StringFormat={}\{0:MM/dd/yyyy\}}"></TextBlock>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Publish Date" Width="105">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Publish_Date,StringFormat={}\{0:MM/dd/yyyy\}}"></TextBlock>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+                <StackPanel x:Name="spDrag">
+                    <StackPanel x:Name="SPFileDrop" AllowDrop="True" Width="300" Height="200" 
+                            Drop="SPFileDrop_Drop"  Margin="10,0,0,0"  >
+                        <StackPanel Orientation="Horizontal">
+                            <Label Foreground="Black" FontSize="20"  FontWeight="Bold">Drop here </Label>
+                            <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0" Foreground="Green" FontWeight="Bold"> (OR)</Label>
+                            <Button x:Name="btnBrowser" Content="Browse" Margin="52,0,0,0" Width="100" FontSize="18" Click="btnBrowser_Click" ></Button>
+                           
+                        </StackPanel>
+                        <ListBox x:Name="lbFileList"  Height="150"   Width="300" Margin="0,5,0,0" ></ListBox>
+                    </StackPanel>
+                    <StackPanel Margin="0,0,0,0">
+                        <Button x:Name="btnNext" Content="Next" Width="200" FontSize="24" Click="btnNext_Click"></Button>
+                        <MediaElement x:Name="player"></MediaElement>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

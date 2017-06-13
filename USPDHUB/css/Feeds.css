@@ -1,0 +1,1285 @@
+﻿
+@font-face
+{
+    src: url("http://support.feed.mikle.com/fonts/GIL.ttf") format("truetype");
+}
+@font-face
+{
+    font-family: "GILB";
+    src: url("http://support.feed.mikle.com/fonts/GILB.ttf") format("truetype");
+}
+@font-face
+{
+    font-family: "HELVETICA";
+    src: url("http://support.feed.mikle.com/fonts/hellovetica.ttf") format("truetype");
+}
+@font-face
+{
+    font-family: "Helvetica Bold Oblique";
+    src: url("http://support.feed.mikle.com/fonts/Helvetica Bold Oblique.ttf") format("truetype");
+}
+@font-face
+{
+    font-family: "Helvetica Neue Bold";
+    src: url("http://support.feed.mikle.com/fonts/Helvetica Neue Bold.ttf") format("truetype");
+}
+@font-face
+{
+    font-family: "Helvetica Neue Light";
+    src: url("http://support.feed.mikle.com/fonts/Helvetica Neue Light.ttf") format("truetype");
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td
+{
+    margin: 0;
+    padding: 0;
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset, img
+{
+    border: 0 none;
+}
+address, caption, cite, code, dfn, th, var
+{
+    font-style: normal;
+    font-weight: normal;
+}
+ol, ul
+{
+    list-style: none outside none;
+}
+caption, th
+{
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6
+{
+    display: block;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+q:before, q:after
+{
+    content: "";
+}
+
+select, input, textarea
+{
+    font: 99% arial,helvetica,clean,sans-serif;
+}
+pre, code
+{
+    font: 100% monospace;
+}
+
+h1
+{
+    background: none repeat scroll 0 0 #0066BB;
+    color: #FFFFFF;
+    font-size: 200%;
+    padding: 10px;
+}
+h2
+{
+    color: #000000;
+    font-size: 150%;
+    padding: 10px 0;
+}
+ul
+{
+    list-style: disc inside none;
+    margin-left: 1em;
+}
+label
+{
+    float: left;
+    width: 12em;
+}
+input[type="text"]
+{
+    width: 15em;
+}
+.Clearfix:after
+{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+.Clear
+{
+    clear: both;
+}
+.Clearfix
+{
+    display: inline-block;
+}
+.Bdr
+{
+    border: medium none !important;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+p, a, ul, li, h1, h2, h3, h5, h6, from, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+img
+{
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+p
+{
+    display: block;
+}
+:focus
+{
+    outline: 0 none;
+}
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+.MainComman
+{
+    float: left;
+    height: auto;
+    width: 100%;
+}
+.FloatLeft
+{
+    float: left;
+}
+.FloatRight
+{
+    float: right;
+}
+.Wrapper
+{
+    margin: 0 auto;
+    width: 990px;
+}
+.InnerWrapper
+{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 990px;
+}
+.Header
+{
+    float: left;
+    min-height: 90px;
+    padding: 8px 0 18px;
+    width: 100%;
+}
+.Logo
+{
+    float: left;
+    height: 64px;
+    padding: 0 0 3px;
+    width: 245px;
+}
+.Header_Right
+{
+    float: right;
+    padding: 10px 8px 0 0;
+    width: 700px;
+}
+
+.Header_Bottom
+{
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.Tutiruals
+{
+    left: 0;
+    position: absolute;
+    top: -5px;
+    width: 740px;
+}
+.Tutiruals p
+{
+    border-right: 1px solid #A0A2A4;
+    color: #616161;
+    float: left;
+    font-family: Helvetica Neue Light;
+    font-size: 12px;
+    padding: 8px 12px 8px 0;
+    text-decoration: none;
+    width: 167px;
+}
+.Tutiruals p span
+{
+    color: #024467;
+}
+.Tutiruals p.last
+{
+    border: 0 none;
+    padding: 0 0 0 22px;
+    width: 437px;
+}
+.rssimg
+{
+    float: right;
+    margin: 0 12px 0 0;
+}
+.Step
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E4E4E5;
+    border-radius: 7px;
+    float: left;
+    margin-top: 13px;
+    padding: 5px 9px;
+    width: 970px;
+}
+.Step_Inner
+{
+    float: left;
+    padding: 22px 0;
+    width: auto;
+}
+.Step_Inner ul
+{
+    float: left;
+    padding: 0;
+    width: auto;
+}
+.Step_Inner ul li
+{
+    border-right: 1px solid #A2A2A2;
+    float: left;
+    list-style: none outside none;
+    padding: 4px 10px;
+    width: auto;
+}
+.Step_Inner ul li:last-child
+{
+    border: 0 none;
+    padding-right: 0;
+}
+.Step_Inner ul li:first-child
+{
+    padding-left: 0;
+}
+.Step_Inner ul li span
+{
+    background: none repeat scroll 0 0 #E8524C;
+    border-radius: 400px;
+    color: #FFFFFF;
+    float: left;
+    font-family: GIL,Gill Sans MT;
+    font-size: 11px;
+    font-weight: bold;
+    height: 19px;
+    padding: 2px 0;
+    text-align: center;
+    width: 23px;
+}
+.Step_Inner ul li p
+{
+    color: #535353;
+    float: left;
+    font-family: GIL,Gill Sans MT;
+    font-size: 14px;
+    padding: 0 0 0 9px;
+    text-transform: uppercase;
+}
+.Step img
+{
+    float: right;
+}
+.MainInfo
+{
+    float: left;
+    padding: 24px 0 50px;
+    width: 100%;
+}
+.LeftInfo
+{
+    float: left;
+    padding-left: 0;
+    width: 362px;
+}
+.Feed_Section
+{
+    border-radius: 4px;
+    float: left;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+.FeedSectionTitle
+{
+    background: none repeat scroll 0 0 #00AAD5;
+    border-radius: 4px 4px 0 0;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+}
+.FeedInner
+{
+    background: none repeat scroll 0 0 #FAFAFA;
+    border-bottom: 1px solid #EAEAEA;
+    border-left: 1px solid #EAEAEA;
+    border-right: 1px solid #EAEAEA;
+    display: block;
+    float: left;
+    padding: 10px 0 10px 10px;
+    width: 350px;
+}
+.InputSection
+{
+    background: url("http://support.feed.mikle.com/images/input_bg.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: left;
+    height: 23px;
+    padding: 18px 30px 34px;
+    width: 482px;
+}
+.InputSection input[type="text"]
+{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    color: #4F4F4F;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 0;
+    width: 290px;
+}
+.FeedInner p
+{
+    clear: none;
+    float: left;
+    padding: 0 0 0 11px;
+}
+.General
+{
+    float: left;
+    width: 100%;
+}
+.General a
+{
+    float: left;
+}
+.General span
+{
+    float: left;
+    font-weight: bold;
+    line-height: 1em;
+    padding: 10px 15px 0 0;
+}
+.General .dhtmlgoodies_question
+{
+    background: url("http://support.feed.mikle.com/images/css_sprite.png") no-repeat scroll 0 8px rgba(0, 0, 0, 0);
+    color: #000000;
+    cursor: pointer;
+    float: right;
+    font-size: 14px;
+    height: auto;
+    padding: 0 11px 0 25px;
+    width: auto;
+}
+.General input[type="text"]
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 0 none;
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+    color: #4F4F4F;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 6px 0 0;
+    padding: 8px;
+    text-align: center;
+    width: 50px;
+}
+.Chk input[type="radio"]
+{
+    float: left;
+    margin-right: 8px;
+}
+.Chk
+{
+    float: left;
+    width: 120px;
+}
+.Chk span
+{
+    float: left;
+    font-weight: bold;
+}
+.Auto
+{
+    float: left;
+    padding: 20px 15px 0 0;
+    width: auto;
+}
+.Col
+{
+    background: none repeat scroll 0 0 #00AAD5;
+    float: left;
+    height: 15px;
+    width: 15px;
+}
+.Gre
+{
+    background: none repeat scroll 0 0 #99CC00;
+}
+.Yel
+{
+    background: none repeat scroll 0 0 #FFCC00;
+}
+.Pik
+{
+    background: none repeat scroll 0 0 #FF6699;
+}
+.Bro
+{
+    background: none repeat scroll 0 0 #993300;
+}
+.Red
+{
+    background: none repeat scroll 0 0 #FF0000;
+}
+.New-text
+{
+    color: #DB4437;
+    font-size: 10px;
+}
+.RadioClass0
+{
+    display: none;
+}
+.RadioClass1
+{
+    display: none;
+}
+.RadioClass2
+{
+    display: none;
+}
+.RadioClass3
+{
+    display: none;
+}
+.RadioClass4
+{
+    display: none;
+}
+.RadioClass5
+{
+    display: none;
+}
+.RadioClass6
+{
+    display: none;
+}
+.RadioClass7
+{
+    display: none;
+}
+.RadioClass8
+{
+    display: none;
+}
+.RadioClass9
+{
+    display: none;
+}
+.RadioLabelClass0
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 22px;
+    margin: -5px 0 0;
+    padding-left: 20px;
+    padding-top: 3px;
+    width: 8px;
+}
+.RadioLabelAutoscroll
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 22px;
+    margin: -5px 0 0;
+    padding-left: 20px;
+    padding-top: 3px;
+    width: 8px;
+}
+.RadioLabelClass1
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    width: 30px;
+}
+.RadioLabelClassEntryck
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 6px;
+    width: 50px;
+}
+.RadioLabelClassProduct
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 6px rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 35px;
+    margin: 0;
+    padding-left: 30px;
+    padding-top: 0;
+    width: 224px;
+}
+.RadioLabelClassContact
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0 -95px 0 0;
+    padding: 0 0 0 28px;
+    width: 135px;
+}
+.RadioLabelClassContactimg
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    width: 30px;
+}
+.RadioLabelClassWindow
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 3px;
+    width: 123px;
+}
+.RadioLabelClassBorder
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 3px;
+    width: 45px;
+}
+.RadioLabelClass2
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    width: 30px;
+}
+.RadioSelected0
+{ 
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelected1
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelected2
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelected3
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelected4
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelected5
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelected6
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelected7
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelected8
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioClassResponsiveSelected
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+}
+.tabcontent .FloatRight
+{
+    float: right;
+    padding: 5px 0 0;
+    width: auto;
+}
+.Code_Left .Auto
+{
+    padding: 0 0 0 10px;
+}
+label.error
+{
+    color: #FF0000;
+    float: none;
+    padding-left: 0.5em;
+    vertical-align: top;
+}
+.komoku a.urlcss
+{
+    background-color: #00AAD5;
+    background-image: linear-gradient(to bottom, #00AAD5, #00AAD5);
+    border: 1px solid #0198BE;
+    border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: GIL,Gill Sans MT;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    margin-right: 4px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    width: auto;
+}
+.komoku a.urlcss:hover
+{
+    background-color: #19B8E0 !important;
+    background-image: linear-gradient(to bottom, #19B8E0, #19B8E0) !important;
+    border: 1px solid #0198BE !important;
+}
+a.cssbutton
+{
+    background-color: #00AAD5;
+    background-image: linear-gradient(to bottom, #00AAD5, #00AAD5);
+    border: 1px solid #0198BE;
+    border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: GIL,Gill Sans MT;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    margin-right: 4px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    width: auto;
+}
+a.cssbutton:hover
+{
+    background-color: #19B8E0 !important;
+    background-image: linear-gradient(to bottom, #19B8E0, #19B8E0) !important;
+    border: 1px solid #0198BE !important;
+}
+a.delete_feed
+{
+    color: #333333;
+    text-decoration: underline;
+}
+.komoku input[type="button"]
+{
+    background-color: #0066FF;
+    background-image: linear-gradient(to bottom, #00AAD5, #00AAD5);
+    border: 1px solid #0198BE;
+    border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: GIL,Gill Sans MT;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    margin-right: 4px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    width: auto;
+}
+.komoku input[type="button"]:hover
+{
+    background-color: #0052CC !important;
+    background-image: linear-gradient(to bottom, #19B8E0, #19B8E0) !important;
+    border: 1px solid #0198BE !important;
+}
+#floatdiv
+{
+    float: left;
+    height: auto;
+    padding: 0;
+    width: 378px;
+    z-index: 999999;
+}
+.RightInner
+{
+    float: left;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.RightInner textarea
+{
+    border: 1px solid #C3D7E1;
+    border-radius: 4px;
+    color: #454545;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold; /*height: 160px;*/
+    height: 111px;
+    padding: 9px; /*width: 358px;*/
+    width: 900px;
+}
+#copy-description, #generate-description, #send-code, .livebox
+{
+    background-color: #347699;
+    border: 1px solid #0198BE;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    padding: 2px 18px;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    margin-right: 20px;
+}
+#copy-description:hover, #generate-description:hover, #send-code:hover, .livebox:hover
+{
+    background-color: #347EA6;
+    border: 1px solid #0198BE;
+}
+#create-widget
+{
+    background-color: #D77D00;
+    border: 1px solid #FFAF0A;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    padding: 2px 18px;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    margin-right: 20px;
+}
+#create-widget:hover
+{
+    background-color: #EB9100;
+    border: 1px solid #FFAF0A;
+}
+.cookie_save
+{
+    color: #666666;
+    font-size: 12px;
+    height: 24px;
+    margin-left: 20px;
+    padding: 4px 10px;
+}
+.cookie_restore
+{
+    color: #666666;
+    font-size: 12px;
+    height: 24px;
+    margin-left: 10px;
+    padding: 4px 10px;
+}
+.tutorial_links
+{
+    border-top: 1px solid #CCCCCC;
+    clear: both;
+    display: block;
+    margin: 30px auto 0;
+}
+.tutorial_links ul
+{
+    display: block;
+    float: left;
+    margin: 10px 0 0 30px;
+    padding: 0;
+    width: auto;
+}
+.tutorial_links li
+{
+    list-style-type: none;
+    margin: 3px 0;
+}
+.tutorial_category
+{
+    color: #666666;
+    font-size: 28px;
+    list-style-type: none;
+    margin: 10px 0 0;
+    padding: 0;
+}
+.tutorial_links p
+{
+    clear: both;
+    font-size: 12px;
+    margin: 40px 0 0;
+    padding: 40px 0 0;
+    text-align: center;
+}
+.logos
+{
+    border-top: 1px solid #CCCCCC;
+    clear: both;
+    display: block;
+    margin: 30px 0 0;
+    padding: 30px 0 0;
+}
+.logos h3
+{
+    color: #666666;
+    font-size: 36px;
+    text-align: center;
+}
+.logos img
+{
+    display: block;
+    margin: 15px auto;
+}
+.deactive
+{
+    opacity: 0.5;
+}
+.floatsection
+{
+    float: right;
+}
+.RadioClassTextAlignment
+{
+    display: none;
+}
+.RadioLabelClassTextAlignment
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 3px;
+    width: 100px;
+}
+.RadioClassCorner
+{
+    display: none;
+}
+.RadioLabelClassCorner
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 3px;
+    width: 70px;
+}
+.RadioClassResponsive
+{
+    display: none;
+}
+.RadioLabelClassResponsive
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 3px;
+    width: 45px;
+}
+.RadioClassAutoscroll
+{
+    display: none;
+}
+.RadioLabelClassAutoscroll
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 3px;
+    width: auto;
+}
+.RadioClassMCSpeed
+{
+    display: none;
+}
+#ScrollOption
+{
+    display: none;
+}
+#ScrollStep
+{
+    display: none;
+}
+#MCSpeed
+{
+    display: none;
+}
+.RadioClassScrolldirection
+{
+    display: none;
+}
+.RadioLabelClassScrolldirection
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 3px;
+    width: auto;
+}
+.RadioLabelClassMCSpeed
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 3px;
+    width: 60px;
+}
+.scrolloption
+{
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    height: 110px;
+    padding: 10px;
+    position: relative;
+}
+.scrolloption:after
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #E0E0E0;
+    border-image: none;
+    border-right: 10px solid rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-width: 0 10px 10px;
+    content: "";
+    display: block;
+    left: 125px;
+    position: absolute;
+    top: -10px;
+    width: 0;
+}
+.RadioLabelClassSort
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 3px;
+    width: 80px;
+}
+.datetime_format
+{
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    height: 120px;
+    padding: 10px;
+    position: relative;
+}
+.datetime_format:after
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #E0E0E0;
+    border-image: none;
+    border-right: 10px solid rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-width: 0 10px 10px;
+    content: "";
+    display: block;
+    left: 250px;
+    position: absolute;
+    top: -10px;
+    width: 0;
+}
+.RadioLabelClassDateFormat
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 3px;
+    width: 130px;
+}
+.RadioLabelClassTimeFormat
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 3px;
+    width: 130px;
+}
+.RadioLabelClassImageScaling
+{
+    background: url("../images/unchk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 3px;
+    width: 30px;
+}
+#HTMLOnOption
+{
+    display: none;
+}
+.htmlonoption
+{
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    height: 60px;
+    padding: 10px;
+    position: relative;
+}
+.htmlonoption:after
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #E0E0E0;
+    border-image: none;
+    border-right: 10px solid rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-width: 0 10px 10px;
+    content: "";
+    display: block;
+    left: 125px;
+    position: absolute;
+    top: -10px;
+    width: 0;
+}
+.RadioClassSort
+{
+    display: none;
+}
+.RadioClassDateFormat
+{
+    display: none;
+}
+.RadioClassTimeFormat
+{
+    display: none;
+}
+.RadioClassImageScaling
+{
+    display: none;
+}
+.RadioSelected
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelectedResponsive
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelectedCorner
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelectedAutoscroll
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelectedScrolldirection
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelectedMCSpeed
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelectedSort
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.RadioSelectedImageScaling
+{
+    background: url("../images/chk.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#backgroundPopup
+{
+    z-index: 1;
+    position: fixed;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: #C0C0C0;
+    top: 0px;
+    left: 0px;
+}
+#toPopup
+{
+    font-family: "lucida grande" ,tahoma,verdana,arial,sans-serif;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 10px solid #BCBCBC;
+    border-radius: 3px 3px 3px 3px;
+    color: #333333;
+    display: none;
+    font-size: 14px;
+    left: 60%;
+    margin-left: -402px;
+    position: fixed;
+    top: 20%;
+    width: 500px;
+    z-index: 2;
+    padding: 10px;
+}
+div.close
+{
+    background: url("../Images/popup_close.gif") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    width: 30px;
+}
+
+#popup_content
+{
+    float: left;
+    padding: 25px;
+}
+.left
+{
+    text-align: left;
+}
+#popup_content .clear15
+{
+    height: 15px;
+}
+#popup_content .clear60
+{
+    height: 60px;
+}
+label
+{
+    float: left;
+    width: 135px;
+    font-size: 14px;
+}
+textarea
+{
+    width: 320px;
+    margin-bottom: 5px;
+    border: solid 1px #bcc8d3;
+    padding: 2px;
+    font-size: 15px;
+    color: #666;
+}
+.inputtextarea
+{
+    width: 320px;
+    height: 25px;
+    margin-bottom: 5px;
+    border: solid 1px #bcc8d3;
+    padding: 2px;
+    font-size: 15px;
+    color: #666;
+}
+#send
+{
+    margin-left: 135px;
+    width:100%;
+    float:left;
+    margin-bottom: 10px;
+}
+.summary ul li
+{
+    padding-left:20px;
+    font-size: 12px;
+}
+.padding15
+{
+	margin-right: 15px;
+}

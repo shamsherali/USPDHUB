@@ -1,0 +1,305 @@
+.editor_dialog
+{
+	display: none;
+	position: fixed;
+	height: auto;
+	width:auto;
+	top: 275px;
+	left: 650px;
+	margin-left: -190px;
+	margin-top: -100px;
+	background-color: #ffffff;
+	border: 1px solid #acacac;
+	color: #222;
+	padding: 5px;
+	z-index: 1011;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.web_dialog_overlay, .editor_dialog_overlay
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	opacity: .50;
+	filter: alpha(opacity=50);
+	-moz-opacity: .50;
+	z-index: 1010;
+	display: none;
+}
+.web_dialog
+{
+	display: none;
+	position: fixed;
+	height: 325px;
+	width:auto;
+	top: 275px;
+	left: 650px;
+	margin-left: -190px;
+	margin-top: -100px;
+	background-color: #ffffff;
+	border: 1px solid #acacac;
+	color: #222;
+	padding: 5px;
+	z-index: 1011;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+#dialog a.modalCloseImg
+{
+	background: url(../images/x.png) no-repeat;
+	width: 25px;
+	height: 29px;
+	display: inline;
+	z-index: 3200;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	cursor: pointer;
+}
+content, .ep-etz-remove-dialog-content, .ep-recl-dialog-content, .gcal-dialog-content, .modal-dialog-content, .offline-dialog-content, .se-delete-dialog-content, .static-form-dialog-content
+{
+	background-color: #fff;
+	color: #222;
+	padding: 15px;
+}
+.h3
+{
+	color: #222;
+	cursor: default;
+	font-size: 16px;
+	font-weight: bold;
+}
+.ed-recl-dialog-content
+{
+	background-color: #fff;
+	color: #222;
+	padding: 15px;
+}
+.ep-rec, .ed-rec
+{
+	width: 95%;
+}
+.ep-rec th, .ed-rec th
+{
+	color: #222;
+	font-weight: bold;
+	padding: 5px 10px 5px 0;
+	text-align: right;
+	white-space: nowrap;
+	width: 21%;
+	font-size: 12px;
+}
+.ep-rec-ends-th, .ed-rec-ends-th
+{
+	vertical-align: top;
+}
+.ep-rec td, .ed-rec td
+{
+	padding: 5px 0;
+	width: 70%;
+}
+.ep-rec-ends-opt
+{
+	display: block;
+}
+.ep-recl-summary
+{
+	font-weight: bold;
+	padding-right: 1ex;
+	font-size: 14px;
+}
+.lk
+{
+	text-decoration: none;
+	color: #15c;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.ed-headerrow {
+  background-color: #fff;
+  color: #000;
+  cursor: default;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  margin: 0 0 16px;
+}
+.ed-header-title {
+  padding-left: 20px;
+}
+/* ===== *** Confirm Dialog *** ==== */
+.confirm_dialog_overlay
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	opacity: .50;
+	filter: alpha(opacity=50);
+	-moz-opacity: .50;
+	z-index: 1010;
+	display: none;
+}
+.confirm_dialog
+{
+	display: none;
+	position: fixed;
+	height: 300px;
+	width: 740px;
+	top: 275px;
+	left: 470px;
+	margin-left: -190px;
+	margin-top: -100px;
+	background-color: #ffffff;
+	border: 1px solid #acacac;
+	color: #222;
+	padding: 5px;
+	z-index: 1011;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+#dialogconfirm a.modalCloseImg
+{
+	background: url(../images/x.png) no-repeat;
+	width: 25px;
+	height: 29px;
+	display: inline;
+	z-index: 3200;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	cursor: pointer;
+}
+.ep-es-dialog-title
+{
+	background-color: #fff;
+	color: #222;
+	cursor: default;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px 15px;
+	position: relative;
+	vertical-align: middle;
+}
+.ep-es-dialog-title-text
+{
+	color: #222;
+	cursor: default;
+	font-size: 16px;
+	font-weight: bold;
+}
+. ep-es-dialog-content
+{
+	background-color: #fff;
+	color: #222;
+	padding: 15px;
+}
+.ep-es
+{
+	overflow: auto;
+	width: 700px;
+}
+.ep-es-button-cell
+{
+	padding-right: 10px;
+}
+.ep-es-button-cell, .ep-es-explanation-cell
+{
+	vertical-align: top;
+}
+.ep-es-button-cell .ep-es-explanation-cell
+{
+	white-space: nowrap;
+}
+.goog-imageless-button, .navbuttonouter
+{
+	-moz-user-select: none;
+	background: -moz-linear-gradient(center top , #f5f5f5, #f1f1f1) repeat scroll 0 0 #f5f5f5;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+	color: #444;
+	font-size: 11px;
+	font-weight: bold;
+	height: 27px;
+	line-height: 27px;
+	min-width: 54px;
+	outline: medium none;
+	padding: 0 8px;
+	text-align: center;
+	transition: all 0.218s ease 0s;
+}
+.goog-flat-menu-button.goog-flat-menu-button-hover
+{
+	background-color: #f8f8f8;
+	background-image: -moz-linear-gradient(center top , #f8f8f8, #f1f1f1);
+	border-color: #c6c6c6;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	color: #333;
+}
+.goog-flat-menu-button.goog-flat-menu-button-focused
+{
+	border-color: #4d90fe;
+}
+.ep-es-dialog-content
+{
+	background-color: #fff;
+	color: #222;
+	padding: 15px;
+}
+.ep-es p
+{
+	margin: 0 0 10px;
+}
+.ep-es-button-cell .goog-imageless-button
+{
+	width: 100%;
+}
+.goog-inline-block
+{
+	position: relative;
+}
+.ep-es-cancel-button
+{
+	float: right;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+.goog-imageless-button-content
+{
+	width: 160px;
+	height: 30px;
+	background:#ffae00;
+	background: -moz-linear-gradient(center top , #ffae00, #d67600) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border: 2px outset #dad9d8;
+	border-radius: 15px;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+	color: #fff;
+	font-family: Arial,sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 0.04em;
+	padding: 4px 10px;
+	text-shadow: 0 1px 10px #000;
+	cursor:pointer;
+}
+.goog-imageless-button-content:hover, .goog-imageless-button-content:focus
+{
+	border: 2px solid #dad9d8;
+}
+.cal-edit
+{
+	 display:inline-block;
+	 font-weight:bold;	
+}

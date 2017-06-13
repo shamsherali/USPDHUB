@@ -1,0 +1,46 @@
+﻿<html>
+	<head>
+		<link href="http://www.uspdhub.com/css/wowzzy_general.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<table width="100%" border="0" align="center" style="padding:10px;">
+			<tr>
+				<td>
+					<img src="http://www.uspdhub.com/images/Dashboard/logo.png" />
+				</td>
+			</tr>			
+			<tr>
+				<td>
+					<br/>
+					<br/>
+					<table width="470px" border="0">
+						<tr>
+							<td nowrap>
+								<HR size="1" style="color: #fff; background-color: #fff; border: 1px dotted #025586; border-style: none none dotted;">
+								<br/>
+								<strong style="color:#B3B3B3;">This is an Automated Email from USPDhub.com. Please do not reply to it.</strong>
+								<br>
+								<HR size="1" style="color: #fff; background-color: #fff; border: 1px dotted #025586; border-style: none none dotted;">								
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					#msgBody#
+					<br/>
+					<br/>
+				</td>
+			</tr>
+			<tr style="color:#B3B3B3;">
+				<td>
+					<strong style="color: #0071B3">Disclaimer Notice:</strong>
+					<br/><br/>
+					This email and its attachments may be confidential and are intended solely for the use of the individual to whom it is addressed. Any views or opinions expressed are solely those of the author and do not necessarily represent those of USPDhub.com.<br><br>If you are not the intended recipient of this email and its attachments, you must take no action based upon them, nor must you copy or show them to anyone.<br><br>Please contact <u style="color: #0071B3">info@USPDhub.com</u>  if you believe you have received this email in error and you would like to be taken off our email list.
+				</td>
+			</tr>
+			<br/><br/>
+		</table>
+	</body>
+</html>

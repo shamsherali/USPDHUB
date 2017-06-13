@@ -1,0 +1,2427 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Winnovative.WnvHtmlConvert</name>
+    </assembly>
+    <members>
+        <member name="T:Winnovative.WnvHtmlConvert.PdfSecurityOptions">
+            <summary>
+            This class encapsulates the options to control the PDF document
+            security options. The PDFConverter class define 
+            a reference to an object of this type
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfSecurityOptions.CanAssembleDocument">
+            <summary>
+            Can assembling of the document (create bookmarks, thumbnail images or insert, rotate, delete
+            pages).
+            </summary>
+            <remarks>This property has effect if 128 bit key set.</remarks>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfSecurityOptions.CanCopyContent">
+            <summary>
+            Can to copy document content.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfSecurityOptions.CanEditAnnotations">
+            <summary>
+            Can to edit PDF document annotations.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfSecurityOptions.CanEditContent">
+            <summary>
+            Can to edit PDF document content.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfSecurityOptions.CanFillFormFields">
+            <summary>
+            Can the fill form fields.
+            /// </summary>
+            <remarks>This property works only if 128 bit key set.</remarks>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfSecurityOptions.CanPrint">
+            <summary>
+            Can print the document
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfSecurityOptions.KeySize">
+            <summary>
+            The dimension of the encryption key.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfSecurityOptions.OwnerPassword">
+            <summary>
+            The password required to change permissions of the PDF document.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfSecurityOptions.UserPassword">
+            <summary>
+            The password required to open the PDF document.
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.PdfFooterOptions">
+            <summary>
+            This class encapsulates the options to control the appearance of the 
+            footer in the rendered PDF document. The PDFConverter class contains a 
+            reference to an object of this type. If the ShowFooter property from PDFDocumentOptions 
+            object is false, the footer options have no efect
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.HtmlToPdfArea">
+            <summary>
+            Set this property with a HtmlToPdfElement object to render HTML code or URL in footer.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.TextArea">
+            <summary>
+            Set this property with a TextArea object to render a text in header.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.ImageArea">
+            <summary>
+            Set this property with an ImageArea object to render an image in header.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.FooterBackColor">
+            <summary>
+            The background color of the footer
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.FooterImage">
+            <summary>
+            The image to be displayed in the footer. The image will be displayed at full size
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.FooterImageLocation">
+            <summary>
+            The location in points inside the footer where to display the image. By default it is displayed in 
+            the top left corner of the header.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.FooterHeight">
+            <summary>
+            The height in points of PDF footer
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.FooterText">
+            <summary>
+            The text to appear in the rendered PDF document footer
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.FooterTextYLocation">
+            <summary>
+            The Y location in points of the footer text
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.FooterTextWidth">
+            <summary>
+            The footer text width in points. Default is -1 which means page width
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.FooterTextColor">
+            <summary>
+            The color of the text displayed in the footer
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.FooterTextFontType">
+            <summary>
+            The font type of the text displayed in the footer
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.FooterTextFontSize">
+            <summary>
+            The font size in points of the text displayed in the header
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.ShowPageNumber">
+            <summary>
+            When true, the page numbers. The default value is true. 
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.DrawFooterLine">
+            <summary>
+            When true, a line is displayed above the footer area. The default value is true.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.PageNumberText">
+            <summary>
+            The text to be displayed before the page number. The default value is 'Page'
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.PageNumberTextFontType">
+            <summary>
+            The font type of the text displayed in the footer page number text
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.PageNumberTextFontSize">
+            <summary>
+            The font size in points of the text displayed in the footer page number text
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.PageNumberTextColor">
+            <summary>
+            The color of the text displayed in the footer page number text
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.PageNumberYLocation">
+            <summary>
+            The Y location in points of the page numbering
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.ShowOnOddPages">
+            <summary>
+            Show or not the header on odd pages. By default the header is displayed both on odd and even pages.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.ShowOnEvenPages">
+            <summary>
+            Show or not the header on even pages. By default the header is displayed both on odd and even pages.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfFooterOptions.ShowOnFirstPage">
+            <summary>
+            Show or not the header on first page. If true, the header will be printed on first page if 
+            showing the header on odd pages is also true.
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.ImgConverter">
+            <summary>
+            This class offers the necessary API to create images in various formats from
+            a specified web page
+            </summary>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.#ctor">
+            <summary>
+            Creates an image converter to autodetect the width and height
+            of the web page
+            </summary>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.#ctor(System.Int32)">
+            <summary>
+            Creates an image converter for a web page with the specified width and 
+            an autodected height
+            </summary>
+            <param name="pageWidth">The web page width </param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Creates an image converter for a web page with the specified width and height
+            </summary>
+            <param name="pageWidth">The web page width</param>
+            <param name="pageHeight">The web page height</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageFromUrl(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified URL in the 
+            the specified System.Drawing.Imaging.ImageFormat format
+            </summary>
+            <param name="url">The web page URL</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageFromHtmlString(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format
+            </summary>
+            <param name="htmlString">The HTML string to convert</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageFromHtmlString(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter. 
+            </summary>
+            <param name="htmlString">The HTML string to convert</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageFromHtmlFile(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML file in the 
+            the specified System.Drawing.Imaging.ImageFormat format
+            </summary>
+            <param name="htmlFilePath">The HTMl file full path</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageFromHtmlStream(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageFromHtmlStream(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlStream parameter. 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageFromHtmlStringWithTempFile(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format by writing first the HTML
+            string in a temporary file
+            </summary>
+            <param name="htmlString">The HTML string to be converted to PDF</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageFromHtmlStringWithTempFile(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format by writing first the HTML
+            string in a temporary file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter. 
+            </summary>
+            <param name="htmlString">The HTML string to be converted to PDF</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageFromHtmlStreamWithTempFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format by writing first the
+            stream in a temporary file
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageFromHtmlStreamWithTempFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format by writing first the
+            stream in a temporary file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter. 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageFromUrlBytes(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets binary format of an image generated from the specified URL in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The bytes can be further written in
+            any stream like a disk file or a web response.
+            </summary>
+            <param name="url">The web page URL</param>
+            <param name="format">The image format</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageBytesFromHtmlFile(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML file in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The bytes can be further written in
+            any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlFilePath">The full path of the HTML file to be converted to image</param>
+            <param name="format">The image format</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageBytesFromHtmlString(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The bytes can be further written in
+            any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The image format</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageBytesFromHtmlString(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The bytes can be further written in
+            any stream like a disk file or a web response. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter. 
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageBytesFromHtmlStringWithTempFile(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The htmlString is first saved into  
+            a temporary file before performing the conversion
+            The bytes can be further written in
+            any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The image format</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageBytesFromHtmlStringWithTempFile(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The htmlString is first saved into  
+            a temporary file before performing the conversion. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter. 
+            The bytes can be further written in any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageBytesFromHtmlStream(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The bytes can be further written in
+            any stream like a disk file or a web response. 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageBytesFromHtmlStream(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter. 
+            The bytes can be further written in any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageBytesFromHtmlStreamWithTempFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The htmlStream is first saved in a temporary file.
+            The bytes can be further written in any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetImageBytesFromHtmlStreamWithTempFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The htmlStream is first saved in a temporary file.
+            The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlStream parameter. 
+            The bytes can be further written in any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromUrlToFile(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            This method produces a image from the specified URL in the specified format
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="url">The web page URL</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlFileToFile(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            This method produces a image from the specified HTML file in the specified format
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlFilePath">The HTML file full path to be converted to image</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlStringToFile(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            This method produces a image from the specified HTML string in the specified format
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlStringToFile(System.String,System.Drawing.Imaging.ImageFormat,System.String,System.String)">
+            <summary>
+            This method produces a image from the specified HTML string in the specified format
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlStreamToFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            This method produces a image from the specified HTML stream in the specified format
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlStreamToFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String,System.String)">
+            <summary>
+            This method produces a image from the specified HTML stream in the specified format
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlStringToFileWithTempFile(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            This method produces a image from the specified HTML string in the specified format
+            and saves the image in the specified disk file by writing first the HTML string into a temporary file. 
+            The existing file will be overwritten.
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlStringToFileWithTempFile(System.String,System.Drawing.Imaging.ImageFormat,System.String,System.String)">
+            <summary>
+            This method produces a image from the specified HTML string in the specified format
+            and saves the image in the specified disk file by writing first the HTML string into a temporary file. 
+            The existing file will be overwritten.
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlStreamToFileWithTempFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            This method produces a image from the specified HTML stream in the specified format
+            and saves the image in the specified disk file by writing first the HTML stream into a temporary file. 
+            The existing file will be overwritten.
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveImageFromHtmlStreamToFileWithTempFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String,System.String)">
+            <summary>
+            This method produces a image from the specified HTML stream in the specified format
+            and saves the image in the specified disk file by writing first the HTML stream into a temporary file. 
+            The existing file will be overwritten.
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetMetafileFromUrl(System.String,Winnovative.Common.HTMLParseInfo@)">
+            <summary>
+            Gets an System.Drawing.Metafile object from the specified URL 
+            </summary>
+            <param name="url">The web page URL</param>
+            <param name="htmlParseInfo">Additional HTML parsing info</param>
+            <returns>The Metafile object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetMetafileFromHtmlStringWithTempFile(System.String,Winnovative.Common.HTMLParseInfo@)">
+            <summary>
+            Gets an System.Drawing.Metafile object from the specified HTML string 
+            </summary>
+            <param name="htmlString">The HTML string to convert</param>
+            <param name="htmlParseInfo">The HTML parse info</param>
+            <returns>The resulted metafile</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.GetMetafileFromHtmlStringWithTempFile(System.String,System.String,Winnovative.Common.HTMLParseInfo@)">
+            <summary>
+            Gets an System.Drawing.Metafile object from the specified HTML string 
+            </summary>
+            <param name="htmlString">The HTML string to convert</param>
+            <param name="baseURL">The HTML string base URL</param>
+            <param name="htmlParseInfo">The HTML parse info</param>
+            <returns>The resulted metafile object</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveMetafileFromUrlToFile(System.String,System.String)">
+            <summary>
+            This method produces a metafile from the specified URL 
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="url">The web page URL</param>
+            <param name="outFile">The file where to write the output metafile</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveMetafileFromHtmlFileToFile(System.String,System.String)">
+            <summary>
+            This method produces a metafile from the specified HTML file 
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlFilePath">The full path of the HTML file</param>
+            <param name="outFile">The file where to write the output metafile</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveMetafileFromHtmlStringToFile(System.String,System.String)">
+            <summary>
+            This method produces a metafile from the specified HTML string 
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="outFile">The file where to write the output metafile</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImgConverter.SaveMetafileFromHtmlStreamToFile(System.IO.Stream,System.Text.Encoding,System.String)">
+            <summary>
+            This method produces a metafile from the specified HTML stream 
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="outFile">The file where to write the output metafile</param>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImgConverter.PageWidth">
+            <summary>
+            Gets or sets the web page width
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImgConverter.LicenseKey">
+            <summary>
+            Gets or sets the license key
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImgConverter.PageHeight">
+            <summary>
+            Gets or sets the web page height. If the width was not set aswell, 
+            this property has no effect
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImgConverter.BatchConversion">
+            <summary>
+            Set this true when using the converter for batch conversion
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImgConverter.ScriptsEnabled">
+            <summary>
+            Enable scripts when rendering HTML to image. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImgConverter.ActiveXEnabled">
+            <summary>
+            Enable ActiveX controls when rendering HTML to image. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImgConverter.AuthenticationUsername">
+            <summary>
+            Optionally set the Username property to authenticate to web server
+            before accessing the URL to be converted (e.g handles any IIS authentication method)
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImgConverter.AuthenticationPassword">
+            <summary>
+            Optionally set the Password property to authenticate to web server
+            before accessing the URL to be converted (e.g handles any IIS authentication method)
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.VerticalTextAlign">
+            <summary>
+            Specifies vertical alignment of text.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.VerticalTextAlign.Top">
+            <summary>
+            Top aligned.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.VerticalTextAlign.Middle">
+            <summary>
+            Center aligned.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.VerticalTextAlign.Bottom">
+            <summary>
+            Bottom alligned.
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.UnitsConverter">
+            <summary>
+            Converts between various graphic units (pixels, points, etc)
+            </summary>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.UnitsConverter.PointsToPixels(System.Single)">
+            <summary>
+            Converts from points to pixels. The result of this method takes into account the 
+            current screen resolution.
+            </summary>
+            <param name="points">The value in points to convert.</param>
+            <returns>The value in pixels.</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.UnitsConverter.PixelsToPoints(System.Single)">
+            <summary>
+            Converts from pixels to points. The result of this method takes into account the 
+            current screen resolution.
+            </summary>
+            <param name="pixels">The value in pixels to convert.</param>
+            <returns>The value in points.</returns>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.PdfDocumentInfo">
+            <summary>
+            This class encapsulates the options to control the PDF document
+            description (author, title, keywords, etc). The PDFConverter class define 
+            a reference to an object of this type
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentInfo.AuthorName">
+            <summary>
+            Gets or sets name of the document author.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentInfo.CreatedDate">
+            <summary>
+            Gets or sets the date and time when the document was created.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentInfo.Keywords">
+            <summary>
+            Gets or sets document keywords.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentInfo.Application">
+            <summary>
+            Gets or sets the name of the application that produced this document
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentInfo.Subject">
+            <summary>
+            Gets or sets the subject of the document.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentInfo.Title">
+            <summary>
+            Gets or sets document title.
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.PdfFontType">
+            <summary>
+            The list of supported fonts for the header and footer
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.Helvetica">
+            <summary>
+            Helvetica
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.HelveticaBold">
+            <summary>
+            HelveticaBold
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.HelveticaOblique">
+            <summary>
+            HelveticaOblique
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.HelvetivaBoldOblique">
+            <summary>
+            HelvetivaBoldOblique
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.Courier">
+            <summary>
+            Courier
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.CourierBold">
+            <summary>
+            CourierBold
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.CourierOblique">
+            <summary>
+            CourierOblique
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.CourierBoldOblique">
+            <summary>
+            CourierBoldOblique
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.TimesRoman">
+            <summary>
+            TimesRoman
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.TimesBold">
+            <summary>
+            TimesBold
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.TimesBoldItalic">
+            <summary>
+            TimesBoldItalic
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.TimesItalic">
+            <summary>
+            TimesItalic
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.Symbol">
+            <summary>
+            Symbol
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfFontType.ZapfDingbats">
+            <summary>
+            ZapfDingbats
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.PdfPageSize">
+            <summary>
+            The PDF document size
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.Custom">
+            <summary>
+            When the PDF page size is set to custom, the dimensions from CustomPdfSize will be applied
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.Letter">
+            <summary>
+            Letter format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.Note">
+            <summary>
+            Note format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.Legal">
+            <summary>
+            Legal format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.A0">
+            <summary>
+            A0 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.A1">
+            <summary>
+            A1 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.A2">
+            <summary>
+            A2 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.A3">
+            <summary>
+            A3 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.A4">
+            <summary>
+            A4 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.A5">
+            <summary>
+            A5 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.A6">
+            <summary>
+            A6 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.A7">
+            <summary>
+            A7 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.A8">
+            <summary>
+            A8 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.A9">
+            <summary>
+            A9 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.A10">
+            <summary>
+            A0 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.B0">
+            <summary>
+            B0 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.B1">
+            <summary>
+            B1 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.B2">
+            <summary>
+            B2 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.B3">
+            <summary>
+            B3 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.B4">
+            <summary>
+            B4 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.B5">
+            <summary>
+            B5 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.ArchE">
+            <summary>
+            ArchE format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.ArchD">
+            <summary>
+            ArchD format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.ArchC">
+            <summary>
+            ArchC format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.ArchB">
+            <summary>
+            ArchB format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.ArchA">
+            <summary>
+            ArchA format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.Flsa">
+            <summary>
+            Flsa format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.HalfLetter">
+            <summary>
+            HalfLetter format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.Letter11x17">
+            <summary>
+            11x17 format
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfPageSize.Ledger">
+            <summary>
+            Ledger format
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.PdfCompressionLevel">
+            <summary>
+            The rendered PDF compression level
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfCompressionLevel.AboveNormal">
+            <summary>
+            Better compression but takes more time to compress
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfCompressionLevel.BelowNormal">
+            <summary>
+            Something middle between normal and BestSpeed compressions
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfCompressionLevel.Best">
+            <summary>
+            Use the best compression but takes more time to compress
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfCompressionLevel.BestSpeed">
+            <summary>
+            The compression speed is high but the compression percentage is low
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfCompressionLevel.NoCompression">
+            <summary>
+            Does not do any compression
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PdfCompressionLevel.Normal">
+            <summary>
+            Use normal compression, a balance between compression speed and resulted size
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.BeforeCreateNextPageHandler">
+            <summary>
+            BeforeCreateNextPage event handler
+            </summary>
+            <param name="bcnpEventArgs">The BeforeCreateNextPage event handler</param>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.BeforeCreateNextPageEventArgs">
+            <summary>
+            BeforeCreateNextPage event arguments
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.BeforeCreateNextPageEventArgs.Cancel">
+            <summary>
+            Set this property true to cancel automatic creation of next page. 
+            This will also end the rendering of the next page.
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.PDFPageOrientation">
+            <summary>
+            PDF page orientation
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PDFPageOrientation.Portrait">
+            <summary>
+            Portrait
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.PDFPageOrientation.Landscape">
+            <summary>
+            Landscape
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.PdfDocumentOptions">
+            <summary>
+            This class encapsulates the options to control the PDF document
+            redering process. The PDFConverter class define 
+            a reference to an object of this type
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.LeftMargin">
+            <summary>
+            The rendered PDF document left margin
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.RightMargin">
+            <summary>
+            The rendered PDF document right margin
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.TopMargin">
+            <summary>
+            The rendered PDF document top margin
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.BottomMargin">
+            <summary>
+            The rendered PDF document bottom margin
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.PdfCompressionLevel">
+            <summary>
+            This property controls the compression level of the rendered PDF document
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.PdfPageSize">
+            <summary>
+            This property controls the size of the rendered PDF document
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.CustomPdfPageSize">
+            <summary>
+            This property gives the PDF page size when the PdfPageSize property is set Custom
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.FitWidth">
+            <summary>
+            When this property is true the HTML content will be resized if necessary to fit the available width in PDF page.
+            When false the HTML content will be rendered at the real size. By default this property is true and 
+            the content will be resized if necessary to fit the available width in PDF page
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.PdfPageOrientation">
+            <summary>
+            This property controls the page orientation of the rendered PDF document
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.GenerateSelectablePdf">
+            <summary>
+            When true, this property  will instruct the PDF renderer to embed a metafile instead of an image 
+            in the rendered PDF document
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.ShowHeader">
+            <summary>
+            This property controls the whether the header appears or not in the rendered PDF document. 
+            The header properties can be further customized by setting the properties of the PDFHeaderOptions 
+            object exposed by the PDFHeaderOptions property of the PDFConverter class.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.EmbedFonts">
+            <summary>
+            When true this options instructs the converter to embed all the true type fonts into the PDF document. 
+            The default value is false.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.LiveUrlsEnabled">
+            <summary>
+            When true this options instructs the converter to convert the html links in PDF links. 
+            The default value is true.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.ShowFooter">
+            <summary>
+            This property controls the whether the footer appears or not in the rendered PDF document. 
+            The footer properties can be further customized by setting the properties of the PDFFooterOptions 
+            object exposed by the PDFFooterOptions property of the PDFConverter class.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.AppendPDFFile">
+            <summary>
+            The full path of an existing PDF document to be appended to the PDF
+            document resulted after conversion
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.AppendPDFFileArray">
+            <summary>
+            An array of full paths of existing PDF documents to be appended to the PDF
+            document resulted after conversion
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.AppendPDFStream">
+            <summary>
+            The PDF stream to be appended to the PDF
+            document resulted after conversion
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfDocumentOptions.AppendPDFStreamArray">
+            <summary>
+            An array of PDF streams to be appended to the PDF
+            document resulted after conversion
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.HtmlToPdfArea">
+            <summary>
+            A HTML string or URL to be added to the header or footer of the rendered PDF document. The PdfConverter.PdfHeaderOptions.HtmlToPdfArea
+            property should be set with an object of this type.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.HtmlToPdfArea.DEFAULT_HTML_VIEWER_WIDTH_PX">
+            <summary>
+            The default virtual browser width in pixels
+            </summary>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.HtmlToPdfArea.#ctor(System.String,System.String)">
+            <summary>
+            Create a HTML string to PDF converter element at the specified x and y coordinates with the specified
+            width. The HTML string to convert is given by the htmlStringToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="htmlStringToConvert">The HTML string convert to PDF.</param>
+            <param name="htmlStringBaseURL">The full URL of the page from where this string was taken used to resolve the images and CSS
+            files referenced by a relative URL in the HTML string. This parameter is optional and the default value is NULL.
+            When this parameter is NULL no base URL will be used. This paramter has effect only if the specified HTML string contains
+            a HEAD element because a <BASE HREF="baseURL"></BASE> will be inserted  automatically by the converter.</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.HtmlToPdfArea.#ctor(System.String)">
+            <summary>
+            Create a URL to PDF converter element at the specified x and y coordinates with the specified
+            width and height. The URL to converter is given by the urlToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="urlToConvert">The URL to convert to PDF</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.HtmlToPdfArea.#ctor(System.Single,System.Single,System.String,System.String)">
+            <summary>
+            Create a HTML string to PDF converter element at the specified x and y coordinates with the specified
+            width. The HTML string to convert is given by the htmlStringToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed
+            the destination width will be given by the available width in page</param>
+            <param name="htmlStringToConvert">The HTML string convert to PDF.</param>
+            <param name="htmlStringBaseURL">The full URL of the page from where this string was taken used to resolve the images and CSS
+            files referenced by a relative URL in the HTML string. This parameter is optional and the default value is NULL.
+            When this parameter is NULL no base URL will be used. This paramter has effect only if the specified HTML string contains
+            a HEAD element because a <BASE HREF="baseURL"></BASE> will be inserted  automatically by the converter.</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.HtmlToPdfArea.#ctor(System.Single,System.Single,System.String)">
+            <summary>
+            Create a URL to PDF converter element at the specified x and y coordinates with the specified
+            width and height. The URL to converter is given by the urlToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed
+            the destination width will be given by the available width in page</param>
+            <param name="urlToConvert">The URL to convert to PDF</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.String,System.String)">
+            <summary>
+            Create a HTML string to PDF converter element at the specified x and y coordinates with the specified
+            width. The HTML string to convert is given by the htmlStringToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="htmlStringToConvert">The HTML string convert to PDF.</param>
+            <param name="htmlStringBaseURL">The full URL of the page from where this string was taken used to resolve the images and CSS
+            files referenced by a relative URL in the HTML string. This parameter is optional and the default value is NULL.
+            When this parameter is NULL no base URL will be used. This paramter has effect only if the specified HTML string contains
+            a HEAD element because a <BASE HREF="baseURL"></BASE> will be inserted  automatically by the converter.</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            Create a URL to PDF converter element at the specified x and y coordinates with the specified
+            width and height. The URL to converter is given by the urlToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="urlToConvert">The URL to convert to PDF</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.String,System.String,System.Int32)">
+            <summary>
+            Create a HTML string to PDF converter element at the specified x and y coordinates with the specified
+            width. The HTML string to convert is given by the htmlStringToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="htmlStringToConvert">The HTML string convert to PDF.</param>
+            <param name="htmlStringBaseURL">The full URL of the page from where this string was taken used to resolve the images and CSS
+            files referenced by a relative URL in the HTML string. This parameter is optional and the default value is NULL.
+            When this parameter is NULL no base URL will be used. This paramter has effect only if the specified HTML string contains
+            a HEAD element because a <BASE HREF="baseURL"></BASE> will be inserted  automatically by the converter.</param>
+            <param name="htmlViewerWidth">The virtual browser width in pixels. The default value is 1024 pixels. The effect of this parameter
+            is similar with viewing the HTML page in a browser window with the specified width. When this parameter is less or equal 0, the
+            converter will try to auto-determine the HTML page width from the body element width.</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.String,System.Int32)">
+            <summary>
+            Create a URL to PDF converter element at the specified x and y coordinates with the specified
+            width and height. The URL to converter is given by the urlToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="urlToConvert">The URL to convert to PDF</param>
+            <param name="htmlViewerWidth">The virtual browser width in pixels. The default value is 1024 pixels. The effect of this parameter
+            is similar with viewing the HTML page in a browser window with the specified width. When this parameter is less or equal 0, the
+            converter will try to auto-determine the HTML page width from the body element width.</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Create a HTML string to PDF converter element at the specified x and y coordinates with the specified
+            width. The HTML string to convert is given by the htmlStringToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="htmlStringToConvert">The HTML string convert to PDF.</param>
+            <param name="htmlStringBaseURL">The full URL of the page from where this string was taken used to resolve the images and CSS
+            files referenced by a relative URL in the HTML string. This parameter is optional and the default value is NULL.
+            When this parameter is NULL no base URL will be used. This paramter has effect only if the specified HTML string contains
+            a HEAD element because a <BASE HREF="baseURL"></BASE> will be inserted  automatically by the converter.</param>
+            <param name="htmlViewerWidth">The virtual browser width in pixels. The default value is 1024 pixels. The effect of this parameter
+            is similar with viewing the HTML page in a browser window with the specified width. When this parameter is less or equal 0, the
+            converter will try to auto-determine the HTML page width from the body element width.</param>
+            <param name="htmlViewerHeight">The virtual browser height in pixels. The default value is 0 which means the height will
+            be auto-determined. The effect of this parameter is similar with viewing the HTML page in a browser window `
+            with the specified width and height. When this paramter is less or equal 0, the converter will try to auto-determine the 
+            HTML page height from the body element height.</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.Single,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Create a HTML string to PDF converter element at the specified x and y coordinates with the specified
+            width. The HTML string to convert is given by the htmlStringToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="height">The destination height in points  for the rendered content. If the specified height is less or equal 0,
+            the destination height will be auto determined so all the content can be rendered. Please note that the specified height is 
+            the effective height that will be rendered in the PDF document and does not include for example 
+            the empty spaces introduced by custom or auomatic page breaks.</param>
+            <param name="htmlStringToConvert">The HTML string convert to PDF.</param>
+            <param name="htmlStringBaseURL">The full URL of the page from where this string was taken used to resolve the images and CSS
+            files referenced by a relative URL in the HTML string. This parameter is optional and the default value is NULL.
+            When this parameter is NULL no base URL will be used. This paramter has effect only if the specified HTML string contains
+            a HEAD element because a <BASE HREF="baseURL"></BASE> will be inserted  automatically by the converter.</param>
+            <param name="htmlViewerWidth">The virtual browser width in pixels. The default value is 1024 pixels. The effect of this parameter
+            is similar with viewing the HTML page in a browser window with the specified width. When this parameter is less or equal 0, the
+            converter will try to auto-determine the HTML page width from the body element width.</param>
+            <param name="htmlViewerHeight">The virtual browser height in pixels. The default value is 0 which means the height will
+            be auto-determined. The effect of this parameter is similar with viewing the HTML page in a browser window `
+            with the specified width and height. When this paramter is less or equal 0, the converter will try to auto-determine the 
+            HTML page height from the body element height.</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.String,System.Int32,System.Int32)">
+            <summary>
+            Create a URL to PDF converter element at the specified x and y coordinates with the specified
+            width and height. The URL to converter is given by the urlToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page.</param>
+            <param name="urlToConvert">The URL to convert to PDF</param>
+            <param name="htmlViewerWidth">The virtual browser width in pixels. The default value is 1024 pixels. The effect of this parameter
+            is similar with viewing the HTML page in a browser window with the specified width. When this parameter is less or equal 0, the
+            converter will try to auto-determine the HTML page width from the body element width.</param>
+            <param name="htmlViewerHeight">The virtual browser height in pixels. The default value is 0 which means the height will
+            be auto-determined. The effect of this parameter is similar with viewing the HTML page in a browser window `
+            with the specified width and height. When this paramter is less or equal 0, the converter will try to auto-determine the 
+            HTML page height from the body element height.</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.Single,System.String,System.Int32,System.Int32)">
+            <summary>
+            Create a URL to PDF converter element at the specified x and y coordinates with the specified
+            width and height. The URL to converter is given by the urlToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="height">The destination height in points  for the rendered content. If the specified height is less or equal 0,
+            the destination height will be auto determined so all the content can be rendered. Please note that the specified height is 
+            the effective height that will be rendered in the PDF document and does not include for example 
+            the empty spaces introduced by custom or auomatic page breaks.</param>
+            <param name="urlToConvert">The URL to convert to PDF</param>
+            <param name="htmlViewerWidth">The virtual browser width in pixels. The default value is 1024 pixels. The effect of this parameter
+            is similar with viewing the HTML page in a browser window with the specified width. When this parameter is less or equal 0, the
+            converter will try to auto-determine the HTML page width from the body element width.</param>
+            <param name="htmlViewerHeight">The virtual browser height in pixels. The default value is 0 which means the height will
+            be auto-determined. The effect of this parameter is similar with viewing the HTML page in a browser window `
+            with the specified width and height. When this paramter is less or equal 0, the converter will try to auto-determine the 
+            HTML page height from the body element height.</param>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.LicenseKey">
+            <summary>
+            Gets or sets the license key
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.HtmlViewerWidth">
+            <summary>
+            Gets or sets the HTML viewer width in pixels
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.HtmlViewerHeight">
+            <summary>
+            Gets or sets the HTML viewer height in pixels. If the viewer width was not set, 
+            this property has no effect
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.AvoidTextBreak">
+            <summary>
+            When true this property instructs the converter to try to
+            avoid cutting off the text between PDF pages
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.AvoidImageBreak">
+            <summary>
+            When true this property instructs the converter to try to
+            avoid cutting off the images between PDF pages
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.FitWidth">
+            <summary>
+            When this property is true the HTML content will be resized if necessary to fit the available width in PDF page.
+            When false the HTML content will be rendered at the real size. By default this property is true and 
+            the content will be resized if necessary to fit the available width in PDF page
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.AdjustBorderSize">
+            <summary>
+            There are situations when a fraction of the right and bottom borders of an image or 
+            table cell are overwritten by the image content or table cell background when the PDF document is viewed with Adobe Reader. 
+            The AdjustBorderSize value is subtracted from the background width and height. 
+            The default value is 0 points. 
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.BkgTransparency">
+            <summary>
+            Modify background transparency. 0 means transparent, 100 means opaque.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.ImgTransparency">
+            <summary>
+            Modify images transparency. 0 means transparent, 100 means opaque.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.RightToLeftEnabled">
+            <summary>
+            Set this true if the web page text is in a right-to-left language like Hebrew or Arabic
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.BatchConversion">
+            <summary>
+            Set this true when using the converter for batch conversion in a loop
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.ScriptsEnabled">
+            <summary>
+            Enable scripts when rendering HTML to selectable PDF. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.ScriptsEnabledInImage">
+            <summary>
+            Enable scripts when rendering HTML to image. 
+            Default is true.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.ActiveXEnabled">
+            <summary>
+            Enable ActiveX when rendering HTML to selectable PDF. 
+            Default is true.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.ActiveXEnabledInImage">
+            <summary>
+            Enable ActiveX when rendering HTML to image. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.EmbedFonts">
+            <summary>
+            When true this options instructs the converter to embed all the true type fonts into the PDF document. 
+            The default value is false.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.HtmlToPdfArea.AuthenticationOptions">
+            <summary>
+            Server authentication options (e.g IIS authentication)
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.BeforeRenderNextPageHandler">
+            <summary>
+            BeforeRenderNextPage event handler
+            </summary>
+            <param name="brnpEventArgs">The BeforeRenderNextPage event handler</param>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.BeforeRenderNextPageEventArgs">
+            <summary>
+            BeforeRenderNextPage event arguments
+            </summary>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.BeforeRenderNextPageEventArgs.#ctor(System.Int32,System.Drawing.RectangleF)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="pageIndex">The next page index</param>
+            <param name="rectangle">The rectangle rendered on the next page</param>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.BeforeRenderNextPageEventArgs.Cancel">
+            <summary>
+            Set this property true to cancel rendering on next page
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.BeforeRenderNextPageEventArgs.Rectangle">
+            <summary>
+            The rectangle that will be rendered on the next page
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.BeforeRenderNextPageEventArgs.PageIndex">
+            <summary>
+            The index of the next page
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.PdfHeaderOptions">
+            <summary>
+            This class encapsulates the options to control the appearance of the 
+            header in the rendered PDF document. The PDFConverter class contains a 
+            reference to an object of this type. If the ShowHeader property of the PDFDocumentOptions 
+            object is false, the header options have no efect
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HtmlToPdfArea">
+            <summary>
+            Set this property with a HtmlToPdfArea object to render HTML code or URL in header.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.TextArea">
+            <summary>
+            Set this property with a TextArea object to render a text in header.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.ImageArea">
+            <summary>
+            Set this property with an ImageArea object to render an image in header.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderBackColor">
+            <summary>
+            The background color of the header
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderImage">
+            <summary>
+            The image to be displayed in the header. The image will be displayed at full size
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderImageLocation">
+            <summary>
+            The location in points inside the header where to display the image. By default it is displayed in 
+            the top left corner of the header.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderHeight">
+            <summary>
+            The height in points of PDF header
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderText">
+            <summary>
+            The text to appear in the rendered PDF document title. 
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderTextYLocation">
+            <summary>
+            The Y location of the header text in points
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderTextAlign">
+            <summary>
+            The header text alignment
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderTextColor">
+            <summary>
+            The color of the text displayed in the header
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderTextFontType">
+            <summary>
+            The font type of the text displayed in the header
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderTextFontSize">
+            <summary>
+            The font size in points of the text displayed in the header
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderSubtitleText">
+            <summary>
+            A PDF document header subtitle.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderSubtitleTextColor">
+            <summary>
+            The color of the text displayed in the header subtitle
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderSubtitleTextFontType">
+            <summary>
+            The font type of the text displayed in the header subtitle
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderSubtitleTextFontSize">
+            <summary>
+            The font size in points of the text displayed in the header subtitle
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.HeaderTitleSubtitleYSpacing">
+            <summary>
+            The Y distance in points between the title and the subtitle
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.DrawHeaderLine">
+            <summary>
+            When true, a line is displayed under the header area. The default value is true.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.ShowOnOddPages">
+            <summary>
+            Show or not the header on odd pages. By default the header is displayed both on odd and even pages.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.ShowOnEvenPages">
+            <summary>
+            Show or not the header on even pages. By default the header is displayed both on odd and even pages.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfHeaderOptions.ShowOnFirstPage">
+            <summary>
+            Show or not the header on first page. If true, the header will be printed on first page if 
+            showing the header on odd pages is also true.
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.ImageArea">
+            <summary>
+            A image to be added to the header or footer of the rendered PDF document. The PdfConverter.PdfHeaderOptions.ImageArea
+            property should be set with an object of this type.
+            </summary>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImageArea.#ctor(System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            Creates an ImageElement from the specified file that will be rendered at the position (x,y)
+            with the destWidth width and an auto detected height.
+            </summary>
+            <param name="x">The X location where this element will be rendered</param>
+            <param name="y">The Y location where this element will be rendered</param>
+            <param name="destWidth">The destination rectangle width</param>
+            <param name="filePath">The image file path</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImageArea.#ctor(System.Single,System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            Creates an ImageElement from the specified file that will be rendered at the position (x,y)
+            with the (destWidth,destHeight) size.
+            </summary>
+            <param name="x">The X location where this element will be rendered</param>
+            <param name="y">The Y location where this element will be rendered</param>
+            <param name="destWidth">The destination rectangle width</param>
+            <param name="destHeight">The destination rectangle height</param>
+            <param name="filePath">The image file path</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImageArea.#ctor(System.Single,System.Single,System.Single,System.Drawing.Image)">
+            <summary>
+            Creates an ImageElement from the specified System.Drawing.Image object that will be rendered at the position (x,y)
+            with the destWidth width and an auto detected height.
+            </summary>
+            <param name="x">The X location where this element will be rendered</param>
+            <param name="y">The Y location where this element will be rendered</param>
+            <param name="destWidth">The destination rectangle width</param>
+            <param name="imageObj">The image file path</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ImageArea.#ctor(System.Single,System.Single,System.Single,System.Single,System.Drawing.Image)">
+            <summary>
+            Creates an ImageElement from the specified System.Drawing.Image object that will be rendered at the position (x,y)
+            with the (destWidth,destHeight) size.
+            </summary>
+            <param name="x">The X location where this element will be rendered</param>
+            <param name="y">The Y location where this element will be rendered</param>
+            <param name="destWidth">The destination rectangle width</param>
+            <param name="destHeight">The destination rectangle height</param>
+            <param name="imageObj">The image file path</param>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImageArea.XLocation">
+            <summary>
+            Gets or sets the image location on X
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImageArea.YLocation">
+            <summary>
+            Gets or sets the image location on Y
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImageArea.DestWidth">
+            <summary>
+            Gets or sets the image destination width
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImageArea.DestHeight">
+            <summary>
+            Gets or sets the image destination height
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImageArea.ImageObj">
+            <summary>
+            Gets the underlying image object
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImageArea.ImageWidth">
+            <summary>
+            Gets the underlying image width.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImageArea.ImageHeight">
+            <summary>
+            Gets the underlying image height.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.ImageArea.Transparency">
+            <summary>
+            Gets or sets element transparency. The transparency is expressed as a value between 0 and 100. 
+            0 means completely transparent and 100 completely opaque.
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.RenderImageFormat">
+            <summary>
+            The supporter image formats
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.RenderImageFormat.Bmp">
+            <summary>
+            Bmp
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.RenderImageFormat.Gif">
+            <summary>
+            Gif
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.RenderImageFormat.Jpeg">
+            <summary>
+            Jpeg
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.RenderImageFormat.Png">
+            <summary>
+            Png
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.RenderImageFormat.Tiff">
+            <summary>
+            Tiff
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.RenderImageFormatConverter">
+            <summary>
+            This class converts a RenderImageFormat to System.Drawing.ImageFormat
+            </summary>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.RenderImageFormatConverter.GetImageFormat(Winnovative.WnvHtmlConvert.RenderImageFormat)">
+            <summary>
+            Converts a RenderImageFormat to System.Drawing.ImageFormat
+            </summary>
+            <param name="format">The RenderImageFormat to convert</param>
+            <returns>The converted ImageFormat</returns>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.HorizontalTextAlign">
+            <summary>
+            Specifies horizontal alignment of text.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.HorizontalTextAlign.Default">
+            <summary>
+            Align default.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.HorizontalTextAlign.Left">
+            <summary>
+            Align left.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.HorizontalTextAlign.Center">
+            <summary>
+            Align center.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.HorizontalTextAlign.Right">
+            <summary>
+            Align right.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.HorizontalTextAlign.Justify">
+            <summary>
+            Align justify.
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.ConverterUtils">
+            <summary>
+            HTML converter utilities
+            </summary>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ConverterUtils.GetHtmlFromURL(System.String)">
+            <summary>
+            Get the HTML code from the specified URL. Use the autodetermined page encoding
+            to create the resulted string object. The default code page is UTF8 if the page
+            has no encoding specified
+            </summary>
+            <param name="url">The URL from where to get the HTML</param>
+            <returns>The page HTML string</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ConverterUtils.GetHtmlFromURL(System.String,System.Text.Encoding)">
+            <summary>
+            Get the HTML code from the specified URL. Use the specified page encoding
+            to create the resulted string object. 
+            </summary>
+            <param name="url">The URL from where to get the HTML</param>
+            <param name="pageEncoding">The encoding used to build the resulted string object</param>
+            <returns>The page HTML string</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ConverterUtils.GetHtmlFromURL(System.Net.HttpWebRequest,System.Text.Encoding)">
+            <summary>
+            
+            </summary>
+            <param name="request">The HttpWebRequest object to to make the HTTP request</param>
+            <param name="pageEncoding">The encoding used to build the resulted string object</param>
+            <returns>The page HTML string</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.ConverterUtils.RenderHtmlFromURL(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Retrieves the HTML code from a URL and executes the JavaScript code. 
+            The GetHtmlFromURL only retrieves the HTML code as returned by the server
+            </summary>
+            <param name="url"></param>
+            <param name="scriptsEnabled">Enable scripts when rendering the HTML string</param>
+            <param name="activeXEnabled">Enable Active X controls when rendering the HTML string</param>
+            <returns></returns>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.PdfConverter">
+            <summary>
+            This class offers the necessary API to create a PDF document from
+            a specified web page
+            </summary>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.#ctor">
+            <summary>
+            Creates a web page to PDF converter which will autodetect the width and height
+            of the web page
+            </summary>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.#ctor(System.Int32)">
+            <summary>
+            Creates a web page to PDF converter which will autodetect the height
+            of the web page.
+            </summary>
+            <param name="pageWidth">The web page width</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Creates a web page to PDF converter for a web page with the specified width and height
+            </summary>
+            <param name="pageWidth">The web page width</param>
+            <param name="pageHeight">The web page height</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.GetPdfFromUrlBytes(System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified web page URL
+            </summary>
+            <param name="url">The web page URL</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.GetPdfBytesFromHtmlFile(System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified web page URL
+            </summary>
+            <param name="htmlFilePath">The full path of the HTML file</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.GetPdfBytesFromHtmlString(System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified HTML string 
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.GetPdfBytesFromHtmlString(System.String,System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified HTML string. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the htmlString parameter
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.GetPdfBytesFromHtmlStream(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified stream containing the HTML code 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.GetPdfBytesFromHtmlStream(System.IO.Stream,System.Text.Encoding,System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified stream containing the HTML code. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the htmlStream parameter 
+            </summary>
+            <param name="htmlStream">The HTML stream containg a HTML string in the specified encoding</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.GetPdfBytesFromHtmlStringWithTempFile(System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified HTML string by writing first the HTML string in a temporary file
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.GetPdfBytesFromHtmlStringWithTempFile(System.String,System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified HTML string by writing first the HTML string in a temporary file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the htmlStream parameter 
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.GetPdfBytesFromHtmlStreamWithTempFile(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified stream containing the HTML code by writing first the HTML string 
+            in a temporary file
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.GetPdfBytesFromHtmlStreamWithTempFile(System.IO.Stream,System.Text.Encoding,System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified stream containing the HTML stream by writing first the HTML stream
+            in a temporary file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlStream parameter 
+            </summary>
+            <param name="htmlStream">The HTML stream containg the HTML code to be converted</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.SavePdfFromUrlToFile(System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified URL into the specified 
+            disk file
+            </summary>
+            <param name="url">The web page URL</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.SavePdfFromHtmlFileToFile(System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML file into the specified 
+            disk file
+            </summary>
+            <param name="htmlFilePath">The HTML file full path</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.SavePdfFromHtmlStringToFile(System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML string into the specified 
+            disk file. 
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.SavePdfFromHtmlStringToFile(System.String,System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML string into the specified 
+            disk file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter 
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.SavePdfFromHtmlStreamToFile(System.IO.Stream,System.Text.Encoding,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML string into the specified 
+            disk file
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The HTML stream encoding</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.SavePdfFromHtmlStreamToFile(System.IO.Stream,System.Text.Encoding,System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML string into the specified 
+            disk file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlStream parameter 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The HTML stream encoding</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.SavePdfFromHtmlStringToFileWithTempFile(System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML string into the specified 
+            disk file by writing first the HTML string into a temporary file
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.SavePdfFromHtmlStringToFileWithTempFile(System.String,System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML string into the specified 
+            disk file by writing first the HTML string into a temporary file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter 
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.SavePdfFromHtmlStreamToFileWithTempFile(System.IO.Stream,System.Text.Encoding,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML stream into the specified 
+            disk file by writing first the HTML stream into a temporary file
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The HTML stream encoding</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.PdfConverter.SavePdfFromHtmlStreamToFileWithTempFile(System.IO.Stream,System.Text.Encoding,System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML stream into the specified 
+            disk file by writing first the HTML stream into a temporary file.The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlStream parameter 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The HTML stream encoding</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="E:Winnovative.WnvHtmlConvert.PdfConverter.BeforeCreateNextPageEvent">
+            <summary>
+            This event is raised when the next page is about to be created to continue rendering.
+            The element rendering can be cancelled from the event handler of this event.
+            </summary>
+        </member>
+        <member name="E:Winnovative.WnvHtmlConvert.PdfConverter.BeforeRenderNextPageEvent">
+            <summary>
+            This is event is raised before rendering the content on a page, including the intial page.
+            The element rendering can be cancelled from the event handler of this event.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.LicenseKey">
+            <summary>
+            Gets or sets the license key
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.PageWidth">
+            <summary>
+            Gets or sets the web page width
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.PageHeight">
+            <summary>
+            Gets or sets the web page height. If the width was not set aswell, 
+            this property has no effect
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.PdfDocumentOptions">
+            <summary>
+            Gets a reference to the object controlling the generated PDF 
+            document options
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.AuthenticationOptions">
+            <summary>
+            Optionally set this object Username and Password properties to authenticate to web server
+            before accessing the URL to be converted (e.g handles any IIS authentication method)
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.PdfDocumentInfo">
+            <summary>
+            Gets a reference to the object to controlling the generated PDF 
+            document description
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.PdfSecurityOptions">
+            <summary>
+            Gets a reference to the object to controlling the generated PDF 
+            document security settings
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.PdfHeaderOptions">
+            <summary>
+            Gets a reference to an object to control the generated PDF 
+            document header options
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.PdfFooterOptions">
+            <summary>
+            Gets a reference to an object to control the generated PDF 
+            document footer options
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.AvoidTextBreak">
+            <summary>
+            When true this property instructs the converter to try to
+            avoid cutting off the text between PDF pages
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.AvoidImageBreak">
+            <summary>
+            When true this property instructs the converter to try to
+            avoid cutting off the images between PDF pages
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.RightToLeftEnabled">
+            <summary>
+            Set this true if the web page text is in a right-to-left language like Hebrew or Arabic
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.BatchConversion">
+            <summary>
+            Set this true when using the converter for batch conversion
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.ScriptsEnabled">
+            <summary>
+            Enable scripts when rendering HTML to selectable PDF. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.ScriptsEnabledInImage">
+            <summary>
+            Enable scripts when rendering HTML to image. 
+            Default is true.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.ActiveXEnabled">
+            <summary>
+            Enable ActiveX when rendering HTML to selectable PDF. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.ActiveXEnabledInImage">
+            <summary>
+            Enable ActiveX when rendering HTML to image. 
+            Default is true.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.AdjustBorderSize">
+            <summary>
+            There are situations when a fraction of the right and bottom borders of an image or 
+            table cell are overwritten by the image content or table cell background when the PDF document is viewed with Adobe Reader. 
+            The AdjustBorderSize value is subtracted from the background width and height. 
+            The default value is 0 points. 
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.BkgTransparency">
+            <summary>
+            Modify background transparency. 0 means transparent, 100 means opaque.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.PdfConverter.ImgTransparency">
+            <summary>
+            Modify images transparency. 0 means transparent, 100 means opaque.
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.EncryptionKeySize">
+            <summary>
+            The length of the encryption key
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.EncryptionKeySize.EncryptKey128Bit">
+            <summary>
+            A 128 bit length.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.EncryptionKeySize.EncryptKey40Bit">
+            <summary>
+            A 40 bit length.
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.AuthenticationOptions">
+            <summary>
+            Authentication options for accessing a URL (e.g IIS authentication). 
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.AuthenticationOptions.Username">
+            <summary>
+            The username
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.AuthenticationOptions.Password">
+            <summary>
+            The password
+            </summary>
+        </member>
+        <member name="T:Winnovative.WnvHtmlConvert.TextArea">
+            <summary>
+            A text to be added to the header or footer of the rendered PDF document. The PdfConverter.PdfHeaderOptions.TextArea
+            property should be set with an object of this type.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.text">
+            <summary>
+            The string to be written
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.x">
+            <summary>
+            The start x position
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.y">
+            <summary>
+            The start y position
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.width">
+            <summary>
+            The width of destination rectangle
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.height">
+            <summary>
+            The height of the destination rectangle 
+            Is optional
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.font">
+            <summary>
+            The text font
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.multiPageText">
+            <summary>
+            When true a paginable text is rendered
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.paginate">
+            <summary>
+            When true the text can be paginated
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.textAlign">
+            <summary>
+            Horizontal text alignment.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.verticalTextAlign">
+            <summary>
+            Vertical text alignment.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.rightToLeft">
+            <summary>
+            Indicates whether RTL should be checked.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.characterSpacing">
+            <summary>
+            Character spacing value.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.wordSpacing">
+            <summary>
+            Word spacing value.
+            </summary>
+        </member>
+        <member name="F:Winnovative.WnvHtmlConvert.TextArea.leading">
+            <summary>
+            Text leading.
+            </summary>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.TextArea.#ctor(System.Single,System.Single,System.String,System.Drawing.Font)">
+            <summary>
+            Contructs a text element that will be rendered at the specified (x,y) position using the specified width and font. 
+            The height of the rendered text will be auto-determined. The width is the available width in page.
+            </summary>
+            <param name="x">The start x coordinate where the text will be rendered</param>
+            <param name="y">The start y coordinate where the text </param>
+            <param name="text">The text to be rendered</param>
+            <param name="font">The text font</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.TextArea.#ctor(System.Single,System.Single,System.Single,System.String,System.Drawing.Font)">
+            <summary>
+            Contructs a text element that will be rendered at the specified (x,y) position using the specified width and font. 
+            The height of the rendered text will be auto-determined.
+            </summary>
+            <param name="x">The start x coordinate where the text will be rendered</param>
+            <param name="y">The start y coordinate where the text </param>
+            <param name="width">The width of the destination rectangle</param>
+            <param name="text">The text to be rendered</param>
+            <param name="font">The text font</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.TextArea.#ctor(System.Single,System.Single,System.Single,System.Single,System.String,System.Drawing.Font)">
+            <summary>
+            Contructs a text element that will be rendered in the specified rectangle using the specified font. 
+            </summary>
+            <param name="x">The start x coordinate where the text will be rendered</param>
+            <param name="y">The start y coordinate where the text </param>
+            <param name="width">The width of the destination rectangle</param>
+            <param name="height">The height of the destination rectangle</param>
+            <param name="text">The text to be rendered</param>
+            <param name="font">The text font</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.TextArea.#ctor(System.Single,System.Single,System.Single,System.String,System.Drawing.Font,System.Drawing.Color)">
+            <summary>
+            Contructs a text element that will be rendered at the specified (x,y) position using the specified width, font and color. 
+            The height of the rendered text will be auto-determined.
+            </summary>
+            <param name="x">The start x coordinate where the text will be rendered</param>
+            <param name="y">The start y coordinate where the text </param>
+            <param name="width">The width of the destination rectangle</param>
+            <param name="text">The text to be rendered</param>
+            <param name="font">The text font</param>
+            <param name="textColor">The text color</param>
+        </member>
+        <member name="M:Winnovative.WnvHtmlConvert.TextArea.#ctor(System.Single,System.Single,System.Single,System.Single,System.String,System.Drawing.Font,System.Drawing.Color)">
+            <summary>
+            Contructs a text element that will be rendered in the specified rectangle using the specified font and color. 
+            </summary>
+            <param name="x">The start x coordinate where the text will be rendered</param>
+            <param name="y">The start y coordinate where the text </param>
+            <param name="width">The width of the destination rectangle</param>
+            <param name="height">The height of the destination rectangle</param>
+            <param name="text">The text to be rendered</param>
+            <param name="font">The text font</param>
+            <param name="textColor">The text color</param>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.TextAlign">
+            <summary>
+            Gets or sets the text alignment.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.VerticalTextAlign">
+            <summary>
+            Gets or sets the vertical text alignment.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.RightToLeftLanguage">
+            <summary>
+            Set this property true if the text is in a RTL language.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.CharacterSpacing">
+            <summary>
+            Gets or sets an additional spacing between characters.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.WordSpacing">
+            <summary>
+            Gets or sets an aditional spacing between words. The words separator is consider the 
+            space character with code 32
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.LineSpacing">
+            <summary>
+            Gets or sets value that indicates the vertical distance between the baselines of adjacent lines of text.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.TextAngle">
+            <summary>
+            Gets or sets an angle to control text counter-clockwise direction. The default value is 0.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.TextRise">
+            <summary>
+            Gets or sets the distance to move the text baseline up or down from its default location.
+            Adjustments to the baseline are useful for drawing superscripts or subscripts.
+            Positive values of text rise move the baseline up and creates a superscript text. 
+            Negative values of text rise move the baseline down and creates a subscript text. 
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.BackColor">
+            <summary>
+            Gets or sets element background color.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.ForeColor">
+            <summary>
+            Gets or sets the element foreground color.
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.Text">
+            <summary>
+            The string to be written
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.X">
+            <summary>
+            The start x position
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.Y">
+            <summary>
+            The start y position
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.Width">
+            <summary>
+            The width of destination rectangle
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.Height">
+            <summary>
+            The height of the destination rectangle 
+            Is optional
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.TextFont">
+            <summary>
+            The text font
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.EmbedTextFont">
+            <summary>
+            A flag indicating if the text area font will be embedded in the PDF document
+            </summary>
+        </member>
+        <member name="P:Winnovative.WnvHtmlConvert.TextArea.Transparency">
+            <summary>
+            Gets or sets element transparency. The transparency is expressed as a value between 0 and 100. 
+            0 means completely transparent and 100 completely opaque.
+            </summary>
+        </member>
+    </members>
+</doc>

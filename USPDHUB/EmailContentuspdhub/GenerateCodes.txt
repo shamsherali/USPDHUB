@@ -1,0 +1,7 @@
+﻿This email has been sent because as request for generating Pre-Paid codes.
+
+Details
+---------
+ProfileID: #ProfileID#
+Profile Name: #ProfileName#
+Requested Count: #Count#

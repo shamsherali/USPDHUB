@@ -1,0 +1,13 @@
+﻿<table width='750px' border='0' cellspacing='0' cellpadding='0' align='center' style='border: solid 0px Blue;'>
+ <tr><td colspan='2' align='center'>
+A new #Type# - #Title#  has been rejected by  #Username#.
+Initials: #Initiails#
+Remarks: #Remarks#
+ </td></tr> 
+
+  <tr><td colspan='2' style='padding: 30px;'> 
+Thank you,
+
+The USPDhub<sup style="font-size: 14px;">&reg;</sup> Team
+    </td></tr>
+</table>

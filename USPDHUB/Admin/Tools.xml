@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <tools name="MainToolbar" enabled="true">
+    <tool name="FormatCodeBlock" />
+  </tools>
+
+  <tools name="InsertToolbar" enabled="true" >
+    <tool name="AjaxSpellCheck"/>
+    <tool name="ImageManager" shortcut="CTRL+M"/>
+    <tool name="MediaManager"/>
+    <tool name="DocumentManager" />
+    <tool separator="true"/>
+    <tool name="InsertTable" />
+    <tool name="InsertRowAbove" />
+    <tool name="InsertRowBelow" />
+    <tool name="DeleteRow" />
+    <tool name="InsertColumnLeft" />
+    <tool name="InsertColumnRight" />0
+    <tool name="DeleteColumn" />
+    <tool separator="true"/>
+    <tool name="MergeColumns" />
+    <tool name="MergeRows" />
+    <tool separator="true"/>
+    <tool name="SplitCell" />
+    <tool name="DeleteCell" />
+    <tool name="SetCellProperties" />
+    <tool name="SetTableProperties" />
+  </tools>
+
+  <tools enabled="true">
+    <tool name="Undo" />
+    <tool name="Redo" />
+    <tool separator="true"/>
+    <tool name="Cut" />
+    <tool name="Copy" />
+    <tool name="Paste" shortcut="CTRL+!"/>
+    <tool separator="true"/>
+    <tool name="PastePlainText" />
+    <tool separator="true"/>
+    <tool name="FindAndReplace" />
+    <tool name="SelectAll" />
+    <tool separator="true"/>
+    <tool name="InsertHorizontalRule" />
+  </tools>
+
+  <tools enabled="true" dockable="true">
+    <tool name="Bold" />
+    <tool name="Italic" />
+    <tool name="Underline" />
+    <tool separator="true"/>
+    <tool name="JustifyLeft" />
+    <tool name="JustifyCenter" />
+    <tool name="JustifyRight" />
+    <tool name="JustifyFull" />
+    <tool name="JustifyNone" />
+
+    <tool separator="true"/>
+    <tool name="Indent" />
+    <tool name="Outdent" />
+    <tool name="InsertOrderedList" />
+    <tool name="InsertUnorderedList"/>
+
+    <tool name="LinkManager" />
+    <tool name="Unlink" />
+  </tools>
+
+  <tools name="DropdownToolbar" dockable="true" >
+    <tool name="ForeColor" />
+    <tool separator="true"/>
+    <tool name="FormatBlock"/>
+  </tools>
+
+
+</root>
